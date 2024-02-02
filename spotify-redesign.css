@@ -1,3 +1,5 @@
+/* tweaked version of DaBluLite's SpotifyActivityRedesign */
+
 .activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) :is(.text__13126, .anchor_c8ddc0, .themed__857a7 .text__13126),
 .activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) :is(.text__13126, .anchor_c8ddc0, .themed__857a7 .text__13126) {
     color: #fff
