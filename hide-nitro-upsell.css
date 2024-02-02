@@ -1,0 +1,86 @@
+/*
+ * @name Hide Nitro Upselling
+ * @description Hide all Nitro upselling
+ * @author Vendicated, msm8916, D3SOX
+ * @version 1.0
+*/
+[class^="channel_"] > div > [href="/store"], /* Nitro Button above DM List */
+[class^="channel_"] > div > [href="/shop"], /* Shop Button above DM List */
+[class^="channelTextArea"] [class^="buttons_"] > button, /* Gift Button */
+[class^="upsellVisible_"], /* Banner Nitro Upsell Header in the user modal */
+[class^="premiumIconWrapper"], /* Nitro Icon in top right on Banners */
+[class^="characterCount_"] [class*="upsell_"], /* "Send longer Messages with Discord Nitro!" */
+[class^="emojiSection_"] [class*="shinyButton_"], /* "Get Nitro" button in Emoji/Sticker modal" */
+[class*="tryItOutSection_"], /*try nitro banner section on profile editor */
+[class^="premiumIcon"], /* Try remove booster badge */
+[class^="customizationSection_"] + [class^="upsellContainer_"], /* Per server profile customizations */
+[class^="customizationSection_"][class*="disabled_"], /* Per server profile customizations */
+[class*="bannerNitroUpsell_"], /* "Unlock Banner" in profile editor */
+[class^="imageUploaderHint_"],
+[class*=nitroAuthorBadgeContainer], /* Nitro badge in chat */
+[class^="imagePickerContainer_"] > [class^="optionBox_"]:nth-child(2), /* Remove gif option from profile pic upload option */
+[class^="premiumTab"], /* Nitro settings tab */
+#user-settings-cog-Discord_Nitro, /* Nitro settings right click entry */
+#user-settings-cog-Billing, /* Billing settings right click entry */
+[class^="subscribeAction"], /* Nitro upselling in server boosting screen */
+[class^="upsellBanner"], /* Nitro upselling in screen share */
+[class^="userPopoutInner"] > [class^="wrapper"] > [class^="banner"], /* Nitro upselling in user popout when hovering over banner */
+[class^="userPopoutInner"] > [class^="containerWrapper"], /* Avatar decorations upselling in user popout */
+[class*="premiumFeatureBannerBackground"], /* Avatar decorations upselling in profiles settings tab */
+[class*="premiumFeatureBorder"], /* Profile effect upselling in profiles settings tab */
+[class^="userPanelInner"] > [class*="inSidebar"], /* Avatar decorations upselling in user side panel */
+[class^="tierCtaContainer"], [class^="tierCtaContainer"] + [class^="shelf"], /* Nitro upselling in activities */
+a[href*="/snowsgiving"], [class^="customizationSection"] > [class^="limitedFeatureBorder"], /* Snowsgiving bs */
+[class^="upsellOverlayContainer_"], /* Upsell overlay in profiles tab */
+[class*="sansAttachButton"] > [class^="buttons"] > [class^="container"], /* Christmas gifting button */
+[id^="popout"] [class*="contentPremium"], /* Nitro upselling popups on settings (e.g. avatar decorations) */
+[class^="birthdayFeatureBorder"], /* Birthday avatar decoration upselling */
+[class^="container_"]:has([class^="falloweenArtContainer_"]), /* Halloween avatar decoration upselling */
+[class^="sidebar"] > [class^="container"] > [class^="wrapper"] > [class^="container"] > [class^="content"], /* Nitro upselling above profile (e.g. super reactions) */
+[class^="themeEditor"], /* Nitro theme upselling */
+[class*="cozyMessage"] > [class*="buttonContainer"] > [class*="buttons"] > [class*="wrapper"] > [aria-label*="Add Super Reaction"], /* Message Hover menu super reactions */
+[id^="popout"] [class*="colorPremiumGradient"], /* Message Hover overflow menu super reactions */
+#message [class*="colorPremiumGradient"], /* Message right click menu super reactions */
+[class^="burstReactionTooltipPrompt"], /* Super reaction tooltip Nitro upsell */
+[aria-label="Add Super Reaction"], /* Message hover add super reaction icon */
+[class^="side_"] > [class^="header_"] + [class^="premiumTab"] + [class^="item_"] + [class^="item_"] + [class^="item_"] + [class^="item_"], /* Settings billing tab */
+#emoji-picker-tab-panel > [class*="emojiPickerHeader"]:first-child > [class^="tooltipContainer"]:nth-child(2) /* Nitro call screen reactions */
+{
+  display: none !important;
+}
+/* Disable Nitro button in custom emotes popup when emote is not available */
+[class^="emojiSection"] > div > div > div > a
+{
+  color: inherit;
+  pointer-events: none;
+}
+/* Disable clicking on super reactions */
+[class^="reactionInner"][aria-label*="burst react"]
+{
+  pointer-events: none;
+}
+/* Fix top Avatar decorations upselling in user popout */
+[class^="userPopoutInner"] > [class^="containerWrapper"]
+{
+  top: 0 !important;
+}
+/* no more super reaction effect */
+[class*=effectsWrapper]
+{
+  display: none !important;
+}
+[class*="hideEmoji_"][class*="hideEmoji_"][class*="hideEmoji_"]
+{
+  opacity: 1;
+}
+/* Hides the Billing Settings stuff from discord settings */
+div :has(+ .premiumTab__57bdc),
+.premiumTab__57bdc,
+.premiumTab__57bdc + div,
+.premiumTab__57bdc + div + div,
+.premiumTab__57bdc + div + div + div,
+.premiumTab__57bdc + div + div + div + div,
+.premiumTab__57bdc + div + div + div + div + div
+{
+  display: none !important;
+}

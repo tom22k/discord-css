@@ -1,0 +1,141 @@
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/*  */
+
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* search bar */
+.searchBar_e0c60b
+{
+	background-color: var(--background-modifier-selected);
+	border-radius: 5px;
+}
+.searchBar_e0c60b > div > div > svg
+{
+	color: var(--interactive-normal);
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* folders */
+.expandedFolderIconWrapper__458cf > svg
+{
+	color: inherit !important;
+}
+[class*=FolderIconWrapper__]
+{
+	color: var(--interactive-normal) !important;
+}
+[class*=FolderIconWrapper__]:hover
+{
+	color: var(--interactive-active) !important;
+	background-color: var(--background-modifier-selected);
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* code blocks */
+[class^=markup_] code
+{
+    background: var(--background-modifier-selected);
+	border-color: rgba(255,255,255,0.1);
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* add server button */
+[class^=circleIconButton_]
+{
+  color: var(--interactive-normal);
+}
+[class^=circleIconButton_]:hover
+{
+	color: var(--interactive-active);
+	background-color: var(--background-modifier-selected);
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* light background to dark usernames */
+[class^=username][style="color: rgb(2, 2, 2);"], /* ? black */
+[class^=username][style="color: rgb(5, 0, 5);"], /* color chan black */
+[class^=username][style="color: rgb(0, 0, 0);"], /* black */
+[class^=username][style="color: rgb(15, 2, 2);"], /* hiraeth black */
+[class^=username][style="color: rgb(0, 1, 0);"], /* swiss bedwars black */
+[class^=username][style="color: rgb(10, 1, 2);"], /* sewerperson owner black */
+[class^=username][style="color: rgb(0, 0, 1);"], /* sewerperson admin black */
+[class^=username][style="color: rgb(9, 8, 8);"], /* xona loha black */
+[class^=username][style="color: rgb(12, 12, 12);"] /* xona crescent black */
+{
+	color: var(--text-normal) !important;
+}
+/* mentions */
+.mention[style*="color: rgb(2, 2, 2);"], /* ? black */
+.mention[style*="color: rgb(5, 0, 5);"], /* color chan black */
+.mention[style*="color: rgb(0, 0, 0);"], /* black */
+.mention[style*="color: rgb(15, 2, 2);"], /* hiraeth black */
+.mention[style*="color: rgb(0, 1, 0);"], /* swiss bedwars black */
+.mention[style*="color: rgb(10, 1, 2);"], /* sewerperson owner black */
+.mention[style*="color: rgb(0, 0, 1);"], /* sewerperson admin black */
+.mention[style*="color: rgb(9, 8, 8);"], /* xona loha black */
+.mention[style*="color: rgb(12, 12, 12);"] /* xona crescent black */
+{
+	color: var(--text-normal) !important;
+	background: rgba(219,222,225,0.1) !important;
+}
+/* hovered mentions */
+.mention[style*="color: rgb(2, 2, 2);"]:hover, /* ? black */
+.mention[style*="color: rgb(5, 0, 5);"]:hover, /* color chan black */
+.mention[style*="color: rgb(0, 0, 0);"]:hover, /* black */
+.mention[style*="color: rgb(15, 2, 2);"]:hover, /* hiraeth black */
+.mention[style*="color: rgb(0, 1, 0);"]:hover, /* swiss bedwars black */
+.mention[style*="color: rgb(10, 1, 2);"]:hover, /* sewerperson owner black */
+.mention[style*="color: rgb(0, 0, 1);"]:hover, /* sewerperson admin black */
+.mention[style*="color: rgb(9, 8, 8);"]:hover, /* xona loha black */
+.mention[style*="color: rgb(12, 12, 12);"]:hover /* xona crescent black */
+{
+	color: var(--text-normal) !important;
+	background: rgba(219,222,225,0.3) !important;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* spoiler */
+.theme-dark
+{
+  --__spoiler-background-color--hidden: var(--background-modifier-selected);
+  --__spoiler-background-color--hidden--hover: rgb(15, 15, 15);
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* scrollbars */
+:root,
+.theme-dark,
+.theme-light
+{
+ --scrollbar-auto-thumb: var(--background-modifier-selected);
+ --scrollbar-auto-track: transparent;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* use theme colours in 'channels & roles' menu */
+.theme-dark .container__7590f, /* 'browse channels' background */
+.theme-dark .scroller__81266, /* 'customize' background */
+.theme-dark .container__10dc7, /* header background */
+.theme-dark .header__60bef
+{
+  background-color: var(--background-primary);
+}
+.theme-dark .innerHeader_afca2f:after /* hide little gradient thing */
+{
+    background: transparent;
+}
+/*nitro background fix v1.1*/
+.layer__2efaa+.layer__2efaa,
+.standardSidebarView__1129a,
+.contentRegion__0bec1,
+.contentRegionScroller__86c79,
+.sidebarRegionScroller__1fa7e,
+.page__0b66e
+{
+    background: none;
+}
+.container__10dc7
+{
+    background: none !important;
+}
