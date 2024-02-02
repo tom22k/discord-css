@@ -44,6 +44,17 @@ a[href*="/snowsgiving"], [class^="customizationSection"] > [class^="limitedFeatu
 [class^="burstReactionTooltipPrompt"], /* Super reaction tooltip Nitro upsell */
 [aria-label="Add Super Reaction"], /* Message hover add super reaction icon */
 [class^="side_"] > [class^="header_"] + [class^="premiumTab"] + [class^="item_"] + [class^="item_"] + [class^="item_"] + [class^="item_"], /* Settings billing tab */
+[class^=container_]:has([class^=artContainer_]), /* Avatar decorations upselling in profiles settings tab */
+[class^=customizationSection__]:has([class^=nitroWheel__]), /* Profile effect upselling in profiles settings tab */
+[class^=messageLengthUpsellContainer_], /* Message length Nitro upselling */
+[class*=botTagRemix_], /* Remix using mobile app ad */
+[class^=nitroFileSizeUpsell__], /* Large file upload nitro upselling */
+[class^=accountProfilePopoutWrapper_] > [class^=popoutContainer__] > [class^=container__], /* Nitro profile decorations upselling in my profile popout */
+[class^=notAppAsidePanel__] > [class^=layerContainer_] > [id^=popout_] > [class^=animatorBottom_] > div:has(.image_f4d883), /*Gift Nitro upselling  */
+[class*=effectsWrapper], /* no more super reaction effect */
+#profile-customization-tab > div:nth-child(4) > div > div > [class^=sectionsContainer_] > div:nth-child(4), /* avatar decoration customizer */
+#profile-customization-tab > div:nth-child(4) > div > div > [class^=sectionsContainer_] > div:nth-child(5), /* profile effect customizer */
+[aria-label="Merch"], /* merch */
 #emoji-picker-tab-panel > [class*="emojiPickerHeader"]:first-child > [class^="tooltipContainer"]:nth-child(2) /* Nitro call screen reactions */
 {
   display: none !important;
@@ -63,11 +74,6 @@ a[href*="/snowsgiving"], [class^="customizationSection"] > [class^="limitedFeatu
 [class^="userPopoutInner"] > [class^="containerWrapper"]
 {
   top: 0 !important;
-}
-/* no more super reaction effect */
-[class*=effectsWrapper]
-{
-  display: none !important;
 }
 [class*="hideEmoji_"][class*="hideEmoji_"][class*="hideEmoji_"]
 {
