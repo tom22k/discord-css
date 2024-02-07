@@ -1,0 +1,331 @@
+/* HIDE */
+[class*=animatedContainer_]:has([class*=bannerImage_]), /* server banner */
+[class*=animatedBannerHoverLayer_], /* server banner spacer clickable*/
+[style="height: 84px;"], /* server banner spacer */
+[aria-label="Channels"] > [style="height: 12px;"], /* spacer */
+[aria-label="Channels"] > [style="height: 16px;"], /* spacer */
+div.container__4f639:has(div.progressBarContainer__9b571), /* server boost progress */
+.iconItem__8e3b8[aria-label="Create Invite"], /* create invite on channels */
+[data-list-item-id^="channels___home-tab-"], /* server guide */
+[class^="threadSuggestionBar"],  /* create thread suggestion */
+[aria-label="Open Translate Modal"], /* translate button in message bar (translate plugin) */
+#channels > ul > li:has(#clip0_2645_182555), /* server shop */
+#profile-customization-tab > [class^=container_]:has([class^=art__]), /* announcement in profile customizer */
+#user-context-note, /* user context menu: add note */
+#user-context-call, /* user context menu: call */
+#user-context-add-friend-nickname, /* user context menu: add friend nickname */
+[href="https://support.discord.com"], /* help button */
+.recentsIcon__3c4cf:not(:has(.iconBadge_cc5031)), /* inbox button when no notifs */
+.searchBar_ff8800, /* search bar in friends list */
+#message-actions-tts, /* speak message */
+#message-tts, /* speak message */
+#message-actions-mark-unread, /* mark unread */
+#message-mark-unread, /* mark unread */
+[aria-label="Mark Unread"], /* mark unread */
+#vc-toolbox-vc-toolbox-quickcss-toggle, /* quickcss toggle in vc toolbox */
+[aria-label="BadgeAPI"], /* badge api in vc toolbox */
+#vc-toolbox > div > [class^=separator_], /* separator in vc toolbox */
+.container_b03b4b, /* "welcome to channel" thing */
+#user-settings-cog > .scroller__750f5 > .item__183e8, /* shortens right-click settings menu */
+[aria-label="Family Center"], /* family center */
+.listItem_fa7b36:has([data-list-item-id="guildsnav___guild-discover-button"]), /* discoverable servers */
+[data-list-item-id^="channels___upcoming-events"], /* events */
+[aria-label="Notification Settings"], /* notification settings in channel header */
+[class^=note_], /* notes */
+[class^=section__]:has([class^=note_]), /* notes header in user popout */
+[class^=userInfoSection__] > h1:last-of-type, /* notes header in user profile */
+[class^=userPanelOverlayBackground__] > [class^=divider__]:not(:has( ~ [class^=divider__])) /* last divider before notes in user popout */ { 
+  display: none !important;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* last updated 7 feb 2024 */
+
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* lighter channel hover highlight */
+.wrapper__7bcde:hover .link__95dc0 {
+  background: var(--bg-overlay-selected,var(--background-modifier-selected));
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* highlight message container on hover */
+[data-list-item-id^="chat-messages"]:hover {
+  background-color: var(--bg-overlay-selected,var(--background-modifier-selected));
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* server list less padding */
+.guilds__2b93a {
+  width: 64px;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* remove folder animation */
+.wrapper_ed1dea > [id*="folder-items-"] {
+  height: fit-content !important;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* DISABLED: ugly scrollbars (look at arrows to enable) */
+/* scrollable user popouts but still cutting off empty sections ->-
+.body_ea740e {
+  flex: none !important;
+}
+.root_ba16f0 {
+  overflow: auto !important;
+}
+> */
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* CLICKABLE CONNECTED ACCOUNTS */
+[class^=connectedAccountContainer__] {
+  position: relative;
+  border: none;
+}
+[class^=connectedAccountName_] a {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+/* reposition arrow back to the right */
+[class^=connectedAccountName_] a svg {
+  position: absolute;  
+  top: calc(50% - (18px / 2));
+  right: calc(2%);
+} 
+/* give buttons a background on hover */
+[class^=connectedAccountContainer__] a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* make code blocks' size dynamic */
+[class^=codeContainer__],
+.shiki-container {
+  width: fit-content;
+  border-radius: 8px;
+}
+[class^=markup_] code {
+  padding-right: 24px; /* space for the copy button */
+}
+[class^=markup_] pre {
+  max-width: 100% !important; /* prevent unnecessary line wraps */
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* user profile modal buttons */
+.tabBarContainer__63f55 {
+  border: none;
+}
+.top__592a7 {
+  gap: 20px ;
+}
+.item__48dda {
+  border: none !important;
+  padding: 8px ;
+  border-radius: 8px;
+  height: auto;
+}
+.theme-dark .item__48dda.selected__5711d {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* reduce padding in user profile modals */
+.userInfoSection__1daf8 {
+  padding-bottom: 8px;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* make gif fav button invert colors */
+.gifFavoriteButton_be5369,
+.imageAccessory__64ab2:has(.gifFavoriteButton_be5369) {
+  mix-blend-mode: difference;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* shorten some dividers in channel column */
+.containerDefault__23a29,
+.containerDragBefore__06455,
+.containerDragAfter__72575,
+.containerUserOver_fe1d69 {
+  --custom-category-channel-space-before-category: 5px;
+}
+.sectionDivider__68d2a {
+  margin-top: 5px;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* Add red colour to dangerous user actions */
+#user-context-close-dm,
+#user-context-remove-friend,
+#user-context-block {
+  color: var(--status-danger)
+}
+#user-context-close-dm:active,
+#user-context-remove-friend:active,
+#user-context-block:active {
+  background-color: var(--red-500)!important;
+  color: var(--white-500)!important;    
+}
+#user-context-close-dm[class*="focused_"],
+#user-context-remove-friend[class*="focused_"],
+#user-context-block[class*="focused_"] {
+  background-color: var(--button-danger-background);
+  color: var(--white-500);   
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* smaller member count */
+#vc-membercount {
+  margin-top: 0 !important;
+  margin-bottom: -1.25em !important;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* bigger stream preview */
+[class*=streamPreview_]:not([class*=content_]) {
+  width: 504px;
+}
+[class*=previewContainer_] {
+  height: 284px;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* remove obnoxious "new emote" stuff */
+#emoji-picker-tab-panel :is([class^=badgeLabel_], [class^=newlyAddedBadge]) {
+  display: none !important;
+}
+[class^=newlyAddedHighlight], [class^=newlyAddedHighlight]:hover {
+  border: none;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* Replace dashes with spaces in channel names */
+@font-face {
+  font-family: "Twemoji Mozilla";
+  src: url("https://vendicated.github.io/random-files/Twemoji.Mozilla.ttf") format("truetype");
+  unicode-range: U+1F1E6-1F1FF;
+}
+@font-face {
+  font-family: "dashless";
+  size-adjust: 100%; /*adjust this to change word spacing*/
+  src: url("https://vendicated.github.io/random-files/Dashless.woff2") format("woff2");
+  unicode-range: U+002D;
+}
+[data-list-item-id^=channels___]:not([role=button]), /* channel list */
+[class^=titleWrapper] > h1, /* top bar with topic */
+[id^=":r"] > h1, /* topic popup */
+[class^=resultChannel], /* search */
+[class^=channelNameContainer_], /* search */
+[class^=searchAnswer_], /* search */
+.channelWithIcon, /* channel mentions in chat */
+[class^=emptyChannelIcon_] + h3, /* start of new channel */
+[class^=emptyChannelIcon_] ~ [class*=description_],
+[class^=browser_] [class*=channelText_], /* channel browser*/
+[class^=returnButton_] [class^=text-], /*return button in channel browser*/
+[class^=placeholder][class*=slateTextArea], /* chat input placeholder text */
+[class^=auditLog_] [class^=overflowEllipsis_] strong, /* audit log */
+.vc-permviewer-perms-title, /* permissions viewer */
+[class^=headerChannelContainer_] > div /* invite to channel dialog */ {
+  font-family: "Twemoji Mozilla", "dashless", var(--font-primary);
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* Role pill background */
+[class*="role_"] [class*="roleCircle_"]:before,
+[class*="actionButton_"][class*="role_"][class*="justifyCenter_"] {
+  border-radius: 5px;
+}
+[class*="role_"] {
+  transform: translate(0);
+  border: 0;
+}
+[class*="role_"] [class*="roleRemoveIcon_"] {
+  margin: 0;
+  left: unset;
+  transform: translate(50%,-50%);
+}
+[class*="role_"] [class*="roleRemoveButton_"] {
+  position: static;
+}
+[class*="root_"]>[class*="role_"] [class*="roleCircle_"]:before {
+  content: '';
+  top: 0;left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  background: inherit;
+  border: 2px solid transparent;
+  opacity: .4;
+}
+[class*="roles_"] {
+  color: var(--text-normal);
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* Bigger Emojis */
+[id*=message-reactions] [class*=reaction_] .emoji, /* reactions */
+[class*=effect_] {
+  zoom: 150%;
+}
+:root {
+  --custom-emoji-size-emoji: 2em !important; /* in messages with text */
+  --custom-emoji-size-jumbo-emoji: 4rem !important; /* in messages without text */
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* show full about me */
+[style="-webkit-line-clamp: 6;"] {
+  display: block;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* rounder radius in mentions */
+.mention {
+  border-radius: 5px;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* Vencord toolbox Logo */
+.vc-toolbox-btn svg path {
+  d: path("M7 12.001C7 10.8964 6.10457 10.001 5 10.001C3.89543 10.001 3 10.8964 3 12.001C3 13.1055 3.89543 14.001 5 14.001C6.10457 14.001 7 13.1055 7 12.001ZM14 12.001C14 10.8964 13.1046 10.001 12 10.001C10.8954 10.001 10 10.8964 10 12.001C10 13.1055 10.8954 14.001 12 14.001C13.1046 14.001 14 13.1055 14 12.001ZM19 10.001C20.1046 10.001 21 10.8964 21 12.001C21 13.1055 20.1046 14.001 19 14.001C17.8954 14.001 17 13.1055 17 12.001C17 10.8964 17.8954 10.001 19 10.001Z");
+}
+.vc-toolbox-btn svg {
+  width: 125%;
+  height: 125%;
+}
+.vc-toolbox-btn {
+  margin-left: 0;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* CONTEXT MENU ICONS (DON'T WORK IN THEME) */
+/* (un)fav emote */
+:is(#message-favorite, #message-unfavorite) > [class*="label_"]::after {
+  display: inline-block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: var(--interactive-normal);
+  -webkit-mask: url(/assets/141d49436743034a59dec6bd5618675d.svg);
+  mask: url(/assets/141d49436743034a59dec6bd5618675d.svg);
+  position: absolute;
+  right: 8px;
+}
+/* (un)fav channel */
+#channel-context-opt-in-favorite-channel > [class*="label_"]::after {
+  display: inline-block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: var(--interactive-normal);
+  -webkit-mask: url(/assets/141d49436743034a59dec6bd5618675d.svg);
+  mask: url(/assets/141d49436743034a59dec6bd5618675d.svg);
+  position: absolute;
+  right: 8px;
+}
