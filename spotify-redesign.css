@@ -1,18 +1,19 @@
 /* tweaked version of DaBluLite's SpotifyActivityRedesign */
 
+/* stylize text in activity to match player */
 .activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) :is(.text__13126, .anchor_c8ddc0, .themed__857a7 .text__13126),
-.activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) :is(.text__13126, .anchor_c8ddc0, .themed__857a7 .text__13126) {
-    color: #fff
-}
+.activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) :is(.text__13126, .anchor_c8ddc0, .themed__857a7 .text__13126),
 .activityUserPopoutV2__32328:has(.spotifyButtonLogo__526f7) .content_d7cb7f,
 .activityProfileV2__4de28:has(.spotifyButtonLogo__526f7) .content_d7cb7f {
     color: #fff
 }
+/* white progress bar */
 .activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .barInner_d1abc6,
 .activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) .barInner_d1abc6,
-#vc-spotify-progress-bar > div > div > div > .barFill__30e17 {
+#vc-spotify-progress-bar .barFill__30e17 {
     background-color: #fff !important
 }
+/* stylize text in activity to match player */
 .activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .contentImagesUserPopoutV2__04250 .state_a85ac0,
 .activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .contentImagesUserPopoutV2__04250 .textRow__4750e:nth-of-type(2) .activityName__47e51,
 .activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) .contentImagesProfileV2_aa86c4 .state_a85ac0,
@@ -20,10 +21,12 @@
     font-size: 14px;
     opacity: .75
 }
+/* rounden activity images */
 .activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .assetsLargeImage_b88a59,
 .activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) .assetsLargeImage_b88a59 {
     border-radius: 4px
 }
+/* "play on spotify" button in activity */
 .activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .buttonColor__01bf8,
 .activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) .actionColor__21cca {
     background-color: transparent !important;
@@ -32,24 +35,63 @@
     transition: none !important;
     color: #1fdf64 !important
 }
+/* hide spotify header & logo in activity */
 .activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .platformIcon__05c5e,
 .activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"])>.headerContainer__2ec4e,
 .activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) .platformIcon__05c5e,
 .activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"])>.headerContainer__2ec4e {
     display: none !important
 }
+/* stylize buttons */
+/* listen along button */
 .activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .iconButton__878e3,
 .activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) .iconButton__878e3,
+/* pause/play button */
 .vc-spotify-button:has(>:is(.vc-spotify-pause,.vc-spotify-play)) {
     background-color: #fff !important;
     color: #000 !important
 }
+/* enlarge buttons on hover */
 .activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .buttonColor__01bf8:hover,
 .activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) .actionColor__21cca:hover,
 .vc-spotify-button:has(>.vc-spotify-pause):hover,
 .vc-spotify-button:has(>.vc-spotify-play):hover {
     scale: 1.05
 }
+/* stylize progress bar */
+#vc-spotify-player .bar_e58961,
+#vc-spotify-player .barFill__30e17 {
+    border-radius: 8px
+}
+/* stylize grabber */
+#vc-spotify-player .grabber_d2868c {
+    background-color: #fff !important;
+    border-color: #fff !important;
+    opacity: 0
+}
+/* show grabber on progress bar hover */
+#vc-spotify-progress-bar .sliderContainer__109be:hover .grabber_d2868c {
+    opacity: 1
+}
+/* brighter progress bar background */
+#vc-spotify-player .bar_e58961,
+.activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .bar_e63719,
+.activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) .bar_e63719 {
+    background-color: #4d4d4d
+}
+/* progress bar green on hover */
+.activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .bar_e63719:hover>.barInner_d1abc6,
+.activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) .bar_e63719:hover>.barInner_d1abc6,
+#vc-spotify-progress-bar .sliderContainer__109be:hover .barFill__30e17 {
+    background-color: #1fdf64 !important
+}
+/* enlarge & rounden image */
+#vc-spotify-info-wrapper #vc-spotify-album-image {
+    height: 56px !important;
+    width: 56px !important;
+    border-radius: 4px
+}
+/* set fonts */
 @font-face {
     font-family: Spotify;
     src: url(https://encore.scdn.co/fonts/CircularSp-Book-4eaffdf96f4c6f984686e93d5d9cb325.woff2);
@@ -70,34 +112,6 @@
     src: url(https://encore.scdn.co/fonts/CircularSpTitle-Black-3f9afb402080d53345ca1850226ca724.woff2);
     font-weight: 800
 }
-#vc-spotify-player .bar_e58961,
-#vc-spotify-player .barFill__30e17 {
-    border-radius: 8px
-}
-#vc-spotify-player .grabber_d2868c {
-    background-color: #fff !important;
-    border-color: #fff !important;
-    opacity: 0
-}
-#vc-spotify-player .bar_e58961:is(:hover, :has(.barFill__30e17:hover))+.track_a48141>.grabber_d2868c,
-#vc-spotify-player .grabber_d2868c:hover {
-    opacity: 1
-}
-#vc-spotify-player .bar_e58961,
-.activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .bar_e63719,
-.activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) .bar_e63719 {
-    background-color: #4d4d4d
-}
-.activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .bar_e63719:hover>.barInner_d1abc6,
-.activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) .bar_e63719:hover>.barInner_d1abc6,
-#vc-spotify-progress-bar .sliderContainer__109be:hover>div>div>.barFill__30e17 {
-    background-color: #1fdf64 !important
-}
-#vc-spotify-info-wrapper #vc-spotify-album-image {
-    height: 56px !important;
-    width: 56px !important;
-    border-radius: 4px
-}
 #vc-spotify-info-wrapper {
     height: 56px;
     --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -115,10 +129,7 @@
     --font-display: "Spotify", var(--fallback-font);
     font-family: var(--font-display) !important
 }
-.vc-spotify-button:hover {
-    background-color: transparent;
-    cursor: default
-}
+
 .activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]),
 .activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]),
 #vc-spotify-controls {
@@ -127,6 +138,12 @@
     --font-display: "Spotify", var(--fallback-font);
     font-family: var(--font-display) !important
 }
+/* adjust cursor behaviour */
+.vc-spotify-button:hover {
+    background-color: transparent;
+    cursor: default;
+}
+/* re-order player */
 .vc-spotify-button-row {
     gap: 8px !important
 }
@@ -148,17 +165,39 @@
     order: 3;
     margin: 0;
 }
+/* progress times on sides */
 .vc-spotify-progress-time {
     position: static;
 }
+/* center progress bar */
 #vc-spotify-progress-bar .sliderContainer__109be {
     height: 10px;
 }
+/* spotify shuffle button */
 [class*=vc-spotify-shuffle] svg path {
-    d=path("M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z")
+  d:path("m 12.5 14.723 l 0.98 -1.167 l 0.957 1.14 a 2.25 2.25 0 0 0 1.724 0.804 h 1.947 l -1.017 -1.018 a 0.75 0.75 0 1 1 1.06 -1.06 l 2.829 2.828 l -2.829 2.828 a 0.75 0.75 0 1 1 -1.06 -1.06 L 18.109 17 H 16.16 A 3.75 3.75 0 0 1 13.287 15.66 L 12.5 14.722 Z m 5.651 -9.801 a 0.75 0.75 0 1 0 -1.06 1.06 L 18.109 7 H 16.16 A 3.75 3.75 0 0 0 13.287 8.34 L 7.114 15.696 A 2.25 2.25 0 0 1 5.39 16.5 H 5 V 18 H 5.391 A 3.75 3.75 0 0 0 8.264 16.66 L 14.437 9.304 A 2.25 2.25 0 0 1 16.161 8.5 h 1.947 l -1.017 1.018 a 0.75 0.75 0 0 0 1.06 1.06 L 20.98 7.75 L 18.15 4.922 Z M 5.391 7.5 H 5 V 6 H 5.391 C 6.5 6 7.551 6.49 8.264 7.34 L 9.89 9.277 L 8.911 10.444 L 7.115 8.304 A 2.25 2.25 0 0 0 5.39 7.5 Z");
+}
+[class*=vc-spotify-shuffle] svg {
+  width: 24px;
+  height: 24px;
+}
+/* spotify repeat button */
+[class*=vc-spotify-repeat] svg path {
+  d:path("M 5 9.75 A 3.75 3.75 0 0 1 8.75 6 h 8.5 A 3.75 3.75 0 0 1 21 9.75 v 5 a 3.75 3.75 0 0 1 -3.75 3.75 H 14.81 l 1.018 1.018 a 0.75 0.75 0 1 1 -1.06 1.06 L 11.939 17.75 l 2.829 -2.828 a 0.75 0.75 0 1 1 1.06 1.06 L 14.811 17 h 2.439 a 2.25 2.25 0 0 0 2.25 -2.25 v -5 a 2.25 2.25 0 0 0 -2.25 -2.25 h -8.5 A 2.25 2.25 0 0 0 6.5 9.75 v 5 A 2.25 2.25 0 0 0 8.75 17 H 10 v 1.5 H 8.75 A 3.75 3.75 0 0 1 5 14.75 v -5 z");
+}
+[class*=vc-spotify-repeat] svg {
+  width: 24px;
+  height: 24px;
+}
+/* spotify previous button */
+[class*=vc-spotify-previous] path {
+  d:path("M 8.3 6 a 0.7 0.7 0 0 1 0.7 0.7 v 5.15 l 9.95 -5.744 a 0.7 0.7 0 0 1 1.05 0.606 v 12.575 a 0.7 0.7 0 0 1 -1.05 0.607 L 9 14.149 V 19.3 a 0.7 0.7 0 0 1 -0.7 0.7 H 6.7 a 0.7 0.7 0 0 1 -0.7 -0.7 V 6.7 a 0.7 0.7 0 0 1 0.7 -0.7 h 1.6 z");
+}
+/* spotify next button */
+[class*=vc-spotify-next] path {
+  d:path("M 17.7 6 a 0.7 0.7 0 0 0 -0.7 0.7 v 5.15 L 7.05 6.107 A 0.7 0.7 0 0 0 6 6.712 v 12.575 a 0.7 0.7 0 0 0 1.05 0.607 L 17 14.149 V 19.3 a 0.7 0.7 0 0 0 0.7 0.7 h 1.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 6.7 a 0.7 0.7 0 0 0 -0.7 -0.7 h -1.6 z");
 }
 /*resize spotify progress bar*/
-#vc-spotify-player [class^="bar_"]
-{
+#vc-spotify-player [class^="bar_"] {
   height: 20%;
 }
