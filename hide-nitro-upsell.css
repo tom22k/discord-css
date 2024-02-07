@@ -16,6 +16,8 @@
 [class^="customizationSection_"] + [class^="upsellContainer_"], /* Per server profile customizations */
 [class^="customizationSection_"][class*="disabled_"], /* Per server profile customizations */
 [class*="bannerNitroUpsell_"], /* "Unlock Banner" in profile editor */
+#guild-header-popout-premium-subscribe, /* server boost popout */
+#emoji-tab [class^=banner__]:has(img[src$="882143336a13f77e3a08.svg"]), /* boost server ad in emoji tab */
 [class^="imageUploaderHint_"],
 [class*=nitroAuthorBadgeContainer], /* Nitro badge in chat */
 [class^="imagePickerContainer_"] > [class^="optionBox_"]:nth-child(2), /* Remove gif option from profile pic upload option */
