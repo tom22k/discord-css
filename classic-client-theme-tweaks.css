@@ -4,51 +4,56 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* search bar */
-.searchBar_e0c60b
-{
-	background-color: var(--background-modifier-selected);
+/* set solid background colour */
+:root {
+	--background-custom-user: hsl(0, 0%, 5%);
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* background for server header popout */
+#guild-header-popout {
+	background-color: var(--background-custom-user);
 	border-radius: 5px;
 }
-.searchBar_e0c60b > div > div > svg
-{
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* search bar */
+.searchBar_e0c60b {
+	background-color: var(--background-custom-user);
+	border-radius: 5px;
+}
+.searchBar_e0c60b svg {
 	color: var(--interactive-normal);
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* folders */
-.expandedFolderIconWrapper__458cf > svg
-{
+.expandedFolderIconWrapper__458cf > svg {
 	color: inherit !important;
 }
-[class*=FolderIconWrapper__]
-{
+[class*=FolderIconWrapper__] {
 	color: var(--interactive-normal) !important;
 }
-[class*=FolderIconWrapper__]:hover
-{
+[class*=FolderIconWrapper__]:hover {
 	color: var(--interactive-active) !important;
-	background-color: var(--background-modifier-selected);
+	background-color: var(--background-custom-user);
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* code blocks */
-[class^=markup_] code
-{
-    background: var(--background-modifier-selected);
+[class^=markup_] code {
+    background: var(--background-custom-user);
 	border-color: rgba(255,255,255,0.1);
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* add server button */
-[class^=circleIconButton_]
-{
+[class^=circleIconButton_] {
   color: var(--interactive-normal);
 }
-[class^=circleIconButton_]:hover
-{
+[class^=circleIconButton_]:hover {
 	color: var(--interactive-active);
-	background-color: var(--background-modifier-selected);
+	background-color: var(--background-custom-user);
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
@@ -61,8 +66,7 @@
 [class^=username][style="color: rgb(10, 1, 2);"], /* sewerperson owner black */
 [class^=username][style="color: rgb(0, 0, 1);"], /* sewerperson admin black */
 [class^=username][style="color: rgb(9, 8, 8);"], /* xona loha black */
-[class^=username][style="color: rgb(12, 12, 12);"] /* xona crescent black */
-{
+[class^=username][style="color: rgb(12, 12, 12);"] /* xona crescent black */ {
 	color: var(--text-normal) !important;
 }
 /* mentions */
@@ -74,8 +78,7 @@
 .mention[style*="color: rgb(10, 1, 2);"], /* sewerperson owner black */
 .mention[style*="color: rgb(0, 0, 1);"], /* sewerperson admin black */
 .mention[style*="color: rgb(9, 8, 8);"], /* xona loha black */
-.mention[style*="color: rgb(12, 12, 12);"] /* xona crescent black */
-{
+.mention[style*="color: rgb(12, 12, 12);"] /* xona crescent black */ {
 	color: var(--text-normal) !important;
 	background: rgba(219,222,225,0.1) !important;
 }
@@ -88,26 +91,23 @@
 .mention[style*="color: rgb(10, 1, 2);"]:hover, /* sewerperson owner black */
 .mention[style*="color: rgb(0, 0, 1);"]:hover, /* sewerperson admin black */
 .mention[style*="color: rgb(9, 8, 8);"]:hover, /* xona loha black */
-.mention[style*="color: rgb(12, 12, 12);"]:hover /* xona crescent black */
-{
+.mention[style*="color: rgb(12, 12, 12);"]:hover /* xona crescent black */ {
 	color: var(--text-normal) !important;
 	background: rgba(219,222,225,0.3) !important;
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* spoiler */
-.theme-dark
-{
-  --__spoiler-background-color--hidden: var(--background-modifier-selected);
-  --__spoiler-background-color--hidden--hover: rgb(15, 15, 15);
+.theme-dark {
+  --__spoiler-background-color--hidden: var(--background-custom-user);
+  --__spoiler-background-color--hidden--hover: hsl(0, 0%, 3%);
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* scrollbars */
 :root,
 .theme-dark,
-.theme-light
-{
+.theme-light {
  --scrollbar-auto-thumb: var(--background-modifier-selected);
  --scrollbar-auto-track: transparent;
 }
@@ -117,12 +117,10 @@
 .theme-dark .container__7590f, /* 'browse channels' background */
 .theme-dark .scroller__81266, /* 'customize' background */
 .theme-dark .container__10dc7, /* header background */
-.theme-dark .header__60bef
-{
+.theme-dark .header__60bef {
   background-color: var(--background-primary);
 }
-.theme-dark .innerHeader_afca2f:after /* hide little gradient thing */
-{
+.theme-dark .innerHeader_afca2f:after /* hide little gradient thing */ {
     background: transparent;
 }
 /*nitro background fix v1.1*/
@@ -131,11 +129,9 @@
 .contentRegion__0bec1,
 .contentRegionScroller__86c79,
 .sidebarRegionScroller__1fa7e,
-.page__0b66e
-{
+.page__0b66e {
     background: none;
 }
-.container__10dc7
-{
+.container__10dc7 {
     background: none !important;
 }
