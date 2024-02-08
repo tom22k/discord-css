@@ -6,20 +6,19 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* set solid background colour */
 :root {
-	--background-custom-user: hsl(0, 0%, 5%);
+	--background-floating: hsl(0, 0%, 5%);
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* background for server header popout */
+/* background for server header popout
 #guild-header-popout {
-	background-color: var(--background-custom-user);
 	border-radius: 5px;
-}
+} */
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* search bar */
 .searchBar_e0c60b {
-	background-color: var(--background-custom-user);
+	background-color: var(--background-floating);
 	border-radius: 5px;
 }
 .searchBar_e0c60b svg {
@@ -36,13 +35,13 @@
 }
 [class*=FolderIconWrapper__]:hover {
 	color: var(--interactive-active) !important;
-	background-color: var(--background-custom-user);
+	background-color: var(--bg-overlay-selected,var(--background-modifier-selected));
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* code blocks */
 [class^=markup_] code {
-    background: var(--background-custom-user);
+    background: var(--background-floating);
 	border-color: rgba(255,255,255,0.1);
 }
 /* /////////////////////////////////////////////////////////////////// */
@@ -53,7 +52,7 @@
 }
 [class^=circleIconButton_]:hover {
 	color: var(--interactive-active);
-	background-color: var(--background-custom-user);
+	background-color: var(--bg-overlay-selected,var(--background-modifier-selected));
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
@@ -99,7 +98,7 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* spoiler */
 .theme-dark {
-  --__spoiler-background-color--hidden: var(--background-custom-user);
+  --__spoiler-background-color--hidden: var(--background-floating);
   --__spoiler-background-color--hidden--hover: hsl(0, 0%, 3%);
 }
 /* /////////////////////////////////////////////////////////////////// */
