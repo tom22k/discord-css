@@ -19,7 +19,7 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* search bar */
 .searchBar_e0c60b {
-	background-color: var(--bg-overlay-selected,var(--background-modifier-selected));
+	background-color: var(--background-modifier-selected);
 	border-radius: 5px;
 }
 .searchBar_e0c60b svg {
@@ -36,13 +36,13 @@
 }
 [class*=FolderIconWrapper__]:hover {
 	color: var(--interactive-active) !important;
-	background-color: var(--bg-overlay-selected,var(--background-modifier-selected));
+	background-color: var(--background-modifier-selected);
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* code blocks */
 [class^=markup_] code {
-    background: var(--bg-overlay-selected,var(--background-modifier-selected));
+    background: var(--background-modifier-selected);
 	border-color: rgba(255,255,255,0.1);
 }
 /* /////////////////////////////////////////////////////////////////// */
@@ -53,7 +53,7 @@
 }
 [class^=circleIconButton_]:hover {
 	color: var(--interactive-active);
-	background-color: var(--bg-overlay-selected,var(--background-modifier-selected));
+	background-color: var(--background-modifier-selected);
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
@@ -99,8 +99,8 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* spoiler */
 .theme-dark {
-  --__spoiler-background-color--hidden: var(--bg-overlay-selected,var(--background-modifier-selected));
-  --__spoiler-background-color--hidden--hover: hsl(0, 0%, 3%);
+  --__spoiler-background-color--hidden: var(--background-modifier-selected);
+  --__spoiler-background-color--hidden--hover: hsl(0, 0%, 6%);
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
