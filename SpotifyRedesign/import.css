@@ -201,3 +201,7 @@
 #vc-spotify-player [class^="bar_"] {
   height: 20%;
 }
+/* black (instead of transparent) bars in spotify logo in now playing section */
+[class^=nowPlayingColumn_] [class^=spotifySection__] [class^=activitySectionAssets_] svg {
+  background-color: black;
+}
