@@ -7,4 +7,4 @@ A simple redesign making folders appear as interactive icons
 ```
 
 ### Example:
-![https://github.com/dystopic22/css-snippets/blob/main/InteractiveFolders/snippet.gif]
+![](https://github.com/dystopic22/css-snippets/blob/main/InteractiveFolders/snippet.gif)
