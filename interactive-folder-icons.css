@@ -1,0 +1,10 @@
+[class^=expandedFolderIconWrapper__] > svg {
+	color: inherit !important;
+}
+[class*=FolderIconWrapper__] {
+	color: var(--interactive-normal) !important;
+}
+[class*=FolderIconWrapper__]:hover {
+	color: var(--interactive-active) !important;
+	background-color: var(--background-modifier-selected);
+}
