@@ -28,7 +28,7 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* folders */
-.expandedFolderIconWrapper__458cf > svg {
+[class^=expandedFolderIconWrapper__] > svg {
 	color: inherit !important;
 }
 [class*=FolderIconWrapper__] {
