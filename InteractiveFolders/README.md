@@ -1,5 +1,5 @@
 # Interactive Folders
-A simple redesign making folders appear as interactive icons
+A simple redesign making folders appear as interactive icons, compatible with all themes
 
 ### Importing:
 ```css
