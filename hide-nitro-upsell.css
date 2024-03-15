@@ -52,6 +52,8 @@ a[href*="/snowsgiving"], [class^="customizationSection"] > [class^="limitedFeatu
 [class^=messageLengthUpsellContainer_], /* Message length Nitro upselling */
 [class*=botTagRemix_], /* Remix using mobile app ad */
 [class^=nitroFileSizeUpsell__], /* Large file upload nitro upselling */
+[aria-label="Your files are too powerful"] [class^=root_] [class^=content__] [class^=defaultColor__] [class^=body__] [class^=defaultColor__], /* Large file upload nitro upselling */
+[aria-label="Your files are too powerful"] [class^=root_] [class^=shinyButton_], /* Large file upload nitro upselling */
 [class^=giftButtonContainer__], /* Gift button in user popout in DMs */
 [class^=accountProfilePopoutWrapper_] > [class^=popoutContainer__] > [class^=container__], /* Nitro profile decorations upselling in my profile popout */
 [class^=notAppAsidePanel__] > [class^=layerContainer_] > [id^=popout_] > [class^=animatorBottom_] > div:has(.image_f4d883), /*Gift Nitro upselling  */
