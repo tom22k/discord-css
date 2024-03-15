@@ -61,10 +61,12 @@ a[href*="/snowsgiving"], [class^="customizationSection"] > [class^="limitedFeatu
 [aria-label="Merch"], /* merch */
 #appearance-tab [class^=selectionGroup__]:has([aria-label="Exclusive to Nitro"]), /* customize icon section in appearance tab */
 #appearance-tab section:has([aria-label="Exclusive to Nitro"]), /* customize colour background section in appearance tab */
-#emoji-picker-grid [class^=nitroTopDividerContainer__], /* nitro top divider in emoji picker  */
-#emoji-picker-grid [class^=nitroBottomDivider_], /* nitro top divider in emoji picker  */
+#emoji-picker-tab-panel > [class*="emojiPickerHeader"]:first-child > [class^="tooltipContainer"]:nth-child(2), /* Nitro call screen reactions */
+[class^=nitroTopDividerContainer__], /* nitro top divider in emoji picker/autocomplete  */
+#emoji-picker-grid [class^=nitroBottomDivider_], /* nitro bottom divider in emoji picker  */
 #emoji-picker-grid [class^=upsellContainer_], /* nitro upsell warning in emoji picker  */
-#emoji-picker-tab-panel > [class*="emojiPickerHeader"]:first-child > [class^="tooltipContainer"]:nth-child(2) /* Nitro call screen reactions */
+[class^=autocomplete_] [class^=premiumHeader_], /* nitro header in autocomplete */
+[class^=autocomplete_] [class*=premiumEmoji__] /* nitro emoji in autocomplete */
 {
   display: none !important;
 }
