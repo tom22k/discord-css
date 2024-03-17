@@ -4,6 +4,27 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
+/* hover highlight on vc buttons */
+[class^=actionButtons_] [aria-label="Turn On Camera"]:hover,
+[class^=actionButtons_] [aria-label="Share Your Screen"]:hover,
+[class^=actionButtons_] [aria-label="Open Soundboard"]:hover,
+[class^=actionButtons_] [aria-label="Start an Activity"]:hover {
+  background-color: var(--bg-overlay-selected,var(--background-modifier-selected));
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* lighter channel hover highlight */
+.wrapper__7bcde:hover .link__95dc0 {
+  background: var(--bg-overlay-selected,var(--background-modifier-selected));
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* highlight message container on hover */
+[data-list-item-id^="chat-messages"]:hover {
+  background-color: var(--bg-overlay-selected,var(--background-modifier-selected));
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
 /* set solid background colour */
 :root {
 	--background-custom-solid: hsl(0, 0%, 5%);
