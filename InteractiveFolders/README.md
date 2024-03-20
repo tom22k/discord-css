@@ -3,8 +3,8 @@ A simple redesign making folders appear as interactive icons, compatible with al
 
 ### Importing:
 ```css
-@import url("https://github.com/tom2k/css-snippets/raw/main/InteractiveFolders/import.css");
+@import url("https://github.com/tom22k/css-snippets/raw/main/InteractiveFolders/import.css");
 ```
 
 ### Example:
-![](https://github.com/tom2k/css-snippets/blob/main/InteractiveFolders/snippet.gif)
+![](https://github.com/tom22k/css-snippets/blob/main/InteractiveFolders/snippet.gif)
