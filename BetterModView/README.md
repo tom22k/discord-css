@@ -4,7 +4,7 @@ Works for both users with and without profile themes.
 
 ### Importing:
 ```css
-@import url("https://raw.githubusercontent.com/tom2k/css-snippets/main/BetterModView/import.css");
+@import url("https://raw.githubusercontent.com/tom22k/css-snippets/main/BetterModView/import.css");
 ```
 
 ### Screenshots:
