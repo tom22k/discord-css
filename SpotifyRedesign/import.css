@@ -68,7 +68,7 @@
     border: 1px solid #fff;
 }
 /* pause/play button */
-.vc-spotify-button:has(.vc-spotify-pause,.vc-spotify-play) {
+.vc-spotify-button:has(:is(.vc-spotify-pause,.vc-spotify-play)) {
     background-color: #fff !important;
     color: #000 !important;
 }
