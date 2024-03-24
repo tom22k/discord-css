@@ -67,6 +67,11 @@
     border-radius: 50px;
     border: 1px solid #fff;
 }
+/* pause/play button */
+.vc-spotify-button:has(.vc-spotify-pause,.vc-spotify-play) {
+    background-color: #fff !important;
+    color: #000 !important;
+}
 /* enlarge buttons on hover */
 [id^=popout_] [class^=activity_]:has([class^=spotifyButtonLogo__]) button:hover
 .activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .buttonColor__01bf8:hover,
