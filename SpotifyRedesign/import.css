@@ -5,14 +5,19 @@
   cursor: pointer;
 }
 /* stylize text in activity to match player */
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer__]) :is([class*=text__], [class^=anchor_], [class*=themed__] [class*=text__]),
-[class^=activity]:has(img[src$="7231645d01e0b14f58cc.svg"]) :is([class*=text__], [class^=anchor_], [class*=themed__] [class*=text__]),
-[class^=activity]:has([class*=spotifyButtonLogo__) [class^=content_] {
+[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer__]) :is(.text__13126, .anchor_c8ddc0, .themed__857a7 .text__13126),
+.activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) :is(.text__13126, .anchor_c8ddc0, .themed__857a7 .text__13126),
+.activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) :is(.text__13126, .anchor_c8ddc0, .themed__857a7 .text__13126),
+.activityUserPopoutV2__32328:has(.spotifyButtonLogo__526f7) .content_d7cb7f,
+.activityProfileV2__4de28:has(.spotifyButtonLogo__526f7) .content_d7cb7f {
     color: #fff
 }
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer__]) :is([class^=anchor_], .themed__857a7 .text__13126),
-[class^=activity]:has(img[src$="7231645d01e0b14f58cc.svg"]) [class^=timeBar] [class*=text__],
-[class^=activity]:has(img[src$="7231645d01e0b14f58cc.svg"]) [class^=contentImages] :is([class^=detailsWrap__],[class^=state_]) [class^=anchor_] {
+.activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) [class^=timeBarUserPopoutV2_] .text__13126,
+[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer__]) :is(.anchor_c8ddc0, .themed__857a7 .text__13126),
+.activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .contentImagesUserPopoutV2__04250 .state_a85ac0,
+.activityUserPopoutV2__32328:has(img[src$="7231645d01e0b14f58cc.svg"]) .contentImagesUserPopoutV2__04250 .textRow__4750e:nth-of-type(2) .activityName__47e51,
+.activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) .contentImagesProfileV2_aa86c4 .state_a85ac0,
+.activityProfileV2__4de28:has(img[src$="7231645d01e0b14f58cc.svg"]) .contentImagesProfileV2_aa86c4 .textRow__4750e:nth-of-type(2) .activityName__47e51 {
     opacity: .75;
 }
 /* white progress bar */
@@ -176,10 +181,39 @@
     order: 3;
     margin: 0;
 }
-/* progress times on sides */
+/* PROGRESS TIMES ON SIDES */
+/* controls area*/
 .vc-spotify-progress-time {
     position: static;
 }
+/* user poopout & profile */
+[class^=timeBarProfileV2__],
+[class^=timeBarUserPopoutV2_] {
+  justify-content: center;
+  display: flex;
+}
+[class^=contentImagesProfileV2_] [class^=timeBarProfileV2__] [class^=barInMultiLine_] {
+  width: 27%;
+  position: absolute;
+}
+[class^=contentNoImagesProfileV2__] [class^=timeBarProfileV2__] [class^=barInMultiLine_] {
+  width: 82.5%;
+  position: absolute;
+}
+[class^=contentImagesProfileV2_] [class^=timeBarProfileV2__] [class^=flex] {
+  margin-top: -1.75%;
+}
+[class^=contentNoImagesProfileV2__] [class^=timeBarProfileV2__] [class^=flex] {
+  margin-top: -0.75%;
+}
+[class^=timeBarUserPopoutV2_] [class^=barInMultiLine_] {
+  width: 77.5%;
+  position: absolute;
+}
+[class^=timeBarUserPopoutV2_] [class^=flex] {
+  margin-top: -1.25%;
+}
+
 /* center progress bar */
 #vc-spotify-progress-bar .sliderContainer__109be {
     height: 10px;
