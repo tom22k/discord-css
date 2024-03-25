@@ -10,9 +10,9 @@
 [class^=activity]:has([class*=spotifyButtonLogo__) [class^=content_] {
     color: #fff
 }
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer__]) :is([class^=anchor_], .themed__857a7 .text__13126),
+[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer__]) :is([class^=anchor_], [class*=themed__] [class*=text__]),
 [class^=activity]:has(img[src$="7231645d01e0b14f58cc.svg"]) [class^=timeBar] [class*=text__],
-[class^=activity]:has(img[src$="7231645d01e0b14f58cc.svg"]) [class^=contentImages] :is([class^=detailsWrap__],[class^=state_]) [class^=anchor_] {
+[class^=activity]:has(img[src$="7231645d01e0b14f58cc.svg"]) [class^=contentImages] :is([class^=detailsWrap__]) [class^=anchor_] {
     opacity: .75;
 }
 /* white progress bar */
