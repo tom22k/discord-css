@@ -187,21 +187,25 @@
     position: static;
 }
 /* user poopout & profile */
+[class^=activityUserPopoutV2__]:has(img[src$="7231645d01e0b14f58cc.svg"]) [class^=contentImagesUserPopoutV2__] {
+  margin-top: 3px; /* fix details being horizontally misaligned */
+}
 [class^=timeBarProfileV2__],
 [class^=timeBarUserPopoutV2_] {
   justify-content: center;
   display: flex;
 }
 [class^=contentImagesProfileV2_] [class^=timeBarProfileV2__] [class^=barInMultiLine_] {
-  width: 27%;
+  width: 65%;
   position: absolute;
+  margin-top: 2.23%;
+}
+[class^=contentImagesProfileV2_] [class^=timeBarProfileV2__] [class^=flex] {
+  margin-top: 2%;
 }
 [class^=contentNoImagesProfileV2__] [class^=timeBarProfileV2__] [class^=barInMultiLine_] {
   width: 82.5%;
   position: absolute;
-}
-[class^=contentImagesProfileV2_] [class^=timeBarProfileV2__] [class^=flex] {
-  margin-top: -1.75%;
 }
 [class^=contentNoImagesProfileV2__] [class^=timeBarProfileV2__] [class^=flex] {
   margin-top: -0.75%;
@@ -213,7 +217,6 @@
 [class^=timeBarUserPopoutV2_] [class^=flex] {
   margin-top: -1.25%;
 }
-
 /* center progress bar */
 #vc-spotify-progress-bar .sliderContainer__109be {
     height: 10px;
