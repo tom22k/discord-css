@@ -181,39 +181,10 @@
     order: 3;
     margin: 0;
 }
-/* PROGRESS TIMES ON SIDES */
-/* controls area*/
+/* progress times on sides */
 .vc-spotify-progress-time {
     position: static;
 }
-/* user poopout & profile */
-[class^=timeBarProfileV2__],
-[class^=timeBarUserPopoutV2_] {
-  justify-content: center;
-  display: flex;
-}
-[class^=contentImagesProfileV2_] [class^=timeBarProfileV2__] [class^=barInMultiLine_] {
-  width: 27%;
-  position: absolute;
-}
-[class^=contentNoImagesProfileV2__] [class^=timeBarProfileV2__] [class^=barInMultiLine_] {
-  width: 82.5%;
-  position: absolute;
-}
-[class^=contentImagesProfileV2_] [class^=timeBarProfileV2__] [class^=flex] {
-  margin-top: -1.75%;
-}
-[class^=contentNoImagesProfileV2__] [class^=timeBarProfileV2__] [class^=flex] {
-  margin-top: -0.75%;
-}
-[class^=timeBarUserPopoutV2_] [class^=barInMultiLine_] {
-  width: 77.5%;
-  position: absolute;
-}
-[class^=timeBarUserPopoutV2_] [class^=flex] {
-  margin-top: -1.25%;
-}
-
 /* center progress bar */
 #vc-spotify-progress-bar .sliderContainer__109be {
     height: 10px;
