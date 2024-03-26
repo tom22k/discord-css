@@ -9,5 +9,7 @@ A simple redesign for the Spotify activity portions in user popouts and Vencord'
 ```
 
 ### Screenshots:
-![image](https://github.com/tom22k/css-snippets/assets/143504320/44c39938-8b17-4d6b-9a36-78f02ea81bc2)
-![image](https://github.com/tom22k/css-snippets/assets/143504320/a039fff8-532f-4823-a7fd-7aaa1d41dc58)
+![image](https://github.com/tom22k/css-snippets/assets/143504320/d3248a8b-1368-4cf3-acf0-55f3380d9e8b)
+![image](https://github.com/tom22k/css-snippets/assets/143504320/ae9442de-26c7-4f48-b943-b39af36f05ca)
+![image](https://github.com/tom22k/css-snippets/assets/143504320/81f261f2-7888-4d32-832d-74b145775dcc)
+![image](https://github.com/tom22k/css-snippets/assets/143504320/4ac052da-fefa-42a1-994b-8bf7cdf9bd5c)
