@@ -145,17 +145,16 @@
 /* re-order player */
 .vc-spotify-button-row {
     gap: 8px !important;
+    order: 2;
+    margin: 5px 0 !important;
 }
 #vc-spotify-player {
     display: flex;
     flex-direction: column;
+    background-color: #000;
 }
 #vc-spotify-info-wrapper {
     order: 0;
-}
-.vc-spotify-button-row {
-    order: 2;
-    margin: 5px 0 !important;
 }
 #vc-spotify-progress-bar {
     display: flex;
