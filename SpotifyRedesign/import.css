@@ -151,7 +151,7 @@
 #vc-spotify-player {
     display: flex;
     flex-direction: column;
-    background-color: #000;
+    background-color: #000 !important;
 }
 #vc-spotify-info-wrapper {
     order: 0;
