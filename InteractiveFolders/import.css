@@ -1,10 +1,10 @@
-[class^=expandedFolderIconWrapper__] > svg {
+[class^=expandedFolderIconWrapper_] > svg {
 	color: inherit !important;
 }
-[class*=FolderIconWrapper__] {
+[class*=FolderIconWrapper_] {
 	color: var(--interactive-normal) !important;
 }
-[class*=FolderIconWrapper__]:hover {
+[class*=FolderIconWrapper_]:hover {
 	color: var(--interactive-active) !important;
 	background-color: var(--background-modifier-selected);
 }
