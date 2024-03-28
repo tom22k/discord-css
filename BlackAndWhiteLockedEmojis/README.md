@@ -9,6 +9,9 @@ If you don't have Discord Nitro, this will make all the emojis that you cannot u
 ### Screenshots:
 **Before:**
 
+![gif](https://github.com/tom22k/css-snippets/assets/143504320/a86e813e-9281-46a8-be4a-40d0e48acddb)
+
+
 ![image](https://github.com/tom22k/css-snippets/assets/143504320/f52957dc-82d5-4584-aeb7-c4899c25736a)
 
 **After:**
