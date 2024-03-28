@@ -9,3 +9,9 @@
   background: hsl(var(--black-500-hsl)/.6);
   filter: brightness(50%);
 }
+
+#emoji-picker-grid [class^=nitroTopDividerContainer_],
+#emoji-picker-grid [class^=upsellContainer_],
+#emoji-picker-tab-panel [class^=premiumPromo_] {
+  display: none !important;
+}
