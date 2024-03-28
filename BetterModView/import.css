@@ -5,10 +5,10 @@
 }
 [style="width: 480px;"] [class^=userProfile] [class^=container_] [class^=topRow_],
 [style="width: 480px;"] [class^=userProfile] [class^=container_] [class^=bottomRow_],
-[style="width: 480px;"] [class^=userProfile] [class^=container_] [class^=header__],
+[style="width: 480px;"] [class^=userProfile] [class^=container_] [class^=header_],
 [style="width: 480px;"] [class^=userProfile] [class^=container_] [class^=innerContainer_] {
   background-color: rgba(255, 255, 255, 0.05) !important;
 }
-[style="width: 480px;"] [class^=userProfile] [class^=container_] [class^=innerContainer_] [class^=modInfoItem__] {
+[style="width: 480px;"] [class^=userProfile] [class^=container_] [class^=innerContainer_] [class^=modInfoItem_] {
   background-color: rgba(0, 0, 0, 0.15);
 }
