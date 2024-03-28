@@ -1,0 +1,24 @@
+/* CLICKABLE CONNECTED ACCOUNTS */
+[class^=connectedAccountContainer_] {
+  position: relative;
+  border: none;
+}
+
+[class^=connectedAccountName_] a {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* reposition arrow back to the right */
+[class^=connectedAccountName_] a svg {
+  position: absolute;
+  top: calc(50% - (18px / 2));
+  right: calc(2%);
+}
+
+/* give buttons a background on hover */
+[class^=connectedAccountContainer_] a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
