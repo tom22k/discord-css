@@ -1,8 +1,8 @@
 /* user panel config by seele1306 */
-[aria-label="User area"] [class^=nameTag_][class*=canCopy_] {
+[aria-label="User area"] > [class^=container_] [class^=nameTag_][class*=canCopy_] {
 margin-left: 5px
 }
-[aria-label="User area"] [class^=container_] {
+[aria-label="User area"] > [class^=container_] {
 display: flex;
 flex-direction: column;
 height: fit-content;
@@ -11,7 +11,7 @@ padding: 0;
 margin: 0;
 background: transparent !important
 }
-[aria-label="User area"] [class^=container_] > [class^=avatarWrapper_] {
+[aria-label="User area"] > [class^=container_] > [class^=avatarWrapper_] {
 width: 100%;
 height: 45px;
 padding: 0 16px;
@@ -19,12 +19,12 @@ margin: 0;
 box-sizing: border-box;
 border-radius: 0
 }
-[aria-label="User area"] [class^=container_] [class^=flex_] {
+[aria-label="User area"] > [class^=container_] [class^=flex_] {
 width: 100%;
 justify-content: center;
 gap: 0px
 }
-[aria-label="User area"] [class^=container_] button {
+[aria-label="User area"] > [class^=container_] button {
 background: transparent;
 height: 35px;
 width: 100%;
