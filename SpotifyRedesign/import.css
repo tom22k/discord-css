@@ -186,12 +186,12 @@
 [class^=activityProfileV2_]:has([class^=disabledButtonWrapper_],[class*=spotifyButtonLogo_]) [class^=timeBarProfileV2_] [class^=flex] {
   margin-top: -0.8%;
 }
-[class^=activityProfileV2_]:has([class*=spotifyButtonLogo_],:not([class^=disabledButtonWrapper_])) [class^=timeBarProfileV2_] [class^=barInMultiLine_] {
+[class^=activityProfileV2_]:has(:not([class^=disabledButtonWrapper_])):has([class*=spotifyButtonLogo_]) [class^=timeBarProfileV2_] [class^=barInMultiLine_] {
   width: 27.5%;
   position: absolute;
   margin-top: 0.5%;
 }
-[class^=activityProfileV2_]:has([class*=spotifyButtonLogo_],:not([class^=disabledButtonWrapper_])) [class^=timeBarProfileV2_] [class^=flex] {
+[class^=activityProfileV2_]:has(:not([class^=disabledButtonWrapper_])):has([class*=spotifyButtonLogo_]) [class^=timeBarProfileV2_] [class^=flex] {
   margin-top: -0.5%;
 }
 [class^=activityProfileV2_]:has([class^=platformIcon_],[class^=contentNoImagesProfileV2_]) [class^=timeBarProfileV2_] [class^=barInMultiLine_] {
