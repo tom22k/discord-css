@@ -192,3 +192,30 @@
     position: absolute;
     right: 8px;
 }
+/* (un)fav emote */
+#expression-picker-unfavorite > [class*="label_"]::after,
+#expression-picker-favorite > [class*="label_"]::after,
+#message-favorite > [class*="label_"]::after,
+#message-unfavorite > [class*="label_"]::after {
+  display: inline-block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: var(--interactive-normal);
+  -webkit-mask: url(https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg);
+  mask: url(https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg);
+  position: absolute;
+  right: 8px;
+}
+/* (un)fav channel */
+#channel-context-opt-in-favorite-channel > [class*="label_"]::after {
+  display: inline-block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: var(--interactive-normal);
+  -webkit-mask: url(https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg);
+  mask: url(https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg);
+  position: absolute;
+  right: 8px;
+}
