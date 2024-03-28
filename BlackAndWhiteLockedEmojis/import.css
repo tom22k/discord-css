@@ -1,0 +1,11 @@
+/* make nitro needed emojis b&w */
+#emoji-picker-grid [class^=emojiListRow_] [class^=emojiItem_]:has([class^=emojiLockIconContainer_]),
+#emoji-picker-grid [class*=categorySectionNitroLocked_] {
+  background-color: transparent;
+  filter: grayscale(100%);
+}
+
+#emoji-picker-grid [class*=categorySectionNitroLocked_] [class^=lockedEmoji_] {
+  background: hsl(var(--black-500-hsl)/.6);
+  filter: brightness(50%);
+}
