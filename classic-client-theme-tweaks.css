@@ -14,7 +14,7 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* lighter channel hover highlight */
-.wrapper__7bcde:hover .link__95dc0 {
+#channels [class^=iconVisibility_]:hover [role=link] {
   background: var(--bg-overlay-selected,var(--background-modifier-selected));
 }
 /* /////////////////////////////////////////////////////////////////// */
@@ -39,23 +39,23 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* search bar */
-.searchBar_e0c60b {
+[aria-label="Channel header"] [class^=searchBar_] {
 	background-color: var(--background-modifier-selected);
 	border-radius: 5px;
 }
-.searchBar_e0c60b svg {
+[aria-label="Channel header"] [class^=searchBar_] svg {
 	color: var(--interactive-normal);
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* folders */
-[class^=expandedFolderIconWrapper__] > svg {
+[aria-label="Servers"] [class^=expandedFolderIconWrapper_] > svg {
 	color: inherit !important;
 }
-[class*=FolderIconWrapper__] {
+[aria-label="Servers"] [class*=FolderIconWrapper_] {
 	color: var(--interactive-normal) !important;
 }
-[class*=FolderIconWrapper__]:hover {
+[aria-label="Servers"] [class*=FolderIconWrapper_]:hover {
 	color: var(--interactive-active) !important;
 	background-color: var(--background-modifier-selected);
 }
@@ -69,10 +69,10 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* add server button */
-[class^=circleIconButton_] {
+[data-list-id=guildsnav] [data-list-item-id=guildsnav___create-join-button] {
   color: var(--interactive-normal);
 }
-[class^=circleIconButton_]:hover {
+[data-list-id=guildsnav] [data-list-item-id=guildsnav___create-join-button]:hover {
 	color: var(--interactive-active);
 	background-color: var(--background-modifier-selected);
 }
@@ -139,33 +139,32 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* scrollbars */
-:root,
-.theme-dark,
-.theme-light {
+:root {
  --scrollbar-auto-thumb: var(--background-modifier-selected);
  --scrollbar-auto-track: transparent;
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* use theme colours in 'channels & roles' menu */
-.theme-dark .container__7590f, /* 'browse channels' background */
-.theme-dark .scroller__81266, /* 'customize' background */
-.theme-dark .container__10dc7, /* header background */
-.theme-dark .header__60bef {
+[class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=header_], /* header background */
+[class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=content_]:has([class^=tabBar_]), /* tab bar background */
+[class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=content_]:has([class^=tabBar_]) [class^=pageBody_], /* "browse channels" background */
+[class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=chat_]:has([class^=prompt_]) /* "customize" background */ {
   background-color: var(--background-primary);
 }
-.theme-dark .innerHeader_afca2f:after /* hide little gradient thing */ {
-    background: transparent;
+/* hide little gradient thing */
+[class^=base_] > [class^=content_] > [class^=chat_] > [class^=header_] > [class^=upperContainer_] > [class*=innerHeader_]::after {
+  display: none;
 }
-/*nitro background fix v1.1*/
-.layer__2efaa+.layer__2efaa,
-.standardSidebarView__1129a,
-.contentRegion__0bec1,
-.contentRegionScroller__86c79,
-.sidebarRegionScroller__1fa7e,
-.page__0b66e {
+/*nitro background fix v1.1*/ /* not mine so idk where there r */
+.layer_f7d46a+.layer_f7d46a,
+.standardSidebarView__12528,
+.contentRegion__08eba,
+.contentRegionScroller__9ae20,
+.sidebarRegionScroller__8113e,
+.page_e5cc79 {
     background: none;
 }
-.container__10dc7 {
+.container__03ec9 {
     background: none !important;
 }
