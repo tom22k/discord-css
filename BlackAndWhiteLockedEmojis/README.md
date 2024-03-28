@@ -1,5 +1,5 @@
 # Better Locked Emojis
-If you don't have Discord Nitro, this will make all the emojis that you cannot use black and white.
+If you don't have Discord Nitro, this will make all the emojis that you cannot use black and white as well as remove the annoying Nitro upsell.
 
 ### Importing:
 ```css
