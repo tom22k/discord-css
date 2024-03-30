@@ -4,6 +4,12 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
+/* lighter title bar */
+[class^=typeWindows_][class*=withFrame][class*=titleBar_][class*=withBackgroundOverride_] {
+  background-color: var(--background-modifier-selected);
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
 /* hover highlight on vc buttons */
 [class^=actionButtons_] [aria-label="Turn On Camera"]:hover,
 [class^=actionButtons_] [aria-label="Share Your Screen"]:hover,
@@ -148,7 +154,7 @@
 /* use theme colours in 'channels & roles' menu */
 [class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=header_], /* header background */
 [class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=content_]:has([class^=tabBar_]), /* tab bar background */
-[class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=content_]:has([class^=tabBar_]) [class^=pageBody_], /* "browse channels" background */
+[class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=content_] [class^=pageBody_], /* "browse channels" background */
 [class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=chat_]:has([class^=prompt_]) /* "customize" background */ {
   background-color: var(--background-primary);
 }
