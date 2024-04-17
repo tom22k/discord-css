@@ -85,15 +85,15 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* light background to dark usernames */
-[class^=username][style="color: rgb(2, 2, 2);"], /* ? black */
-[class^=username][style="color: rgb(5, 0, 5);"], /* color chan black */
-[class^=username][style="color: rgb(0, 0, 0);"], /* black */
-[class^=username][style="color: rgb(15, 2, 2);"], /* hiraeth black */
-[class^=username][style="color: rgb(0, 1, 0);"], /* swiss bedwars black */
-[class^=username][style="color: rgb(10, 1, 2);"], /* sewerperson owner black */
-[class^=username][style="color: rgb(0, 0, 1);"], /* sewerperson admin black */
-[class^=username][style="color: rgb(9, 8, 8);"], /* xona loha black */
-[class^=username][style="color: rgb(12, 12, 12);"] /* xona crescent black */ {
+[class*=username_][style="color: rgb(2, 2, 2);"], /* ? black */
+[class*=username_][style="color: rgb(5, 0, 5);"], /* color chan black */
+[class*=username_][style="color: rgb(0, 0, 0);"], /* black */
+[class*=username_][style="color: rgb(15, 2, 2);"], /* hiraeth black */
+[class*=username_][style="color: rgb(0, 1, 0);"], /* swiss bedwars black */
+[class*=username_][style="color: rgb(10, 1, 2);"], /* sewerperson owner black */
+[class*=username_][style="color: rgb(0, 0, 1);"], /* sewerperson admin black */
+[class*=username_][style="color: rgb(9, 8, 8);"], /* xona loha black */
+[class*=username_][style="color: rgb(12, 12, 12);"] /* xona crescent black */ {
 	color: var(--text-normal) !important;
 }
 /* mentions */
@@ -123,15 +123,15 @@
 	background-color: rgba(219,222,225,0.3) !important;
 }
 /* mentions in message bar */
-[class^=channelTextArea__] [class^=wrapper_][style*="color: rgb(2, 2, 2);"], /* ? black */
-[class^=channelTextArea__] [class^=wrapper_][style*="color: rgb(5, 0, 5);"], /* color chan black */
-[class^=channelTextArea__] [class^=wrapper_][style*="color: rgb(0, 0, 0);"], /* black */
-[class^=channelTextArea__] [class^=wrapper_][style*="color: rgb(15, 2, 2);"], /* hiraeth black */
-[class^=channelTextArea__] [class^=wrapper_][style*="color: rgb(0, 1, 0);"], /* swiss bedwars black */
-[class^=channelTextArea__] [class^=wrapper_][style*="color: rgb(10, 1, 2);"], /* sewerperson owner black */
-[class^=channelTextArea__] [class^=wrapper_][style*="color: rgb(0, 0, 1);"], /* sewerperson admin black */
-[class^=channelTextArea__] [class^=wrapper_][style*="color: rgb(9, 8, 8);"], /* xona loha black */
-[class^=channelTextArea__] [class^=wrapper_][style*="color: rgb(12, 12, 12);"] /* xona crescent black */ {
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(2, 2, 2);"], /* ? black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(5, 0, 5);"], /* color chan black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(0, 0, 0);"], /* black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(15, 2, 2);"], /* hiraeth black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(0, 1, 0);"], /* swiss bedwars black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(10, 1, 2);"], /* sewerperson owner black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(0, 0, 1);"], /* sewerperson admin black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(9, 8, 8);"], /* xona loha black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(12, 12, 12);"] /* xona crescent black */ {
 	color: var(--text-normal) !important;
 	background-color: rgba(219,222,225,0.1) !important;
 }
