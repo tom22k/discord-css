@@ -149,6 +149,9 @@
  --scrollbar-auto-thumb: var(--background-modifier-selected);
  --scrollbar-auto-track: transparent;
 }
+[class^=chat_] [class^=messagesWrapper_] [class*=scroller_][class*=auto_] {
+  scrollbar-color: var(--interactive-normal);
+}
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* use theme colours in 'channels & roles' menu */
