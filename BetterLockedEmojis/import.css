@@ -10,6 +10,12 @@
   filter: brightness(50%);
 }
 
+/* disable clicking on unavailable emojis */
+#emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroLocked],
+#emoji-picker-grid [class^=emojiItem_]:has([class^=emojiLockIconContainer_]) {
+  pointer-events: none;
+}
+
 #emoji-picker-grid [class^=nitroTopDividerContainer_],
 #emoji-picker-grid [class^=upsellContainer_],
 #emoji-picker-tab-panel [class^=premiumPromo_] {
