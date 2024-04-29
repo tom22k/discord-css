@@ -57,6 +57,9 @@
 [class^=userProfileModalOverlayBackground_] [class^=body_] [class^=infoScroller] {
     scrollbar-color: var(--profile-body-divider-color) var(--scrollbar-thin-track) !important;
 }
+#channels {
+    scrollbar-width: none;
+}
 /* hide unnecessary scrollbar in user popouts */
 [class^=userPopoutOverlayBackground_] [class^=scroller_] {
   scrollbar-width: none;
@@ -95,108 +98,6 @@
 
 [aria-label="Friends"] [class^=nowPlayingColumn_] [class^=itemCard_] {
   padding: 8px;
-}
-
-/* /////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* HIDE */
-/* vencord custom badges */
-[aria-label="User Badges"] a:has([style="border-radius: 50%; transform: scale(0.9);"]),
-/* "change decoration" when trying to change avatar */
-#user-settings-change-avatar-change-avatar-decoration,
-/* social links in settings */
-[aria-label="User Settings"] [class^=socialLinks_],
-/* extra experiment settings */
-[data-tab-id="Text Component"],
-[data-tab-id="Text Playground"],
-[data-tab-id="Payment Flow Modals"],
-[data-tab-id="Dismissible Content Options"],
-[data-tab-id="Hotspot Options"],
-[data-tab-id="Developer Options"],
-/* server banner */
-[class*=animatedContainer_]:has([class*=bannerImage_]),
-/* server banner spacer clickable*/
-[class*=animatedBannerHoverLayer_],
-/* server banner spacer */
-[style="height: 84px;"],
-/* server header popout divider */
-#guild-header-popout [class^=separator_],
-/* server boost progress */
-#channels [class^=container_][aria-label*="Boost"],
-/* create invite on channels */
-#channels [aria-label="Create Invite"],
-/* server guide */
-[data-list-item-id^="channels___home-tab-"],
-/* create thread suggestion */
-[class^="threadSuggestionBar"],
-/* translate button in message bar (translate plugin) */
-[aria-label="Open Translate Modal"],
-/* server shop */
-#channels>ul>li:has(#clip0_2645_182555),
-/* announcement in profile customizer */
-#profile-customization-tab>[class^=container_]:has([class^=art_]),
-/* user context menu: call */
-#user-context-call,
-/* user context menu: add friend nickname */
-#user-context-add-friend-nickname,
-/* dividers in channel column */
-#channels [class^=sectionDivider_],
-/* help button */
-[href="https://support.discord.com"],
-/* inbox button when no notifs */
-[aria-label="Inbox"]:not(:has([class^=iconBadge_], [class*=recentMentionsPopout_])),
-/* search bar in friends list
-[aria-label="Friends"] [class^=searchBar_], */
-/* separator in channel actions popout */
-#channel-context [class^=separator_],
-/* separator in message actions popout */
-#message-actions [class^=separator_],
-/* speak message */
-#message-tts,
-#message-actions-tts,
-/* message id in shift msg actions */
-[aria-label="Message Actions"] [aria-label="Copy Message ID"],
-/* mark unread */
-#message-actions-mark-unread,
-#message-mark-unread,
-[aria-label="Mark Unread"],
-/* quickcss toggle in vc toolbox
-#vc-toolbox-vc-toolbox-quickcss-toggle, */
-/* badge api in vc toolbox */
-#vc-toolbox [aria-label="BadgeAPI"],
-/* separator in vc toolbox */
-#vc-toolbox [class^=separator_],
-/*"welcome to channel" thing */
-[class^=chatContent_] [class^=container_]:has([class^=emptyChannelIcon_], [class^=inner_]),
-/* shortens right-click settings menu */
-#user-settings-cog>[class^=scroller_]>[class^=item_],
-/* family center */
-[aria-label="Family Center"],
-/* discoverable servers */
-[data-list-id="guildsnav"]>[class^=scroller_]>[class^=listItem_]:has([aria-label*=Discoverable]),
-/* events */
-[data-list-item-id^="channels___upcoming-events"],
-/* member count in server icon hover */
-.vc-membercount-tooltip,
-/* "Get started" */
-#channels [class^=progressBarContainer_]:has([style="background-color: var(--background-modifier-active);"]),
-/* "Next: read x" */
-[class^=chatContent_] [class^=container_]:has([class^=banner_]),
-/* mini mutuals */
-[class^=mainContainer_][class*=profileMutuals_],
-/* user context menu: add note */
-#user-context-note,
-/* notes */
-[class^=note_],
-/* notes header in user popout & profile panel*/
-[class^=section_]:has(> [class^=note_]),
-/* notes header in user profile modal*/
-[class^=userProfileModal] [class^=userInfoSection_]>h1:has(+ [class^=note_]),
-/* divider before notes in profile panel */
-[class^=profilePanel_] [class^=divider]:has(+ [class^=section_] > [class^=note_]),
-/* notification settings in channel header */
-[aria-label="Notification Settings"] {
-  display: none !important;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
