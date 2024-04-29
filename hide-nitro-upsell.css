@@ -5,100 +5,212 @@
  * @author Vendicated, msm8916, D3SOX
  * @version 1.0
 */
-[class^="channel_"] > div > [href="/store"], /* Nitro Button above DM List */
-[class^="channel_"] > div > [href="/shop"], /* Shop Button above DM List */
-[class^="channelTextArea"] [class^="buttons_"] > button, /* Gift Button */
-[class^="upsellVisible_"], /* Banner Nitro Upsell Header in the user modal */
-[class^="premiumIconWrapper"], /* Nitro Icon in top right on Banners */
-[class^="characterCount_"] [class*="upsell_"], /* "Send longer Messages with Discord Nitro!" */
-[class^="emojiSection_"] [class*="shinyButton_"], /* "Get Nitro" button in Emoji/Sticker modal" */
-[class*="tryItOutSection_"], /*try nitro banner section on profile editor */
-[class^="premiumIcon"], /* Try remove booster badge */
-[class^="customizationSection_"] + [class^="upsellContainer_"], /* Per server profile customizations */
-[class^="customizationSection_"][class*="disabled_"], /* Per server profile customizations */
-[class*="bannerNitroUpsell_"], /* "Unlock Banner" in profile editor */
-#guild-header-popout-premium-subscribe, /* server boost popout */
-#emoji-tab [class^=banner_]:has(img[src$="882143336a13f77e3a08.svg"]), /* boost server ad in emoji tab */
-[class^="imageUploaderHint_"],
-[class*=nitroAuthorBadgeContainer], /* Nitro badge in chat */
-[class^="imagePickerContainer_"] > [class^="optionBox_"]:nth-child(2), /* Remove gif option from profile pic upload option */
-[class^="premiumTab"], /* Nitro settings tab */
-#user-settings-cog-Discord_Nitro, /* Nitro settings right click entry */
-#user-settings-cog-Billing, /* Billing settings right click entry */
-[class^="subscribeAction"], /* Nitro upselling in server boosting screen */
-[class^="upsellBanner"], /* Nitro upselling in screen share */
-[class^="userPopoutInner"] > [class^="wrapper"] > [class^="banner"], /* Nitro upselling in user popout when hovering over banner */
-[class^="userPopoutInner"] > [class^="containerWrapper"], /* Avatar decorations upselling in user popout */
-[class*="premiumFeatureBannerBackground"], /* Avatar decorations upselling in profiles settings tab */
-[class*="premiumFeatureBorder"], /* Profile effect upselling in profiles settings tab */
-[class^="userPanelInner"] > [class*="inSidebar"], /* Avatar decorations upselling in user side panel */
-[class^="tierCtaContainer"], [class^="tierCtaContainer"] + [class^="shelf"], /* Nitro upselling in activities */
-a[href*="/snowsgiving"], [class^="customizationSection"] > [class^="limitedFeatureBorder"], /* Snowsgiving bs */
-[class^="upsellOverlayContainer_"], /* Upsell overlay in profiles tab */
-[class*="sansAttachButton"] > [class^="buttons"] > [class^="container"], /* Christmas gifting button */
-[id^="popout"] [class*="contentPremium"], /* Nitro upselling popups on settings (e.g. avatar decorations) */
-[class^="birthdayFeatureBorder"], /* Birthday avatar decoration upselling */
-[class^="container_"]:has([class^="falloweenArtContainer_"]), /* Halloween avatar decoration upselling */
-[class^="sidebar"] > [class^="container"] > [class^="wrapper"] > [class^="container"] > [class^="content"], /* Nitro upselling above profile (e.g. super reactions) */
-[class^="themeEditor"], /* Nitro theme upselling */
-[class*="cozyMessage"] > [class*="buttonContainer"] > [class*="buttons"] > [class*="wrapper"] > [aria-label*="Add Super Reaction"], /* Message Hover menu super reactions */
-[id^="popout"] [class*="colorPremiumGradient"], /* Message Hover overflow menu super reactions */
-#message [class*="colorPremiumGradient"], /* Message right click menu super reactions */
-[class^="burstReactionTooltipPrompt"], /* Super reaction tooltip Nitro upsell */
-[aria-label="Add Super Reaction"], /* Message hover add super reaction icon */
-[class^="side_"] > [class^="header_"] + [class^="premiumTab"] + [class^="item_"] + [class^="item_"] + [class^="item_"] + [class^="item_"], /* Settings billing tab */
-[class^=container_]:has([class^=artContainer_]), /* Avatar decorations upselling in profiles settings tab */
-[class^=customizationSection_]:has([class^=nitroWheel_]), /* Profile effect upselling in profiles settings tab */
-[class^=messageLengthUpsellContainer_], /* Message length Nitro upselling */
-[class*=botTagRemix_], /* Remix using mobile app ad */
-[class^=nitroFileSizeUpsell_], /* Large file upload nitro upselling */
-[aria-label="Your files are too powerful"] [class^=root_] [class^=content_] [class^=defaultColor_] [class^=body_] [class^=defaultColor_], /* Large file upload nitro upselling */
-[aria-label="Your files are too powerful"] [class^=root_] [class^=shinyButton_], /* Large file upload nitro upselling */
-[class^=giftButtonContainer_], /* Gift button in user popout in DMs */
-[class^=accountProfilePopoutWrapper_] > [class^=popoutContainer_] > [class^=container_], /* Nitro profile decorations upselling in my profile popout */
-[class^=notAppAsidePanel_] > [class^=layerContainer_] > [id^=popout_] > [class^=animatorBottom_] > div:has([class^=image_]), /*Gift Nitro upselling  */
-[class*=effectsWrapper], /* no more super reaction effect */
-#profile-customization-tab > div:nth-child(4) > div > div > [class^=sectionsContainer_] > div:nth-child(4), /* avatar decoration customizer */
-#profile-customization-tab > div:nth-child(4) > div > div > [class^=sectionsContainer_] > div:nth-child(5), /* profile effect customizer */
-[aria-label="Merch"], /* merch */
-#appearance-tab [class^=selectionGroup_]:has([aria-label="Exclusive to Nitro"]), /* customize icon section in appearance tab */
-#appearance-tab section:has([aria-label="Exclusive to Nitro"]), /* customize colour background section in appearance tab */
-#emoji-picker-tab-panel > [class*="emojiPickerHeader"]:first-child > [class^="tooltipContainer"]:nth-child(2), /* Nitro call screen reactions */
-[class^=nitroTopDividerContainer_], /* nitro top divider in emoji picker/autocomplete  */
-#emoji-picker-grid [class^=nitroBottomDivider_], /* nitro bottom divider in emoji picker  */
-#emoji-picker-grid [class^=upsellContainer_], /* nitro upsell warning in emoji picker  */
-[class^=autocomplete_] [class^=premiumHeader_], /* nitro header in autocomplete */
-[class^=autocomplete_] [class*=premiumEmoji_] /* nitro emoji in autocomplete */
-{
+/* SERVER BOOSTING */
+#guild-header-popout-premium-subscribe,
+#guild-header-popout div:has(#guild-header-popout-premium-subscribe) + [class^=separator_],
+/* server boost settings tab */
+[class^=item_][data-tab-id="Nitro Server Boost"],
+/* boost settings right click entry */
+#user-settings-cog-Nitro_Server_Boost,
+/* boosting ad on role badge click */
+[id^=popout_] button:has([class^=boosterBadge_]),
+/* boost progress */
+#channels [class^=container_]:has([class^=goalTextContainer]),
+/* boost for more emojis */
+[class^=emojiSettings_] [class^=banner_]:has([class^=shinyButton_]),
+/* ? boost server ad in emoji tab */
+#emoji-tab [class^=banner_]:has(img[src$="882143336a13f77e3a08.svg"]),
+/* boost status tab in server settings */
+[data-tab-id=GUILD_PREMIUM],
+/* following separator */
+[data-tab-id=GUILD_PREMIUM] + [class^=separator_],
+/* booster badge */
+[class^=nameAndDecorators_] [class^="premiumIcon"] {
   display: none !important;
 }
-/* Disable Nitro button in custom emotes popup when emote is not available */
-[class^="emojiSection"] > div > div > div > a
-{
-  color: inherit;
+/* HIDE */
+/* Nitro Button above DM List */
+[href="/store"],
+/* Shop Button above DM List */
+[href="/shop"],
+/* Gift Button */
+[class^="channelTextArea"] [class^="buttons_"] > button,
+/* "Send longer Messages with Discord Nitro!"*/ 
+[class^="characterCount_"] [class*="upsell_"],
+/* "Get Nitro" button in Emoji/Sticker modal" */
+[class^="emojiSection_"] [class*="shinyButton_"],
+/* nitro ad in server boosts page */
+[class^=tier0Container_],
+/* preceding info */
+[class^=wrapper_]:has(+ [class^=tier0Container_]),
+/* preceding divider */
+[class^=divider_]:has(+ [class^=wrapper_] + [class^=tier0Container_]),
+/* Nitro badge in chat */
+[class^=nitroAuthorBadgeContainer],
+/* Remove gif option from profile pic upload option */
+[class^="imagePickerContainer_"] > [class^="optionBox_"]:has([class^=gifIconContainer_]),
+/* payment settings header */
+[class^=header_]:has(+ [class^=premiumTab_]),
+/* nitro settings tab */
+[class^=premiumTab_],
+/* subscriptions settings tab */
+[class^=item_][data-tab-id="Subscriptions"],
+/* gift inventory settings tab */
+[class^=item_][data-tab-id="Library Inventory"],
+/* billing settings tab */
+[class^=item_][data-tab-id="Billing"],
+/* following separator in settings */
+[class^=item_][data-tab-id="Billing"] + [class^=separator_],
+/* Nitro settings right click entry */
+#user-settings-cog-Discord_Nitro,
+/* Subscriptions settings right click entry */
+#user-settings-cog-Subscriptions,
+/* Gift invetory settings right click entry */
+#user-settings-cog-Library_Inventory,
+/* Billing settings right click entry */
+#user-settings-cog-Billing,
+/* Billing settings right click entry */
+#user-settings-cog-merchandise,
+/* Nitro upselling in server boosting screen */
+button[class*=guildBoostCtaSecondary_],
+/* Nitro upselling in user popout when hovering over banner */
+[class^=banner_] [class^="premiumIcon"],
+/* Upselling in profiles settings tab */
+#profile-customization-tab [class*="premiumFeatureBorder"],
+/* Nitro upselling in activities */
+[class^="tierCtaContainer"], [class^="tierCtaContainer"] + [class^="shelf"],
+/* Snowsgiving bs */
+a[href*="/snowsgiving"], [class^="customizationSection"] > [class^="limitedFeatureBorder"],
+/* Upsell overlay in profiles tab */
+[class^="upsellOverlayContainer_"],
+/* Christmas gifting button */
+[class*="sansAttachButton"] > [class^="buttons"] > [class^="container"],
+/* Nitro upselling popups on settings (e.g. avatar decorations) */
+[id^="popout"] [class*="contentPremium"],
+/* Birthday avatar decoration upselling */
+[class^="birthdayFeatureBorder"],
+/* Halloween avatar decoration upselling */
+[class^="container_"]:has([class^="falloweenArtContainer_"]),
+/* Nitro upselling above profile (e.g. super reactions) */
+[class^="sidebar"] > [class^="container"] > [class^="wrapper"] > [class^="container"] > [class^="content"],
+/* Nitro theme upselling */
+[class^="themeEditor"],
+/* Message Hover menu super reactions */
+[class*="cozyMessage"] > [class*="buttonContainer"] > [class*="buttons"] > [class*="wrapper"] > [aria-label*="Add Super Reaction"],
+/* Message Hover overflow menu super reactions */
+[id^="popout"] [class*="colorPremiumGradient"],
+/* Message right click menu super reactions */
+#message [class*="colorPremiumGradient"],
+/* Super reaction tooltip Nitro upsell */
+[class^="burstReactionTooltipPrompt"],
+/* Avatar decorations upselling in profiles settings tab */
+[class^=container_]:has([class^=artContainer_]),
+/* Profile effect upselling in profiles settings tab */
+[class^=customizationSection_]:has([class^=nitroWheel_]),
+/* Message length Nitro upselling */
+[class^=messageLengthUpsellContainer_],
+/* Remix using mobile app ad */
+[class*=botTagRemix_],
+/* Large file upload nitro upselling */
+[class^=nitroFileSizeUpsell_],
+/* Large file upload nitro upselling description */
+[aria-label="Your files are too powerful"] [class^=root_] [class^=content_] [class^=defaultColor_] [class^=body_] [class^=defaultColor_],
+/* Large file upload nitro upselling nitro button */
+[aria-label="Your files are too powerful"] [class^=root_] [class^=shinyButton_],
+/* Gift button in user popout in DMs */
+[class^=giftButtonContainer_],
+/* Nitro profile decorations upselling in my profile popout */
+[class^=accountProfilePopoutWrapper_] > [class^=popoutContainer_] > [class^=container_],
+/*Gift Nitro upselling  */
+[class^=notAppAsidePanel_] > [class^=layerContainer_] > [id^=popout_] > [class^=animatorBottom_] > div:has([class^=image_]),
+/* no more super reaction effect */
+[class*=effectsWrapper],
+#user-settings-change-avatar-change-avatar-decoration,
+/* avatar decoration customizer */
+#profile-customization-tab [class^=profileCustomizationSection_] [class^=customizationSection_][class*=withDivider_] + [class^=customizationSection_],
+/* profile effect customizer */
+#profile-customization-tab [class^=profileCustomizationSection_] [class^=customizationSection_][class*=withDivider_] + [class^=customizationSection_] + [class^=customizationSection_],
+/* merch */
+[data-tab-id="merchandise"],
+/* customize icon section in appearance tab */
+#appearance-tab [class^=selectionGroup_]:has([class^=shinyButton_]),
+/* customize colour background section in appearance tab */
+#appearance-tab [class^=premiumFeatureBorder_],
+/* nitro top divider in emoji picker/autocomplete  */
+[class^=nitroTopDividerContainer_],
+/* nitro bottom divider in emoji picker  */
+#emoji-picker-grid [class^=nitroBottomDivider_],
+/* nitro upsell warning in emoji picker  */
+#emoji-picker-grid [class^=upsellContainer_],
+/* nitro header in autocomplete */
+[class^=autocomplete_] [class^=premiumHeader_],
+/* nitro emoji in autocomplete */
+[class^=autocomplete_] [class*=premiumEmoji_] {
+  display: none !important;
+}
+
+/* disable clicking on unavailable emojis */
+#emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroLocked],
+#emoji-picker-grid [class^=emojiItem_]:has([class^=emojiLockIconContainer_]) {
   pointer-events: none;
 }
+/* make nitro needed emojis b&w */
+#emoji-picker-grid [class^=emojiListRow_] [class^=emojiItem_]:has([class^=emojiLockIconContainer_]),
+#emoji-picker-grid [class*=categorySectionNitroLocked_] {
+  background-color: transparent;
+  filter: grayscale(100%);
+}
+#emoji-picker-grid [class*=categorySectionNitroLocked_] [class^=lockedEmoji_] {
+  background: hsl(var(--black-500-hsl)/.6);
+  filter: brightness(50%);
+}
 /* Disable clicking on super reactions */
-[class^="reactionInner"][aria-label*="burst react"]
-{
+[class^="reactionInner"][aria-label*="burst react"] {
   pointer-events: none;
 }
 /* Fix top Avatar decorations upselling in user popout */
-[class^="userPopoutInner"] > [class^="containerWrapper"]
-{
+[class^="userPopoutInner"] > [class^="containerWrapper"] {
   top: 0 !important;
 }
-[class*="hideEmoji_"][class*="hideEmoji_"][class*="hideEmoji_"]
-{
+[class*="hideEmoji_"][class*="hideEmoji_"][class*="hideEmoji_"] {
   opacity: 1;
 }
-/* Hides the Billing Settings stuff from discord settings */
-[aria-label="User Settings"] div:has(+ [class^=premiumTab_]),
-[aria-label="User Settings"] [class^=premiumTab_],
-[aria-label="User Settings"] [class^=premiumTab_] + div,
-[aria-label="User Settings"] [class^=premiumTab_] + div + div,
-[aria-label="User Settings"] [class^=premiumTab_] + div + div + div,
-[aria-label="User Settings"] [class^=premiumTab_] + div + div + div + div,
-[aria-label="User Settings"] [class^=premiumTab_] + div + div + div + div + div {
+
+/* DANGEROUS */
+/* popups that have nitro button 
+[class^=layerContainer_]:has([class^=focusLock_] [class^=shinyButton_]) {
   display: none !important;
-}
+}*/
+
+/* UNSURE OR DEPRECATED */
+/* Message hover add super reaction icon */
+[aria-label="Add Super Reaction"],
+/* Avatar decorations upselling in user side panel */
+[class^="userPanelInner"] > [class*="inSidebar"],
+/* Avatar decorations upselling in user popout */
+[class^="userPopoutInner"] > [class^="containerWrapper"],
+/* server boost popout */
+#guild-header-popout-premium-subscribe,
+/* Banner Nitro Upsell Header in the user modal */
+[class^="upsellVisible_"],
+/* Nitro Icon in top right on Banners */
+[class^="premiumIconWrapper"],
+/* ? */
+[class^="imageUploaderHint_"],
+/* Nitro upselling in server boosting screen */
+[class^="subscribeAction"],
+/* Nitro upselling in screen share */
+[class^="upsellBanner"],
+
+/* DEPRECATED */
+/* Nitro upselling in user popout when hovering over banner 
+[class^="userPopoutInner"] > [class^="wrapper"] > [class^="banner"],*/
+/* try nitro banner section on profile editor 
+[class*="tryItOutSection_"],*/
+/* Per server profile customizations 
+[class^="customizationSection_"] + [class^="upsellContainer_"],
+[class^="customizationSection_"][class*="disabled_"],*/
+/* "Unlock Banner" in profile editor 
+[class*="bannerNitroUpsell_"],*/
+/* Avatar decorations upselling in profiles settings tab 
+[class*="premiumFeatureBannerBackground"],*/
