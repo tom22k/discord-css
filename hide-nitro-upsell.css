@@ -104,7 +104,7 @@ a[href*="/snowsgiving"], [class^="customizationSection"] > [class^="limitedFeatu
 /* Super reaction tooltip Nitro upsell */
 [class^="burstReactionTooltipPrompt"],
 /* Avatar decorations upselling in profiles settings tab */
-[class^=container_]:has([class^=artContainer_]),
+#profile-customization-tab > [class^=container_][style^="background-image:"],
 /* Profile effect upselling in profiles settings tab */
 [class^=customizationSection_]:has([class^=nitroWheel_]),
 /* Message length Nitro upselling */
