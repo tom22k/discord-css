@@ -1,7 +1,3 @@
-.theme-dark {
-    --background-message-hover: red;
-}
-
 /* HIDE */
 /* store button on bot profiles */
 button:has([class^=storeBtn_]),
