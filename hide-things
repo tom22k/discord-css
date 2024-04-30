@@ -1,3 +1,7 @@
+.theme-dark {
+    --background-message-hover: red;
+}
+
 /* HIDE */
 /* store button on bot profiles */
 button:has([class^=storeBtn_]),
@@ -6,7 +10,7 @@ button:has([class^=storeBtn_]),
 /* "change decoration" when trying to change avatar */
 #user-settings-change-avatar-change-avatar-decoration,
 /* social links in settings */
-[aria-label="User Settings"] [class^=socialLinks_],
+nav > [role=tablist] > [class^=socialLinks_],
 /* extra experiment settings */
 [data-tab-id="Text Component"],
 [data-tab-id="Text Playground"],
@@ -14,6 +18,7 @@ button:has([class^=storeBtn_]),
 [data-tab-id="Dismissible Content Options"],
 [data-tab-id="Hotspot Options"],
 [data-tab-id="Developer Options"],
+[data-tab-id="Profile Effects Preview Tool"],
 /* server banner */
 [class*=animatedContainer_]:has([class*=bannerImage_]),
 /* server banner spacer clickable*/
@@ -25,17 +30,15 @@ button:has([class^=storeBtn_]),
 /* server boost progress */
 #channels [class^=container_][aria-label*="Boost"],
 /* create invite on channels */
-#channels [aria-label="Create Invite"],
+#channels [aria-label="Create Invite"]
 /* server guide */
 [data-list-item-id^="channels___home-tab-"],
 /* create thread suggestion */
 [class^="threadSuggestionBar"],
 /* translate button in message bar (translate plugin) */
-[aria-label="Open Translate Modal"],
+[class^=buttons_] > [class^=expression-picker-chat-input-button]:has([aria-label="Open Translate Modal"]),
 /* server shop */
-#channels>ul>li:has(#clip0_2645_182555),
-/* announcement in profile customizer */
-#profile-customization-tab>[class^=container_]:has([class^=art_]),
+#channels > ul > li:has(svg > defs),
 /* user context menu: call */
 #user-context-call,
 /* user context menu: add friend nickname */
@@ -45,9 +48,7 @@ button:has([class^=storeBtn_]),
 /* help button */
 [href="https://support.discord.com"],
 /* inbox button when no notifs */
-[aria-label="Inbox"]:not(:has([class^=iconBadge_], [class*=recentMentionsPopout_])),
-/* search bar in friends list
-[aria-label="Friends"] [class^=searchBar_], */
+[class^=recentsIcon_]:not(:has([class^=iconBadge_], [class*=recentMentionsPopout_])),
 /* separator in channel actions popout */
 #channel-context [class^=separator_],
 /* separator in message actions popout */
