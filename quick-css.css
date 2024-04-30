@@ -4,6 +4,21 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
+/* coloured status picker backgrounds */
+#account-status-picker--dnd[class^=item_][class*=focused_] {
+    background-color: rgba(242, 63, 66, 0.9);
+}
+#account-status-picker--invisible[class^=item_][class*=focused_] {
+    background-color: rgba(128, 132, 142, 0.9);
+}
+#account-status-picker--idle[class^=item_][class*=focused_] {
+    background-color: rgba(240, 178, 50, 0.9);
+}
+#account-status-picker--online[class^=item_][class*=focused_] {
+    background-color: rgba(35, 165, 90, 0.9);
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
 /* compact polls */
 [class^=chatContent_] [id^=message-accessories-] [aria-label="Poll options"] {
     grid-template-columns: repeat(2, 1fr);
@@ -208,11 +223,11 @@
 
 /* Add green colour to positive user actions */
 #user-context-add-friend {
-  color: #23A55A;
+  color: rgb(35, 165, 90);
 }
 
 #user-context-add-friend[class*="focused_"] {
-  background-color: #1C7F45;
+  background-color: rgba(35, 165, 90, 0.9);
   color: var(--white-500);
 }
 
