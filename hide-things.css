@@ -1,4 +1,8 @@
 /* HIDE */
+/* separator in status picker */
+#account[class^=menu_] [class^=submenu_] [class^=separator_],
+/* descriptions in status picker */
+[class^=statusItem_] > [class^=description_],
 /* store button on bot profiles */
 button:has([class^=storeBtn_]),
 /* vencord custom badges */
