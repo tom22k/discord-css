@@ -1,0 +1,147 @@
+/*
+ * @name Hide Nitro Upselling
+ * @description Hide all Nitro upselling
+ * @author Vendicated, msm8916, D3SOX, tom2k
+ * @version beta 2.0
+*/
+/* HIDE */
+/* Nitro Button above DM List */
+[href="/store"],
+/* Shop Button above DM List */
+[href="/shop"],
+/* Gift Button */
+[class^=channelTextArea_] [class^=buttons_] > button,
+/* nitro ad in server boosts page */
+[class^=tier0Container_],
+/* Nitro upselling in server boosting screen */
+button[class*=guildBoostCtaSecondary_],
+/* ^ preceding info */
+[class^=wrapper_]:has(+ [class^=tier0Container_]),
+/* ^ preceding divider */
+[class^=divider_]:has(+ [class^=wrapper_] + [class^=tier0Container_]),
+/* Nitro badge in chat */
+[class^=nitroAuthorBadgeContainer_],
+/* Remove gif option from profile pic upload option */
+[class^=imagePickerContainer_] > [class^=optionBox_]:has([class^=gifIconContainer_]),
+/* payment settings header */
+[class^=header_]:has(+ [class^=premiumTab_]),
+/* nitro settings tab */
+[class^=premiumTab_],
+/* subscriptions settings tab */
+[class^=item_][data-tab-id="Subscriptions"],
+/* gift inventory settings tab */
+[class^=item_][data-tab-id="Library Inventory"],
+/* billing settings tab */
+[class^=item_][data-tab-id="Billing"],
+/* ^ following separator in settings */
+[class^=item_][data-tab-id="Billing"] + [class^=separator_],
+/* merch in settings */
+[data-tab-id="merchandise"],
+/* Nitro settings right click entry */
+#user-settings-cog-Discord_Nitro,
+/* Subscriptions settings right click entry */
+#user-settings-cog-Subscriptions,
+/* Gift invetory settings right click entry */
+#user-settings-cog-Library_Inventory,
+/* Billing settings right click entry */
+#user-settings-cog-Billing,
+/* Merch settings right click entry */
+#user-settings-cog-merchandise,
+/* Nitro upselling in user popout when hovering over banner */
+[class^=banner_] [class^=premiumIcon],
+/* Upselling in profiles settings tab */
+#profile-customization-tab [class*=premiumFeatureBorder],
+/* Upsell unique profiles overlay in profiles tab */
+[class^=upsellOverlayContainer_],
+/* Nitro theme upselling */
+[class^=themeEditor],
+/* Shop upselling in profiles settings tab */
+#profile-customization-tab > [class^=container_][style^="background-image:"],
+/* "Send longer Messages with Discord Nitro!"*/ 
+[class^=characterCount_] [class*=upsell_],
+/* Large file size & too long messages upselling nitro button */
+[class^=focusLock_] > [class^=root_] > [class^=flex_] > [class^=primaryActions_] > [class^=shinyButton_],
+/* Long message length nitro upselling description */
+[class^=focusLock_] > [class^=root_] > [class^=content_] > [class^=defaultColor_] > p:has(a),
+/* Large file upload nitro upselling description */
+[class^=focusLock_] > [class^=root_] > [class^=content_] > [class^=defaultColor_] > [class^=body_] > [class^=defaultColor_],
+/* no more super reaction effect */
+[class*=effectsWrapper],
+/* change avatar decoration option when clicking pfp in profiles tab */
+#user-settings-change-avatar-change-avatar-decoration,
+/* avatar decoration customizer in profiles tab */
+#profile-customization-tab [class^=profileCustomizationSection_] [class^=customizationSection_][class*=withDivider_] + [class^=customizationSection_],
+/* profile effect customizer in profiles tab */
+#profile-customization-tab [class^=profileCustomizationSection_] [class^=customizationSection_][class*=withDivider_] + [class^=customizationSection_] + [class^=customizationSection_],
+/* customize icon section in appearance tab */
+#appearance-tab [class^=selectionGroup_]:has([class^=shinyButton_]),
+/* customize colour background section in appearance tab */
+#appearance-tab [class^=premiumFeatureBorder_],
+/* Super reactions toggle */
+[class^=burstToggle_],
+/* Super reaction hover tooltip Nitro upsell */
+[class^=burstReactionTooltipPrompt],
+/* custom emoji hover tooltip Nitro upsell */
+[class^=tooltipPremiumContent_],
+/* "Powered by Nitro" when clicking on Emoji/Sticker */
+[class^=emojiSection_] [class^=nitroTextAndBadge_],
+/* "Get Nitro" button when clicking on Emoji/Sticker */
+[class^=emojiSection_] [class*=shinyButton_],
+/* nitro upselling description when clicking on emoji/sticker */
+[class^=emojiSection_] > [class^=flex_] > [class^=flex_] > [class^=defaultColor_][data-text-variant="text-sm/normal"],
+/* hide servers whose emojis cant be used in emoji picker */
+#emoji-picker-tab-panel [class^=listItems_] > div:has([class^=categoryItemLockIconContainer_]),
+/* nitro top divider in emoji picker/autocomplete  */
+[class^=nitroTopDividerContainer_],
+/* nitro bottom divider in emoji picker  */
+#emoji-picker-grid [class^=nitroBottomDivider_],
+/* nitro upsell warning in emoji picker  */
+#emoji-picker-grid [class^=upsellContainer_],
+/* nitro header in autocomplete */
+[class^=autocomplete_] [class^=premiumHeader_],
+/* nitro emoji in autocomplete */
+[class^=autocomplete_] [class*=premiumEmoji_] {
+  display: none !important;
+}
+/* prevent clicking on badges that upsell nitro - preserve hover popup? */
+[class^=profileBadges] > [href="https://discord.com/settings/premium"],
+[class^=badgeList_] > [href="https://discord.com/settings/premium"] {
+    pointer-events: none;
+}
+/* disable clicking on super reactions */
+[class^=reactionInner_]:has([class^=burstGlow_]),
+/* disable clicking on unavailable emojis */
+#emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroLocked],
+#emoji-picker-grid [class^=emojiItem_]:has([class^=emojiLockIconContainer_]) {
+  pointer-events: none;
+}
+/* make nitro needed emojis b&w */
+#emoji-picker-grid [class^=emojiListRow_] [class^=emojiItem_]:has([class^=emojiLockIconContainer_]),
+#emoji-picker-grid [class*=categorySectionNitroLocked_] {
+  background-color: transparent;
+  filter: grayscale(100%);
+}
+#emoji-picker-grid [class*=categorySectionNitroLocked_] [class^=lockedEmoji_] {
+  background: hsl(var(--black-500-hsl)/.6);
+  filter: brightness(50%);
+}
+
+/* TODO: join more than 100 servers upsell */
+
+/* UNABLE TO TEST ATM */
+/* Birthday avatar decoration upselling */
+[class^=birthdayFeatureBorder],
+/* Halloween avatar decoration upselling */
+[class^=container]:has([class^=falloweenArtContainer_]),
+/* Christmas gifting button */
+[class*=sansAttachButton] > [class^=buttons] > [class^=container],
+/* Snowsgiving bs */
+a[href*="/snowsgiving"], [class^=customizationSection] > [class^=limitedFeatureBorder],
+/* Nitro upselling in activities - deprecated? */
+[class^=tierCtaContainer], [class^=tierCtaContainer] + [class^=shelf],
+/* Nitro upselling in screen share */
+[class^="upsellBanner"],
+/* Gift Nitro upselling - deprecated? */
+[class^=notAppAsidePanel_] > [class^=layerContainer_] > [id^=popout_] > [class^=animatorBottom_] > div:has([class^=image_]) {
+    display: none !important;
+}
