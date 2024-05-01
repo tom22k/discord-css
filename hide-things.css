@@ -26,7 +26,7 @@ nav > [role=tablist] > [class^=socialLinks_],
 /* server header popout divider */
 #guild-header-popout [class^=separator_],
 /* create invite on channels */
-#channels [aria-label="Create Invite"]
+#channels [aria-label="Create Invite"],
 /* server guide */
 [data-list-item-id^="channels___home-tab-"],
 /* create thread suggestion */
@@ -69,7 +69,7 @@ nav > [role=tablist] > [class^=socialLinks_],
 /* discoverable servers */
 [data-list-id="guildsnav"]>[class^=scroller_]>[class^=listItem_]:has([aria-label*=Discoverable]),
 /* events */
-[data-list-item-id^="channels___upcoming-events"],
+#channels [class^=containerDefault_]:has(> [data-list-item-id^="channels___upcoming-events"]),
 /* member count in server icon hover */
 .vc-membercount-tooltip,
 /* "Get started" */
