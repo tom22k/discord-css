@@ -8,15 +8,19 @@
 #account-status-picker--dnd[class^=item_][class*=focused_] {
     background-color: rgba(242, 63, 66, 0.9);
 }
+
 #account-status-picker--invisible[class^=item_][class*=focused_] {
     background-color: rgba(128, 132, 142, 0.9);
 }
+
 #account-status-picker--idle[class^=item_][class*=focused_] {
     background-color: rgba(240, 178, 50, 0.9);
 }
+
 #account-status-picker--online[class^=item_][class*=focused_] {
     background-color: rgba(35, 165, 90, 0.9);
 }
+
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* compact polls */
@@ -26,30 +30,9 @@
 
 [class^=chatContent_] [id^=message-accessories-] [class*=pollContainer_] [class^=answerInner_] {
     min-height: 0;
-    width: 100% !important; 
+    width: 100% !important;
 }
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* minimised search bar 
-.search_ac353c:not(.open_d3ab4e) .searchBar__5a20a {
-    width: 22px;
-    background-color: transparent;
-}
-.searchBarComponent__8f95f, :not(.open_d3ab4e) > .searchBar__5a20a {
-    background: transparent !important;
-}
-.search_ac353c:not(.open_d3ab4e) .iconLayout__9d9a4 {
-  cursor: pointer!important;
-}
-.search_ac353c:not(.open_d3ab4e) .iconContainer__9f124 {
-  transform: scale(1.25);
-}
-.search_ac353c:not(.open_d3ab4e) .icon__5c8c7 {
-  color: var(--interactive);
-}
-.search_ac353c:not(.open_d3ab4e):hover .icon__5c8c7 {
-  color: var(--interactive-active);
-}*/
+
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* Revert the change to codeblock font */
@@ -59,27 +42,31 @@
         "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Monaco",
         "Courier New", "Courier", "monospace";
 }
+
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* SCROLLBARS */
 /* make profile text scrollable and restyle - requires new electron */
 [class*=lineClamp2Plus_] {
-  overflow-y: auto !important; 
-  scrollbar-color: rgba(135, 135, 135, 0.263) transparent !important;
-  scrollbar-width: thin !important;
+    overflow-y: auto !important;
+    scrollbar-color: rgba(135, 135, 135, 0.263) transparent !important;
+    scrollbar-width: thin !important;
 }
-/*  */
+
 [class^=userProfileModalOverlayBackground_] [class^=body_] [class^=infoScroller] {
     scrollbar-color: var(--profile-body-divider-color) var(--scrollbar-thin-track) !important;
 }
+
 #channels {
     scrollbar-width: none;
 }
+
 /* hide unnecessary scrollbar in user popouts */
 [class^=userPopoutOverlayBackground_] [class^=scroller_] {
-  scrollbar-width: none;
-  padding-right: 12px !important;
+    scrollbar-width: none;
+    padding-right: 12px !important;
 }
+
 /* show full about me 
 [style="-webkit-line-clamp: 6;"] {
   display: block;
@@ -89,30 +76,23 @@
   display:block;
 }
 */
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* add this to github tweaks and to vc theme dev */
-/* make vc toolbox quick css toggle checkmark be filled on hover */
-#vc-toolbox-vc-toolbox-quickcss-toggle[class*=focused_] svg [class^=check_] {
-  fill: var(--brand-experiment-560);
-}
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* more condensed member list*/
 [aria-label="Members"] [class^=member_] [class^=memberInner_] {
-  padding: 0 4px;
+    padding: 0 4px;
 }
 
 /* more condensed activity in friends tab */
 [aria-label="Friends"] [class^=nowPlayingColumn_] [class^=scroller_] {
-  padding: 0 5px;
-  margin: 0;
-  border: none;
+    padding: 0 5px;
+    margin: 0;
+    border: none;
 }
 
 [aria-label="Friends"] [class^=nowPlayingColumn_] [class^=itemCard_] {
-  padding: 8px;
+    padding: 8px;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -120,33 +100,33 @@
 /* make new pins & new notifs in inbox more noticeable */
 [aria-label="Pinned Messages"]:has([class^=iconBadge_]) svg,
 [aria-label="Inbox"]:has([class^=iconBadge_]) svg {
-  color: var(--status-danger) !important;
+    color: var(--status-danger) !important;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* Make size-changing videos work as they used to */
 .attachmentContentItem_ef9fc2 {
-  width: unset !important;
-  height: unset !important;
+    width: unset !important;
+    height: unset !important;
 }
 
 .loadingOverlay__4d818 {
-  aspect-ratio: unset !important;
+    aspect-ratio: unset !important;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* server list less padding */
 [aria-label="Servers sidebar"] {
-  width: 64px;
+    width: 64px;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* remove folder animation */
-[aria-label="Servers"]>[class^=wrapper_]>[id*="folder-items-"] {
-  height: fit-content !important;
+[aria-label="Servers"] > [class^=wrapper_] > [id*="folder-items-"] {
+    height: fit-content !important;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -154,42 +134,42 @@
 /* make code blocks' size dynamic */
 [class^=codeContainer_],
 .shiki-container {
-  width: fit-content;
-  word-break: break-word;
-  border-radius: 8px;
+    width: fit-content;
+    word-break: break-word;
+    border-radius: 8px;
 }
 
 [class^=markup_] code {
-  padding-right: 24px;
+    padding-right: 24px;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* user profile modal buttons */
+/* user profile modal buttons 
 [aria-label="User Profile Modal"] [class^=tabBarContainer_] {
-  border: none;
+    border: none;
 }
 
 [aria-label="User Profile Modal"] [class^=tabBar_] {
-  gap: 20px;
+    gap: 20px;
 }
 
 [aria-label="User Profile Modal"] [class^=tabBarItem_] {
-  border: none !important;
-  padding: 8px;
-  border-radius: 8px;
-  height: auto;
+    border: none !important;
+    padding: 8px;
+    border-radius: 8px;
+    height: auto;
 }
 
 [aria-label="User Profile Modal"] [class^=tabBarItem_][class*=selected_] {
-  background-color: rgba(135, 135, 135, 0.1);
-}
+    background-color: rgba(135, 135, 135, 0.1);
+}*/
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* reduce padding in user profile modals */
 [aria-label="User Profile Modal"] [class^=userInfoSection_] {
-  padding-bottom: 8px;
+    padding-bottom: 8px;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -197,90 +177,75 @@
 /* make gif fav button invert colors */
 [class*=gifFavoriteButton_]:not([class*=selected_]),
 [class^=imageAccessory_]:has([class*=gifFavoriteButton_]:not([class*=selected_])) {
-  mix-blend-mode: difference;
+    mix-blend-mode: difference;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* shorten some dividers in channel column */
 #channels {
-  --custom-category-channel-space-before-category: 5px;
+    --custom-category-channel-space-before-category: 5px;
 }
 
-#channels>[style="height: 12px;"] {
-  height: 0 !important;
+#channels > [style="height: 12px;"] {
+    height: 0 !important;
 }
-
-[id=popout_16233]
 
 /* ? */
-  {
-  top: 66px !important;
+[id=popout_16233] {
+    top: 66px !important;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-
 /* Add green colour to positive user actions */
 #user-context-add-friend {
-  color: rgb(35, 165, 90);
+    color: rgb(35, 165, 90);
 }
 
 #user-context-add-friend[class*="focused_"] {
-  background-color: rgba(35, 165, 90, 0.9);
-  color: var(--white-500);
+    background-color: rgba(35, 165, 90, 0.9);
+    color: var(--white-500);
 }
 
 /* Add red colour to dangerous user actions */
 #user-context-close-dm,
 #user-context-remove-friend,
 #user-context-block {
-  color: var(--status-danger);
+    color: var(--status-danger);
 }
 
 #user-context-close-dm:active,
 #user-context-remove-friend:active,
 #user-context-block:active {
-  background-color: var(--red-500) !important;
-  color: var(--white-500) !important;
+    background-color: var(--red-500) !important;
+    color: var(--white-500) !important;
 }
 
 #user-context-close-dm[class*="focused_"],
 #user-context-remove-friend[class*="focused_"],
 #user-context-block[class*="focused_"] {
-  background-color: var(--button-danger-background);
-  color: var(--white-500);
+    background-color: var(--button-danger-background);
+    color: var(--white-500);
 }
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* smaller member count */
 [data-list-id^=members-] .vc-membercount-widget {
-  margin-top: 0 !important;
-  margin-bottom: -1.25em !important;
+    margin-top: 0 !important;
+    margin-bottom: -1.25em !important;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* bigger stream preview */
 [class*=streamPreview_]:not([class*=content_]) {
-  width: 504px;
+    width: 504px;
 }
 
 [class*=previewContainer_] {
-  height: 284px;
-}
-
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* remove obnoxious "new emote" stuff */
-#emoji-picker-tab-panel :is([class^=badgeLabel_], [class^=newlyAddedBadge]) {
-  display: none !important;
-}
-
-[class^=newlyAddedHighlight],
-[class^=newlyAddedHighlight]:hover {
-  border: none;
+    height: 284px;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -288,40 +253,40 @@
 /* Role pill background */
 [class*="role_"] [class*="roleCircle_"]:before,
 [class*="actionButton_"][class*="role_"][class*="justifyCenter_"] {
-  border-radius: 5px;
+    border-radius: 5px;
 }
 
 [class*="role_"] {
-  transform: translate(0);
-  border: 0;
+    transform: translate(0);
+    border: 0;
 }
 
 [class*="role_"] [class*="roleRemoveIcon_"] {
-  margin: 0;
-  left: unset;
-  transform: translate(50%, -50%);
+    margin: 0;
+    left: unset;
+    transform: translate(50%, -50%);
 }
 
 [class*="role_"] [class*="roleRemoveButton_"] {
-  position: static;
+    position: static;
 }
 
-[class*="root_"]>[class*="role_"] [class*="roleCircle_"]:before {
-  content: '';
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  position: absolute;
-  background: inherit;
-  border: 2px solid transparent;
-  opacity: .4;
+[class*="root_"] > [class*="role_"] [class*="roleCircle_"]:before {
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    background: inherit;
+    border: 2px solid transparent;
+    opacity: .4;
 }
 
 [class*="roles_"] {
-  color: var(--text-normal);
+    color: var(--text-normal);
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -329,27 +294,28 @@
 /* Bigger Reactions */
 [id*=message-reactions] [class*=reaction_] .emoji,
 [class*=effect_] {
-  zoom: 150%;
+    zoom: 150%;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* rounder radius in mentions */
 .mention {
-  border-radius: 5px;
+    border-radius: 5px;
 }
+
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* Vencord toolbox Logo */
 .vc-toolbox-btn svg path {
-  d: path("M7 12.001C7 10.8964 6.10457 10.001 5 10.001C3.89543 10.001 3 10.8964 3 12.001C3 13.1055 3.89543 14.001 5 14.001C6.10457 14.001 7 13.1055 7 12.001ZM14 12.001C14 10.8964 13.1046 10.001 12 10.001C10.8954 10.001 10 10.8964 10 12.001C10 13.1055 10.8954 14.001 12 14.001C13.1046 14.001 14 13.1055 14 12.001ZM19 10.001C20.1046 10.001 21 10.8964 21 12.001C21 13.1055 20.1046 14.001 19 14.001C17.8954 14.001 17 13.1055 17 12.001C17 10.8964 17.8954 10.001 19 10.001Z");
+    d: path("M7 12.001C7 10.8964 6.10457 10.001 5 10.001C3.89543 10.001 3 10.8964 3 12.001C3 13.1055 3.89543 14.001 5 14.001C6.10457 14.001 7 13.1055 7 12.001ZM14 12.001C14 10.8964 13.1046 10.001 12 10.001C10.8954 10.001 10 10.8964 10 12.001C10 13.1055 10.8954 14.001 12 14.001C13.1046 14.001 14 13.1055 14 12.001ZM19 10.001C20.1046 10.001 21 10.8964 21 12.001C21 13.1055 20.1046 14.001 19 14.001C17.8954 14.001 17 13.1055 17 12.001C17 10.8964 17.8954 10.001 19 10.001Z");
 }
 
 .vc-toolbox-btn svg {
-  width: 125%;
-  height: 125%;
+    width: 125%;
+    height: 125%;
 }
 
 .vc-toolbox-btn {
-  margin-left: 0;
+    margin-left: 0;
 }
