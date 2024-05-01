@@ -1,0 +1,30 @@
+/*
+ * @name Hide Server Boost Upselling
+ * @description Hide all server boost upselling
+ * @author tom2k
+ * @version 1.0
+*/
+/* boost button on clicking server header */
+#guild-header-popout-premium-subscribe,
+/* ^following separator */
+#guild-header-popout div:has(#guild-header-popout-premium-subscribe) + [class^=separator_],
+/* server boost settings tab */
+[class^=item_][data-tab-id="Nitro Server Boost"],
+/* boost settings right click entry */
+#user-settings-cog-Nitro_Server_Boost,
+/* boosting ad on role badge click */
+[id^=popout_] button:has([class^=boosterBadge_]),
+/* boost progress */
+#channels [class^=container_]:has([class^=goalTextContainer]),
+/* boost for more emojis */
+[class^=emojiSettings_] [class^=banner_]:has([class^=shinyButton_]),
+/* UNABLE TO TEST - boost server ad in emoji tab */
+#emoji-tab [class^=banner_]:has(img[src$="882143336a13f77e3a08.svg"]),
+/* boost status tab in server settings */
+[data-tab-id=GUILD_PREMIUM],
+/* ^ following separator */
+[data-tab-id=GUILD_PREMIUM] + [class^=separator_],
+/* booster badge in memberlist */
+[class^=nameAndDecorators_] [class^="premiumIcon"] {
+  display: none !important;
+}
