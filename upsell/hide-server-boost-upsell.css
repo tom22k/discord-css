@@ -1,30 +1,61 @@
 /*
  * @name Hide Server Boost Upselling
- * @description Hide all server boost upselling
+ * @description Hide all server boost & server subscription upselling
  * @author tom2k
- * @version 1.0
+ * @version 1.1
 */
-/* boost button on clicking server header */
-#guild-header-popout-premium-subscribe,
-/* ^following separator */
-#guild-header-popout div:has(#guild-header-popout-premium-subscribe) + [class^=separator_],
-/* server boost settings tab */
-[class^=item_][data-tab-id="Nitro Server Boost"],
-/* boost settings right click entry */
-#user-settings-cog-Nitro_Server_Boost,
-/* boosting ad on role badge click */
-[id^=popout_] button:has([class^=boosterBadge_]),
-/* boost progress */
-#channels [class^=container_]:has([class^=goalTextContainer]),
-/* boost for more emojis */
-[class^=emojiSettings_] [class^=banner_]:has([class^=shinyButton_]),
-/* UNABLE TO TEST - boost server ad in emoji tab */
-#emoji-tab [class^=banner_]:has(img[src$="882143336a13f77e3a08.svg"]),
-/* boost status tab in server settings */
+/* BOOSTS - SERVER SETTINGS */
+/* overview tab upsell */
+#overview-tab [class^=divider_] [class^=divider_]:has([class^=shinyButton_]),
+/* roles tab - role icon section - possibility for only when we don't have boost lvl 2? */
+#roles-tab [class^=contentWidth_] > [class^=container_]:has([class^=availabilityIndicator_]),
+/* emoji tab - "boost for more emojis" */
+#emoji-tab [class^=banner_]:has([class^=shinyButton_]),
+/* stickers tab - "boost for more stickers" */
+#stickers-tab [class^=banner_]:has([class^=shinyButton_]),
+/* stickers tab - progress bar */
+#stickers-tab [class^=progress_],
+/* stickers tab - number of boosts description */
+#stickers-tab [class^=tierDefaultUnlocked_],
+/* stickers tab - "unlock more slots" button */
+#stickers-tab [class^=shinyButton_],
+/* stickers tab - locked tiers */
+#stickers-tab [class^=tier_]:has([class^=tierIcon_][class*=tierIconLocked_]),
+/* custom invite link tab - level requirement icon */
+#vanity_url-tab h2[class*=title_] > [class^=clickable_],
+/* custom invite link tab - boosting button */
+#vanity_url-tab [class^=shinyButton_],
+/* soundboard tab - "get boosted" */
+#soundboard-tab [class^=banner_]:has([class^=shinyButton_]),
+/* boost status tab */
 [data-tab-id=GUILD_PREMIUM],
 /* ^ following separator */
 [data-tab-id=GUILD_PREMIUM] + [class^=separator_],
+
+/* BOOSTS - OTHER */
+/* boost progress bar */
+#channels [class^=container_]:has([class^=goalTextContainer]),
+/* boost button on clicking server header */
+#guild-header-popout-premium-subscribe,
+/* ^ following separator */
+#guild-header-popout div:has(> #guild-header-popout-premium-subscribe) + [class^=separator_],
+/* user settings boost tab */
+[class^=item_][data-tab-id="Nitro Server Boost"],
+/* right click entry to user settings boost tab */
+#user-settings-cog-Nitro_Server_Boost,
+/* uspell on role badge click */
+[id^=popout_] button:has([class^=boosterBadge_]),
 /* booster badge in memberlist */
-[class^=nameAndDecorators_] [class^="premiumIcon"] {
+[class^=nameAndDecorators_] [class^=premiumIcon],
+
+/* SERVER SUBSCRIPTIONS */
+/* server settings - subscriptions tab */
+[data-tab-id=ROLE_SUBSCRIPTIONS],
+/* server settings - ^ preceding header */
+[class^=sidebar_] [class^=header_]:has(+ [data-tab-id=ROLE_SUBSCRIPTIONS]),
+/* server settings - ^ following separator */
+[data-tab-id=ROLE_SUBSCRIPTIONS] + [class^=separator_],
+/* server shop */
+#channels [class^=containerDefault_]:has(> [id^=shop]) {
   display: none !important;
 }
