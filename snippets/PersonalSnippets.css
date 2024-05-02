@@ -29,7 +29,7 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* compact polls */
+/* compact polls by Faf4a/catpurrrchino */
 [class^=chatContent_] [id^=message-accessories-] [aria-label="Poll options"] {
     grid-template-columns: repeat(2, 1fr);
 }
@@ -41,7 +41,7 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* Revert the change to codeblock font */
+/* Revert the change to codeblock font by thekodetoad */
 :root {
     --font-code: "Consolas", "Andale Mono WT", "Andale Mono",
         "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
@@ -111,7 +111,7 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* Make size-changing videos work as they used to */
+/* Make size-changing videos work as they used to by kyuuhachi */
 .attachmentContentItem_ef9fc2 {
     width: unset !important;
     height: unset !important;
@@ -137,7 +137,7 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* make code blocks' size dynamic */
+/* make code blocks' size dynamic (idea by callme_h) */
 [class^=codeContainer_],
 .shiki-container {
     width: fit-content;
@@ -214,7 +214,7 @@
     color: var(--white-500);
 }
 
-/* Add red colour to dangerous user actions */
+/* Add red colour to dangerous user actions by pointy */
 #user-context-close-dm,
 #user-context-remove-friend,
 #user-context-block {
@@ -256,7 +256,7 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* Role pill background */
+/* Role pill background by alije */
 [class*="role_"] [class*="roleCircle_"]:before,
 [class*="actionButton_"][class*="role_"][class*="justifyCenter_"] {
     border-radius: 5px;
