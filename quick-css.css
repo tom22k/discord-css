@@ -4,6 +4,12 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
+/* stop arrow spinning in server header click */
+[class^=sidebar_] [class^=headerContent_]:has(> [class^=guildIconV2Container_]) > [class^=headerChildren_] > svg {
+    transform: none;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
 /* coloured status picker backgrounds */
 #account-status-picker--dnd[class^=item_][class*=focused_] {
     background-color: rgba(242, 63, 66, 0.9);
