@@ -17,7 +17,6 @@
 }
 
 #emoji-picker-grid [class^=nitroTopDividerContainer_],
-#emoji-picker-grid [class^=upsellContainer_],
-#emoji-picker-tab-panel [class^=premiumPromo_] {
+#emoji-picker-grid [class^=upsellContainer_] {
   display: none !important;
 }
