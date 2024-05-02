@@ -59,12 +59,14 @@ button[class*=guildBoostCtaSecondary_],
 #profile-customization-tab > [class^=container_][style^="background-image:"],
 /* "Send longer Messages with Discord Nitro!"*/ 
 [class^=characterCount_] [class*=upsell_],
-/* Large file size & too long messages upselling nitro button */
-[class^=focusLock_] > [class^=root_] > [class^=flex_] > [class^=primaryActions_] > [class^=shinyButton_],
 /* Long message length nitro upselling description */
 [class^=focusLock_] > [class^=root_] > [class^=content_] > [class^=defaultColor_] > p:has(a),
 /* Large file upload nitro upselling description */
 [class^=focusLock_] > [class^=root_] > [class^=content_] > [class^=defaultColor_] > [class^=body_] > [class^=defaultColor_],
+/* 100 server limit nitro upselling description */
+[class^=focusLock_] > [class^=root_] > [class^=content_] > [class^=defaultColor_] > p:has([class^=learnMoreLink_]),
+/* Popups upselling nitro button */
+[class^=focusLock_] > [class^=root_] > [class^=flex_] > [class^=primaryActions_] > [class^=shinyButton_],
 /* no more super reaction effect */
 [class*=effectsWrapper],
 /* change avatar decoration option when clicking pfp in profiles tab */
@@ -125,8 +127,6 @@ button[class*=guildBoostCtaSecondary_],
   background: hsl(var(--black-500-hsl)/.6);
   filter: brightness(50%);
 }
-
-/* TODO: join more than 100 servers upsell */
 
 /* UNABLE TO TEST ATM */
 /* Birthday avatar decoration upselling */
