@@ -70,6 +70,38 @@ https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BetterModView
 
 </details>
 
+## [BoxyUserPanel](https://github.com/tom22k/discord-css/blob/main/Snippets/BoxyUserPanel.css)
+Just a user panel re-design, inspired by [Snare Hawk's idea](https://github.com/Snare-Hawk/snare-CSS?tab=readme-ov-file#profile-panel-thingy).
+Works with the game activity toggle button too.
+
+<details> <summary>Screenshots</summary>
+
+**Before**
+
+![image](https://github.com/tom22k/discord-css/assets/143504320/24b2f899-9179-4e8e-8cfc-2bc9760d33cc)
+
+**After**
+
+![image](https://github.com/tom22k/discord-css/assets/143504320/58bf65e2-e1b8-42fc-9ce7-d7f1a6158bdf)
+
+</details>
+
+<details> <summary>How to use</summary>
+  
+**Copy link to paste in online themes**
+```
+https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BoxyUserPanel.css
+```
+
+**Importing in quick CSS**
+```css
+@import url("https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BoxyUserPanel.css");
+```
+
+**Or copy the raw CSS into your own file (Click [here](https://github.com/tom22k/discord-css/blob/main/Snippets/BoxyUserPanel.css))**
+
+</details>
+
 ## [ClickableConectedAccounts](https://github.com/tom22k/discord-css/blob/main/Snippets/ClickableConectedAccounts.css)
 Make each entire connected account clickable!
 
