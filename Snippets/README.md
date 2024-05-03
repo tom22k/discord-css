@@ -54,3 +54,16 @@ Instead of just the little arrow. Also adds a little background when hovering.
 
 ![gif](https://github.com/tom22k/css-snippets/assets/143504320/614f642c-4140-41dc-91c9-5fb7e551d43c)
 
+
+# Interactive Folders
+A simple redesign making folders appear as interactive icons, compatible with all themes
+
+### Importing:
+```css
+@import url("https://github.com/tom22k/css-snippets/raw/main/InteractiveFolders/import.css");
+```
+
+### Example:
+![](https://github.com/tom22k/css-snippets/blob/main/InteractiveFolders/snippet.gif)
+
+
