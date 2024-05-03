@@ -1,5 +1,5 @@
 ## Some simple css snippets for Discord.
-I try to make the snippets work through Discord updates and with most themes.
+These snippets should work through Discord updates and with most themes.
 
 You can message me on Discord @tom22k or ping me in the Vencord theme dev channel, you can also post issues or contributions here.
 
