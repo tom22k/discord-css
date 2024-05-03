@@ -19,6 +19,6 @@
 
 /* give buttons a background on hover */
 [class^=connectedAccountContainer_] a:hover {
-  background-color: rgba(135, 135, 135, 0.1);
+  background-color: rgba(135, 135, 135, 0.175);
   border-radius: 8px;
 }
