@@ -9,7 +9,6 @@ If you don't have Discord Nitro, this will make all the emojis and stickers that
 
 <details> <summary>Screenshots</summary>
 
-**Importing:**
 **Before:**
 
 ![image](https://github.com/tom22k/css-snippets/assets/143504320/f52957dc-82d5-4584-aeb7-c4899c25736a) ![gif](https://github.com/tom22k/css-snippets/assets/143504320/a86e813e-9281-46a8-be4a-40d0e48acddb)
@@ -21,15 +20,18 @@ If you don't have Discord Nitro, this will make all the emojis and stickers that
 
 <details> <summary>How to use</summary>
   
-**Copy link:**
+**Copy link to paste in online themes:**
 ```
 https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BetterLockedEmojis.css
 ```
 
-**Importing:**
+**Importing in quick CSS:**
 ```css
 @import url("https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BetterLockedEmojis.css");
 ```
+
+**Or copy the raw CSS into your own file (Click [here](https://github.com/tom22k/discord-css/blob/main/Snippets/BetterLockedEmojis.css))**
+
 </details>
 
 
