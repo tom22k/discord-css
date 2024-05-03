@@ -1,0 +1,41 @@
+/* make nitro needed emojis & stickers b&w */
+#emoji-picker-grid [class^=emojiListRow_] [class^=emojiItem_]:has([class^=emojiLockIconContainer_]),
+#emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroLocked_],
+#sticker-picker-grid div:has(> [class^=row_] [class^=sticker_] [class^=stickerNode_][class*=stickerUnsendable_]) {
+  background-color: transparent;
+  filter: grayscale(100%);
+}
+
+/* make unavailable emojis & stickers have matching styles */
+#emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroLocked_] [class^=lockedEmoji_],
+#sticker-picker-grid [class^=sticker_]:has([class^=stickerNode_][class*=stickerUnsendable_]) {
+  background: hsl(var(--black-500-hsl)/.6);
+  filter: brightness(50%);
+}
+
+/* disable clicking on unavailable emojis & stickers */
+#emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroLocked] [class^=emojiListRow_],
+#emoji-picker-grid [class^=emojiItem_]:has([class^=emojiLockIconContainer_]),
+#sticker-picker-grid [class^=sticker_]:has([class^=stickerNode_][class*=stickerUnsendable_]) {
+  pointer-events: none;
+}
+
+/* hide unavailable server shortcuts and upsell */
+#emoji-picker-tab-panel [class^=listItems_] > div:has([class^=categoryItemLockIconContainer_]),
+#emoji-picker-grid [class^=nitroTopDividerContainer_],
+#emoji-picker-grid [class^=upsellContainer_],
+#sticker-picker-tab-panel > [class^=wrapper_] [class^=listItems_] [class^=stickerCategory_] {
+  display: none;
+}
+
+/* don't hide default sticker shortcuts and available server */
+#sticker-picker-tab-panel > [class^=wrapper_] [class^=listItems_] [class^=stickerCategory_][class*=stickerCategoryGeneric_],
+#sticker-picker-tab-panel > [class^=wrapper_] [class^=listItems_] div:has([class^=stickerCategory_][class*=stickerCategoryGeneric_]) + div [class^=stickerCategory_] {
+    display: block !important;
+}
+
+/* disable scrolling on the server shortcuts */
+#emoji-picker-tab-panel > [class^=wrapper_] > [class^=scroller_],
+#sticker-picker-tab-panel > [class^=wrapper_] > [class^=scroller_] {
+    overflow-y: hidden !important;
+}
