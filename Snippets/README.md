@@ -1,12 +1,15 @@
-# Better Locked Emojis
-If you don't have Discord Nitro, this will make all the emojis that you cannot use black and white as well as remove the annoying Nitro upsell.
+## Some simple css snippets for Discord.
+I try to make the snippets work through Discord updates and with most themes.
+You can message me on Discord @tom22k or ping me in the Vencord theme dev channel, you can also post issues or contributions here.
+Screenshots may not be exactly what you will see or may be slightly out of date.
+**The snippets are still in active development and I reserve the right to make breaking changes.**
 
-### Importing:
-```css
-@import url("https://raw.githubusercontent.com/tom22k/css-snippets/main/BetterLockedEmojis/import.css");
-```
+## [BetterLockedEmojis](https://github.com/tom22k/discord-css/blob/main/Snippets/BetterLockedEmojis.css)
+If you don't have Discord Nitro, this will make all the emojis and stickers that you cannot use black and white, disable being able to click on things you can't use, and remove the annoying Nitro upsell.
 
-### Screenshots:
+<details> <summary>Screenshots</summary>
+
+**Importing:**
 **Before:**
 
 ![image](https://github.com/tom22k/css-snippets/assets/143504320/f52957dc-82d5-4584-aeb7-c4899c25736a) ![gif](https://github.com/tom22k/css-snippets/assets/143504320/a86e813e-9281-46a8-be4a-40d0e48acddb)
@@ -14,6 +17,20 @@ If you don't have Discord Nitro, this will make all the emojis that you cannot u
 **After:**
 
 ![image](https://github.com/tom22k/css-snippets/assets/143504320/7484f717-3cd6-4623-b57f-39f4feb5c343) ![gif](https://github.com/tom22k/css-snippets/assets/143504320/b46e6387-026c-47b5-8ddc-d063541af2a4)
+</details>
+
+<details> <summary>How to use</summary>
+  
+**Copy link:**
+```
+https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BetterLockedEmojis.css
+```
+
+**Importing:**
+```css
+@import url("https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BetterLockedEmojis.css");
+```
+</details>
 
 
 # Better Mod View
