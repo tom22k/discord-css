@@ -1,5 +1,8 @@
-/* tweaked version of DaBluLite's SpotifyActivityRedesign */
-
+/*
+ * @name SpotifyRedesignV2
+ * @description Expanded version of DaBluLite's Spotify Activity Redesign
+ * @author DaBluLite, tom2k
+*/
 /* make the cursor a pointer on buttons */
 .vc-spotify-button-row [class^=vc-spotify-button] {
   cursor: pointer;
