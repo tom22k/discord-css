@@ -99,7 +99,7 @@ https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BoxyUserPanel
 
 </details>
 
-## [ClickableConectedAccounts](https://github.com/tom22k/discord-css/blob/main/Snippets/ClickableConectedAccounts.css)
+## [ClickableConnectedAccounts](https://github.com/tom22k/discord-css/blob/main/Snippets/ClickableConnectedAccounts.css)
 Make each entire connected account clickable! Instead of just the little arrow. Also adds a little background when hovering.
 
 <details> <summary>Screenshots</summary>
@@ -118,12 +118,12 @@ Make each entire connected account clickable! Instead of just the little arrow. 
   
 **Copy link to paste in online themes**
 ```
-https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/ClickableConectedAccounts.css
+https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/ClickableConnectedAccounts.css
 ```
 
 **Importing in quick CSS**
 ```css
-@import url("https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/ClickableConectedAccounts.css");
+@import url("https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/ClickableConnectedAccounts.css");
 ```
 
 **Or copy the raw CSS into your own file (Click [here](https://github.com/tom22k/discord-css/blob/main/Snippets/ClickableConectedAccounts.css))**
