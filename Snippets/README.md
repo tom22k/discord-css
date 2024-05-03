@@ -110,11 +110,13 @@ A simple redesign making folders appear as interactive icons, compatible with al
 
 **Before**
 
-![gif](https://github.com/tom22k/discord-css/assets/143504320/b57b5e04-ae95-472d-89c1-bef35ccfb66a)
+![gif](https://github.com/tom22k/discord-css/assets/143504320/19abfcf0-0379-482b-8099-756ef1f63bd3)
+
 
 **After**
 
-![gif](https://github.com/tom22k/discord-css/assets/143504320/6fbcb95c-a52f-47ce-90b9-8bedb1417ddb)
+![gif](https://github.com/tom22k/discord-css/assets/143504320/cf5be4a6-23a7-4085-936e-b2dfd8e28d63)
+
 
 </details>
 
