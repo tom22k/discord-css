@@ -39,9 +39,7 @@ https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BetterLockedE
 
 
 ## [BetterModView](https://github.com/tom22k/discord-css/blob/main/Snippets/BetterModView.css)
-Give Discord's "mod view" its intended style.
-
-Works for users with and without profile themes.
+Give Discord's "mod view" its intended style. Works for users with and without profile themes.
 
 <details> <summary>Screenshots</summary>
 
@@ -71,8 +69,7 @@ https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BetterModView
 </details>
 
 ## [BoxyUserPanel](https://github.com/tom22k/discord-css/blob/main/Snippets/BoxyUserPanel.css)
-Just a user panel re-design, inspired by [Snare Hawk's idea](https://github.com/Snare-Hawk/snare-CSS?tab=readme-ov-file#profile-panel-thingy).
-Works with the game activity toggle button too.
+Just a user panel re-design, inspired by [Snare Hawk's idea](https://github.com/Snare-Hawk/snare-CSS?tab=readme-ov-file#profile-panel-thingy). Works with the game activity toggle button too.
 
 <details> <summary>Screenshots</summary>
 
@@ -103,9 +100,7 @@ https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BoxyUserPanel
 </details>
 
 ## [ClickableConectedAccounts](https://github.com/tom22k/discord-css/blob/main/Snippets/ClickableConectedAccounts.css)
-Make each entire connected account clickable!
-
-Instead of just the little arrow. Also adds a little background when hovering.
+Make each entire connected account clickable! Instead of just the little arrow. Also adds a little background when hovering.
 
 <details> <summary>Screenshots</summary>
 
@@ -136,7 +131,7 @@ https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/ClickableCone
 </details>
 
 ## [InteractiveFolders](https://github.com/tom22k/discord-css/blob/main/Snippets/InteractiveFolders.css)
-A simple redesign making folders appear as interactive icons, compatible with all themes
+A simple redesign making folders appear as interactive icons.
 
 <details> <summary>Screenshots</summary>
 
