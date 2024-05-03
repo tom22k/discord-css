@@ -9,6 +9,8 @@ button:has([class^=storeBtn_]),
 [aria-label="User Badges"] a:has([style="border-radius: 50%; transform: scale(0.9);"]),
 /* social links in settings */
 nav > [role=tablist] > [class^=socialLinks_],
+/* hypesquad settings */
+[data-tab-id^="Hypesquad"],
 /* extra experiment settings */
 [data-tab-id="Text Component"],
 [data-tab-id="Text Playground"],
