@@ -93,6 +93,8 @@ button[class*=guildBoostCtaSecondary_],
 [class^=emojiSection_] > [class^=flex_] > [class^=flex_] > [class^=defaultColor_][data-text-variant="text-sm/normal"],
 /* nitro top divider in emoji picker/autocomplete  */
 [class^=nitroTopDividerContainer_],
+/* hide unavailable emoji server shortcuts */
+#emoji-picker-tab-panel [class^=listItems_] > div:has([class^=categoryItemLockIconContainer_]),
 /* nitro bottom divider in emoji picker  */
 #emoji-picker-grid [class^=nitroBottomDivider_],
 /* nitro upsell warning in emoji picker  */
@@ -134,24 +136,6 @@ button[class*=guildBoostCtaSecondary_],
 #emoji-picker-grid [class^=emojiItem_]:has([class^=emojiLockIconContainer_]),
 #sticker-picker-grid [class^=sticker_]:has([class^=stickerNode_][class*=stickerUnsendable_]) {
   pointer-events: none;
-}
-
-/* hide unavailable server shortcuts */
-#emoji-picker-tab-panel [class^=listItems_] > div:has([class^=categoryItemLockIconContainer_]),
-#sticker-picker-tab-panel > [class^=wrapper_] [class^=listItems_] [class^=stickerCategory_] {
-  display: none;
-}
-
-/* don't hide default sticker shortcuts and available server */
-#sticker-picker-tab-panel > [class^=wrapper_] [class^=listItems_] [class^=stickerCategory_][class*=stickerCategoryGeneric_],
-#sticker-picker-tab-panel > [class^=wrapper_] [class^=listItems_] div:has([class^=stickerCategory_][class*=stickerCategoryGeneric_]) + div [class^=stickerCategory_] {
-    display: block !important;
-}
-
-/* disable scrolling on the server shortcuts */
-#emoji-picker-tab-panel > [class^=wrapper_] > [class^=scroller_],
-#sticker-picker-tab-panel > [class^=wrapper_] > [class^=scroller_] {
-    overflow-y: hidden !important;
 }
 
 /* UNABLE TO TEST ATM */
