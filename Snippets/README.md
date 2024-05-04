@@ -10,6 +10,8 @@ Screenshots may not be exactly what you will see or may be slightly out of date.
 ## [BetterLockedEmojis](https://github.com/tom22k/discord-css/blob/main/Snippets/BetterLockedEmojis.css)
 If you don't have Discord Nitro, this will make all the emojis and stickers that you cannot use black and white, disable being able to click on things you can't use, and remove the annoying Nitro upsell.
 
+**Only use if you do not have Nitro.**
+
 <details> <summary>Screenshots</summary>
 
 **Before**
