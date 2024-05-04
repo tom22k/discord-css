@@ -47,6 +47,8 @@ button[class*=guildBoostCtaSecondary_],
 #user-settings-cog-Billing,
 /* Merch settings right click entry */
 #user-settings-cog-merchandise,
+/* nitro icon in stream quality */
+[class^=streamQualityIndicator_] [class^=premiumStreamIcon_],
 /* Nitro upselling in user popout when hovering over banner */
 [class^=banner_] [class^=premiumIcon],
 /* Upselling in profiles settings tab */
