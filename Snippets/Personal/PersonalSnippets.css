@@ -51,37 +51,12 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* SCROLLBARS */
 /* make profile text scrollable and restyle - requires new electron */
 [class*=lineClamp2Plus_] {
     overflow-y: auto !important;
     scrollbar-color: rgba(135, 135, 135, 0.263) transparent !important;
     scrollbar-width: thin !important;
 }
-
-[class^=userProfileModalOverlayBackground_] [class^=body_] [class^=infoScroller] {
-    scrollbar-color: var(--profile-body-divider-color) var(--scrollbar-thin-track) !important;
-}
-
-#channels {
-    scrollbar-width: none;
-}
-
-/* hide unnecessary scrollbar in user popouts */
-[class^=userPopoutOverlayBackground_] [class^=scroller_] {
-    scrollbar-width: none;
-    padding-right: 12px !important;
-}
-
-/* show full about me 
-[style="-webkit-line-clamp: 6;"] {
-  display: block;
-}*/
-/* make profile modals adaptable 
-[aria-label="User Profile Modal"] [class^=userProfileModalOverlayBackground_] {
-  display:block;
-}
-*/
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
