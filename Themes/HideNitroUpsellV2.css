@@ -2,7 +2,7 @@
  * @name Hide Nitro Upselling
  * @description Hide all Nitro upselling
  * @author Vendicated, msm8916, D3SOX, tom2k
- * @version 2.0
+ * @version 2.1
 */
 /* HIDE */
 /* Nitro Button above DM List */
@@ -11,6 +11,10 @@
 [href="/shop"],
 /* Gift Button */
 [class^=channelTextArea_] [class^=buttons_] > button,
+/* "Choose a sound" in voice & video settings */
+[class^=customizationSection_]:has([class^=nitroWheel_]),
+/* react with nitro emojis in vc */
+#emoji-picker-tab-panel [class^=tooltipContainer_]:has(> #fancybutton-toggle),
 /* nitro ad in server boosts page */
 [class^=tier0Container_],
 /* Nitro upselling in server boosting screen */
@@ -55,8 +59,10 @@ button[class*=guildBoostCtaSecondary_],
 #profile-customization-tab [class*=premiumFeatureBorder],
 /* Upsell unique profiles overlay in profiles tab */
 [class^=upsellOverlayContainer_],
-/* Nitro theme upselling */
-[class^=themeEditor],
+/* nitro themes */
+[class^=presets_][class*=basicThemeSelectors_] + section:has([class^=nitroWheel_]),
+/* custom app icons */
+[class^=selectionGroup_]:has([class^=nitroWheel_]),
 /* Shop upselling in profiles settings tab */
 #profile-customization-tab > [class^=container_][style^="background-image:"],
 /* "Send longer Messages with Discord Nitro!"*/ 
