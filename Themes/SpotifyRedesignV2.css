@@ -3,14 +3,15 @@
  * @description Expanded version of DaBluLite's Spotify Activity Redesign
  * @author DaBluLite, tom2k
 */
+
 /* make the cursor a pointer on buttons */
 .vc-spotify-button-row [class^=vc-spotify-button] {
   cursor: pointer;
 }
 /* stylize text in activity to match player */
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) :is([class*=text_], [class^=anchor_], [class*=themed_] [class*=text_]),
-[class^=activity]:has([class*=spotifyButtonLogo_]) :is([class*=text_], [class^=anchor_], [class*=themed_] [class*=text_]),
-[class^=activity]:has([class*=spotifyButtonLogo_]) [class*=content_] {
+.theme-dark [id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) :is([class*=text_], [class^=anchor_], [class*=themed_] [class*=text_]),
+[class^=userP][style^="--profile-gradient-primary-color: var(--background-secondary-alt);"] [class^=activity]:has([class*=spotifyButtonLogo_]) :is([class*=text_], [class^=anchor_], [class*=themed_] [class*=text_]),
+[class^=userP][style^="--profile-gradient-primary-color: var(--background-secondary-alt);"] [class^=activity]:has([class*=spotifyButtonLogo_]) [class*=content_] {
     color: #fff;
 }
 [id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) :is([class^=anchor_], [class*=themed_] [class*=text_]),
@@ -44,7 +45,7 @@
 /* stylize buttons */
 /* "play on spotify" button in activity */
 [class^=activity]:has([class*=spotifyButtonLogo_]) button:not(:has([class^=listenAlongIcon_])) {
-    background-color: transparent !important;
+    background-color: #000 !important;
     border-radius: 50px;
     border: 1px solid #fff;
     transition: none !important;
@@ -181,27 +182,27 @@
   justify-content: center;
   display: flex;
 }
-[class^=activityProfileV2_]:has([class^=disabledButtonWrapper_],[class*=spotifyButtonLogo_]) [class^=timeBarProfileV2_] [class^=barInMultiLine_] {
+[class^=activityProfileV2_]:has([class^=disabledButtonWrapper_]) :has([class*=spotifyButtonLogo_]) [class^=timeBarProfileV2_] [class^=barInMultiLine_] {
   width: 65%;
   position: absolute;
   margin-top: -0.025%;
 }
-[class^=activityProfileV2_]:has([class^=disabledButtonWrapper_],[class*=spotifyButtonLogo_]) [class^=timeBarProfileV2_] [class^=flex] {
+[class^=activityProfileV2_]:has([class^=disabledButtonWrapper_]) :has([class*=spotifyButtonLogo_]) [class^=timeBarProfileV2_] [class^=flex] {
   margin-top: -0.8%;
 }
-[class^=activityProfileV2_]:has(:not([class^=disabledButtonWrapper_])):has([class*=spotifyButtonLogo_]) [class^=timeBarProfileV2_] [class^=barInMultiLine_] {
+[class^=activityProfileV2_] :has([class*=spotifyButtonLogo_]) [class^=timeBarProfileV2_] [class^=barInMultiLine_] {
   width: 27.5%;
   position: absolute;
   margin-top: 0.5%;
 }
-[class^=activityProfileV2_]:has(:not([class^=disabledButtonWrapper_])):has([class*=spotifyButtonLogo_]) [class^=timeBarProfileV2_] [class^=flex] {
+[class^=activityProfileV2_] :has([class*=spotifyButtonLogo_]) [class^=timeBarProfileV2_] [class^=flex] {
   margin-top: -0.5%;
 }
-[class^=activityProfileV2_]:has([class^=platformIcon_],[class^=contentNoImagesProfileV2_]) [class^=timeBarProfileV2_] [class^=barInMultiLine_] {
+[class^=activityProfileV2_]:has([class^=platformIcon_]) :has([class^=contentNoImagesProfileV2_]) [class^=timeBarProfileV2_] [class^=barInMultiLine_] {
   width: 82.5%;
   position: absolute;
 }
-[class^=activityProfileV2_]:has([class^=platformIcon_],[class^=contentNoImagesProfileV2_]) [class^=timeBarProfileV2_] [class^=flex] {
+[class^=activityProfileV2_]:has([class^=platformIcon_]) :has([class^=contentNoImagesProfileV2_]) [class^=timeBarProfileV2_] [class^=flex] {
   margin-top: -0.75%;
 }
 [class^=activityUserPopoutV2_]:has([class^=platformIcon_]) [class^=timeBarUserPopoutV2_] [class^=barInMultiLine_] {
