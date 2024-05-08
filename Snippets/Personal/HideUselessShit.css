@@ -28,7 +28,7 @@ nav > [role=tablist] > [class^=socialLinks_],
 /* server header popout divider */
 #guild-header-popout [class^=separator_],
 /* create invite on channels */
-#channels [aria-label="Create Invite"],
+#channels [class^=iconItem_][aria-label*="Invite"],
 /* server guide */
 [data-list-item-id^="channels___home-tab-"],
 /* create thread suggestion */
