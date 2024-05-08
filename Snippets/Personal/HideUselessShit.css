@@ -1,4 +1,6 @@
 /* HIDE */
+/* emoji skin color picker */
+#emoji-picker-tab-panel [class^=diversitySelector_],
 /* separator in status picker */
 #account[class^=menu_] [class^=submenu_] [class^=separator_],
 /* descriptions in status picker */
