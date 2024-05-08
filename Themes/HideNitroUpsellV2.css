@@ -113,15 +113,6 @@ button[class*=guildBoostCtaSecondary_],
 [class^=autocomplete_] [class*=premiumEmoji_] {
   display: none !important;
 }
-/* prevent clicking on badges that upsell nitro - preserve hover popup? */
-[class^=profileBadges] > [href="https://discord.com/settings/premium"],
-[class^=badgeList_] > [href="https://discord.com/settings/premium"] {
-    pointer-events: none;
-}
-/* disable clicking on super reactions */
-[class^=reactionInner_]:has([class^=burstGlow_]) {
-  pointer-events: none;
-}
 
 /* BetterLockedEmojis */
 /* make nitro needed emojis & stickers b&w */
@@ -139,6 +130,11 @@ button[class*=guildBoostCtaSecondary_],
   filter: brightness(50%);
 }
 
+/* prevent clicking on badges that upsell nitro */
+[class^=profileBadges] > [href="https://discord.com/settings/premium"]:active,
+[class^=badgeList_] > [href="https://discord.com/settings/premium"]:active,
+/* disable clicking on super reactions */
+[class^=reactionInner_]:has([class^=burstGlow_]),
 /* disable clicking on unavailable emojis & stickers */
 #emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroLocked] [class^=emojiListRow_],
 #emoji-picker-grid [class^=emojiItem_]:has([class^=emojiLockIconContainer_]),
