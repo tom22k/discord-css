@@ -1,4 +1,10 @@
 /* HIDE */
+/* user settings cog shortcuts except listed below */
+[id^=user-settings-cog-]:not([id^=user-settings-cog-Vencord],
+#user-settings-cog-My_Account,
+#user-settings-cog-Profile_Customization,
+#user-settings-cog-Voice____Video,
+[id^=user-settings-cog-Experiments]),
 /* emoji skin color picker */
 #emoji-picker-tab-panel [class^=diversitySelector_],
 /* separator in status picker */
