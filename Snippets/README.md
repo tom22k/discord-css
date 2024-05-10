@@ -133,7 +133,7 @@ https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/ClickableConn
 </details>
 
 ## [InteractiveFolders](https://github.com/tom22k/discord-css/blob/main/Snippets/InteractiveFolders.css)
-A simple redesign making folders appear as interactive icons.
+A simple redesign making folders and the "Add a Server" button appear as interactive icons.
 
 <details> <summary>Screenshots</summary>
 
