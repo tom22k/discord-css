@@ -10,7 +10,7 @@
     justify-content: center !important;
 }
 /* keep the chat day separatorwhich is removed in nvhhr's bordercleanup */
-[class^=divider_][class*=hasContent_] {
+[class^=divider_][class*=hasContent_][aria-label] {
     border-top: thin solid var(--background-modifier-accent) !important;
     justify-content: center !important;
 }
