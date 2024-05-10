@@ -72,7 +72,8 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* use theme colours in 'channels & roles' menu */
 [class^=base_] > [class^=content_] > [class^=chat_] > [class^=header_] > [class^=upperContainer_] > [class*=innerHeader_]::after, /* little gradient thing */
-[class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=header_], /* header background */
-[class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=chat_] /* menu background */ {
+[class^=base_] > [class^=content_] > [class^=chat_]:has(> [class^=header_]) [class^=header_], /* header background */
+[class^=base_] > [class^=content_] > [class^=chat_]:has(> [class^=header_]) [class^=content_], /* background */
+[class^=base_] > [class^=content_] > [class^=chat_]:has(> [class^=header_]) [class^=chat_] /* menu background */ {
   background: transparent;
 }
