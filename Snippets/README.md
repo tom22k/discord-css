@@ -1,11 +1,11 @@
 ## Some simple css snippets for Discord.
-These snippets should work through Discord updates and with most themes.
+These snippets were designed to work through Discord updates and with most themes.
 
-You can message me on Discord @tom22k or ping me in the Vencord theme dev channel, you can also post issues or contributions here.
+If you have any suggestions or issues, you can message me on Discord @tom22k or ping me in the Vencord theme development channel, although you can also post issues or pull requests here.
 
-Screenshots may not be exactly what you will see or may be slightly out of date.
+Screenshots may be slightly out of date.
 
-**The snippets are still in active development and I reserve the right to make breaking changes.**
+**These snippets are constantly under development.**
 
 ## [BetterLockedEmojis](https://github.com/tom22k/discord-css/blob/main/Snippets/BetterLockedEmojis.css)
 If you don't have Discord Nitro, this will make all the emojis and stickers that you cannot use black and white, disable being able to click on things you can't use, and remove the annoying Nitro upsell.
