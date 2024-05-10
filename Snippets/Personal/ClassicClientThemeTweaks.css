@@ -4,30 +4,30 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* lighter title bar */
-[class^=typeWindows_][class*=withFrame][class*=titleBar_][class*=withBackgroundOverride_] {
-  background-color: var(--background-modifier-selected);
+/* keep the unread bar which is removed in nvhhr's bordercleanup */
+#---new-messages-bar[class^=divider_][class*=hasContent_] /*chat day separator*/ {
+    border-top: thin solid var(--divider-color) !important;
+    justify-content: center !important;
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
+/* LIGHTER COLOUR */
+/* code blocks */
+[class^=markup_] code,
+/* friends list activity cards */
+[class^=nowPlayingColumn_] [class^=itemCard_],
+/* lighter title bar */
+[class^=typeWindows_][class*=withFrame][class*=titleBar_][class*=withBackgroundOverride_],
 /* hover highlight on vc buttons */
 [class^=actionButtons_] [aria-label="Turn On Camera"]:hover,
 [class^=actionButtons_] [aria-label="Share Your Screen"]:hover,
 [class^=actionButtons_] [aria-label="Open Soundboard"]:hover,
-[class^=actionButtons_] [aria-label="Start an Activity"]:hover {
-  background-color: var(--bg-overlay-selected,var(--background-modifier-selected));
-}
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
+[class^=actionButtons_] [aria-label="Start an Activity"]:hover,
 /* lighter channel hover highlight */
-#channels [class^=iconVisibility_]:hover [role=link] {
-  background: var(--bg-overlay-selected,var(--background-modifier-selected));
-}
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
+#channels [class^=iconVisibility_]:hover [role=link],
 /* highlight message container on hover */
 [data-list-item-id^="chat-messages"]:hover {
-  background-color: var(--bg-overlay-selected,var(--background-modifier-selected));
+  background-color: var(--background-modifier-selected) !important;
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
@@ -45,96 +45,14 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* search bar */
-[aria-label="Channel header"] [class^=searchBar_] {
+[class^=chat_] [class^=searchBar_] {
 	background-color: var(--background-modifier-selected);
 	border-radius: 5px;
 }
-[aria-label="Channel header"] [class^=searchBar_] svg {
+[class^=chat_] [class^=searchBar_] svg {
 	color: var(--interactive-normal);
 }
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* folders */
-[aria-label="Servers"] [class^=expandedFolderIconWrapper_] > svg {
-	color: inherit !important;
-}
-[aria-label="Servers"] [class*=FolderIconWrapper_] {
-	color: var(--interactive-normal) !important;
-}
-[aria-label="Servers"] [class*=FolderIconWrapper_]:hover {
-	color: var(--interactive-active) !important;
-	background-color: var(--background-modifier-selected);
-}
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* code blocks */
-[class^=markup_] code {
-    background: var(--background-modifier-selected);
-	border-color: rgba(255,255,255,0.1);
-}
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* add server button */
-[data-list-id=guildsnav] [data-list-item-id=guildsnav___create-join-button] {
-  color: var(--interactive-normal);
-}
-[data-list-id=guildsnav] [data-list-item-id=guildsnav___create-join-button]:hover {
-	color: var(--interactive-active);
-	background-color: var(--background-modifier-selected);
-}
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* light background to dark usernames */
-[class*=username_][style="color: rgb(2, 2, 2);"], /* ? black */
-[class*=username_][style="color: rgb(5, 0, 5);"], /* color chan black */
-[class*=username_][style="color: rgb(0, 0, 0);"], /* black */
-[class*=username_][style="color: rgb(15, 2, 2);"], /* hiraeth black */
-[class*=username_][style="color: rgb(0, 1, 0);"], /* swiss bedwars black */
-[class*=username_][style="color: rgb(10, 1, 2);"], /* sewerperson owner black */
-[class*=username_][style="color: rgb(0, 0, 1);"], /* sewerperson admin black */
-[class*=username_][style="color: rgb(9, 8, 8);"], /* xona loha black */
-[class*=username_][style="color: rgb(12, 12, 12);"] /* xona crescent black */ {
-	color: var(--text-normal) !important;
-}
-/* mentions */
-.mention[style*="color: rgb(2, 2, 2);"], /* ? black */
-.mention[style*="color: rgb(5, 0, 5);"], /* color chan black */
-.mention[style*="color: rgb(0, 0, 0);"], /* black */
-.mention[style*="color: rgb(15, 2, 2);"], /* hiraeth black */
-.mention[style*="color: rgb(0, 1, 0);"], /* swiss bedwars black */
-.mention[style*="color: rgb(10, 1, 2);"], /* sewerperson owner black */
-.mention[style*="color: rgb(0, 0, 1);"], /* sewerperson admin black */
-.mention[style*="color: rgb(9, 8, 8);"], /* xona loha black */
-.mention[style*="color: rgb(12, 12, 12);"] /* xona crescent black */ {
-	color: var(--text-normal) !important;
-	background-color: rgba(219,222,225,0.1) !important;
-}
-/* hovered mentions */
-.mention[style*="color: rgb(2, 2, 2);"]:hover, /* ? black */
-.mention[style*="color: rgb(5, 0, 5);"]:hover, /* color chan black */
-.mention[style*="color: rgb(0, 0, 0);"]:hover, /* black */
-.mention[style*="color: rgb(15, 2, 2);"]:hover, /* hiraeth black */
-.mention[style*="color: rgb(0, 1, 0);"]:hover, /* swiss bedwars black */
-.mention[style*="color: rgb(10, 1, 2);"]:hover, /* sewerperson owner black */
-.mention[style*="color: rgb(0, 0, 1);"]:hover, /* sewerperson admin black */
-.mention[style*="color: rgb(9, 8, 8);"]:hover, /* xona loha black */
-.mention[style*="color: rgb(12, 12, 12);"]:hover /* xona crescent black */ {
-	color: var(--text-normal) !important;
-	background-color: rgba(219,222,225,0.3) !important;
-}
-/* mentions in message bar */
-[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(2, 2, 2);"], /* ? black */
-[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(5, 0, 5);"], /* color chan black */
-[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(0, 0, 0);"], /* black */
-[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(15, 2, 2);"], /* hiraeth black */
-[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(0, 1, 0);"], /* swiss bedwars black */
-[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(10, 1, 2);"], /* sewerperson owner black */
-[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(0, 0, 1);"], /* sewerperson admin black */
-[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(9, 8, 8);"], /* xona loha black */
-[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(12, 12, 12);"] /* xona crescent black */ {
-	color: var(--text-normal) !important;
-	background-color: rgba(219,222,225,0.1) !important;
-}
+
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* spoiler */
@@ -149,31 +67,12 @@
  --scrollbar-auto-thumb: var(--background-modifier-selected);
  --scrollbar-auto-track: transparent;
 }
-[class^=chat_] [class^=messagesWrapper_] [class*=scroller_][class*=auto_] {
-  scrollbar-color: var(--interactive-normal);
-}
+
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* use theme colours in 'channels & roles' menu */
+[class^=base_] > [class^=content_] > [class^=chat_] > [class^=header_] > [class^=upperContainer_] > [class*=innerHeader_]::after, /* little gradient thing */
 [class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=header_], /* header background */
-[class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=content_]:has([class^=tabBar_]), /* tab bar background */
-[class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=content_] [class^=pageBody_], /* "browse channels" background */
-[class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=chat_]:has([class^=prompt_]) /* "customize" background */ {
-  background-color: var(--background-primary);
-}
-/* hide little gradient thing */
-[class^=base_] > [class^=content_] > [class^=chat_] > [class^=header_] > [class^=upperContainer_] > [class*=innerHeader_]::after {
-  display: none;
-}
-/*nitro background fix v1.1*/ /* not mine so idk where there r */
-.layer_f7d46a+.layer_f7d46a,
-.standardSidebarView__12528,
-.contentRegion__08eba,
-.contentRegionScroller__9ae20,
-.sidebarRegionScroller__8113e,
-.page_e5cc79 {
-    background: none;
-}
-.container__03ec9 {
-    background: none !important;
+[class^=base_] > [class^=content_] > [class^=chat_]:not(:has([class^=chatContent_])) [class^=chat_] /* menu background */ {
+  background: transparent;
 }
