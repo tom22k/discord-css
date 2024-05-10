@@ -1,3 +1,4 @@
+/* interactive folders */
 [class^=expandedFolderIconWrapper_] > svg {
 	color: inherit !important;
 }
@@ -6,5 +7,14 @@
 }
 [class*=FolderIconWrapper_]:hover {
 	color: var(--interactive-active) !important;
+	background-color: var(--background-modifier-selected);
+}
+
+/* interactive "add server" button */
+[data-list-id=guildsnav] [data-list-item-id=guildsnav___create-join-button] {
+	color: var(--interactive-normal);
+}
+[data-list-id=guildsnav] [data-list-item-id=guildsnav___create-join-button]:hover {
+	color: var(--interactive-active);
 	background-color: var(--background-modifier-selected);
 }
