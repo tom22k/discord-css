@@ -164,3 +164,35 @@ https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/InteractiveFo
 **Or copy the raw CSS into your own file (Click [here](https://github.com/tom22k/discord-css/blob/main/Snippets/InteractiveFolders.css))**
 
 </details>
+
+
+## [SimpleDarkUsernamesFix](https://github.com/tom22k/discord-css/blob/main/Snippets/SimpleDarkUsernamesFix.css)
+Makes very dark usernames the normal text colour. This is applied to usernames everywhere, as well as mentions if using the "" plugin.
+
+<details> <summary>Screenshots</summary>
+
+**Before**
+
+![image](https://github.com/tom22k/discord-css/assets/143504320/5cf19078-7e08-4276-a89e-5aa5c5d5d26e)
+
+**After**
+
+![image](https://github.com/tom22k/discord-css/assets/143504320/851cef4f-b180-4a01-a26f-09aa9556d03c)
+
+</details>
+
+<details> <summary>How to use</summary>
+  
+**Copy link to paste in online themes**
+```
+https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/SimpleDarkUsernamesFix.css
+```
+
+**Importing in quick CSS**
+```css
+@import url("https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/SimpleDarkUsernamesFix.css");
+```
+
+**Or copy the raw CSS into your own file (Click [here](https://github.com/tom22k/discord-css/blob/main/Snippets/SimpleDarkUsernamesFix.css))**
+
+</details>
