@@ -1,0 +1,51 @@
+/* usernames */
+[class*=username_][style="color: rgb(2, 2, 2);"], /* ? black */
+[class*=username_][style="color: rgb(5, 0, 5);"], /* color chan black */
+[class*=username_][style="color: rgb(0, 0, 0);"], /* black */
+[class*=username_][style="color: rgb(15, 2, 2);"], /* hiraeth black */
+[class*=username_][style="color: rgb(0, 1, 0);"], /* swiss bedwars black */
+[class*=username_][style="color: rgb(10, 1, 2);"], /* sewerperson owner black */
+[class*=username_][style="color: rgb(0, 0, 1);"], /* sewerperson admin black */
+[class*=username_][style="color: rgb(9, 8, 8);"], /* xona loha black */
+[class*=username_][style="color: rgb(12, 12, 12);"] /* xona crescent black */ {
+	color: var(--text-normal) !important;
+}
+/* mentions */
+.mention[style*="color: rgb(2, 2, 2);"], /* ? black */
+.mention[style*="color: rgb(5, 0, 5);"], /* color chan black */
+.mention[style*="color: rgb(0, 0, 0);"], /* black */
+.mention[style*="color: rgb(15, 2, 2);"], /* hiraeth black */
+.mention[style*="color: rgb(0, 1, 0);"], /* swiss bedwars black */
+.mention[style*="color: rgb(10, 1, 2);"], /* sewerperson owner black */
+.mention[style*="color: rgb(0, 0, 1);"], /* sewerperson admin black */
+.mention[style*="color: rgb(9, 8, 8);"], /* xona loha black */
+.mention[style*="color: rgb(12, 12, 12);"] /* xona crescent black */ {
+	color: var(--text-normal) !important;
+	background-color: rgba(219,222,225,0.1) !important;
+}
+/* hovered mentions */
+.mention[style*="color: rgb(2, 2, 2);"]:hover, /* ? black */
+.mention[style*="color: rgb(5, 0, 5);"]:hover, /* color chan black */
+.mention[style*="color: rgb(0, 0, 0);"]:hover, /* black */
+.mention[style*="color: rgb(15, 2, 2);"]:hover, /* hiraeth black */
+.mention[style*="color: rgb(0, 1, 0);"]:hover, /* swiss bedwars black */
+.mention[style*="color: rgb(10, 1, 2);"]:hover, /* sewerperson owner black */
+.mention[style*="color: rgb(0, 0, 1);"]:hover, /* sewerperson admin black */
+.mention[style*="color: rgb(9, 8, 8);"]:hover, /* xona loha black */
+.mention[style*="color: rgb(12, 12, 12);"]:hover /* xona crescent black */ {
+	color: var(--text-normal) !important;
+	background-color: rgba(219,222,225,0.3) !important;
+}
+/* mentions in message bar */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(2, 2, 2);"], /* ? black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(5, 0, 5);"], /* color chan black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(0, 0, 0);"], /* black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(15, 2, 2);"], /* hiraeth black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(0, 1, 0);"], /* swiss bedwars black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(10, 1, 2);"], /* sewerperson owner black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(0, 0, 1);"], /* sewerperson admin black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(9, 8, 8);"], /* xona loha black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(12, 12, 12);"] /* xona crescent black */ {
+	color: var(--text-normal) !important;
+	background-color: rgba(219,222,225,0.1) !important;
+}
