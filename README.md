@@ -1,7 +1,5 @@
-This repository is still in a stage where things might change in major ways without warning.
+This repository is still under development, files may change without warning.
 
-Any/all functionality and look of all css here might change without any warning at any time.
+For most snippets/themes in this repository, the Vencord plugin "ThemeAttributes" should be enable.
 
-The Vencord plugin "ThemeAttributes" should be enabled for best experience.
-
-I'm only testing this on Vesktop but I try to maintain compatibility with Discord stable.
+I am primarily testing this on Vesktop (Vencord desktop app), but occasionally verify snippets with Vencord (modded Discord app via Vencord).
