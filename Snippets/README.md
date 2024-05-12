@@ -167,7 +167,7 @@ https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/InteractiveFo
 
 
 ## [SimpleDarkUsernamesFix](https://github.com/tom22k/discord-css/blob/main/Snippets/SimpleDarkUsernamesFix.css)
-Makes very dark usernames the normal text colour. This is applied to usernames everywhere, as well as mentions if using the "" plugin.
+Makes very dark usernames the normal text colour. This is applied to usernames everywhere, as well as mentions if using the "RoleColorEverywhere" plugin.
 
 <details> <summary>Screenshots</summary>
 
