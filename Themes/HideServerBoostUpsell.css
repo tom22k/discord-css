@@ -7,8 +7,10 @@
 /* BOOSTS - SERVER SETTINGS */
 /* overview tab upsell */
 #overview-tab [class^=divider_] [class^=divider_]:has([class^=shinyButton_]),
-/* roles tab - role icon section - possibility for only when we don't have boost lvl 2? */
-#roles-tab [class^=contentWidth_] > [class^=container_]:has([class^=availabilityIndicator_]),
+/* roles tab - role icon section */
+#roles-tab [class^=contentWidth_] > [class^=container_]:has([class^=availabilityIndicator_] > [class*=icon_]:not([class*=unlockedIcon_])),
+/* roles tab - boost icon in role icon section when boost lvl is 2 or more */
+#roles-tab [class^=availabilityIndicator_],
 /* emoji tab - "boost for more emojis" */
 #emoji-tab [class^=banner_]:has([class^=shinyButton_]),
 /* stickers tab - "boost for more stickers" */
@@ -66,5 +68,5 @@
 
 /* disable clicking on server boost status icon in server header */
 [class^=guildIconV2Container_]:active {
-  pointer-events: none;
+  pointer-events: none !important;
 }
