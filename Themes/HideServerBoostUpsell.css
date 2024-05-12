@@ -31,6 +31,8 @@
 [data-tab-id=GUILD_PREMIUM],
 /* ^ following separator */
 [data-tab-id=GUILD_PREMIUM] + [class^=separator_],
+/* context menu for boost status tab */
+#guild-context-guild-settings--GUILD_PREMIUM,
 
 /* BOOSTS - OTHER */
 /* boost progress bar */
@@ -55,7 +57,14 @@
 [class^=sidebar_] [class^=header_]:has(+ [data-tab-id=ROLE_SUBSCRIPTIONS]),
 /* server settings - ^ following separator */
 [data-tab-id=ROLE_SUBSCRIPTIONS] + [class^=separator_],
+/* context menu for subscriptions tab */
+#guild-context-guild-settings--ROLE_SUBSCRIPTIONS,
 /* server shop */
 #channels [class^=containerDefault_]:has(> [id^=shop]) {
   display: none !important;
+}
+
+/* disable clicking on server boost status icon in server header */
+[class^=guildIconV2Container_]:active {
+  pointer-events: none;
 }
