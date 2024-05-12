@@ -49,3 +49,15 @@
 	color: var(--text-normal) !important;
 	background-color: rgba(219,222,225,0.1) !important;
 }
+/* member list group names */
+[class^=membersGroup_] [style^="color: rgb(2, 2, 2);"], /* ? black */
+[class^=membersGroup_] [style^="color: rgb(5, 0, 5);"], /* color chan black */
+[class^=membersGroup_] [style^="color: rgb(0, 0, 0);"], /* black */
+[class^=membersGroup_] [style^="color: rgb(15, 2, 2);"], /* hiraeth black */
+[class^=membersGroup_] [style^="color: rgb(0, 1, 0);"], /* swiss bedwars black */
+[class^=membersGroup_] [style^="color: rgb(10, 1, 2);"], /* sewerperson owner black */
+[class^=membersGroup_] [style^="color: rgb(0, 0, 1);"], /* sewerperson admin black */
+[class^=membersGroup_] [style^="color: rgb(9, 8, 8);"], /* xona loha black */
+[class^=membersGroup_] [style^="color: rgb(12, 12, 12);"] /* xona crescent black */ {
+	color: var(--text-normal) !important;
+}
