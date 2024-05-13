@@ -3,7 +3,7 @@
 [id^=user-settings-cog-]:not([id^=user-settings-cog-Vencord],
 #user-settings-cog-My_Account,
 #user-settings-cog-Profile_Customization,
-#user-settings-cog-Voice____Video,
+#user-settings-cog-Voice___Video,
 [id^=user-settings-cog-Experiments]),
 /* emoji skin color picker */
 #emoji-picker-tab-panel [class^=diversitySelector_],
