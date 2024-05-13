@@ -1,4 +1,6 @@
 /* HIDE */
+/* arrow on voice & video shortcut  */
+#user-settings-cog-Voice___Video [class^=iconContainer_],
 /* user settings cog shortcuts except listed below */
 [id^=user-settings-cog-]:not([id^=user-settings-cog-Vencord],
 #user-settings-cog-My_Account,
