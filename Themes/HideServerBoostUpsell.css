@@ -67,6 +67,6 @@
 }
 
 /* disable clicking on server boost status icon in server header */
-[class^=guildIconV2Container_]:active {
+[class^=header_] [class^=guildIcon]:active {
   pointer-events: none !important;
 }
