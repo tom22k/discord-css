@@ -93,10 +93,6 @@
     width: 56px !important;
     border-radius: 4px;
 }
-/* reduce padding before spotify activity in user panels */
-[class^=userPanelOverlayBackground_]:has(+ [class^=userPanelOverlayBackground_] [class^=platformIcon_]) {
-    padding-bottom: 0;
-}
 
 /* set fonts */
 @font-face {
