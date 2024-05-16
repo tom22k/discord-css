@@ -51,11 +51,28 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* make profile text scrollable and restyle - requires new electron */
-[class*=lineClamp2Plus_] {
-    overflow-y: auto !important;
-    scrollbar-color: rgba(135, 135, 135, 0.263) transparent !important;
-    scrollbar-width: thin !important;
+/* make profile text scrollable and restyle - by Saltssaumure */
+[class^=user] [class*=markup_] > [class*=lineClamp2Plus_] {
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border: 2px solid var(--scrollbar-thin-track);
+    background-color: var(--scrollbar-thin-track);
+    border-color: var(--scrollbar-thin-track);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--profile-body-divider-color);
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    min-height: 40px;
+  }
 }
 
 /* /////////////////////////////////////////////////////////////////// */
