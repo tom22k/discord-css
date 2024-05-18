@@ -4,6 +4,13 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
+/* prevent clicking on official discord badges */
+[class^=profileBadges] > [href*="discord.com"]:active,
+[class^=badgeList_] > [href*="discord.com"]:active {
+  pointer-events: none;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
 /* stop arrow spinning in server header click */
 [class^=sidebar_] [class^=headerContent_]:has(> [class^=guildIconV2Container_]) > [class^=headerChildren_] > svg {
     transform: none;
