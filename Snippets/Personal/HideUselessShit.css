@@ -1,4 +1,8 @@
 /* HIDE */
+/* quest icon in activity */
+[class^=activity_] [class^=questsIcon_],
+/* quest popout on clicking a user in memberlist with a quest icon in activity */
+[id^=popout_]:has([class^=top_] > [class^=left_] > h2):has([class^=top_] > [class^=right_] > [class^=imgWrapper_]),
 /* arrow on voice & video shortcut  */
 #user-settings-cog-Voice___Video [class^=iconContainer_],
 /* user settings cog shortcuts except listed below */
