@@ -19,8 +19,8 @@
 /* LIGHTER COLOUR */
 /* code blocks */
 [class^=markup_] code,
-/* friends list activity cards 
-[class^=nowPlayingColumn_] [class^=itemCard_],*/
+/* friends list activity cards on hover */
+[class^=nowPlayingColumn_] [class^=itemCard_]:hover,
 /* lighter title bar */
 [class^=typeWindows_][class*=withFrame][class*=titleBar_][class*=withBackgroundOverride_],
 /* hover highlight on vc buttons */
