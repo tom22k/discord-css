@@ -4,18 +4,6 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* keep the unread bar which is removed in nvhhr's bordercleanup */
-#---new-messages-bar[class^=divider_][class*=hasContent_] {
-    border-top: thin solid var(--divider-color) !important;
-    justify-content: center !important;
-}
-/* keep the chat day separatorwhich is removed in nvhhr's bordercleanup */
-[class^=divider_][class*=hasContent_][aria-label] {
-    border-top: thin solid var(--background-modifier-accent) !important;
-    justify-content: center !important;
-}
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
 /* LIGHTER COLOUR */
 /* code blocks */
 [class^=markup_] code,
