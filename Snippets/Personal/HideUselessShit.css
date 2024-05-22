@@ -1,4 +1,6 @@
 /* HIDE */
+/* "friends since" icon in profile modal (out of place) */
+[class^=userProfileModal] [class^=section_] > [class^=memberSinceWrapper_] > svg,
 /* quest icon in activity */
 [class^=activity_] [class^=questsIcon_],
 /* quest popout on clicking a user in memberlist with a quest icon in activity */
