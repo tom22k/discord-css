@@ -46,7 +46,7 @@ nav > [role=tablist] > [class^=socialLinks_],
 /* create invite on channels */
 #channels [class^=iconItem_][aria-label*="Invite"],
 /* server guide */
-[data-list-item-id^="channels___home-tab-"],
+#channels > ul > li:has([id^="home-tab-"]),
 /* create thread suggestion */
 [class^="threadSuggestionBar"],
 /* translate button in message bar (translate plugin) */
