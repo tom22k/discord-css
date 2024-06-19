@@ -26,7 +26,7 @@
 /* store button on bot profiles */
 [class^=user] button:has([class^=storeBtn_]),
 /* vencord custom badges */
-[aria-label="User Badges"] [aria-label]:has(> a > [style="border-radius: 50%; transform: scale(0.9);"]),
+[class^=tags_] > [class^=container_] > [aria-label]:has(> a > [style="border-radius: 50%; transform: scale(0.9);"]),
 /* social links in settings */
 nav > [role=tablist] > [class^=socialLinks_],
 /* hypesquad settings */
