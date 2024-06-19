@@ -15,7 +15,7 @@
 [class^=actionButtons_] [aria-label="Turn On Camera"]:hover,
 [class^=actionButtons_] [aria-label="Share Your Screen"]:hover,
 [class^=actionButtons_] [aria-label="Open Soundboard"]:hover,
-[class^=actionButtons_] [aria-label="Start an Activity"]:hover,
+[class^=actionButtons_] [aria-label="Start An Activity"]:hover,
 /* lighter channel hover highlight */
 #channels [class^=iconVisibility_]:hover [role=link],
 /* highlight message container on hover */
