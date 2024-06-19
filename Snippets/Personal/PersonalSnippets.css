@@ -17,32 +17,26 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* prevent clicking on official discord badges */
-[class^=profileBadges] > [href*="discord.com"]:active,
-[class^=badgeList_] > [href*="discord.com"]:active {
+[aria-label="User Badges"] > [aria-label]:has([href*="discord.com"]:active) {
   pointer-events: none;
 }
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* stop arrow spinning in server header click */
-[class^=sidebar_] [class^=headerContent_]:has(> [class^=guildIconV2Container_]) > [class^=headerChildren_] > svg {
-    transform: none;
-}
+
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* coloured status picker backgrounds */
-#account-status-picker--dnd[class^=item_][class*=focused_] {
+#status-status-picker--dnd[class^=item_][class*=focused_] {
     background-color: rgba(242, 63, 66, 0.9);
 }
 
-#account-status-picker--invisible[class^=item_][class*=focused_] {
+#status-status-picker--invisible[class^=item_][class*=focused_] {
     background-color: rgba(128, 132, 142, 0.9);
 }
 
-#account-status-picker--idle[class^=item_][class*=focused_] {
+#status-status-picker--idle[class^=item_][class*=focused_] {
     background-color: rgba(240, 178, 50, 0.9);
 }
 
-#account-status-picker--online[class^=item_][class*=focused_] {
+#status-status-picker--online[class^=item_][class*=focused_] {
     background-color: rgba(35, 165, 90, 0.9);
 }
 
@@ -70,7 +64,7 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* make profile text scrollable and restyle - by Saltssaumure */
+/* make profile text scrollable and restyle - by Saltssaumure 
 [class^=user] [class*=markup_] > [class*=lineClamp2Plus_] {
   overflow-y: scroll;
 
@@ -92,7 +86,7 @@
     border-radius: 4px;
     min-height: 40px;
   }
-}
+}*/
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
@@ -108,9 +102,6 @@
     border: none;
 }
 
-[aria-label="Friends"] [class^=nowPlayingColumn_] [class^=itemCard_] {
-    padding: 8px;
-}
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
@@ -162,35 +153,6 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* user profile modal buttons 
-[aria-label="User Profile Modal"] [class^=tabBarContainer_] {
-    border: none;
-}
-
-[aria-label="User Profile Modal"] [class^=tabBar_] {
-    gap: 20px;
-}
-
-[aria-label="User Profile Modal"] [class^=tabBarItem_] {
-    border: none !important;
-    padding: 8px;
-    border-radius: 8px;
-    height: auto;
-}
-
-[aria-label="User Profile Modal"] [class^=tabBarItem_][class*=selected_] {
-    background-color: rgba(135, 135, 135, 0.1);
-}*/
-
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* reduce padding in user profile modals */
-[aria-label="User Profile Modal"] [class^=userInfoSection_] {
-    padding-bottom: 8px;
-}
-
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
 /* make gif fav button invert colors */
 [class*=gifFavoriteButton_]:not([class*=selected_]),
 [class^=imageAccessory_]:has([class*=gifFavoriteButton_]:not([class*=selected_])) {
@@ -201,16 +163,7 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* shorten some dividers in channel column */
 #channels {
-    --custom-category-channel-space-before-category: 5px;
-}
-
-#channels > [style="height: 12px;"] {
-    height: 0 !important;
-}
-
-/* ? */
-[id=popout_16233] {
-    top: 66px !important;
+    --custom-category-channel-space-before-category: 0;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -309,8 +262,7 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* Bigger Reactions */
-[id*=message-reactions] [class*=reaction_] .emoji,
-[class*=effect_] {
+[id*=message-reactions] [class*=reaction_] .emoji {
     zoom: 150%;
 }
 
