@@ -2,6 +2,7 @@
  * @name SpotifyRedesignV2
  * @description Expanded version of DaBluLite's Spotify Activity Redesign
  * @author DaBluLite, tom2k
+ * @version 2.1
 */
 
 /* make the cursor a pointer on buttons */
@@ -10,8 +11,8 @@
 }
 /* stylize text in activity to match player */
 .theme-dark [id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) :is([class*=text_], [class^=anchor_], [class*=themed_] [class*=text_]),
-[class^=userP][style^="--profile-gradient-primary-color: var(--background-secondary-alt);"] [class^=activity]:has([class^=platformIcon_]):has([class^=syncButton_]) :is([class*=text_], [class^=anchor_], [class*=themed_] [class*=text_]),
-[class^=userP][style^="--profile-gradient-primary-color: var(--background-secondary-alt);"] [class^=activity]:has([class^=platformIcon_]):has([class^=syncButton_]) [class*=content_] {
+[class^=userP] [class^=activity]:has([class^=platformIcon_]):has([class^=syncButton_]) :is([class*=text_], [class^=anchor_], [class*=themed_] [class*=text_]),
+[class^=userP] [class^=activity]:has([class^=platformIcon_]):has([class^=syncButton_]) [class*=content_] {
     color: #fff;
 }
 [id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) :is([class^=anchor_], [class*=themed_] [class*=text_]),
@@ -142,6 +143,7 @@
     --font-primary: "Spotify", var(--fallback-font);
     --font-display: "Spotify", var(--fallback-font);
     font-family: var(--font-display) !important;
+    background-color: #000 !important;
 }
 /* adjust cursor behaviour */
 .vc-spotify-button:hover {
@@ -157,7 +159,7 @@
 #vc-spotify-player {
     display: flex;
     flex-direction: column;
-    background-color: #000 !important;
+    background-color: black !important;
 }
 #vc-spotify-info-wrapper {
     order: 0;
@@ -175,46 +177,46 @@
     position: static;
 }
 /* fix details being horizontally misaligned */
-[class^=activityUserPopoutV2_]:has([class^=platformIcon_]):has([class^=syncButton_]) [class^=contentImagesUserPopoutV2_] {
+[class^=activity][class*=Popout]:has([class^=platformIcon_]):has([class^=syncButton_]) [class^=contentImages] {
   margin-top: 3px; 
 }
-[class^=activityProfileV2_]:has([class^=platformIcon_]):has([class^=syncButton_]) [class^=contentImagesProfileV2_] {
+[class^=activity][class*=Profile]:has([class^=platformIcon_]):has([class^=syncButton_]) [class^=contentImages] {
   margin-top: 2%;
 }
-/* user poopout & profile */
-[class^=activityProfileV2_]:has([class^=platformIcon_]) [class^=timeBarProfileV2_],
-[class^=activityUserPopoutV2_]:has([class^=platformIcon_]) [class^=timeBarUserPopoutV2_] {
+/* user popout & profile */
+[class^=activity][class*=Profile]:has([class^=platformIcon_]) [class^=timeBar],
+[class^=activity][class*=Popout]:has([class^=platformIcon_]) [class^=timeBar] {
   justify-content: center;
   display: flex;
 }
-[class^=activityProfileV2_]:has([class^=platformIcon_]):has([class^=disabledButtonWrapper_]) :has([class^=syncButton_]) [class^=timeBarProfileV2_] [class^=barInMultiLine_] {
+[class^=activity][class*=Profile]:has([class^=platformIcon_]):has([class^=disabledButtonWrapper_]) :has([class^=syncButton_]) [class^=timeBar] [class^=barInMultiLine_] {
   width: 65%;
   position: absolute;
   margin-top: -0.025%;
 }
-[class^=activityProfileV2_]:has([class^=platformIcon_]):has([class^=disabledButtonWrapper_]) :has([class^=syncButton_]) [class^=timeBarProfileV2_] [class^=flex] {
+[class^=activity][class*=Profile]:has([class^=platformIcon_]):has([class^=disabledButtonWrapper_]) :has([class^=syncButton_]) [class^=timeBar] [class^=flex] {
   margin-top: -0.8%;
 }
-[class^=activityProfileV2_]:has([class^=platformIcon_]) :has([class^=syncButton_]) [class^=timeBarProfileV2_] [class^=barInMultiLine_] {
+[class^=activity][class*=Profile]:has([class^=platformIcon_]) :has([class^=syncButton_]) [class^=timeBar] [class^=barInMultiLine_] {
   width: 27.5%;
   position: absolute;
   margin-top: 0.5%;
 }
-[class^=activityProfileV2_]:has([class^=platformIcon_]) :has([class^=syncButton_]) [class^=timeBarProfileV2_] [class^=flex] {
+[class^=activity][class*=Profile]:has([class^=platformIcon_]) :has([class^=syncButton_]) [class^=timeBar] [class^=flex] {
   margin-top: -0.5%;
 }
-[class^=activityProfileV2_]:has([class^=platformIcon_]) :has([class^=contentNoImagesProfileV2_]) [class^=timeBarProfileV2_] [class^=barInMultiLine_] {
+[class^=activity][class*=Profile]:has([class^=platformIcon_]) :has([class^=contentNoImages]) [class^=timeBar] [class^=barInMultiLine_] {
   width: 82.5%;
   position: absolute;
 }
-[class^=activityProfileV2_]:has([class^=platformIcon_]) :has([class^=contentNoImagesProfileV2_]) [class^=timeBarProfileV2_] [class^=flex] {
+[class^=activity][class*=Profile]:has([class^=platformIcon_]) :has([class^=contentNoImages]) [class^=timeBar] [class^=flex] {
   margin-top: -0.75%;
 }
-[class^=activityUserPopoutV2_]:has([class^=platformIcon_]) [class^=timeBarUserPopoutV2_] [class^=barInMultiLine_] {
-  width: 77.5%;
+[class^=activity][class*=Popout]:has([class^=platformIcon_]) [class^=timeBar] [class^=barInMultiLine_] {
+  width: 70%;
   position: absolute;
 }
-[class^=activityUserPopoutV2_]:has([class^=platformIcon_]) [class^=timeBarUserPopoutV2_] [class^=flex] {
+[class^=activity][class*=Popout]:has([class^=platformIcon_]) [class^=timeBar] [class^=flex] {
   margin-top: -1.25%;
 }
 /* center progress bar */
