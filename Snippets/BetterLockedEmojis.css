@@ -28,12 +28,6 @@
   display: none;
 }
 
-/* don't hide default sticker shortcuts and available server */
-#sticker-picker-tab-panel > [class^=wrapper_] [class^=listItems_] [class^=stickerCategory_][class*=stickerCategoryGeneric_],
-#sticker-picker-tab-panel > [class^=wrapper_] [class^=listItems_] div:has([class^=stickerCategory_][class*=stickerCategoryGeneric_]) + div [class^=stickerCategory_] {
-    display: block !important;
-}
-
 /* disable scrolling on the server shortcuts */
 #emoji-picker-tab-panel > [class^=wrapper_] > [class^=scroller_],
 #sticker-picker-tab-panel > [class^=wrapper_] > [class^=scroller_] {
