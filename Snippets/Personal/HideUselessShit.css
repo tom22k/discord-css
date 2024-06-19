@@ -1,14 +1,16 @@
 /* HIDE */
-/* devtools shortcut */
-[class^=toolbar_] > div:not([class]),
-/* "friends since" icon in profile modal (out of place) */
-[class^=userProfileModal] [class^=section_] > [class^=memberSinceWrapper_] > svg,
+/* devtools shortcut 
+[class^=toolbar_] > div:not([class]),*/
+/* "friends since" icon in profile modal (out of place) 
+[class^=userProfileModal] [class^=section_] > [class^=memberSinceWrapper_] > svg,*/
 /* quest icon in activity */
 [class^=activity_] [class^=questsIcon_],
 /* quest popout on clicking a user in memberlist with a quest icon in activity */
 [id^=popout_]:has([class^=top_] > [class^=left_] > h2):has([class^=top_] > [class^=right_] > [class^=imgWrapper_]),
-/* arrow on voice & video shortcut  */
+/* arrow on voice & video shortcut */
 #user-settings-cog-Voice___Video [class^=iconContainer_],
+/* popup on voice & video shortcut */
+#user-settings-cog-Voice___Video + .theme-dark[class*=layer_],
 /* user settings cog shortcuts except listed below */
 [id^=user-settings-cog-]:not([id^=user-settings-cog-Vencord],
 #user-settings-cog-My_Account,
@@ -18,13 +20,13 @@
 /* emoji skin color picker */
 #emoji-picker-tab-panel [class^=diversitySelector_],
 /* separator in status picker */
-#account[class^=menu_] [class^=submenu_] [class^=separator_],
+#status[class^=menu_] [class^=submenu_] [class^=separator_],
 /* descriptions in status picker */
 [class^=statusItem_] > [class^=description_],
 /* store button on bot profiles */
-button:has([class^=storeBtn_]),
+[class^=user] button:has([class^=storeBtn_]),
 /* vencord custom badges */
-[aria-label="User Badges"] a:has([style="border-radius: 50%; transform: scale(0.9);"]),
+[aria-label="User Badges"] [aria-label]:has(> a > [style="border-radius: 50%; transform: scale(0.9);"]),
 /* social links in settings */
 nav > [role=tablist] > [class^=socialLinks_],
 /* hypesquad settings */
@@ -63,10 +65,11 @@ nav > [role=tablist] > [class^=socialLinks_],
 /* help button */
 [href="https://support.discord.com"],
 /* inbox button when no notifs */
-[class^=recentsIcon_]:not(:has([class^=iconBadge_], [class*=recentMentionsPopout_])),
+[class^=recentsIcon_]:not(:has([class^=iconBadge_],[class*=recentMentionsPopout_])),
 /* separator in channel actions popout */
 #channel-context [class^=separator_],
 /* separator in message actions popout */
+#message [class^=separator_],
 #message-actions [class^=separator_],
 /* speak message */
 #message-tts,
@@ -77,18 +80,16 @@ nav > [role=tablist] > [class^=socialLinks_],
 #message-actions-mark-unread,
 #message-mark-unread,
 [aria-label="Mark Unread"],
-/* quickcss toggle in vc toolbox
-#vc-toolbox-vc-toolbox-quickcss-toggle, */
 /* badge api in vc toolbox */
 #vc-toolbox [aria-label="BadgeAPI"],
 /* separator in vc toolbox */
 #vc-toolbox [class^=separator_],
 /*"welcome to channel" thing - unhidden when channel is empty */
 [class^=chatContent_] [class^=container_]:has([class^=emptyChannelIcon_], [class^=inner_] h3):has(+ [class^=divider_]),
-/* family center */
+/* family center in settings */
 [aria-label="Family Center"],
 /* discoverable servers */
-[data-list-id="guildsnav"]>[class^=scroller_]>[class^=listItem_]:has([aria-label*=Discoverable]),
+[data-list-id=guildsnav] > [class^=scroller_] > [class^=listItem_]:has([data-list-item-id=guildsnav___guild-discover-button]),
 /* events */
 #channels [class^=containerDefault_]:has(> [data-list-item-id^="channels___upcoming-events"]),
 /* member count in server icon hover */
@@ -97,8 +98,6 @@ nav > [role=tablist] > [class^=socialLinks_],
 #channels [class^=progressBarContainer_]:has([style="background-color: var(--background-modifier-active);"]),
 /* "Next: read x" */
 [class^=chatContent_] [class^=container_]:has([class^=banner_]),
-/* mini mutuals */
-[class^=mainContainer_][class*=profileMutuals_],
 /* remove obnoxious "new emoji" stuff */
 #emoji-picker-tab-panel :is([class^=badgeLabel_][class*=topGuildEmojiBadge_],[class^=newlyAddedBadge]),
 /* shortcut for "Top Emojis In Server" */
@@ -106,13 +105,10 @@ nav > [role=tablist] > [class^=socialLinks_],
 /* user context menu: add note */
 #user-context-note,
 /* notes */
+[aria-label*="Note"],
 [class^=note_],
-/* notes header in user popout & profile panel*/
+/* notes header */
 [class^=section_]:has(> [class^=note_]),
-/* notes header in user profile modal*/
-[class^=userProfileModal] [class^=userInfoSection_]>h1:has(+ [class^=note_]),
-/* divider before notes in profile panel */
-[class^=profilePanel_] [class^=divider]:has(+ [class^=section_] > [class^=note_]),
 /* notification settings in channel header */
 [aria-label="Notification Settings"] {
   display: none !important;
