@@ -17,7 +17,7 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* prevent clicking on official discord badges */
-[aria-label="User Badges"] > [aria-label]:has([href*="discord.com"]:active) {
+[class^=tags_] > [class^=container_] > [aria-label]:has([href*="discord.com"]:active) {
   pointer-events: none;
 }
 
