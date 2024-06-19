@@ -130,8 +130,8 @@ button[class*=guildBoostCtaSecondary_],
   filter: brightness(50%);
 }
 
-/* prevent clicking on badges that upsell nitro */
-[aria-label="User Badges"] > [aria-label]:has([href="https://discord.com/settings/premium"]:active),
+/* disable clicking on anything that redirects to nitro page */
+[href="https://discord.com/settings/premium"]:active,
 /* disable clicking on super reactions */
 [class^=reactionInner_]:has([class^=burstGlow_]),
 /* disable clicking on unavailable emojis & stickers */
