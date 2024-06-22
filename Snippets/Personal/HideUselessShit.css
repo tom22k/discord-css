@@ -1,4 +1,8 @@
 /* HIDE */
+/* shadow above channels */
+[class^=chat_] > [class^=subtitleContainer_] > [class^=title_] [class^=children_]::after,
+/* shadow above chat & memberlist */
+[class^=chat_] > [class^=content_]:before,
 /* devtools shortcut 
 [class^=toolbar_] > div:not([class]),*/
 /* "friends since" icon in profile modal (out of place) 
