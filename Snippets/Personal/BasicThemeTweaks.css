@@ -4,19 +4,14 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* remove little shadow above chat, memberlist, and channels - uncomment when on default theme 
+/* remove little shadow above channels column */
 [class^=sidebar_] > [class^=container_] > [class^=container_][class*=clickable_] > [class^=header_] {
     box-shadow: none;
 }
-
-[class^=chat_] > [class^=subtitleContainer_] > [class^=title_] [class^=children_]::after,
-[class^=chat_] > [class^=content_]:before {
-    display: none;
-}
-
+/* re-colour chat header to match channels column */
 [class^=chat_] > [class^=subtitleContainer_] > [class^=title_] {
     background: var(--bg-overlay-chat, var(--background-secondary));
-}*/
+}
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* LIGHTER COLOUR */
