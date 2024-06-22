@@ -4,13 +4,28 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
+/* remove little shadow above chat, memberlist, and channels - uncomment when on default theme 
+[class^=sidebar_] > [class^=container_] > [class^=container_][class*=clickable_] > [class^=header_] {
+    box-shadow: none;
+}
+
+[class^=chat_] > [class^=subtitleContainer_] > [class^=title_] [class^=children_]::after,
+[class^=chat_] > [class^=content_]:before {
+    display: none;
+}
+
+[class^=chat_] > [class^=subtitleContainer_] > [class^=title_] {
+    background: var(--bg-overlay-chat, var(--background-secondary));
+}*/
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
 /* LIGHTER COLOUR */
 /* code blocks */
 [class^=markup_] code,
 /* friends list activity cards on hover */
 [class^=nowPlayingColumn_] [class^=itemCard_]:hover,
-/* lighter title bar */
-[class^=typeWindows_][class*=withFrame][class*=titleBar_][class*=withBackgroundOverride_],
+/* lighter title bar 
+[class^=typeWindows_][class*=withFrame][class*=titleBar_][class*=withBackgroundOverride_],*/
 /* hover highlight on vc buttons */
 [class^=actionButtons_] [aria-label="Turn On Camera"]:hover,
 [class^=actionButtons_] [aria-label="Share Your Screen"]:hover,
