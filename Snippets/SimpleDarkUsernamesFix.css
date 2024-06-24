@@ -3,6 +3,7 @@
 [class*=username_][style="color: rgb(5, 0, 5);"], /* color chan black */
 [class*=username_][style="color: rgb(0, 0, 0);"], /* black */
 [class*=username_][style="color: rgb(15, 2, 2);"], /* hiraeth black */
+[class*=username_][style="color: rgb(12, 4, 99);"], /* vencord role dark blue */
 [class*=username_][style="color: rgb(0, 1, 0);"], /* swiss bedwars black */
 [class*=username_][style="color: rgb(10, 1, 2);"], /* sewerperson owner black */
 [class*=username_][style="color: rgb(0, 0, 1);"], /* sewerperson admin black */
@@ -15,6 +16,7 @@
 .mention[style*="color: rgb(5, 0, 5);"], /* color chan black */
 .mention[style*="color: rgb(0, 0, 0);"], /* black */
 .mention[style*="color: rgb(15, 2, 2);"], /* hiraeth black */
+.mention[style*="color: rgb(12, 4, 99);"], /* vencord role dark blue */
 .mention[style*="color: rgb(0, 1, 0);"], /* swiss bedwars black */
 .mention[style*="color: rgb(10, 1, 2);"], /* sewerperson owner black */
 .mention[style*="color: rgb(0, 0, 1);"], /* sewerperson admin black */
@@ -28,6 +30,7 @@
 .mention[style*="color: rgb(5, 0, 5);"]:hover, /* color chan black */
 .mention[style*="color: rgb(0, 0, 0);"]:hover, /* black */
 .mention[style*="color: rgb(15, 2, 2);"]:hover, /* hiraeth black */
+.mention[style*="color: rgb(12, 4, 99);"]:hover, /* vencord role dark blue */
 .mention[style*="color: rgb(0, 1, 0);"]:hover, /* swiss bedwars black */
 .mention[style*="color: rgb(10, 1, 2);"]:hover, /* sewerperson owner black */
 .mention[style*="color: rgb(0, 0, 1);"]:hover, /* sewerperson admin black */
@@ -41,6 +44,7 @@
 [class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(5, 0, 5);"], /* color chan black */
 [class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(0, 0, 0);"], /* black */
 [class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(15, 2, 2);"], /* hiraeth black */
+[class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(12, 4, 99);"], /* vencord role dark blue */
 [class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(0, 1, 0);"], /* swiss bedwars black */
 [class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(10, 1, 2);"], /* sewerperson owner black */
 [class^=channelTextArea_] [class^=wrapper_][style*="color: rgb(0, 0, 1);"], /* sewerperson admin black */
@@ -54,6 +58,7 @@
 [class^=membersGroup_] [style^="color: rgb(5, 0, 5);"], /* color chan black */
 [class^=membersGroup_] [style^="color: rgb(0, 0, 0);"], /* black */
 [class^=membersGroup_] [style^="color: rgb(15, 2, 2);"], /* hiraeth black */
+[class^=membersGroup_] [style^="color: rgb(12, 4, 99);"], /* vencord role dark blue */
 [class^=membersGroup_] [style^="color: rgb(0, 1, 0);"], /* swiss bedwars black */
 [class^=membersGroup_] [style^="color: rgb(10, 1, 2);"], /* sewerperson owner black */
 [class^=membersGroup_] [style^="color: rgb(0, 0, 1);"], /* sewerperson admin black */
