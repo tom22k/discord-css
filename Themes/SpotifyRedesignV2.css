@@ -189,31 +189,35 @@
   justify-content: center;
   display: flex;
 }
-[class^=activity][class*=Profile]:has([class^=platformIcon_]):has([class^=disabledButtonWrapper_]) :has([class^=syncButton_]) [class^=timeBar] [class^=barInMultiLine_] {
+[class^=activity][class*=Profile]:has([class^=platformIcon_]):has([class^=disabledButtonWrapper_]):has([class^=syncButton_]) [class^=timeBar] [class^=barInMultiLine_] {
   width: 65%;
   position: absolute;
   margin-top: -0.025%;
 }
-[class^=activity][class*=Profile]:has([class^=platformIcon_]):has([class^=disabledButtonWrapper_]) :has([class^=syncButton_]) [class^=timeBar] [class^=flex] {
+[class^=activity][class*=Profile]:has([class^=platformIcon_]):has([class^=disabledButtonWrapper_]):has([class^=syncButton_]) [class^=timeBar] [class^=flex] {
   margin-top: -0.8%;
 }
-[class^=activity][class*=Profile]:has([class^=platformIcon_]) :has([class^=syncButton_]) [class^=timeBar] [class^=barInMultiLine_] {
+[class^=activity][class*=Profile]:has([class^=platformIcon_]):has([class^=syncButton_]) [class^=timeBar] [class^=barInMultiLine_] {
   width: 27.5%;
   position: absolute;
   margin-top: 0.5%;
 }
-[class^=activity][class*=Profile]:has([class^=platformIcon_]) :has([class^=syncButton_]) [class^=timeBar] [class^=flex] {
+[class^=activity][class*=Profile]:has([class^=platformIcon_]):has([class^=syncButton_]) [class^=timeBar] [class^=flex] {
   margin-top: -0.5%;
 }
-[class^=activity][class*=Profile]:has([class^=platformIcon_]) :has([class^=contentNoImages]) [class^=timeBar] [class^=barInMultiLine_] {
+[class^=activity][class*=Profile]:has([class^=platformIcon_]):has([class^=contentNoImages]) [class^=timeBar] [class^=barInMultiLine_] {
   width: 82.5%;
   position: absolute;
 }
-[class^=activity][class*=Profile]:has([class^=platformIcon_]) :has([class^=contentNoImages]) [class^=timeBar] [class^=flex] {
+[class^=activity][class*=Profile]:has([class^=platformIcon_]):has([class^=contentNoImages]) [class^=timeBar] [class^=flex] {
   margin-top: -0.75%;
 }
-[class^=activity][class*=Popout]:has([class^=platformIcon_]) [class^=timeBar] [class^=barInMultiLine_] {
+[class^=activity][class*=Popout]:has([class^=platformIcon_]):has([class^=syncButton_]) [class^=timeBar] [class^=barInMultiLine_] {
   width: 70%;
+  position: absolute;
+}
+[class^=activity][class*=Popout]:has([class^=platformIcon_]):has([class^=contentNoImages]) [class^=timeBar] [class^=barInMultiLine_] {
+  width: 75%;
   position: absolute;
 }
 [class^=activity][class*=Popout]:has([class^=platformIcon_]) [class^=timeBar] [class^=flex] {
