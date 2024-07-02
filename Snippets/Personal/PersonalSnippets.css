@@ -210,7 +210,7 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* bigger stream preview */
-[class*=streamPreview_]:not([class*=content_]) {
+[class^=streamPreviewWrapper_] > [class*=streamPreview_]:not([class*=content_]) {
     width: 504px;
 }
 
