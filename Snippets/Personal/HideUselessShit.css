@@ -3,10 +3,6 @@
 [class^=chat_] > [class^=subtitleContainer_] > [class^=title_] [class^=children_]::after,
 /* shadow above chat & memberlist */
 [class^=chat_] > [class^=content_]:before,
-/* devtools shortcut 
-[class^=toolbar_] > div:not([class]),*/
-/* "friends since" icon in profile modal (out of place) 
-[class^=userProfileModal] [class^=section_] > [class^=memberSinceWrapper_] > svg,*/
 /* quest icon in activity */
 [class^=activity_] [class^=questsIcon_],
 /* quest popout on clicking a user in memberlist with a quest icon in activity */
@@ -24,7 +20,7 @@
 /* emoji skin color picker */
 #emoji-picker-tab-panel [class^=diversitySelector_],
 /* separator in status picker */
-#status[class^=menu_] [class^=submenu_] [class^=separator_],
+[id^=popout_] [class^=submenu_] [class^=separator_],
 /* descriptions in status picker */
 [class^=statusItem_] > [class^=description_],
 /* store button on bot profiles */
