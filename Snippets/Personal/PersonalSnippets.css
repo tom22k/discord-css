@@ -4,6 +4,12 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
+/* disable scrolling on the server shortcuts in emoji picker */
+#emoji-picker-tab-panel > [class^=wrapper_] > [class^=scroller_] {
+    overflow-y: hidden !important;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
 /* keep the unread bar which is removed in nvhhr's bordercleanup */
 #---new-messages-bar[class^=divider_][class*=isUnread_] {
     border-top: thin solid var(--divider-color) !important;
@@ -54,42 +60,6 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* Revert the change to codeblock font by thekodetoad */
-:root {
-    --font-code: "Consolas", "Andale Mono WT", "Andale Mono",
-        "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-        "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Monaco",
-        "Courier New", "Courier", "monospace";
-}
-
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* make profile text scrollable and restyle - by Saltssaumure 
-[class^=user] [class*=markup_] > [class*=lineClamp2Plus_] {
-  overflow-y: scroll;
-
-  &::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-
-  &::-webkit-scrollbar-track {
-    border: 2px solid var(--scrollbar-thin-track);
-    background-color: var(--scrollbar-thin-track);
-    border-color: var(--scrollbar-thin-track);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--profile-body-divider-color);
-    background-clip: padding-box;
-    border: 2px solid transparent;
-    border-radius: 4px;
-    min-height: 40px;
-  }
-}*/
-
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
 /* more condensed member list*/
 [aria-label="Members"] [class^=member_] [class^=memberInner_] {
     padding: 0 4px;
@@ -101,7 +71,6 @@
     margin: 0;
     border: none;
 }
-
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
