@@ -22,7 +22,7 @@
 /* emoji skin color picker */
 #emoji-picker-tab-panel [class^=diversitySelector_],
 /* separator in status picker */
-[id^=popout_] [class^=submenu_] [class^=separator_],
+[class^=submenu_] [id^=status] + [class^=separator_],
 /* descriptions in status picker */
 [class^=statusItem_] > [class^=description_],
 /* store button on bot profiles */
