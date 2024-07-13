@@ -11,22 +11,16 @@
 [href="/shop"],
 /* Gift Button */
 [class^=channelTextArea_] [class^=buttons_] > button,
-/* "Choose a sound" in voice & video settings */
-[class^=customizationSection_]:has([class^=nitroWheel_]),
+/* entrance sounds in voice & video settings */
+[id="voice-&-video-tab"] [class^=soundboardRow_] + [class^=divider_] ~ [class],
 /* react with nitro emojis in vc */
 #emoji-picker-tab-panel [class^=tooltipContainer_]:has(> #fancybutton-toggle),
-/* nitro ad in server boosts page */
-[class^=tier0Container_],
+/* "you could be paying less!" in server boost modal */
+.paymentModalContent [class^=upsellFooter_],
 /* Nitro upselling in server boosting screen */
 button[class*=guildBoostCtaSecondary_],
-/* ^ preceding info */
-[class^=wrapper_]:has(+ [class^=tier0Container_]),
-/* ^ preceding divider */
-[class^=divider_]:has(+ [class^=wrapper_] + [class^=tier0Container_]),
 /* Nitro badge in chat */
 [class^=nitroAuthorBadgeContainer_],
-/* Remove gif option from profile pic upload option */
-[class^=imagePickerContainer_] > [class^=optionBox_]:has([class^=gifIconContainer_]),
 /* payment settings header */
 [class^=header_]:has(+ [class^=premiumTab_]),
 /* nitro settings tab */
@@ -55,16 +49,6 @@ button[class*=guildBoostCtaSecondary_],
 [class^=streamQualityIndicator_] [class^=premiumStreamIcon_],
 /* Nitro upselling in user popout when hovering over banner */
 [class^=banner_] [class^=premiumIcon],
-/* Upselling in profiles settings tab */
-#profile-customization-tab [class*=premiumFeatureBorder],
-/* Upsell unique profiles overlay in profiles tab */
-[class^=upsellOverlayContainer_],
-/* nitro themes */
-[class^=presets_][class*=basicThemeSelectors_] + section:has([class^=nitroWheel_]),
-/* custom app icons */
-[class^=selectionGroup_]:has([class^=nitroWheel_]),
-/* Shop upselling in profiles settings tab */
-#profile-customization-tab > [class^=container_][style^="background-image:"],
 /* "Send longer Messages with Discord Nitro!"*/ 
 [class^=characterCount_] [class*=upsell_],
 /* Long message length nitro upselling description */
@@ -77,6 +61,14 @@ button[class*=guildBoostCtaSecondary_],
 [class^=focusLock_] > [class^=root_] > [class^=flex_] > [class^=primaryActions_] > [class^=shinyButton_],
 /* no more super reaction effect */
 [class*=effectsWrapper],
+/* Remove gif option from profile pic upload option */
+[class^=imagePickerContainer_] > [class^=optionBox_]:has([class^=gifIconContainer_]),
+/* "Try Out Nitro!" in profiles settings tab */
+#profile-customization-tab [class*=premiumFeatureBorder],
+/* unique server profiles overlay in profiles settings tab */
+#profile-customization-tab [class^=upsellOverlayContainer_],
+/* Shop upselling in profiles settings tab */
+#profile-customization-tab > [class^=container_][style^="background-image:"],
 /* change avatar decoration option when clicking pfp in profiles tab */
 #user-settings-change-avatar-change-avatar-decoration,
 /* avatar decoration customizer in profiles tab */
@@ -84,9 +76,9 @@ button[class*=guildBoostCtaSecondary_],
 /* profile effect customizer in profiles tab */
 #profile-customization-tab [class^=profileCustomizationSection_] [class^=customizationSection_][class*=withDivider_] + [class^=customizationSection_] + [class^=customizationSection_],
 /* customize icon section in appearance tab */
-#appearance-tab [class^=selectionGroup_]:has([class^=shinyButton_]),
+#appearance-tab [class^=selectionGroup_]:has([class^=nitroWheel_]),
 /* customize colour background section in appearance tab */
-#appearance-tab [class^=premiumFeatureBorder_],
+#appearance-tab section:has(> [class^=header_] [class^=nitroWheel_]),
 /* Super reactions toggle */
 [class^=burstToggle_],
 /* Super reaction hover tooltip Nitro upsell */
