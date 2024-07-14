@@ -269,3 +269,7 @@
 [class^=nowPlayingColumn_] [class^=spotifySection_] [class^=activitySectionAssets_] svg {
   background-color: black;
 }
+/* hide missing image icon in now playing column for local songs */
+[class^=nowPlayingColumn_] [class^=itemCard_] [class^=spotifySection_] > [class^=activitySectionAssets_] > img:not([src]) {
+    display: none;
+}
