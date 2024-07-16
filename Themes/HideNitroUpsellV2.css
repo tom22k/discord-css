@@ -138,9 +138,8 @@ button[class*=guildBoostCtaSecondary_],
   pointer-events: none;
 }
 
-
 /* disable scrolling on the server shortcuts */
-#emoji-picker-tab-panel > [class^=wrapper_] > [class^=scroller_]:has([class^=listItems_] > div [class^=categoryItemLockIconContainer_]) {
+#emoji-picker-tab-panel > [class^=wrapper_] > [class^=scroller_]:has(> [class^=listItems_] [class^=categoryItemLockIconContainer_]) {
     overflow-y: hidden !important;
 }
 
