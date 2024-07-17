@@ -50,7 +50,7 @@
 /* stylize buttons */
 /* "play on spotify" button in activity */
 [id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) > div:has([class^=syncButton_]) button:not([class^=syncButton_]),
-[class^=activity]:has(> [class^=platformIcon_]) > div:has([class^=syncButton_]) button:not([class^=syncButton_]) {
+[class^=activity]:has(> [class^=platformIcon_]) [class^=flex_] > [class^=syncButton_] + button {
     background-color: #000 !important;
     border-radius: 50px;
     border: 1px solid #fff;
