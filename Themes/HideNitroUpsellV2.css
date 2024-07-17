@@ -151,12 +151,6 @@ button[class*=guildBoostCtaSecondary_],
 /* Christmas gifting button */
 [class*=sansAttachButton] > [class^=buttons] > [class^=container],
 /* Snowsgiving bs */
-a[href*="/snowsgiving"], [class^=customizationSection] > [class^=limitedFeatureBorder],
-/* Nitro upselling in activities - deprecated? */
-[class^=tierCtaContainer], [class^=tierCtaContainer] + [class^=shelf],
-/* Nitro upselling in screen share - deprecated? */
-[class^="upsellBanner"],
-/* Gift Nitro upselling - deprecated? */
-[class^=notAppAsidePanel_] > [class^=layerContainer_] > [id^=popout_] > [class^=animatorBottom_] > div:has([class^=image_]) {
+a[href*="/snowsgiving"], [class^=customizationSection] > [class^=limitedFeatureBorder] {
     display: none !important;
 }
