@@ -43,13 +43,15 @@
 [id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]):has([class^=syncButton_]) [class^=activityActionsContainer_]:has([class^=disabledButtonOverlay]),
 /* hide top-right spotify logo in activity */
 [class^=activity] > [class^=platformIcon_],
+/* hide missing image icon in now playing column for local songs */
+[class^=nowPlayingColumn_] [class^=itemCard_] [class^=spotifySection_] > [class^=activitySectionAssets_] > img:not([src]),
 /* hide "listening to spotify" header in activity */
 [class^=activity]:has(> [class^=platformIcon_]) [class^=headerContainer] {
     display: none !important;
 }
 /* stylize buttons */
 /* "play on spotify" button in activity */
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) > div:has([class^=syncButton_]) button:not([class^=syncButton_]),
+[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) [class^=flex_] > [class*=button]:has(+ [class*=button] > [class^=syncButton_]) > button,
 [class^=activity]:has(> [class^=platformIcon_]) [class^=flex_] > [class^=syncButton_] + button {
     background-color: #000 !important;
     border-radius: 50px;
@@ -268,8 +270,4 @@
 /* black (instead of transparent) bars in spotify logo in now playing section */
 [class^=nowPlayingColumn_] [class^=spotifySection_] [class^=activitySectionAssets_] svg {
   background-color: black;
-}
-/* hide missing image icon in now playing column for local songs */
-[class^=nowPlayingColumn_] [class^=itemCard_] [class^=spotifySection_] > [class^=activitySectionAssets_] > img:not([src]) {
-    display: none;
 }
