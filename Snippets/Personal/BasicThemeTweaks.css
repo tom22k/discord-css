@@ -1,9 +1,5 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/*  */
-
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
 /* remove little shadow above channels column */
 [class^=sidebar_] > [class^=container_] > [class^=container_][class*=clickable_] > [class^=header_] {
     box-shadow: none;
@@ -19,8 +15,6 @@
 [class^=markup_] code,
 /* friends list activity cards on hover */
 [class^=nowPlayingColumn_] [class^=itemCard_]:hover,
-/* lighter title bar 
-[class^=typeWindows_][class*=withFrame][class*=titleBar_][class*=withBackgroundOverride_],*/
 /* hover highlight on vc buttons */
 [class^=actionButtons_] [aria-label="Turn On Camera"]:hover,
 [class^=actionButtons_] [aria-label="Share Your Screen"]:hover,
@@ -32,19 +26,7 @@
 [data-list-item-id^="chat-messages"]:hover {
   background-color: var(--background-modifier-selected) !important;
 }
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* set solid background colour */
-:root {
-	--background-custom-solid: hsl(0, 0%, 5%);
-}
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* background for server header popout */
-#guild-header-popout {
-	background-color: var(--background-custom-solid);
-	border-radius: 5px;
-}
+
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* search bar */
@@ -58,25 +40,8 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* spoiler */
-.theme-dark {
-  --__spoiler-background-color--hidden: var(--background-modifier-selected);
-  --__spoiler-background-color--hidden--hover: hsl(0, 0%, 6%);
-}
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
 /* scrollbars */
 :root {
  --scrollbar-auto-thumb: var(--background-modifier-selected);
  --scrollbar-auto-track: transparent;
-}
-
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* use theme colours in 'channels & roles' menu */
-[class^=base_] > [class^=content_] > [class^=chat_] > [class^=header_] > [class^=upperContainer_] > [class*=innerHeader_]::after, /* little gradient thing */
-[class^=base_] > [class^=content_] > [class^=chat_]:has(> [class^=header_]) [class^=header_], /* header background */
-[class^=base_] > [class^=content_] > [class^=chat_]:has(> [class^=header_]) [class^=content_], /* background */
-[class^=base_] > [class^=content_] > [class^=chat_]:has(> [class^=header_]) [class^=chat_] /* menu background */ {
-  background: transparent;
 }
