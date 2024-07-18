@@ -1,15 +1,5 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/*  */
-
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* disable scrolling on the server shortcuts in emoji picker */
-#emoji-picker-tab-panel > [class^=wrapper_] > [class^=scroller_] {
-    overflow-y: hidden !important;
-}
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
 /* keep the unread bar which is removed in nvhhr's bordercleanup */
 #---new-messages-bar[class^=divider_][class*=isUnread_] {
     border-top: thin solid var(--divider-color) !important;
@@ -83,12 +73,12 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* Make size-changing videos work as they used to by kyuuhachi */
-.attachmentContentItem_ef9fc2 {
+.attachmentContentItem__47a25 {
     width: unset !important;
     height: unset !important;
 }
 
-.loadingOverlay__4d818 {
+.loadingOverlay__35a04 {
     aspect-ratio: unset !important;
 }
 
@@ -161,9 +151,9 @@
     color: var(--white-500) !important;
 }
 
-#user-context-close-dm[class*="focused_"],
-#user-context-remove-friend[class*="focused_"],
-#user-context-block[class*="focused_"] {
+#user-context-close-dm[class*=focused_],
+#user-context-remove-friend[class*=focused_],
+#user-context-block[class*=focused_] {
     background-color: var(--button-danger-background);
     color: var(--white-500);
 }
@@ -190,27 +180,27 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* Role pill background by alije */
-[class*="role_"] [class*="roleCircle_"]:before,
-[class*="actionButton_"][class*="role_"][class*="justifyCenter_"] {
+[class*=role_] [class*=roleCircle_]:before,
+[class*=actionButton_][class*=role_][class*=justifyCenter_] {
     border-radius: 5px;
 }
 
-[class*="role_"] {
+[class*=role_] {
     transform: translate(0);
     border: 0;
 }
 
-[class*="role_"] [class*="roleRemoveIcon_"] {
+[class*=role_] [class*=roleRemoveIcon_] {
     margin: 0;
     left: unset;
     transform: translate(50%, -50%);
 }
 
-[class*="role_"] [class*="roleRemoveButton_"] {
+[class*=role_] [class*=roleRemoveButton_] {
     position: static;
 }
 
-[class*="root_"] > [class*="role_"] [class*="roleCircle_"]:before {
+[class*=root_] > [class*=role_] [class*=roleCircle_]:before {
     content: '';
     top: 0;
     left: 0;
@@ -224,7 +214,7 @@
     opacity: .4;
 }
 
-[class*="roles_"] {
+[class*=roles_] {
     color: var(--text-normal);
 }
 
