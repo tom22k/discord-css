@@ -102,11 +102,7 @@ button[class*=guildBoostCtaSecondary_],
 /* nitro bottom divider in emoji picker  */
 #emoji-picker-grid [class^=nitroBottomDivider_],
 /* nitro upsell warning in emoji picker  */
-#emoji-picker-grid [class^=upsellContainer_],
-/* nitro header in autocomplete */
-[class^=autocomplete_] [class^=premiumHeader_],
-/* nitro emoji in autocomplete */
-[class^=autocomplete_] [class*=premiumEmoji_] {
+#emoji-picker-grid [class^=upsellContainer_] {
   display: none !important;
 }
 
@@ -165,6 +161,7 @@ button[class*=guildBoostCtaSecondary_],
 /* Christmas gifting button */
 [class*=sansAttachButton] > [class^=buttons] > [class^=container],
 /* Snowsgiving bs */
-a[href*="/snowsgiving"], [class^=customizationSection] > [class^=limitedFeatureBorder] {
+a[href*="/snowsgiving"],
+[class^=customizationSection] > [class^=limitedFeatureBorder] {
     display: none !important;
 }
