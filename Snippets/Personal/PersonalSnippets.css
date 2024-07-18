@@ -1,5 +1,11 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
+/* make "member since" & "friends since" side by side in user panel */
+[class^=userPanel] [class^=body_] > [class^=overlayBackground_] {
+    flex-direction: row
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
 /* keep the unread bar which is removed in nvhhr's bordercleanup */
 #---new-messages-bar[class^=divider_][class*=isUnread_] {
     border-top: thin solid var(--divider-color) !important;
