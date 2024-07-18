@@ -11,8 +11,6 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* LIGHTER COLOUR */
-/* code blocks */
-[class^=markup_] code,
 /* friends list activity cards on hover */
 [class^=nowPlayingColumn_] [class^=itemCard_]:hover,
 /* hover highlight on vc buttons */
