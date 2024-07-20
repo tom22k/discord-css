@@ -5,7 +5,7 @@ A redesign of the Spotify activities in user popouts and profiles, and of Vencor
 
 ### Importing:
 ```css
-@import url("https://raw.githubusercontent.com/tom22k/css-snippets/main/SpotifyRedesign/import.css");
+@import url("https://raw.githubusercontent.com/tom22k/discord-css/main/Themes/SpotifyRedesignV2.css");
 ```
 
 ### Screenshots:
