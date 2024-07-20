@@ -2,272 +2,356 @@
  * @name SpotifyRedesignV2
  * @description Expanded version of DaBluLite's Spotify Activity Redesign
  * @author DaBluLite, tom2k
- * @version 2.1
+ * @version 2.2
 */
-
-/* make the cursor a pointer on buttons */
-.vc-spotify-button-row [class^=vc-spotify-button] {
-  cursor: pointer;
-}
-/* stylize text in activity to match player */
-.theme-dark [id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) :is([class*=text_], [class^=anchor_], [class*=themed_] [class*=text_]),
-[class^=userP] [class^=activity]:has(> [class^=platformIcon_]):has([class^=syncButton_]) :is([class*=text_], [class^=anchor_], [class*=themed_] [class*=text_]),
-[class^=userP] [class^=activity]:has(> [class^=platformIcon_]):has([class^=syncButton_]) [class*=content_] {
-    color: #fff;
-}
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) :is([class^=anchor_], [class*=themed_] [class*=text_]),
-[class^=activity]:has(> [class^=platformIcon_]) [class^=timeBar] [class*=text_],
-[class^=activity]:has(> [class^=platformIcon_]) [class^=contentImages] :is([class^=detailsWrap_],[class^=state_]) [class^=anchor_] {
-    opacity: .75;
-}
-/* white progress bar */
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) [class^=barInner_],
-[class^=activity]:has(> [class^=platformIcon_]) [class^=barInner_],
-#vc-spotify-progress-bar [class^=barFill_] {
-    background-color: #fff !important;
-}
-/* brighter progress bar background */
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) [class^=bar_],
-#vc-spotify-player [class^=bar_],
-[class^=activity]:has(> [class^=platformIcon_]) [class^=barInMultiLine_] {
-    background-color: #4d4d4d;
-}
-/* rounden activity images */
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) [class*=assetsLargeImage_],
-[class^=activity]:has(> [class^=platformIcon_]):has([class^=syncButton_]) [class*=assetsLargeImage_] {
-    border-radius: 4px;
-}
-/* hide "listen along" when not able to */
-[class^=activity]:has(> [class^=platformIcon_]) [class]:has(> [class*=buttonsWrapper_] > [class^=disabledButtonWrapper_]),
-[class^=activity]:has(> [class^=platformIcon_]) [class^=actions_]:has([class] > [class*=buttonsWrapper_] > [class^=disabledButtonWrapper_]),
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]):has([class^=syncButton_]) [class^=activityActionsContainer_]:has([class^=disabledButtonOverlay]),
-/* hide top-right spotify logo in activity */
-[class^=activity] > [class^=platformIcon_],
-/* hide missing image icon in now playing column for local songs */
-[class^=nowPlayingColumn_] [class^=itemCard_] [class^=spotifySection_] > [class^=activitySectionAssets_] > img:not([src]),
-/* hide "listening to spotify" header in activity */
-[class^=activity]:has(> [class^=platformIcon_]) [class^=headerContainer] {
-    display: none !important;
-}
-/* stylize buttons */
-/* "play on spotify" button in activity */
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) [class^=flex_] > [class*=button]:has(+ [class*=button] > [class^=syncButton_]) > button,
-[class^=activity]:has(> [class^=platformIcon_]) [class^=flex_] > [class^=syncButton_] + button {
-    background-color: #000 !important;
-    border-radius: 50px;
-    border: 1px solid #fff;
-    transition: none !important;
-    color: #1fdf64 !important;
-}
-/* listen along button */
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) [class^=syncButton_],
-[class^=activity]:has(> [class^=platformIcon_]) [class^=syncButton_] {
-    background-color: #fff !important;
-    color: #000 !important;
-    border-radius: 50px;
-    border: 1px solid #fff;
-}
-/* pause/play button */
-.vc-spotify-button:has(:is(.vc-spotify-pause,.vc-spotify-play)) {
-    background-color: #fff !important;
-    color: #000 !important;
-}
-/* enlarge buttons on hover */
-.vc-spotify-button:has(.vc-spotify-pause):hover,
-.vc-spotify-button:has(.vc-spotify-play):hover {
-    scale: 1.05;
-}
-/* stylize progress bar */
-#vc-spotify-player [class^=bar_],
-#vc-spotify-player [class^=barFill_] {
-    border-radius: 8px;
-}
-/* stylize grabber */
-#vc-spotify-player [class^=grabber_] {
-    background-color: #fff !important;
-    border-color: #fff !important;
-    opacity: 0;
-}
-/* show grabber on progress bar hover */
-#vc-spotify-progress-bar [class^=sliderContainer_]:hover [class^=grabber_] {
-    opacity: 1;
-}
-/* progress bar green on hover */
-#vc-spotify-progress-bar [class^=sliderContainer_]:hover [class^=barFill_] {
-    background-color: #1fdf64 !important;
-}
-/* enlarge & rounden image */
-#vc-spotify-info-wrapper #vc-spotify-album-image {
-    height: 56px !important;
-    width: 56px !important;
-    border-radius: 4px;
-}
-
 /* set fonts */
 @font-face {
-    font-family: Spotify;
-    src: url(https://encore.scdn.co/fonts/CircularSp-Book-4eaffdf96f4c6f984686e93d5d9cb325.woff2);
-    font-weight: 400;
+  font-family: Spotify;
+  src: url(https://encore.scdn.co/fonts/CircularSp-Book-4eaffdf96f4c6f984686e93d5d9cb325.woff2);
+  font-weight: 400;
 }
 @font-face {
-    font-family: Spotify;
-    src: url(https://encore.scdn.co/fonts/CircularSp-Bold-fe1cfc14b7498b187c78fa72fb72d148.woff2);
-    font-weight: 600;
+  font-family: Spotify;
+  src: url(https://encore.scdn.co/fonts/CircularSp-Bold-fe1cfc14b7498b187c78fa72fb72d148.woff2);
+  font-weight: 600;
 }
 @font-face {
-    font-family: Spotify;
-    src: url(https://encore.scdn.co/fonts/CircularSpTitle-Bold-2fbf72b606d7f0b0f771ea4956a8b4d6.woff2);
-    font-weight: 700;
+  font-family: Spotify;
+  src: url(https://encore.scdn.co/fonts/CircularSpTitle-Bold-2fbf72b606d7f0b0f771ea4956a8b4d6.woff2);
+  font-weight: 700;
 }
 @font-face {
-    font-family: Spotify;
-    src: url(https://encore.scdn.co/fonts/CircularSpTitle-Black-3f9afb402080d53345ca1850226ca724.woff2);
-    font-weight: 800;
+  font-family: Spotify;
+  src: url(https://encore.scdn.co/fonts/CircularSpTitle-Black-3f9afb402080d53345ca1850226ca724.woff2);
+  font-weight: 800;
 }
-#vc-spotify-info-wrapper {
-    height: 56px;
-    --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-display: "Spotify", var(--fallback-font);
-    font-family: var(--font-display) !important;
+
+/* activity in user profiles */
+[class^=userP] [class^=activity]:has(> [class^=platformIcon_]) {
+  /* fonts */
+  --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-primary: "Spotify", var(--fallback-font);
+  --font-display: "Spotify", var(--fallback-font);
+  font-family: var(--font-display) !important;
+  background-color: #000 !important;
+  /* stylize text in activity to match player */
+  &:has([class^=syncButton_]) {
+    [class^=anchor_],
+    [class*=content_],
+    [class*=text_],
+    [class*=themed_] [class*=text_] {
+        color: #fff;
+    }
+    /* fonts */
+    [class*=activityName_],
+    [class^=detailsWrap_] {
+      font-weight: 400 !important;
+    }
+    /* rounden activity images */
+    [class*=assetsLargeImage_] {
+      border-radius: 4px;
+    }
+  }
+  /* white progress bar */
+  [class^=barInner_] {
+    background-color: #fff !important;
+  }
+  /* brighter progress bar background */
+  [class^=barInMultiLine_] {
+    background-color: #4d4d4d;
+  }
+  [class^=contentImages] {
+    [class^=detailsWrap_],
+    [class^=state_] {
+      [class^=anchor_] {
+        opacity: .75;
+      }
+    }
+  }
+  [class^=syncButton_] {
+    /* stlyize "listen along" button in activity */
+    background-color: #fff !important;
+    color: #000 !important;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    /* stlyize "play on spotify" button in activity */
+    [class^=flex_] > & + button {
+      background-color: #000 !important;
+      border-radius: 50px;
+      border: 1px solid #fff;
+      transition: none !important;
+      color: #1fdf64 !important;
+    }
+  }
+  [class^=timeBar] [class*=text_] {
+    opacity: .75;
+  }
+  /* hide "listen along" when not able to */
+  [class]:has(> [class*=buttonsWrapper_] > [class^=disabledButtonWrapper_]),
+  [class^=actions_]:has([class] > [class*=buttonsWrapper_] > [class^=disabledButtonWrapper_]),
+  /* hide top-right spotify logo in activity */
+  [class^=platformIcon_],
+  /* hide "listening to spotify" header in activity */
+  [class^=headerContainer] {
+    display: none !important;
+  }
 }
-#vc-spotify-titles,
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) [class^=headerLink_],
-[class^=activity]:has(> [class^=platformIcon_]) :is([class*=activityName_],[class^=detailsWrap_]) {
-    font-weight: 400 !important;
+/* PROGRESS TIMES ON SIDES - user popout & profile */
+[class*=Profile],
+[class*=Popout] {
+  [class^=activity]&:has(> [class^=platformIcon_]) {
+    [class^=timeBar] {
+      justify-content: center;
+      display: flex;
+    }
+  }
 }
-.vc-spotify-artist {
+/* PROGRESS TIMES ON SIDES - profiles */
+[class*=Profile] {
+  [class^=activity]&:has(> [class^=platformIcon_]) {
+    /* profiles listening to local songs */
+    :has([class^=contentNoImages]) [class^=timeBar] {
+      [class^=barInMultiLine_] {
+        width: 82.5%;
+        position: absolute;
+      }
+      [class^=flex] {
+        margin-top: -0.75%;
+      }
+    }
+    /* other people's profiles */
+    &:has([class^=syncButton_]):not(:has([class^=disabledButtonWrapper_])) [class^=timeBar] {
+      [class^=barInMultiLine_] {
+        width: 29%;
+        position: absolute;
+        margin-top: 0.25%;
+      }
+      [class^=flex] {
+        margin-top: -1.5%;
+      }
+    }
+    /* your own profile (and also other people's when you're unable to listen along) */
+    [class^=timeBar] {
+      [class^=barInMultiLine_] {
+        width: 65%;
+        position: absolute;
+      }
+      [class^=flex] {
+        margin-top: -1%;
+      }
+    }
+  }
+}
+/* PROGRESS TIMES ON SIDES - popouts & panels */
+[class*=Popout] {
+  [class^=activity]&:has(> [class^=platformIcon_]) {
+    /* popouts */
+    [class^=timeBar] {
+      [class^=barInMultiLine_] {
+        width: 70%;
+        position: absolute;
+      }
+      [class^=flex] {
+        margin-top: -1%;
+      }
+    }
+    /* panels */
+    [class^=UserPanel] & [class^=timeBar] [class^=barInMultiLine_] {
+      width: 75%;
+      position: absolute;
+    }
+  }
+}
+
+/* vencord spotify player */
+[id^=vc-spotify-] {
+  &[id$=artist] {
     font-size: 14px !important;
     --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-display: "Spotify", var(--fallback-font);
     font-family: var(--font-display) !important;
-}
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]),
-[class^=activity]:has(> [class^=platformIcon_]),
-#vc-spotify-controls {
+  }
+  &[id$=controls] {
     --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-primary: "Spotify", var(--fallback-font);
     --font-display: "Spotify", var(--fallback-font);
     font-family: var(--font-display) !important;
     background-color: #000 !important;
-}
-/* adjust cursor behaviour */
-.vc-spotify-button:hover {
-    background-color: transparent;
-    cursor: default;
-}
-/* re-order player */
-.vc-spotify-button-row {
-    gap: 8px !important;
-    order: 2;
-    margin: 5px 0 !important;
-}
-#vc-spotify-player {
+  }
+  &[id$=info-wrapper] {
+    /* re-order player */
+    order: 0;
+    /* set fonts */
+    height: 56px !important;
+    --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-display: "Spotify", var(--fallback-font);
+    font-family: var(--font-display) !important;
+    /* enlarge & rounden image */
+    #vc-spotify-album-image {
+      height: 56px !important;
+      width: 56px !important;
+      border-radius: 4px;
+    }
+  }
+  &[id$=player] {
+    /* re-order player */
     display: flex;
     flex-direction: column;
     background-color: black !important;
-}
-#vc-spotify-info-wrapper {
-    order: 0;
-}
-#vc-spotify-progress-bar {
+    [class^=bar_] {
+      /* brighter progress bar background */
+      background-color: #4d4d4d;
+      /*resize progress bar*/
+      height: 4px;
+    }
+    /* stylize grabber */
+    [class^=grabber_] {
+    background-color: #fff !important;
+    border-color: #fff !important;
+    opacity: 0;
+    }
+  }
+  &[id$=progress-bar] {
+    /* re-order player */
     display: flex;
     align-items: center;
     gap: 8px;
     order: 3;
-    margin: 0;
-}
-/* PROGRESS TIMES ON SIDES */
-/* controls area*/
-.vc-spotify-progress-time {
+    margin: 0 !important;
+    /* white progress bar */
+    [class^=barFill_] {
+      background-color: #fff !important;
+    }
+    /* center progress bar */
+    [class^=sliderContainer_] {
+      height: 10px;
+      &:hover {
+        /* show grabber on progress bar hover */
+        [class^=grabber_] {
+          opacity: 1;
+        }
+        /* progress bar green on hover */
+        [class^=barFill] {
+          background-color: #1fdf64 !important;
+        }
+      }
+    }
+  }
+  /* set fonts */
+  &[id$=titles] {
+    font-weight: 400 !important;
+  }
+  .vc-spotify-button {
+    /* stylise pause/play button */
+    &:has(.vc-spotify-pause,.vc-spotify-play) {
+      background-color: #fff !important;
+      color: #000 !important;
+    }
+    /* enlarge pause/play buttons on hover */
+    &:has(.vc-spotify-pause,.vc-spotify-play):hover {
+      scale: 1.05;
+    }
+    /* no added background on hover */
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  .vc-spotify-button-row {
+    /* re-order player */
+    gap: 8px !important;
+    order: 2;
+    margin: 5px 0 !important;
+    .vc-spotify-button-icon {
+      /* next button */
+      &.vc-spotify-next path {
+        d:path("M 17.7 6 a 0.7 0.7 0 0 0 -0.7 0.7 v 5.15 L 7.05 6.107 A 0.7 0.7 0 0 0 6 6.712 v 12.575 a 0.7 0.7 0 0 0 1.05 0.607 L 17 14.149 V 19.3 a 0.7 0.7 0 0 0 0.7 0.7 h 1.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 6.7 a 0.7 0.7 0 0 0 -0.7 -0.7 h -1.6 z");
+      }
+      /* previous button */
+      &.vc-spotify-previous path {
+        d:path("M 8.3 6 a 0.7 0.7 0 0 1 0.7 0.7 v 5.15 l 9.95 -5.744 a 0.7 0.7 0 0 1 1.05 0.606 v 12.575 a 0.7 0.7 0 0 1 -1.05 0.607 L 9 14.149 V 19.3 a 0.7 0.7 0 0 1 -0.7 0.7 H 6.7 a 0.7 0.7 0 0 1 -0.7 -0.7 V 6.7 a 0.7 0.7 0 0 1 0.7 -0.7 h 1.6 z");
+      }
+      /* repeat button */
+      &.vc-spotify-repeat {
+        width: 24px;
+        height: 24px;
+        path {
+          d:path("M 5 9.75 A 3.75 3.75 0 0 1 8.75 6 h 8.5 A 3.75 3.75 0 0 1 21 9.75 v 5 a 3.75 3.75 0 0 1 -3.75 3.75 H 14.81 l 1.018 1.018 a 0.75 0.75 0 1 1 -1.06 1.06 L 11.939 17.75 l 2.829 -2.828 a 0.75 0.75 0 1 1 1.06 1.06 L 14.811 17 h 2.439 a 2.25 2.25 0 0 0 2.25 -2.25 v -5 a 2.25 2.25 0 0 0 -2.25 -2.25 h -8.5 A 2.25 2.25 0 0 0 6.5 9.75 v 5 A 2.25 2.25 0 0 0 8.75 17 H 10 v 1.5 H 8.75 A 3.75 3.75 0 0 1 5 14.75 v -5 z");
+        }
+      }
+      /* shuffle button */
+      &.vc-spotify-shuffle {
+        width: 24px;
+        height: 24px;
+        path {
+          d: path("m 12.5 14.723 l 0.98 -1.167 l 0.957 1.14 a 2.25 2.25 0 0 0 1.724 0.804 h 1.947 l -1.017 -1.018 a 0.75 0.75 0 1 1 1.06 -1.06 l 2.829 2.828 l -2.829 2.828 a 0.75 0.75 0 1 1 -1.06 -1.06 L 18.109 17 H 16.16 A 3.75 3.75 0 0 1 13.287 15.66 L 12.5 14.722 Z m 5.651 -9.801 a 0.75 0.75 0 1 0 -1.06 1.06 L 18.109 7 H 16.16 A 3.75 3.75 0 0 0 13.287 8.34 L 7.114 15.696 A 2.25 2.25 0 0 1 5.39 16.5 H 5 V 18 H 5.391 A 3.75 3.75 0 0 0 8.264 16.66 L 14.437 9.304 A 2.25 2.25 0 0 1 16.161 8.5 h 1.947 l -1.017 1.018 a 0.75 0.75 0 0 0 1.06 1.06 L 20.98 7.75 L 18.15 4.922 Z M 5.391 7.5 H 5 V 6 H 5.391 C 6.5 6 7.551 6.49 8.264 7.34 L 9.89 9.277 L 8.911 10.444 L 7.115 8.304 A 2.25 2.25 0 0 0 5.39 7.5 Z");
+        }
+      }
+    }
+  }
+  /* progress times on sides */
+  .vc-spotify-progress-time {
     position: static;
-}
-/* user popout & profile */
-[class^=activity][class*=Profile]:has(> [class^=platformIcon_]) [class^=timeBar],
-[class^=activity][class*=Popout]:has(> [class^=platformIcon_]) [class^=timeBar] {
-  justify-content: center;
-  display: flex;
-}
-/* self profile */
-[class^=activity][class*=Profile]:has(> [class^=platformIcon_]) [class^=timeBar] [class^=barInMultiLine_] {
-  width: 65%;
-  position: absolute;
-}
-[class^=activity][class*=Profile]:has(> [class^=platformIcon_]) [class^=timeBar] [class^=flex] {
-  margin-top: -1%;
-}
-/* others profile */
-[class^=activity][class*=Profile]:has(> [class^=platformIcon_]):has([class^=syncButton_]) [class^=timeBar] [class^=barInMultiLine_] {
-  width: 29%;
-  position: absolute;
-  margin-top: 0.25%;
-}
-[class^=activity][class*=Profile]:has(> [class^=platformIcon_]):has([class^=syncButton_]) [class^=timeBar] [class^=flex] {
-  margin-top: -1.5%;
-}
-/* others disabled profile */
-[class^=activity][class*=Profile]:has(> [class^=platformIcon_]):has([class^=disabledButtonWrapper_]) [class^=timeBar] [class^=barInMultiLine_] {
-  width: 65%;
-  position: absolute;
-}
-[class^=activity][class*=Profile]:has(> [class^=platformIcon_]):has([class^=disabledButtonWrapper_]) [class^=timeBar] [class^=flex] {
-  margin-top: -1%;
-}
-/* local profile */
-[class^=activity][class*=Profile]:has(> [class^=platformIcon_]):has([class^=contentNoImages]) [class^=timeBar] [class^=barInMultiLine_] {
-  width: 82.5%;
-  position: absolute;
-}
-[class^=activity][class*=Profile]:has(> [class^=platformIcon_]):has([class^=contentNoImages]) [class^=timeBar] [class^=flex] {
-  margin-top: -0.75%;
-}
-/* popout */
-[class^=activity][class*=Popout]:has(> [class^=platformIcon_]) [class^=timeBar] [class^=barInMultiLine_] {
-  width: 70%;
-  position: absolute;
-}
-[class^=activity][class*=Popout]:has(> [class^=platformIcon_]) [class^=timeBar] [class^=flex] {
-  margin-top: -1%;
-}
-/* panel */
-[class^=userPanel] [class^=activity][class*=Popout]:has(> [class^=platformIcon_]) [class^=timeBar] [class^=barInMultiLine_] {
-  width: 75%;
-  position: absolute;
+  }
 }
 
-/* CONTROLS */
-/* center progress bar */
-#vc-spotify-progress-bar [class^=sliderContainer_] {
-    height: 10px;
+/* vc hover activity popout */
+[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) {
+  /* fonts */
+  --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-primary: "Spotify", var(--fallback-font);
+  --font-display: "Spotify", var(--fallback-font);
+  font-family: var(--font-display) !important;
+  background-color: #000 !important;
+  /* hide "listen along" when unable to */
+  &:has([class^=syncButton_]) [class^=activityActionsContainer_]:has([class^=disabledButtonOverlay]) {
+    display: none !important;
+  }
+  [class^=anchor_],
+  [class*=themed_] [class*=text_] {
+      color: #fff;
+      opacity: .75;
+  }
+  /* rounden activity images */
+  [class*=assetsLargeImage_] {
+    border-radius: 4px;
+  }
+  /* brighter progress bar background */
+  [class^=bar_] {
+    background-color: #4d4d4d;
+  }
+    /* white progress bar */
+  [class^=barInner_] {
+    background-color: #fff !important;
+  }
+  /* stylize "play on spotify" button in activity */
+  [class^=flex_] > [class*=button]:has(+ [class*=button] > [class^=syncButton_]) > button {
+    background-color: #000 !important;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    transition: none !important;
+    color: #1fdf64 !important;
+  }
+  /* stylize "listen along" button */
+  [class^=syncButton_] {
+    background-color: #fff !important;
+    color: #000 !important;
+    border-radius: 50px;
+    border: 1px solid #fff;
+  }
+  /* stylize text in activity to match player */
+  [class*=text_] {
+      color: #fff;
+  }
 }
-/* spotify shuffle button */
-[class*=vc-spotify-shuffle] svg path {
-  d: path("m 12.5 14.723 l 0.98 -1.167 l 0.957 1.14 a 2.25 2.25 0 0 0 1.724 0.804 h 1.947 l -1.017 -1.018 a 0.75 0.75 0 1 1 1.06 -1.06 l 2.829 2.828 l -2.829 2.828 a 0.75 0.75 0 1 1 -1.06 -1.06 L 18.109 17 H 16.16 A 3.75 3.75 0 0 1 13.287 15.66 L 12.5 14.722 Z m 5.651 -9.801 a 0.75 0.75 0 1 0 -1.06 1.06 L 18.109 7 H 16.16 A 3.75 3.75 0 0 0 13.287 8.34 L 7.114 15.696 A 2.25 2.25 0 0 1 5.39 16.5 H 5 V 18 H 5.391 A 3.75 3.75 0 0 0 8.264 16.66 L 14.437 9.304 A 2.25 2.25 0 0 1 16.161 8.5 h 1.947 l -1.017 1.018 a 0.75 0.75 0 0 0 1.06 1.06 L 20.98 7.75 L 18.15 4.922 Z M 5.391 7.5 H 5 V 6 H 5.391 C 6.5 6 7.551 6.49 8.264 7.34 L 9.89 9.277 L 8.911 10.444 L 7.115 8.304 A 2.25 2.25 0 0 0 5.39 7.5 Z");
-}
-[class*=vc-spotify-shuffle] svg {
-  width: 24px;
-  height: 24px;
-}
-/* spotify repeat button */
-[class*=vc-spotify-repeat] svg path {
-  d:path("M 5 9.75 A 3.75 3.75 0 0 1 8.75 6 h 8.5 A 3.75 3.75 0 0 1 21 9.75 v 5 a 3.75 3.75 0 0 1 -3.75 3.75 H 14.81 l 1.018 1.018 a 0.75 0.75 0 1 1 -1.06 1.06 L 11.939 17.75 l 2.829 -2.828 a 0.75 0.75 0 1 1 1.06 1.06 L 14.811 17 h 2.439 a 2.25 2.25 0 0 0 2.25 -2.25 v -5 a 2.25 2.25 0 0 0 -2.25 -2.25 h -8.5 A 2.25 2.25 0 0 0 6.5 9.75 v 5 A 2.25 2.25 0 0 0 8.75 17 H 10 v 1.5 H 8.75 A 3.75 3.75 0 0 1 5 14.75 v -5 z");
-}
-[class*=vc-spotify-repeat] svg {
-  width: 24px;
-  height: 24px;
-}
-/* spotify previous button */
-[class*=vc-spotify-previous] path {
-  d:path("M 8.3 6 a 0.7 0.7 0 0 1 0.7 0.7 v 5.15 l 9.95 -5.744 a 0.7 0.7 0 0 1 1.05 0.606 v 12.575 a 0.7 0.7 0 0 1 -1.05 0.607 L 9 14.149 V 19.3 a 0.7 0.7 0 0 1 -0.7 0.7 H 6.7 a 0.7 0.7 0 0 1 -0.7 -0.7 V 6.7 a 0.7 0.7 0 0 1 0.7 -0.7 h 1.6 z");
-}
-/* spotify next button */
-[class*=vc-spotify-next] path {
-  d:path("M 17.7 6 a 0.7 0.7 0 0 0 -0.7 0.7 v 5.15 L 7.05 6.107 A 0.7 0.7 0 0 0 6 6.712 v 12.575 a 0.7 0.7 0 0 0 1.05 0.607 L 17 14.149 V 19.3 a 0.7 0.7 0 0 0 0.7 0.7 h 1.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 6.7 a 0.7 0.7 0 0 0 -0.7 -0.7 h -1.6 z");
-}
-/*resize spotify progress bar*/
-#vc-spotify-player [class^="bar_"] {
-  height: 20%;
-}
-/* black (instead of transparent) bars in spotify logo in now playing section */
-[class^=nowPlayingColumn_] [class^=spotifySection_] [class^=activitySectionAssets_] svg {
-  background-color: black;
+
+/* "Active now" in friends tab */
+[class^=nowPlayingColumn_] [class^=itemCard_] [class^=spotifySection_] > [class^=activitySectionAssets_] {
+  /* black (instead of transparent) bars in spotify logo */
+  svg {
+    background-color: black;
+  }
+  /* hide missing image icon in now playing column for local songs */
+  > img:not([src]) {
+    display: none !important;
+  }
 }
