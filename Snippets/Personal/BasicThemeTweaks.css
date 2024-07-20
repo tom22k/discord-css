@@ -1,5 +1,27 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
+/* interactive folders */
+[class^=circleIconButton_] {
+	color: #B5BAC1;
+    &:hover {
+        color: #DBDEE1;
+        background-color: #313338;
+    }
+}
+/* interactive "add server" button */
+[class^=folderIconWrapper_] {
+    background-color: #313338 !important;
+    [class^=expandedFolderIconWrapper_] {
+        svg {
+            color: #B5BAC1 !important;
+        }
+        &:hover svg {
+            color: #DBDEE1 !important
+        }
+    }
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
 /* remove little shadow above channels column */
 [class^=sidebar_] > [class^=container_] > [class^=container_][class*=clickable_] > [class^=header_] {
     box-shadow: none;
