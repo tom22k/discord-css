@@ -1,7 +1,7 @@
 ### Note: This is a tweaked version of DaBluLite's [SpotifyActivityRedesign](https://github.com/DaBluLite/css-snippets/tree/master/SpotifyActivityRedesign)
 
 # Spotify Redesign
-A simple redesign for the Spotify activity portions in user popouts and Vencord's Spotify Controls to match the actual Spotify UI
+A redesign of the Spotify activities in user popouts and profiles, and of Vencord's SpotifyControls to match the actual Spotify UI.
 
 ### Importing:
 ```css
