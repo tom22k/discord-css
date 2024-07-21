@@ -2,27 +2,27 @@
  * @name SpotifyRedesignV2
  * @description Expanded version of DaBluLite's Spotify Activity Redesign
  * @author DaBluLite, tom2k
- * @version 2.2.1
+ * @version 2.2.2
 */
 /* set fonts */
 @font-face {
     font-family: Spotify;
-    src: url(https://encore.scdn.co/fonts/CircularSp-Book-4eaffdf96f4c6f984686e93d5d9cb325.woff2);
+    src: url(https://encore.scdn.co/fonts/SpotifyMixUI-Regular-cc3b1de388efa4cbca6c75cebc24585e.woff2);
     font-weight: 400;
 }
 @font-face {
     font-family: Spotify;
-    src: url(https://encore.scdn.co/fonts/CircularSp-Bold-fe1cfc14b7498b187c78fa72fb72d148.woff2);
+    src: url(https://encore.scdn.co/fonts/SpotifyMixUI-Bold-4264b799009b1db5c491778b1bc8e5b7.woff2);
     font-weight: 600;
 }
 @font-face {
     font-family: Spotify;
-    src: url(https://encore.scdn.co/fonts/CircularSpTitle-Bold-2fbf72b606d7f0b0f771ea4956a8b4d6.woff2);
+    src: url(https://encore.scdn.co/fonts/SpotifyMixUITitle-Bold-37290f1de77f297fcc26d71e9afcf43f.woff2);
     font-weight: 700;
 }
 @font-face {
     font-family: Spotify;
-    src: url(https://encore.scdn.co/fonts/CircularSpTitle-Black-3f9afb402080d53345ca1850226ca724.woff2);
+    src: url(https://encore.scdn.co/fonts/SpotifyMixUITitle-Extrabold-ba6c73cd7f82c81e49cf2204017803ed.woff2);
     font-weight: 800;
 }
 
@@ -247,7 +247,6 @@
         --font-primary: "Spotify", var(--fallback-font);
         --font-display: "Spotify", var(--fallback-font);
         font-family: var(--font-display) !important;
-        background-color: #000 !important;
         /* re-order player */
         gap: 8px !important;
         order: 2;
