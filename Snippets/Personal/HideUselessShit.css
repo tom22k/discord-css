@@ -1,4 +1,6 @@
 /* HIDE */
+/* spacer in channels list */
+#channels > ul > [style="height: 12px;"],
 /* sticker button in message bar */
 .expression-picker-chat-input-button:has(> button > [class*=stickerButton_]),
 /* little gradient in channel header */
@@ -114,9 +116,4 @@ nav > [role=tablist] > [class^=socialLinks_],
 /* notification settings in channel header */
 [aria-label="Notification Settings"] {
   display: none !important;
-}
-/* REMOVE BORDER */
-/* newly added emojis highlight */
-#emoji-picker-tab-panel [class^=newlyAddedHighlight] {
-    border: none;
 }
