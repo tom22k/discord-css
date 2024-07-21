@@ -1,6 +1,6 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* interactive folders */
+/* interactive "add server" button */
 [class^=circleIconButton_] {
 	color: #B5BAC1;
     &:hover {
@@ -8,7 +8,7 @@
         background-color: #313338;
     }
 }
-/* interactive "add server" button */
+/* interactive folders */
 [class^=folderIconWrapper_] {
     background-color: #313338 !important;
     [class^=expandedFolderIconWrapper_] {
