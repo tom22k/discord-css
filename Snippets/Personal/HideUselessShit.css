@@ -1,6 +1,4 @@
 /* HIDE */
-/* spacer in channels list */
-#channels > ul > [style="height: 12px;"],
 /* sticker button in message bar */
 .expression-picker-chat-input-button:has(> button > [class*=stickerButton_]),
 /* little gradient in channel header */
@@ -48,8 +46,10 @@ nav > [role=tablist] > [class^=socialLinks_],
 [class*=animatedContainer_]:has([class*=bannerImage_]),
 /* server banner spacer clickable*/
 [class*=animatedBannerHoverLayer_],
+/* spacer in channels list */
+#channels > ul > [style="height: 12px;"],
 /* server banner spacer */
-[style="height: 84px;"],
+#channels > ul > [style="height: 84px;"],
 /* server header popout divider */
 #guild-header-popout [class^=separator_],
 /* create invite on channels */
