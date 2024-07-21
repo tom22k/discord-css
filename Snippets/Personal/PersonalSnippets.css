@@ -1,15 +1,49 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* keep the unread bar which is removed in nvhhr's bordercleanup */
-#---new-messages-bar[class^=divider_][class*=isUnread_] {
+/* remove little shadow above channels column */
+[class^=sidebar_] > [class^=container_] > [class^=container_][class*=clickable_] > [class^=header_] {
+    box-shadow: none;
+}
+/* re-colour chat header to match channels column */
+[class^=chat_] > [class^=subtitleContainer_] > [class^=title_] {
+    background: var(--bg-overlay-chat, var(--background-secondary));
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* LIGHTER COLOUR */
+/* friends list activity cards on hover */
+[class^=nowPlayingColumn_] > aside > div > [class^=itemCard_]:hover,
+/* lighter channel hover highlight */
+#channels > ul > li a:hover,
+/* highlight message container on hover */
+[data-list-id=chat-messages] > li:hover {
+  background-color: var(--background-modifier-selected) !important;
+}
+
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* lighter scrollbars */
+:root {
+ --scrollbar-auto-thumb: var(--background-modifier-selected);
+ --scrollbar-auto-track: transparent;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* keep chat bars which are removed in nvhhr's bordercleanup */
+[data-list-id=chat-messages] {
+    /* unread bar */
+    > #---new-messages-bar[class^=divider_][class*=isUnread_] {
     border-top: thin solid var(--divider-color) !important;
     justify-content: center !important;
-}
-/* keep the chat day separator which is removed in nvhhr's bordercleanup */
-[class^=divider_][class*=hasContent_][aria-label] {
+    }
+    /* day separator */
+    > [class^=divider_][class*=hasContent_][aria-label] {
     border-top: thin solid var(--background-modifier-accent) !important;
     justify-content: center !important;
+    }
 }
+
+
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* prevent clicking on official discord badges */
@@ -20,20 +54,22 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* coloured status picker backgrounds */
-#status-status-picker--dnd[class^=item_][class*=focused_] {
+[class^=item_][class*=focused_] {
+    #status-status-picker--dnd& {
+        background-color: rgba(242, 63, 66, 0.9);
+    }
+    #status-status-picker--dnd& {
     background-color: rgba(242, 63, 66, 0.9);
-}
-
-#status-status-picker--invisible[class^=item_][class*=focused_] {
+    }
+    #status-status-picker--invisible& {
     background-color: rgba(128, 132, 142, 0.9);
-}
-
-#status-status-picker--idle[class^=item_][class*=focused_] {
+    }
+    #status-status-picker--idle& {
     background-color: rgba(240, 178, 50, 0.9);
-}
-
-#status-status-picker--online[class^=item_][class*=focused_] {
+    }
+    #status-status-picker--online& {
     background-color: rgba(35, 165, 90, 0.9);
+    }
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -51,12 +87,12 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* more condensed member list*/
-[aria-label="Members"] [class^=member_] [class^=memberInner_] {
-    padding: 0 4px;
+[class^=members_] > div > [class^=member_] > [class^=memberInner_] {
+    padding: 0;
 }
 
 /* more condensed activity in friends tab */
-[aria-label="Friends"] [class^=nowPlayingColumn_] [class^=scroller_] {
+#online-tab + [class^=nowPlayingColumn_] > aside > [class^=scroller_] {
     padding: 0 5px;
     margin: 0;
     border: none;
@@ -85,7 +121,7 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* server list less padding */
-[aria-label="Servers sidebar"] {
+nav:has(> [data-list-id=guildsnav]) {
     width: 64px;
 }
 
@@ -95,7 +131,6 @@
 [aria-label="Servers"] > [class^=wrapper_] > [id*="folder-items-"] {
     height: fit-content !important;
 }
-
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* make code blocks' size dynamic (idea by callme_h) */
@@ -120,6 +155,13 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
+/* remove newly added emojis highlight */
+#emoji-picker-tab-panel [class^=newlyAddedHighlight] {
+    border: none;
+}
+
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
 /* shorten some dividers in channel column */
 #channels {
     --custom-category-channel-space-before-category: 0;
@@ -133,7 +175,7 @@
 }
 
 #user-context-add-friend[class*="focused_"] {
-    background-color: rgba(35, 165, 90, 0.9);
+    background-color: rgba(35, 165, 90, 0.8);
     color: var(--white-500);
 }
 
@@ -142,13 +184,6 @@
 #user-context-remove-friend,
 #user-context-block {
     color: var(--status-danger);
-}
-
-#user-context-close-dm:active,
-#user-context-remove-friend:active,
-#user-context-block:active {
-    background-color: var(--red-500) !important;
-    color: var(--white-500) !important;
 }
 
 #user-context-close-dm[class*=focused_],
@@ -161,7 +196,7 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* smaller member count */
-[data-list-id^=members-] .vc-membercount-widget {
+.vc-membercount-member-list {
     margin-top: 0 !important;
     margin-bottom: -1.25em !important;
 }
@@ -180,48 +215,40 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* Role pill background by alije */
-[class*=role_] [class*=roleCircle_]:before,
-[class*=actionButton_][class*=role_][class*=justifyCenter_] {
-    border-radius: 5px;
-}
-
-[class*=role_] {
+[class^=role_] {
     transform: translate(0);
     border: 0;
-}
-
-[class*=role_] [class*=roleRemoveIcon_] {
-    margin: 0;
-    left: unset;
-    transform: translate(50%, -50%);
-}
-
-[class*=role_] [class*=roleRemoveButton_] {
-    position: static;
-}
-
-[class*=root_] > [class*=role_] [class*=roleCircle_]:before {
-    content: '';
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    position: absolute;
-    background: inherit;
-    border: 2px solid transparent;
-    opacity: .4;
-}
-
-[class*=roles_] {
-    color: var(--text-normal);
+    [class^=roleCircle_]::before,
+    [class*=actionButton_]&[class*=justifyCenter_] {
+        border-radius: 5px;
+    }
+    [class^=roleRemoveIcon_] {
+        margin: 0;
+        left: unset;
+        transform: translate(50%,-50%);
+    }
+    [class^=roleRemoveButton] {
+        position: static;
+    }
+    [class^=root_] > & [class^=roleCircle_]::before {
+        content: '';
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        position: absolute;
+        background: inherit;
+        border: 2px solid transparent;
+        opacity: .4;
+    }
 }
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* Bigger Reactions */
-[id*=message-reactions] [class*=reaction_] .emoji {
+[data-list-id=chat-messages] [id^=message-reactions] [class^=reaction_] .emoji {
     zoom: 150%;
 }
 
