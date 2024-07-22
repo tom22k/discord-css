@@ -1,9 +1,68 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
+/* consistent chat bar */
+[class^=chat_] > [class^=content_] > [class^=chatContent_] {
+    /* move up jump to present bar when typing or slow mode so no overlap */
+    &:has(> [class^=form_] > [class^=typing_]) > [class^=messagesWrapper_] > [class^=jumpToPresentBar_] {
+        padding-bottom: 32px;
+    }
+    /* jump to present bar consistent dimensions */
+    > [class^=messagesWrapper_] > [class^=jumpToPresentBar_] {
+        border-radius: 0%;
+        opacity: 1;
+        left: 0;
+        right: 0;        
+    }
+    > [class^=form_] {
+        /* take up full width */
+        padding: 0;
+        > [class^=channelBottomBarArea_] > [class^=channelTextArea_] {
+            /* move chat bar to bottom */
+            margin-bottom: 0;
+            > [class^=scrollableContainer_] {
+                /* sharp corners */
+                border-radius: 0;
+                /* consistent height */
+                min-height: 53px;
+                > [class^=inner_] {
+                    /* consistent height */
+                    padding-top: 4px;
+                    min-height: 49px;
+                }
+            }
+        }
+        /* slowmode/typing indicator consistent dimensions */
+        [class^=typing_] {
+            top: -24px;
+            left: 0;
+            right: 0;
+            background-color: var(--background-secondary);
+            /* move slowmode indicator back to default location */
+            [class^=cooldownWrapper_] {
+                margin-right: 16px;
+            }
+        }
+    }
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* always neutral folder background */
+[data-list-id=guildsnav] [class*=FolderIconWrapper_] {
+    background-color: #313338 !important;
+}
+/* neutral "add a server"/"discover servers" button */
+[data-list-id=guildsnav] [class^=circleIconButton_] {
+    color: #848484 !important;
+    background-color: #313338 !important;
+}
+
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
 /* remove folder animation */
 [class*=FolderIconWrapper_] {
     transform: none !important;
 }
+
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* remove little shadow above channels column */
@@ -14,6 +73,7 @@
 [class^=chat_] > [class^=subtitleContainer_] > [class^=title_] {
     background: var(--bg-overlay-chat, var(--background-secondary));
 }
+
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* LIGHTER COLOUR */
@@ -33,6 +93,7 @@
  --scrollbar-auto-thumb: var(--background-modifier-selected);
  --scrollbar-auto-track: transparent;
 }
+
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* keep chat bars which are removed in nvhhr's bordercleanup */
