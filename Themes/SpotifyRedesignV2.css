@@ -2,7 +2,7 @@
  * @name SpotifyRedesignV2
  * @description Expanded version of DaBluLite's Spotify Activity Redesign
  * @author DaBluLite, tom2k
- * @version 2.2.2
+ * @version 2.2.3
 */
 /* set fonts */
 @font-face {
@@ -88,8 +88,8 @@
     /* hide "listen along" when not able to */
     [class]:has(> [class*=buttonsWrapper_] > [class^=disabledButtonWrapper_]),
     [class^=actions_]:has([class] > [class*=buttonsWrapper_] > [class^=disabledButtonWrapper_]),
-    /* hide top-right spotify logo in activity */
-    [class^=platformIcon_],
+    /* only hide top-right spotify logo in activity when buttons are enabled */
+    &:has([class^=flex_] > [class^=button_][class*=lookFilled_]) [class^=platformIcon_],
     /* hide "Listening to Spotify" heaader */
     [class^=headerContainer_] {
         display: none !important;
