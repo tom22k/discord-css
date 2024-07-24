@@ -38,9 +38,13 @@ Hide (or limit, where hiding is not possible) all the annoying Nitro upsell in D
 
 Before
 
+#1
+
 ![image](https://github.com/user-attachments/assets/50732b7d-9e07-4939-bd50-44dfd963d6c1)
 
 After
+
+#2
 
 ![image](https://github.com/user-attachments/assets/7cecdb23-708c-49d0-8c40-76c6c0b9a572)
 
