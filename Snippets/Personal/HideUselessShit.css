@@ -1,4 +1,6 @@
 /* HIDE */
+/* 1 specific super annoying & obtrusive profile effect */
+[class^=profileEffects_] > [class^=inner_] > img[alt^="Boost Relic"],
 /* sticker button in message bar */
 .expression-picker-chat-input-button:has(> button > [class*=stickerButton_]),
 /* little gradient in channel header */
