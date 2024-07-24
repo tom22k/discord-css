@@ -35,8 +35,8 @@
         [class^=typing_] {
             top: -24px;
             left: 0;
-            right: 0;
-            background-color: var(--background-secondary);
+            right: 16px !important;
+            background: var(--bg-overlay-chat, var(--background-primary)) !important;
             /* move slowmode indicator back to default location */
             [class^=cooldownWrapper_] {
                 margin-right: 16px;
