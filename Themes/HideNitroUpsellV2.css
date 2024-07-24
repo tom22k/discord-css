@@ -2,7 +2,7 @@
  * @name Hide Nitro Upselling
  * @description Hide all Nitro upselling
  * @author Vendicated, msm8916, D3SOX, tom2k
- * @version 2.1
+ * @version 2.2
 */
 /* HIDE */
 /* Nitro Button above DM List */
@@ -151,6 +151,43 @@ button[class*=guildBoostCtaSecondary_],
 /* disable scrolling on the server shortcuts */
 #emoji-picker-tab-panel > [class^=wrapper_] > [class^=scroller_]:has(> [class^=listItems_] [class^=categoryItemLockIconContainer_]) {
     overflow-y: hidden !important;
+}
+
+/* nuke huge upsell popup on login - images #1-2 in README.md */
+[class^=focusLock_][role=dialog] > [class^=root_][style="opacity: 1; transform: scale(1);"]:has(> [class^=content_] > [class^=shinyButton_]) {
+    /* restyle background */
+    background: var(--background-primary);
+    /* restyle close button */
+    > button[class^=closeButton_] {
+        opacity: 1;
+        > [class^=contents_] {
+            height: 24px;
+            zoom: 112.5%;
+        }
+    }
+    /* hide most of the upsell */
+    > svg,
+    > [class^=modalTopPill][class*=freeTrial] {
+        display: none;
+    }
+    > [class^=content_]:has(> [class^=shinyButton_]) {
+        > h2[class^=defaultColor_][class*=subHeader_] > a,
+        > [class]:not(h2[class^=defaultColor_][class*=subHeader_]) {
+            display: none;
+        }
+        /* replace sub header with informative text */
+        > h2[class^=defaultColor_][class*=subHeader_] {
+            visibility: hidden;
+            display: flex;
+            align-items: center;
+            &::after {
+                visibility: visible !important;
+                content: "There was previously a Nitro advertisement here. Move along.";
+                position: absolute;
+                top: 42.5%;
+            }
+        }
+    }
 }
 
 /* UNABLE TO TEST ATM */
