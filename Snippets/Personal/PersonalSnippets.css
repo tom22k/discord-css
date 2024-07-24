@@ -1,5 +1,12 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
+/* remove backround & border for user badges */
+[class^=usernameRow_] + [class^=tags_] > [class^=container_] {
+    border: none;
+    background: none;
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
 /* consistent chat bar */
 [class^=chat_] > [class^=content_] > [class^=chatContent_] {
     /* move up jump to present bar when typing or slow mode so no overlap */
@@ -114,7 +121,7 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* prevent clicking on official discord badges */
-[class^=tags_] > [class^=container_] > [aria-label]:has([href*="discord.com"]:active) {
+[class^=usernameRow_] + [class^=tags_] > [class^=container_] > [aria-label]:has([href*="discord.com"]:active) {
   pointer-events: none;
 }
 
