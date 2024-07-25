@@ -79,6 +79,8 @@ button[class*=guildBoostCtaSecondary_],
 #appearance-tab [class^=selectionGroup_]:has([class^=nitroWheel_]),
 /* customize colour background section in appearance tab */
 #appearance-tab section:has(> [class^=header_] [class^=nitroWheel_]),
+/* random side popup theme upsell - image #3 */
+#app-mount > [class^=appAsidePanelWrapper_] > [class^=themeEditor_],
 /* Super reactions toggle */
 [class^=burstToggle_],
 /* Super reaction hover tooltip Nitro upsell */
