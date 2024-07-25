@@ -1,8 +1,8 @@
 /*
  * @name SpotifyRedesignV2
  * @description Expanded version of DaBluLite's Spotify Activity Redesign
- * @author DaBluLite, tom2k
- * @version 2.2.3
+ * @author tom2k, DaBluLite
+ * @version 2.3.0
 */
 /* set fonts */
 @font-face {
@@ -27,143 +27,145 @@
 }
 
 /* activity in user profiles */
-[class^=userP] [class^=activity]:has(> [class^=platformIcon_]) {
-    /* fonts */
+[class^=userP] [class^=activity]:has(> [class^=platformIcon_][src="/assets/6daf7db5db0d4a895afa.svg"]) {
+    /* set fonts */
     --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-primary: "Spotify", var(--fallback-font);
     --font-display: "Spotify", var(--fallback-font);
     font-family: var(--font-display) !important;
     background-color: #000 !important;
-    /* stylize text in activity to match player */
-    &:has([class^=syncButton_]) {
-        [class^=anchor_],
-        [class*=content_],
-        [class*=text_],
-        [class*=themed_] [class*=text_] {
-            color: #fff;
-        }
-        /* fonts */
-        [class*=activityName_],
-        [class^=detailsWrap_] {
-            font-weight: 400 !important;
-        }
-        /* rounden activity images */
-        [class*=assetsLargeImage_] {
+    border-radius: 8px;
+    > [class^=bodyNormal_] > [class^=activityDetails_] {
+        > [class^=assets_] > a > [class*=assetsLargeImageSpotify_] {
             border-radius: 4px;
         }
-    }
-    /* white progress bar */
-    [class^=barInner_] {
-        background-color: #fff !important;
-    }
-    /* brighter progress bar background */
-    [class^=barInMultiLine_] {
-        background-color: #4d4d4d;
-    }
-	/* slightly darkened artist & album names */
-    [class^=detailsWrap_],
-    [class^=state_] {
-        [class^=contentImages] & [class^=anchor_] {
-            opacity: .75;
+        /* text styles */
+        > [class^=content][class*=Images] {
+            /* "by" and "on" for online songs */
+            color: white;
+            /* regular font for song/artist/album */
+            /* online songs */
+            a,
+            /* local songs */
+            [title] {
+                color: white;
+                font-weight: 400;
+            }
+            /* song title */
+            /* local songs */
+            > div > [title][data-text-variant="text-sm/semibold"] {
+                font-weight: 600 !important;
+                /* online songs */
+                > a {
+                    font-weight: 600 !important;
+                }
+            } 
+            /* online songs */
+            > div > [class*=textRow_] > span > a,
+            /* local songs */
+            [title]:not(:has(*),[data-text-variant]) {
+                color: white;
+                opacity: .75;
+            }
         }
     }
-    [class^=syncButton_] {
-        /* stlyize "listen along" button in activity */
-        background-color: #fff !important;
-        color: #000 !important;
+    /* stylize time bar */
+    [class^=timeBar][class*=themed_] {
+        /* prepare for "progress times on sides" section */
+        justify-content: center;
+        display: flex;
+        > [class^=barInMultiLine_] {
+            background-color: #4d4d4d;
+            /* prepare for "progress times on sides" section */
+            position: absolute;
+            > [class^=barInner_] {
+                background-color: white !important;
+            }
+        }
+        > [class^=flex_] {
+            /* prepare for "progress times on sides" section */
+            margin-top: -1%;
+            > [class^=text][class*=text_] {
+                opacity: .75;
+                color: white;
+            }
+        } 
+    }
+    /* user profile specific stuff */
+    &[class*=Profile] > [class^=bodyNormal_] > [class^=activityDetails_] {
+        /* make items vertically align with center of artwork */
+        align-items: center;
+        /* "progress times on sides" - local songs */
+        > [class^=contentNoImages] > [class^=timeBar] {
+            > [class^=barInMultiLine_] {
+                width: 82.5%;
+            }
+            > [class^=flex] {
+                margin-top: -0.75%;
+            }
+        }
+        /* "progress times on sides" - online songs w buttons */
+        &:has([class^=flex_] > [class^=button_][class*=lookFilled_]) > [class^=contentImages] > [class^=timeBar] {
+            > [class^=barInMultiLine_] {
+                width: 29%;
+                margin-top: 0.25%;
+            }
+            > [class^=flex] {
+                margin-top: -1.5%;
+            }
+        }
+        /* "progress times on sides" - online songs w no buttons */
+        > [class^=contentImages] > [class^=timeBar] {
+            [class^=barInMultiLine_] {
+                width: 65%;
+            }
+        }
+    }
+    /* user popout/panel specific stuff */
+    &[class*=Popout] {
+        /* "progress times on sides" - popouts */
+        > [class^=timeBar] > [class^=barInMultiLine_] {
+            width: 70%;
+        }
+        /* "progress times on sides" - panels */
+        &:has(> [class^=headerContainer_] > h2) > [class^=timeBar] > [class^=barInMultiLine_] {
+            width: 75%;
+        }
+    }
+    div > [class^=flex_][class*=buttonsWrapper_] > [class^=syncButton_] {
+        /* stylize "listen along" button in activity */
+        background-color: white !important;
+        color: black !important;
         border-radius: 50px;
-        border: 1px solid #fff;
-        /* stlyize "play on spotify" button in activity */
-        [class^=flex_] > & + button {
-            background-color: #000 !important;
+        border: 1px solid white;
+        /* stylize "play on spotify" button in activity */
+        + button {
+            background-color: black !important;
             border-radius: 50px;
-            border: 1px solid #fff;
+            border: 1px solid white;
             transition: none !important;
             color: #1fdf64 !important;
         }
     }
-    [class^=timeBar] [class*=text_] {
-        opacity: .75;
-    }
-    /* hide "listen along" when not able to */
-    [class]:has(> [class*=buttonsWrapper_] > [class^=disabledButtonWrapper_]),
-    [class^=actions_]:has([class] > [class*=buttonsWrapper_] > [class^=disabledButtonWrapper_]),
-    /* only hide top-right spotify logo in activity when buttons are enabled */
-    &:has([class^=flex_] > [class^=button_][class*=lookFilled_]) [class^=platformIcon_],
-    /* hide "Listening to Spotify" heaader */
-    [class^=headerContainer_] {
+    /* hide buttons when spotify closed - popout */
+    > div:has(> [class^=flex_][class*=buttonsWrapper_] > [class^=disabledButtonWrapper_]),
+    /* hide buttons when spotify closed - profile */
+    [class^=actions_]:has(div > [class*=buttonsWrapper_] > [class^=disabledButtonWrapper_]),
+    /* hide top-right spotify logo only when buttons are enabled */
+    &:has([class^=flex_] > [class^=button_][class*=lookFilled_]) > [class^=platformIcon_],
+    /* hide "Listening to Spotify" header */
+    > [class^=headerContainer_] {
         display: none !important;
-    }
-}
-
-/* PROGRESS TIMES ON SIDES */
-[class^=activity] {
-    /* user popouts & profiles */
-    &[class*=Profile],
-    &[class*=Popout] {
-        &:has(> [class^=platformIcon_]) {
-            [class^=timeBar] {
-            justify-content: center;
-            display: flex;
-            }
-        }
-    }
-    /* user profiles */
-    &[class*=Profile]:has(> [class^=platformIcon_]) {
-        /* profiles listening to local songs */
-        :has([class^=contentNoImages]) [class^=timeBar] {
-            [class^=barInMultiLine_] {
-                width: 82.5%;
-                position: absolute;
-            }
-            [class^=flex] {
-                margin-top: -0.75%;
-            }
-        }
-        /* other people's profiles */
-        &:has([class^=syncButton_]):not(:has([class^=disabledButtonWrapper_])) [class^=timeBar] {
-            [class^=barInMultiLine_] {
-                width: 29%;
-                position: absolute;
-                margin-top: 0.25%;
-            }
-            [class^=flex] {
-                margin-top: -1.5%;
-            }
-        }
-        /* your own profile (and also other people's when you're unable to listen along) */
-        [class^=timeBar] {
-            [class^=barInMultiLine_] {
-                width: 65%;
-                position: absolute;
-            }
-            [class^=flex] {
-                margin-top: -1%;
-            }
-        }
-    }
-    /* popouts & panels */
-    &[class*=Popout]:has(> [class^=platformIcon_]) {
-        /* popouts */
-        [class^=timeBar] {
-            [class^=barInMultiLine_] {
-                width: 70%;
-                position: absolute;
-            }
-            [class^=flex] {
-                margin-top: -1%;
-            }
-        }
-        /* panels */
-        [class^=UserPanel] & [class^=timeBar] [class^=barInMultiLine_] {
-            width: 75%;
-            position: absolute;
-        }
     }
 }
 
 /* vencord spotify player */
 #vc-spotify-player {
+    /* set fonts */
+    --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-primary: "Spotify", var(--fallback-font);
+    --font-display: "Spotify", var(--fallback-font);
+    font-family: var(--font-display) !important;
     /* re-order player */
     display: flex;
     flex-direction: column;
@@ -177,18 +179,11 @@
             width: 56px !important;
             border-radius: 4px;
         }
-        /* set fonts */
         height: 56px !important;
-        --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        --font-display: "Spotify", var(--fallback-font);
-        font-family: var(--font-display) !important;
         #vc-spotify-titles {
             font-weight: 400 !important;
             #vc-spotify-artist {
                 font-size: 14px !important;
-                --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-                --font-display: "Spotify", var(--fallback-font);
-                font-family: var(--font-display) !important;
             }
         }
     }
@@ -223,34 +218,29 @@
                 height: 4px;
                 [class^=barFill_] {
                     /* white progress bar */
-                    background-color: #fff !important;
+                    background-color: white !important;
                     /* round corners */
                     border-radius: 8px;
                     }
                 }
             /* stylize grabber */
             [class^=grabber_] {
-                background-color: #fff !important;
-                border-color: #fff !important;
+                background-color: white !important;
+                border-color: white !important;
                 opacity: 0;
             }
         }
     }
     .vc-spotify-button-row {
-        /* set fonts */
-        --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        --font-primary: "Spotify", var(--fallback-font);
-        --font-display: "Spotify", var(--fallback-font);
-        font-family: var(--font-display) !important;
         /* re-order player */
         gap: 8px !important;
         order: 2;
         margin: 5px 0 !important;
         .vc-spotify-button {
-            /* stylise pause/play button */
+            /* stylize pause/play button */
             &:has(.vc-spotify-pause, .vc-spotify-play) {
-                background-color: #fff !important;
-                color: #000 !important;
+                background-color: white !important;
+                color: black !important;
             }
             /* enlarge pause/play buttons on hover */
             &:has(.vc-spotify-pause, .vc-spotify-play):hover {
@@ -285,63 +275,76 @@
 }
 
 /* vc hover activity popout */
-[id^=popout_] [class^=activity_]:has([class^=detailsAndAvatarsContainer_]) {
+[id^=popout_] [class^=activity_]:has(> [class^=channelActivityContainer_] > [class^=flexColumn] > [class^=timeBar_]) {
     /* fonts */
     --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-primary: "Spotify", var(--fallback-font);
     --font-display: "Spotify", var(--fallback-font);
     font-family: var(--font-display) !important;
-    background-color: #000 !important;
-    /* hide "listen along" when unable to */
-    &:has([class^=syncButton_]) [class^=activityActionsContainer_]:has([class^=disabledButtonOverlay]) {
-        display: none !important;
+    background-color: black !important;
+    > [class^=channelActivityContainer_] {
+        > [class^=flexColumn] {
+            > [class^=flexRow_] {
+                > [class^=clickable_] > [class^=spotifyLargeImage_] {
+                    border-radius: 4px;
+                }
+                /* stylize text */
+                > [class^=detailsAndAvatarsContainer_] {
+                    color: white;
+                    font-weight: 400;
+                    /* song title */
+                    > h2 > [class^=headerLink_] {
+                        font-weight: 600;
+                    }
+                    /* artist name */
+                    > [class^=ellipsisRow_][class*=colorHeaderSecondary_] {
+                        /* local songs */
+                        opacity: .75;
+                        > span > a {
+                            /* online songs */
+                            opacity: .75;
+                        }
+                    }
+                }
+            }
+            [class^=timeBar_] {
+                > [class^=text][class*=text_] {
+                    color: white;
+                    opacity: .75;
+                }
+                > [class^=barInSingleLine_] > [class^=bar_] {
+                    background-color: #4d4d4d;
+                    > [class^=barInner_] {
+                        background-color: white;
+                    }
+                }
+            }
+        }
     }
-    [class^=anchor_],
-    [class*=themed_] [class*=text_] {
-        color: #fff;
-        opacity: .75;
-    }
-    /* rounden activity images */
-    [class*=assetsLargeImage_] {
-        border-radius: 4px;
-    }
-    /* brighter progress bar background */
-    [class^=bar_] {
-        background-color: #4d4d4d;
-    }
-    /* white progress bar */
-    [class^=barInner_] {
-        background-color: #fff !important;
-    }
-    /* stylize "play on spotify" button in activity */
-    [class^=flex_] > [class*=button]:has(+ [class*=button] > [class^=syncButton_]) > button {
-        background-color: #000 !important;
-        border-radius: 50px;
-        border: 1px solid #fff;
-        transition: none !important;
-        color: #1fdf64 !important;
-    }
-    /* stylize "listen along" button */
-    [class^=syncButton_] {
-        background-color: #fff !important;
-        color: #000 !important;
-        border-radius: 50px;
-        border: 1px solid #fff;
-    }
-    /* stylize text in activity to match player */
-    [class*=text_] {
-        color: #fff;
+    > [class^=activityActionsContainer_] > [class^=flex_] {
+        /* hide "listen along" when disabled */
+        &:has(> [class^=disabledButtonWrapper_]) {
+            display: none !important;
+        }
+        /* stylize "play on spotify" button */
+        > [class^=button_]:has(+ [class^=syncButton_]) {
+            background-color: black !important;
+            border-radius: 50px;
+            border: 1px solid white;
+            transition: none !important;
+            color: #1fdf64 !important;
+        }
+        /* stylize "listen along" button */
+        > [class^=syncButton_] {
+            background-color: white !important;
+            color: black !important;
+            border-radius: 50px;
+            border: 1px solid white;
+        }
     }
 }
 
-/* "Active now" in friends tab */
-[class^=nowPlayingColumn_] [class^=itemCard_] [class^=spotifySection_] > [class^=activitySectionAssets_] {
-    /* black (instead of transparent) bars in spotify logo */
-    svg {
-        background-color: black;
-    }
-    /* hide missing image icon in now playing column for local songs */
-    > img:not([src]) {
-        display: none !important;
-    }
+/* hide missing image icon in now playing column for local songs */
+#online-tab + [class^=nowPlayingColumn_] [class^=itemCard_] [class^=spotifySection_] > [class^=activitySectionAssets_] > img:not([src]) {
+    display: none !important;
 }
