@@ -1,4 +1,6 @@
 /* HIDE */
+/* dividers in little menus */
+[role=separator][class^=separator_]
 /* 1 specific super annoying & obtrusive profile effect */
 [class^=profileEffects_] > [class^=inner_] > img[alt^="Boost Relic"],
 /* sticker button in message bar */
@@ -23,8 +25,6 @@
 [id^=user-settings-cog-Experiments]),
 /* emoji skin color picker */
 #emoji-picker-tab-panel [class^=diversitySelector_],
-/* separator in status picker */
-[class^=submenu_] [id^=status] + [class^=separator_],
 /* descriptions in status picker */
 [class^=statusItem_] > [class^=description_],
 /* store button on bot profiles */
@@ -52,8 +52,6 @@ nav > [role=tablist] > [class^=socialLinks_],
 #channels > ul > [style="height: 12px;"],
 /* server banner spacer */
 #channels > ul > [style="height: 84px;"],
-/* server header popout divider */
-#guild-header-popout [class^=separator_],
 /* create invite on channels */
 #channels [class^=iconItem_][aria-label*="Invite"],
 /* server guide */
@@ -72,11 +70,6 @@ nav > [role=tablist] > [class^=socialLinks_],
 [href="https://support.discord.com"],
 /* inbox button when no notifs */
 [class^=recentsIcon_]:not(:has([class^=iconBadge_],[class*=recentMentionsPopout_])),
-/* separator in channel actions popout */
-#channel-context [class^=separator_],
-/* separator in message actions popout */
-#message [class^=separator_],
-#message-actions [class^=separator_],
 /* speak message */
 #message-tts,
 #message-actions-tts,
@@ -88,8 +81,6 @@ nav > [role=tablist] > [class^=socialLinks_],
 [aria-label="Mark Unread"],
 /* badge api in vc toolbox */
 #vc-toolbox [aria-label="BadgeAPI"],
-/* separator in vc toolbox */
-#vc-toolbox [class^=separator_],
 /*"welcome to channel" thing - unhidden when channel is empty */
 [class^=chatContent_] [class^=container_]:has([class^=emptyChannelIcon_], [class^=inner_] h3):has(+ [class^=divider_]),
 /* family center in settings */
