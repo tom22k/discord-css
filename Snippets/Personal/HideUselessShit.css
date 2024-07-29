@@ -1,6 +1,6 @@
 /* HIDE */
 /* dividers in little menus */
-[role=separator][class^=separator_]
+[role=separator][class^=separator_],
 /* 1 specific super annoying & obtrusive profile effect */
 [class^=profileEffects_] > [class^=inner_] > img[alt^="Boost Relic"],
 /* sticker button in message bar */
