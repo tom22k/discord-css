@@ -2,7 +2,7 @@
  * @name SpotifyRedesignV2
  * @description Expanded version of DaBluLite's Spotify Activity Redesign
  * @author tom2k, DaBluLite
- * @version 2.3.0
+ * @version 2.3.1
 */
 /* set fonts */
 @font-face {
@@ -35,6 +35,7 @@
     font-family: var(--font-display) !important;
     background-color: #000 !important;
     border-radius: 8px;
+    --vc-spotify-green: #1fdf64 !important;
     > [class^=bodyNormal_] > [class^=activityDetails_] {
         > [class^=assets_] > a > [class*=assetsLargeImageSpotify_] {
             border-radius: 4px;
@@ -144,7 +145,7 @@
             border-radius: 50px;
             border: 1px solid white;
             transition: none !important;
-            color: #1fdf64 !important;
+            color: var(--vc-spotify-green) !important;
         }
     }
     /* hide buttons when spotify closed - popout */
@@ -161,6 +162,7 @@
 
 /* vencord spotify player */
 #vc-spotify-player {
+    --vc-spotify-green: #1fdf64 !important;
     /* set fonts */
     --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-primary: "Spotify", var(--fallback-font);
@@ -208,7 +210,7 @@
                 }
                 /* progress bar green on hover */
                 [class^=barFill] {
-                    background-color: #1fdf64 !important;
+                    background-color: var(--vc-spotify-green) !important;
                 }
             }
             [class^=bar_] {
@@ -218,7 +220,7 @@
                 height: 4px;
                 [class^=barFill_] {
                     /* white progress bar */
-                    background-color: white !important;
+                    background-color: white;
                     /* round corners */
                     border-radius: 8px;
                     }
@@ -238,17 +240,35 @@
         margin: 5px 0 !important;
         .vc-spotify-button {
             /* stylize pause/play button */
-            &:has(.vc-spotify-pause, .vc-spotify-play) {
+            &:has(> .vc-spotify-pause,> .vc-spotify-play) {
                 background-color: white !important;
                 color: black !important;
-            }
-            /* enlarge pause/play buttons on hover */
-            &:has(.vc-spotify-pause, .vc-spotify-play):hover {
-                scale: 1.05;
+                /* enlarge pause/play buttons on hover */
+                &:hover {
+                    scale: 1.05;
+                }
             }
             /* no added background on hover */
             &:hover {
                 background-color: transparent;
+            }
+            /* shuffle button */
+            &[class*=shuffle] {
+                path {
+                    d: path("m 12.5 14.723 l 0.98 -1.167 l 0.957 1.14 a 2.25 2.25 0 0 0 1.724 0.804 h 1.947 l -1.017 -1.018 a 0.75 0.75 0 1 1 1.06 -1.06 l 2.829 2.828 l -2.829 2.828 a 0.75 0.75 0 1 1 -1.06 -1.06 L 18.109 17 H 16.16 A 3.75 3.75 0 0 1 13.287 15.66 L 12.5 14.722 Z m 5.651 -9.801 a 0.75 0.75 0 1 0 -1.06 1.06 L 18.109 7 H 16.16 A 3.75 3.75 0 0 0 13.287 8.34 L 7.114 15.696 A 2.25 2.25 0 0 1 5.39 16.5 H 5 V 18 H 5.391 A 3.75 3.75 0 0 0 8.264 16.66 L 14.437 9.304 A 2.25 2.25 0 0 1 16.161 8.5 h 1.947 l -1.017 1.018 a 0.75 0.75 0 0 0 1.06 1.06 L 20.98 7.75 L 18.15 4.922 Z M 5.391 7.5 H 5 V 6 H 5.391 C 6.5 6 7.551 6.49 8.264 7.34 L 9.89 9.277 L 8.911 10.444 L 7.115 8.304 A 2.25 2.25 0 0 0 5.39 7.5 Z");
+                }
+                /* little dot */
+                &:not([class*=off])::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    height: 3.2px;
+                    width: 3.2px;
+                    border-radius: 100%;
+                    bottom: 85px;
+                    background-color: var(--vc-spotify-green);
+                    clip-path: inset(0);
+                }
             }
             .vc-spotify-button-icon {
                 width: 24px;
@@ -261,13 +281,26 @@
                 &.vc-spotify-previous path {
                     d: path("M 8.3 6 a 0.7 0.7 0 0 1 0.7 0.7 v 5.15 l 9.95 -5.744 a 0.7 0.7 0 0 1 1.05 0.606 v 12.575 a 0.7 0.7 0 0 1 -1.05 0.607 L 9 14.149 V 19.3 a 0.7 0.7 0 0 1 -0.7 0.7 H 6.7 a 0.7 0.7 0 0 1 -0.7 -0.7 V 6.7 a 0.7 0.7 0 0 1 0.7 -0.7 h 1.6 z");
                 }
-                /* repeat button */
-                &.vc-spotify-repeat path {
+            }
+            /* repeat button */
+            &[class*=repeat] {
+                > .vc-spotify-repeat-1 {
+                    font-size: 60%;
+                }
+                path {
                     d: path("M 5 9.75 A 3.75 3.75 0 0 1 8.75 6 h 8.5 A 3.75 3.75 0 0 1 21 9.75 v 5 a 3.75 3.75 0 0 1 -3.75 3.75 H 14.81 l 1.018 1.018 a 0.75 0.75 0 1 1 -1.06 1.06 L 11.939 17.75 l 2.829 -2.828 a 0.75 0.75 0 1 1 1.06 1.06 L 14.811 17 h 2.439 a 2.25 2.25 0 0 0 2.25 -2.25 v -5 a 2.25 2.25 0 0 0 -2.25 -2.25 h -8.5 A 2.25 2.25 0 0 0 6.5 9.75 v 5 A 2.25 2.25 0 0 0 8.75 17 H 10 v 1.5 H 8.75 A 3.75 3.75 0 0 1 5 14.75 v -5 z");
                 }
-                /* shuffle button */
-                &.vc-spotify-shuffle path {
-                    d: path("m 12.5 14.723 l 0.98 -1.167 l 0.957 1.14 a 2.25 2.25 0 0 0 1.724 0.804 h 1.947 l -1.017 -1.018 a 0.75 0.75 0 1 1 1.06 -1.06 l 2.829 2.828 l -2.829 2.828 a 0.75 0.75 0 1 1 -1.06 -1.06 L 18.109 17 H 16.16 A 3.75 3.75 0 0 1 13.287 15.66 L 12.5 14.722 Z m 5.651 -9.801 a 0.75 0.75 0 1 0 -1.06 1.06 L 18.109 7 H 16.16 A 3.75 3.75 0 0 0 13.287 8.34 L 7.114 15.696 A 2.25 2.25 0 0 1 5.39 16.5 H 5 V 18 H 5.391 A 3.75 3.75 0 0 0 8.264 16.66 L 14.437 9.304 A 2.25 2.25 0 0 1 16.161 8.5 h 1.947 l -1.017 1.018 a 0.75 0.75 0 0 0 1.06 1.06 L 20.98 7.75 L 18.15 4.922 Z M 5.391 7.5 H 5 V 6 H 5.391 C 6.5 6 7.551 6.49 8.264 7.34 L 9.89 9.277 L 8.911 10.444 L 7.115 8.304 A 2.25 2.25 0 0 0 5.39 7.5 Z");
+                /* little dot */
+                &:not([class*=off])::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    height: 3.2px;
+                    width: 3.2px;
+                    border-radius: 100%;
+                    bottom: 1px;
+                    background-color: var(--vc-spotify-green);
+                    clip-path: inset(0);
                 }
             }
         }
@@ -276,6 +309,7 @@
 
 /* vc hover activity popout */
 [id^=popout_] [class^=activity_]:has(> [class^=channelActivityContainer_] > [class^=flexColumn] > [class^=timeBar_]) {
+    --vc-spotify-green: #1fdf64 !important;
     /* fonts */
     --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-primary: "Spotify", var(--fallback-font);
@@ -332,7 +366,7 @@
             border-radius: 50px;
             border: 1px solid white;
             transition: none !important;
-            color: #1fdf64 !important;
+            color: var(--vc-spotify-green) !important;
         }
         /* stylize "listen along" button */
         > [class^=syncButton_] {
