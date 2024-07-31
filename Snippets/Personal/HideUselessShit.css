@@ -36,6 +36,7 @@ nav > [role=tablist] > [class^=socialLinks_],
 /* hypesquad settings */
 [data-tab-id^="Hypesquad"],
 /* extra experiment settings */
+[data-tab-id="Intl Testing"],
 [data-tab-id="Text Component"],
 [data-tab-id="Text Playground"],
 [data-tab-id="Payment Flow Modals"],
