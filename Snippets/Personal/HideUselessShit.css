@@ -68,8 +68,6 @@ nav > [role=tablist] > [class^=socialLinks_],
 #channels [class^=sectionDivider_],
 /* help button */
 [href="https://support.discord.com"],
-/* inbox button when no notifs */
-[class^=recentsIcon_]:not(:has([class^=iconBadge_],[class*=recentMentionsPopout_])),
 /* speak message */
 #message-tts,
 #message-actions-tts,
