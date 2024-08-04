@@ -2,7 +2,7 @@
  * @name SpotifyRedesignV2
  * @description Expanded version of DaBluLite's Spotify Activity Redesign
  * @author tom2k, DaBluLite
- * @version 2.3.1
+ * @version 2.3.2
 */
 /* set fonts */
 @font-face {
@@ -46,11 +46,19 @@
             color: white;
             /* regular font for song/artist/album */
             /* online songs */
-            a,
+            a {
+                color: white;
+                font-weight: 400;
+            }
             /* local songs */
             [title] {
                 color: white;
                 font-weight: 400;
+                &:not(:has(*),[data-text-variant]) {
+                    color: white;
+                    opacity: .75;
+                    font-size: 12px;
+                }
             }
             /* song title */
             /* local songs */
@@ -60,13 +68,23 @@
                 > a {
                     font-weight: 600 !important;
                 }
-            } 
-            /* online songs */
-            > div > [class*=textRow_] > span > a,
-            /* local songs */
-            [title]:not(:has(*),[data-text-variant]) {
-                color: white;
-                opacity: .75;
+            }
+            /* hide "by" & "on" for online songs (not possible for local songs) */
+            > div > [class*=textRow_] {
+                &:has(> span > a) {
+                    font-size: 0;
+                    line-height: normal;
+                }
+                /* keep commas between artists */
+                &[class^=detailsWrap_] > span {
+                    font-size: 12px;
+                }
+                /* style details */
+                > span > a {
+                    color: white;
+                    opacity: .75;
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -163,6 +181,8 @@
 /* vencord spotify player */
 #vc-spotify-player {
     --vc-spotify-green: #1fdf64 !important;
+    --interactive-normal: #b3b3b3;
+    --interactive-hover: white;
     /* set fonts */
     --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-primary: "Spotify", var(--fallback-font);
@@ -172,24 +192,35 @@
     display: flex;
     flex-direction: column;
     background-color: black !important;
-    #vc-spotify-info-wrapper {
+    > #vc-spotify-info-wrapper {
         /* re-order player */
         order: 0;
         /* enlarge & rounden image */
-        #vc-spotify-album-image {
+        > #vc-spotify-album-image {
             height: 56px !important;
             width: 56px !important;
             border-radius: 4px;
+            /* make image larger on hover */
+            &:hover {
+                filter: none;
+                scale: 1.05;
+            }
         }
         height: 56px !important;
-        #vc-spotify-titles {
+        > #vc-spotify-titles {
             font-weight: 400 !important;
-            #vc-spotify-artist {
-                font-size: 14px !important;
+            > .vc-spotify-ellipoverflow:has(> .vc-spotify-artist,> #vc-spotify-album-title) {
+                /* hide "by" and "on" */
+                font-size: 0;
+                line-height: normal;
+                > .vc-spotify-artist,
+                > #vc-spotify-album-title {
+                    font-size: 12px !important;
+                }
             }
         }
     }
-    #vc-spotify-progress-bar {
+    > #vc-spotify-progress-bar {
         /* re-order player */
         display: flex;
         align-items: center;
@@ -197,48 +228,53 @@
         order: 3;
         margin: 0 !important;
         /* progress times on sides */
-        .vc-spotify-progress-time {
+        > .vc-spotify-progress-time {
             position: static;
         }
         /* center progress bar */
-        [class^=sliderContainer_] {
+        > [class^=sliderContainer_] {
             height: 10px;
             &:hover {
-                /* show grabber on progress bar hover */
-                [class^=grabber_] {
-                    opacity: 1;
-                }
-                /* progress bar green on hover */
-                [class^=barFill] {
-                    background-color: var(--vc-spotify-green) !important;
-                }
-            }
-            [class^=bar_] {
-                /* brighter progress bar background */
-                background-color: #4d4d4d;
-                /*resize progress bar*/
-                height: 4px;
-                [class^=barFill_] {
-                    /* white progress bar */
-                    background-color: white;
-                    /* round corners */
-                    border-radius: 8px;
+                > [class^=slider_] {
+                    /* progress bar green on hover */
+                    > [class^=bar_] > [class^=barFill] {
+                        background-color: var(--vc-spotify-green) !important;
+                    }
+                    /* show grabber on progress bar hover */
+                    > [class^=track_] > [class^=grabber_] {
+                        opacity: 1;
                     }
                 }
-            /* stylize grabber */
-            [class^=grabber_] {
-                background-color: white !important;
-                border-color: white !important;
-                opacity: 0;
+                
+            }
+            > [class^=slider_] {
+                > [class^=bar_] {
+                    /* brighter progress bar background */
+                    background-color: #4d4d4d;
+                    /*resize progress bar*/
+                    height: 4px;
+                    > [class^=barFill_] {
+                        /* white progress bar */
+                        background-color: white;
+                        /* round corners */
+                        border-radius: 8px;
+                        }
+                }
+                /* stylize grabber */
+                > [class^=track_] > [class^=grabber_] {
+                    background-color: white !important;
+                    border-color: white !important;
+                    opacity: 0;
+                }
             }
         }
     }
-    .vc-spotify-button-row {
+    > .vc-spotify-button-row {
         /* re-order player */
         gap: 8px !important;
         order: 2;
         margin: 5px 0 !important;
-        .vc-spotify-button {
+        > .vc-spotify-button {
             /* stylize pause/play button */
             &:has(> .vc-spotify-pause,> .vc-spotify-play) {
                 background-color: white !important;
@@ -270,7 +306,7 @@
                     clip-path: inset(0);
                 }
             }
-            .vc-spotify-button-icon {
+            > .vc-spotify-button-icon {
                 width: 24px;
                 height: 24px;
                 /* next button */
