@@ -387,6 +387,10 @@
         [class^=effectsWrapper_] {
             display: none;
         }
+        /* don't hide super reaction emoji when the animation effect would be happening */
+        .emoji[class*=hideEmoji_] {
+            opacity: 1;
+        }
     }
 }
 
