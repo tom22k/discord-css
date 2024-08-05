@@ -123,9 +123,7 @@
     /* appearance tab */
     #appearance-tab {
         /* customize colour background section */
-        section:has(> [class^=header_] [class^=nitroWheel_]) {
-            display: none;
-        }
+        [class^=premiumFeatureBorder_],
         /* custom icon section */
         [class^=selectionGroup_]:has([class^=nitroWheel_]) {
             display: none;
