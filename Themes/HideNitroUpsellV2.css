@@ -443,25 +443,25 @@
             display: none;
         }
     }
-        > [class^=content_]:has(> [class^=shinyButton_]) {
-            > h2[class^=defaultColor_][class*=subHeader_] > a,
-            > [class] {
-                display: none;
-            }
-            /* replace sub header with informative text */
-            > h2[class^=defaultColor_][class*=subHeader_] {
-                visibility: hidden;
-                display: flex !important;
-                align-items: center;
-                &::after {
-                    visibility: visible !important;
-                    content: "There was previously a Nitro advertisement here. Move along.";
-                    position: absolute;
-                    top: 42.5%;
-                }
+    > [class^=content_]:has(> [class^=shinyButton_]) {
+        > h2[class^=defaultColor_][class*=subHeader_] > a,
+        > [class] {
+            display: none;
+        }
+        /* replace sub header with informative text */
+        > h2[class^=defaultColor_][class*=subHeader_] {
+            visibility: hidden;
+            display: flex !important;
+            align-items: center;
+            &::after {
+                visibility: visible !important;
+                content: "There was previously a Nitro advertisement here. Move along.";
+                position: absolute;
+                top: 42.5%;
             }
         }
-    /* "you could be paying less!" in server boost payment modal */
+    }
+/* "you could be paying less!" in server boost payment modal */
     > .paymentModalContent [class^=upsellFooter_] {
         display: none;
     }
