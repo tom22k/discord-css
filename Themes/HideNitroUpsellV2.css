@@ -94,7 +94,7 @@
         /* unique server profiles overlay */
         [class^=upsellOverlayContainer_],
         /* shop upselling */
-        > [class^=container_][style^="background-image:"] {
+        > [class^=container_][style^=background-image] {
             display: none;
         }
         [class^=profileCustomizationSection_] [class^=customizationSection_] {
