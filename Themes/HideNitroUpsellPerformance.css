@@ -209,7 +209,7 @@
 /* boost progress bar */
 #channels > ul > li:has(> [data-list-item-id^=channels___boosts]),
 /* server shop */
-#channels [class^=containerDefault_]:has(> [id^=shop]),
+#channels > ul > li:has(> [class^=containerDefault_] > [id^=shop]),
 /* booster badge in memberlist */
 [class^=membersWrap_] [class^=premiumIcon],
 /* right click entry to user settings boost tab */
@@ -251,22 +251,11 @@
             filter: grayscale();
             background-color: transparent;
             /* server headers */
-            [class^=header_] {
-                /* hide nitro icon */
-                [class^=headerIcon_]:has(> svg > path) {
-                    display: none;
-                    /* remove gap */
-                    + [class^=headerLabel_] {
-                        margin: 0;
-                    }
-                }
-                /* change server names and "Available with Nitro" headers to "Unavailable" */
-                [class^=headerLabel_] {
-                    font-size: 0;
-                    &::before {
-                        font-size: 12px;
-                        content: "Unavailable";
-                    }
+            [class^=header_] [class^=headerIcon_]:has(> svg > path) {
+                display: none;
+                /* remove gap */
+                + [class^=headerLabel_] {
+                    margin: 0;
                 }
             }
             /* disable clicking on unavailable emojis */
@@ -311,14 +300,6 @@
     [class^=stickerNode_][class*=stickerUnsendable_] {
         [class^=wrapper_]:has(+ [class^=row_] [class^=sticker_] &) [class^=header_] {
             filter: grayscale();
-            /* change server names and "Available with Nitro" headers to "Unavailable" */
-            [class^=headerLabel_] {
-                font-size: 0;
-                &::before {
-                    font-size: 12px;
-                    content: "Unavailable";
-                }
-            }
         }
         /* unavailable stickers */
         #sticker-picker-tab-panel>#sticker-picker-grid [class^=sticker_]:has(&) {
@@ -348,14 +329,6 @@
             /* server header with disabled sounds */
             > [class^=sectionContainer_]:has(+ ul > li > [class^=soundButton_][class*=premiumDisabled_]) {
                 filter: grayscale();
-                /* change unavailable server names to "Unavailable"  */
-                > [class^=sectionHeader_] > [class^=sectionHeaderContent_] > h1 {
-                    font-size: 0;
-                    &::before {
-                        content: "Unavailable";
-                        font-size: 12px;
-                    }
-                }
             }
             /* prevent clicking on unavailable sounds */
             > ul > li:has(> [class^=soundButton_][class*=premiumDisabled_]) {
@@ -425,7 +398,43 @@
     [class^=shinyButton_] {
         display: none;
     }
-    /* "you could be paying less!" in server boost payment modal */
+    /* nuke huge upsell popup on login - images #1-2 */
+    &:has(> [class^=content_] > [class^=shinyButton_]) {
+        /* restyle background */
+        background: var(--background-primary);
+        /* restyle close button */
+        > button[class^=closeButton_] {
+            opacity: 1;
+            > [class^=contents_] {
+                height: 24px;
+                zoom: 112.5%;
+            }
+        }
+        /* hide most of the upsell */
+        > svg,
+        > [class^=modalTopPill][class*=freeTrial] {
+            display: none;
+        }
+    }
+    > [class^=content_]:has(> [class^=shinyButton_]) {
+        > h2[class^=defaultColor_][class*=subHeader_] > a,
+        > [class] {
+            display: none;
+        }
+        /* replace sub header with informative text */
+        > h2[class^=defaultColor_][class*=subHeader_] {
+            visibility: hidden;
+            display: flex !important;
+            align-items: center;
+            &::after {
+                visibility: visible !important;
+                content: "There was previously a Nitro advertisement here. Move along.";
+                position: absolute;
+                top: 42.5%;
+            }
+        }
+    }
+/* "you could be paying less!" in server boost payment modal */
     > .paymentModalContent [class^=upsellFooter_] {
         display: none;
     }
