@@ -50,10 +50,13 @@
             /* app launcher */
             > [class^=channelAppLauncher_] {
                 margin: 0;
+                min-width: 44px;
                 background: var(--bg-overlay-3, var(--channeltextarea-background));
                 > [class^=buttonContainer_] {
                     /* consistent height */
                     min-height: 49px;
+                    position: absolute;
+                    top: 0;
                     > button {
                         border-radius: 0;
                     }
