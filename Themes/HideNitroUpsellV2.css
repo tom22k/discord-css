@@ -321,7 +321,7 @@
             }
         }
         /* unavailable stickers */
-        [class^=sticker_]:has(&) {
+        #sticker-picker-tab-panel>#sticker-picker-grid [class^=sticker_]:has(&) {
             pointer-events: none;
             background: hsl(var(--black-500-hsl)/.6);
             filter: brightness(50%);
