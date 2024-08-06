@@ -442,6 +442,7 @@
         > [class^=modalTopPill][class*=freeTrial] {
             display: none;
         }
+    }
         > [class^=content_]:has(> [class^=shinyButton_]) {
             > h2[class^=defaultColor_][class*=subHeader_] > a,
             > [class]:not(h2[class^=defaultColor_][class*=subHeader_]) {
@@ -460,7 +461,6 @@
                 }
             }
         }
-    }
     /* "you could be paying less!" in server boost payment modal */
     > .paymentModalContent [class^=upsellFooter_] {
         display: none;
