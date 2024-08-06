@@ -1,4 +1,6 @@
 /* HIDE */
+/* remove glow in super reactions */
+[class^=reactions_] [class^=burstGlow_],
 /* dividers in little menus */
 [role=separator][class^=separator_],
 /* 1 specific super annoying & obtrusive profile effect */
