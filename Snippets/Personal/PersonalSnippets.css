@@ -29,18 +29,34 @@
     > [class^=form_] {
         /* take up full width */
         padding: 0;
-        > [class^=channelBottomBarArea_] > [class^=channelTextArea_] {
-            /* move chat bar to bottom */
-            margin-bottom: 0;
-            > [class^=scrollableContainer_] {
-                /* sharp corners */
-                border-radius: 0;
-                /* consistent height */
-                min-height: 53px;
-                > [class^=inner_] {
+        &::before {
+            display: none;
+        }
+        > [class^=channelBottomBarArea_] {
+            > [class^=channelTextArea_] {
+                margin-bottom: 0;
+                > [class^=scrollableContainer_] {
+                    border-radius: 0;
+                    padding-right: 0 !important;
                     /* consistent height */
-                    padding-top: 4px;
+                    min-height: 53px;
+                    > [class^=inner_] {
+                        /* consistent height */
+                        padding-top: 4px;
+                        min-height: 49px;
+                    }
+                }
+            }
+            /* app launcher */
+            > [class^=channelAppLauncher_] {
+                margin: 0;
+                background: var(--bg-overlay-3, var(--channeltextarea-background));
+                > [class^=buttonContainer_] {
+                    /* consistent height */
                     min-height: 49px;
+                    > button {
+                        border-radius: 0;
+                    }
                 }
             }
         }
@@ -48,7 +64,7 @@
         [class^=typing_] {
             top: -24px;
             left: 0;
-            right: 16px !important;
+            right: 0;
             background: var(--bg-overlay-chat, var(--background-primary)) !important;
             /* move slowmode indicator back to default location */
             [class^=cooldownWrapper_] {
