@@ -445,13 +445,13 @@
     }
         > [class^=content_]:has(> [class^=shinyButton_]) {
             > h2[class^=defaultColor_][class*=subHeader_] > a,
-            > [class]:not(h2[class^=defaultColor_][class*=subHeader_]) {
+            > [class] {
                 display: none;
             }
             /* replace sub header with informative text */
             > h2[class^=defaultColor_][class*=subHeader_] {
                 visibility: hidden;
-                display: flex;
+                display: flex !important;
                 align-items: center;
                 &::after {
                     visibility: visible !important;
