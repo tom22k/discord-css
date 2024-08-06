@@ -23,8 +23,12 @@
 [href="/store"],
 /* shop button (in case it's anywhere else) */
 [href="/shop"],
+/* nitro button */
+[class^=shinyButton_]:has(> [class*=premiumSubscribeButton_]),
 /* nitro upselling in server boosting screen */
 [class^=guildStatus_] > [class^=guildBoostCtas_] > [class^=guildBoostCta_][class*=guildBoostCtaSecondary_],
+/* nitro upselling description in popup when clicking on emoji/sticker */
+[class^=popoutContainer_] > [class^=emojiSection_] > [class^=flex_] > [class^=flex_] > [class^=defaultColor_][data-text-variant="text-sm/normal"],
 /* nitro icon in stream quality */
 [class^=streamQualityIndicator_] [class^=premiumStreamIcon_] {
     display: none;
@@ -137,7 +141,7 @@
     }
     /* server settings */
     /* overview tab boosting upsell */
-    #overview-tab [class^=divider_] [class^=divider_]:has(> [class^=flex_] > [class^=flexChild_] > [class^=shinyButton_]),
+    #overview-tab [class^=divider_] [class^=divider_]:has([class^=shinyButton_]),
     /* hide role icon section in roles tab when unavailable */
     #roles-tab [class^=contentWidth_] > [class^=container_]:has([class^=availabilityIndicator_] > [class^=icon_]:not([class*=unlockedIcon_])) {
         display: var(--boosting);
@@ -146,7 +150,7 @@
     #stickers-tab,
     #soundboard-tab {
         /* boost upsell banner */
-        [class^=banner_]:has(> [class^=ctaContainer_] > [class^=shinyButton_]) {
+        [class^=banner_]:has([class^=shinyButton_]) {
             display: var(--boosting);
         }
     }
@@ -394,16 +398,6 @@
     }
 }
 
-/* popup when clicking on emoji/sticker */
-[class^=popoutContainer_] > [class^=emojiSection_] {
-    /* nitro upselling description when clicking on emoji/sticker */
-    > [class^=flex_] > [class^=flex_] > [class^=defaultColor_][data-text-variant="text-sm/normal"],
-    /* "Get Nitro" button */
-    > [class^=shinyButton_] {
-        display: none;
-    }
-}
-
 /* dialog popups */
 [class^=focusLock_][role=dialog] > [class^=root_] {
     /* text */
@@ -423,12 +417,8 @@
             display: none;
         }
     }
-    /* nitro button */
-    [class^=shinyButton_] {
-        display: none;
-    }
     /* nuke huge upsell popup on login - images #1-2 */
-    &:has(> [class^=content_] > [class^=shinyButton_]) {
+    &:has([class^=shinyButton_]) {
         /* restyle background */
         background: var(--background-primary);
         /* restyle close button */
