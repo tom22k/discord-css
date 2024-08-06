@@ -209,7 +209,7 @@
 /* boost progress bar */
 #channels > ul > li:has(> [data-list-item-id^=channels___boosts]),
 /* server shop */
-#channels [class^=containerDefault_]:has(> [id^=shop]),
+#channels > ul > li:has(> [class^=containerDefault_] > [id^=shop]),
 /* booster badge in memberlist */
 [class^=membersWrap_] [class^=premiumIcon],
 /* right click entry to user settings boost tab */
