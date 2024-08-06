@@ -407,12 +407,9 @@
     /* text */
     > [class^=content_] {
         > [class^=defaultColor_] {
-            /* paragraphs */
-            > p {
-                /* has a link, likely to the nitro page (long message length upselling description,100 server limit upselling description) */
-                &:has(> a,> [class^=learnMoreLink_]) {
-                    display: none;
-                }
+            /* paragraphs with a link, likely to the nitro page (long message length upselling description,100 server limit upselling description) */
+            > p:has(> a,> [class^=learnMoreLink_]) {
+                display: none;
             }
             /* large file upload upselling description */
             > [class^=body_] > [class^=defaultColor_] {
