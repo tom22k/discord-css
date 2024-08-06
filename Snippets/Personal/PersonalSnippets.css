@@ -54,6 +54,7 @@
                 background: var(--bg-overlay-3, var(--channeltextarea-background));
                 > [class^=buttonContainer_] {
                     /* consistent height */
+                    padding-top: 4px;
                     min-height: 49px;
                     position: absolute;
                     top: 0;
