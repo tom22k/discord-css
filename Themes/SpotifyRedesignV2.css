@@ -147,8 +147,13 @@
             width: 70%;
         }
         /* "progress times on sides" - panels */
-        &:has(> [class^=headerContainer_] > h2) > [class^=timeBar] > [class^=barInMultiLine_] {
-            width: 75%;
+        &:has(> [class^=headerContainer_] > h2) > [class^=timeBar] {
+            > [class^=barInMultiLine_] {
+                width: 72.5%;
+            }
+            > [class^=flex_] {
+                margin-top: -1.5%;
+            }
         }
     }
     div > [class^=flex_][class*=buttonsWrapper_] > [class^=syncButton_] {
