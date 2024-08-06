@@ -17,9 +17,11 @@
 }
 
 /* GENERAL HIDE */
-/* nitro Button above DM List */
+/* nitro & shop buttons above DM list (more space efficient) */
+[data-list-id^=private-channels] > ul > li:has([href="/store"],[href="/shop"]),
+/* nitro button (in case it's anywhere else) */
 [href="/store"],
-/* Shop Button above DM List */
+/* shop button (in case it's anywhere else) */
 [href="/shop"],
 /* nitro upselling in server boosting screen */
 [class^=guildStatus_] > [class^=guildBoostCtas_] > [class^=guildBoostCta_][class*=guildBoostCtaSecondary_],
