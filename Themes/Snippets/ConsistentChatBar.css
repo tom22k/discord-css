@@ -1,0 +1,68 @@
+/*
+ * @name Consistent Chat Bar
+ * @description make the chat bar align with the user panel
+ * @author tom2k
+*/
+[class^=chat_] > [class^=content_] > [class^=chatContent_] {
+    /* move up jump to present bar when typing or slow mode so no overlap */
+    &:has(> [class^=form_] > [class^=typing_]) > [class^=messagesWrapper_] > [class^=jumpToPresentBar_] {
+        padding-bottom: 32px;
+    }
+    /* jump to present bar consistent dimensions */
+    > [class^=messagesWrapper_] > [class^=jumpToPresentBar_] {
+        border-radius: 0%;
+        opacity: 1;
+        left: 0;
+        right: 0;        
+    }
+    > [class^=form_] {
+        /* take up full width */
+        padding: 0;
+        &::before {
+            display: none;
+        }
+        > [class^=channelBottomBarArea_] {
+            > [class^=channelTextArea_] {
+                margin-bottom: 0;
+                > [class^=scrollableContainer_] {
+                    border-radius: 0;
+                    margin-right: -10px;
+                    /* consistent height */
+                    min-height: 53px;
+                    > [class^=inner_] {
+                        /* consistent height */
+                        padding-top: 4px;
+                        min-height: 49px;
+                    }
+                }
+            }
+            /* app launcher */
+            > [class^=channelAppLauncher_] {
+                margin: 0;
+                min-width: 44px;
+                background: var(--bg-overlay-3, var(--channeltextarea-background));
+                > [class^=buttonContainer_] {
+                    /* consistent height */
+                    padding-top: 4px;
+                    min-height: 49px;
+                    position: absolute;
+                    top: 0;
+                    > button {
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+        /* slowmode/typing indicator consistent dimensions */
+        [class^=typing_] {
+            top: -24px;
+            left: 0;
+            right: 0;
+            background: var(--bg-overlay-chat, var(--background-primary)) !important;
+            /* move slowmode indicator back to default location */
+            [class^=cooldownWrapper_] {
+                margin-right: 16px;
+            }
+        }
+    }
+}
