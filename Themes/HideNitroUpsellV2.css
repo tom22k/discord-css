@@ -27,22 +27,16 @@
 [class^=shinyButton_]:has(> [class*=premiumSubscribeButton_]),
 /* nitro upselling in server boosting screen - #3 */
 [class^=guildStatus_] > [class^=guildBoostCtas_] > [class^=guildBoostCta_][class*=guildBoostCtaSecondary_],
-/* nitro icon in stream quality */
-[class^=streamQualityIndicator_] [class^=premiumStreamIcon_] {
+/* nitro icon in stream quality - #4 */
+[class^=streamQualityIndicator_] [class^=premiumStreamIcon_],
+/* random side popup theme upsell - #5 */
+#app-mount > [class^=appAsidePanelWrapper_] > [class^=themeEditor_]:has([class^=shinyButton_]) {
     display: none;
 }
-#app-mount > [class^=appAsidePanelWrapper_] > [class^=themeEditor_] {
-    /* random side popup theme upsell - image #3 */
-    &:has([class^=shinyButton_]),
-    /* nitro themes in theme preview editor */
-    [class^=selectionGroup_] {
-        display: none;
-    }
-}
 
-/* disable hovering tooltip on nitro icon in stream quality */
+/* disable hovering tooltip on nitro icon in stream quality - #6 */
 [class^=streamQualityIndicator_]:has([class^=premiumStreamIcon_]),
-/* disable clicking on anything that redirects to nitro page */
+/* disable clicking on anything that redirects to nitro page (e.g. nitro badge) */
 [href="https://discord.com/settings/premium"]:active {
   pointer-events: none;
 }
@@ -341,7 +335,7 @@
     [class^=reactionTooltip_] > [class^=burstReactionTooltipPrompt] {
         display: none;
     }
-    /* nitro upselling description in popup when clicking on emoji/sticker */
+    /* nitro upselling description in popup when clicking on emoji/sticker - #X */
     [class^=popoutContainer_] > [class^=emojiSection_] [data-text-variant="text-sm/normal"] {
         font-size: 0;
         /* when not from a public server, keep part of the description */
