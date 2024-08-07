@@ -1,0 +1,23 @@
+/*
+ * @name Merge App Launcher
+ * @description merge app launcher to be part of the chat bar
+ * @author tom2k, Obsidianninja11
+*/
+[class^=channelTextArea_] > [class^=scrollableContainer_] {
+    margin-right: -10px;
+    &:not(:has(> [class^=inner_][class*=innerDisabled_])) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+[class^=channelAppLauncher_] {
+    margin-left: 0;
+    min-width: 44px;
+    background: var(--bg-overlay-3, var(--channeltextarea-background));;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    [class^=buttonContainer_] {
+        top: 0;
+        position:absolute;
+    }
+}
