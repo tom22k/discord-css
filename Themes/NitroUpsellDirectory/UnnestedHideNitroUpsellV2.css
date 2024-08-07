@@ -1,362 +1,265 @@
 [href="/store"],
-
 [href="/shop"],
-
 [class^=guildStatus_]>[class^=guildBoostCtas_]>[class^=guildBoostCta_][class*=guildBoostCtaSecondary_],
-
 [class^=streamQualityIndicator_] [class^=premiumStreamIcon_] {
     display: none;
 }
-
 #app-mount>[class^=appAsidePanelWrapper_]>[class^=themeEditor_]:has([class^=shinyButton_]),
-
 #app-mount>[class^=appAsidePanelWrapper_]>[class^=themeEditor_] [class^=selectionGroup_] {
     display: none;
 }
-
 [class^=streamQualityIndicator_]:has([class^=premiumStreamIcon_]),
-
 [href="https://discord.com/settings/premium"]:active {
     pointer-events: none;
 }
-
 [class^=standardSidebarView_]>[class^=sidebarRegion_]>[class^=sidebarRegionScroller_]>nav>[class^=side_]>[class^=header_]:has(+ [class^=premiumTab_]),
-
 [class^=standardSidebarView_]>[class^=sidebarRegion_]>[class^=sidebarRegionScroller_]>nav>[class^=side_]>[class^=premiumTab_],
-
 [class^=standardSidebarView_]>[class^=sidebarRegion_]>[class^=sidebarRegionScroller_]>nav>[class^=side_]>[data-tab-id="Subscriptions"],
-
 [class^=standardSidebarView_]>[class^=sidebarRegion_]>[class^=sidebarRegionScroller_]>nav>[class^=side_]>[data-tab-id="Library Inventory"],
-
 [class^=standardSidebarView_]>[class^=sidebarRegion_]>[class^=sidebarRegionScroller_]>nav>[class^=side_]>[data-tab-id="Billing"],
-
 [class^=standardSidebarView_]>[class^=sidebarRegion_]>[class^=sidebarRegionScroller_]>nav>[class^=side_]>[data-tab-id="Billing"]+[class^=separator_] {
     display: var(--billing);
 }
-
 [class^=standardSidebarView_]>[class^=sidebarRegion_]>[class^=sidebarRegionScroller_]>nav>[class^=side_]>[data-tab-id="Nitro Server Boost"] {
     display: var(--boosting);
 }
-
 [class^=standardSidebarView_]>[class^=sidebarRegion_]>[class^=sidebarRegionScroller_]>nav>[class^=side_]>[data-tab-id="merchandise"] {
     display: none;
 }
-
 [class^=standardSidebarView_]>[class^=sidebarRegion_]>[class^=sidebarRegionScroller_]>nav>[class^=side_]>[class^=serverBoostTabItem_] {
     display: var(--boosting);
 }
-
 [class^=standardSidebarView_]>[class^=sidebarRegion_]>[class^=sidebarRegionScroller_]>nav>[class^=side_]>[class^=serverBoostTabItem_]+[class^=separator_] {
     display: var(--boosting);
 }
-
 [class^=sidebar_] [class^=header_]:has(+ [class^=standardSidebarView_] >[class^=sidebarRegion_]>[class^=sidebarRegionScroller_]>nav>[class^=side_] >[data-tab-id=ROLE_SUBSCRIPTIONS]) [class^=sidebar_] [class^=header_]:has(+ [data-tab-id=ROLE_SUBSCRIPTIONS]),
 [class^=sidebar_] [class^=header_]:has(+ [class^=standardSidebarView_] >[class^=sidebarRegion_]>[class^=sidebarRegionScroller_]>nav>[class^=side_] >[data-tab-id=ROLE_SUBSCRIPTIONS])+[class^=separator_] {
     display: var(--boosting);
 }
-
 [class^=standardSidebarView_] #profile-customization-tab>[class^=premiumFeatureBorder],
 [class^=standardSidebarView_] #profile-customization-tab [class^=limitedFeatureBorder],
 [class^=standardSidebarView_] #profile-customization-tab [class^=upsellOverlayContainer_],
 [class^=standardSidebarView_] #profile-customization-tab>[class^=container_][style^=background-image] {
     display: none;
 }
-
 [class^=standardSidebarView_] #profile-customization-tab [class^=profileCustomizationSection_] [class^=customizationSection_][class*=withDivider_]:has(> [class^=buttonsContainer_])+[class^=customizationSection_],
-
 [class^=standardSidebarView_] #profile-customization-tab [class^=profileCustomizationSection_] [class^=customizationSection_][class*=withDivider_]:has(> [class^=buttonsContainer_])+[class^=customizationSection_]+[class^=customizationSection_] {
     display: none;
 }
-
 [class^=standardSidebarView_] #profile-customization-tab [class^=profileCustomizationSection_] [class^=customizationSection_] [class^=avatar_][class*=clickable_]:has(path[d^="M7 4a1 1 0 0 0 0 2h3a1"]) {
     pointer-events: none;
 }
-
 [class^=standardSidebarView_] #profile-customization-tab [class^=profileCustomizationSection_] [class^=customizationSection_] [class^=avatar_][class*=clickable_]:has(path[d^="M7 4a1 1 0 0 0 0 2h3a1"]) rect {
     pointer-events: none;
 }
-
 [class^=standardSidebarView_] #profile-customization-tab [class^=profileCustomizationSection_] [class^=customizationSection_] [class^=banner_]>[class^=clickable_]:has(path[d^="M7 4a1 1 0 0 0 0 2h3a1"]) {
     pointer-events: none;
 }
-
 [class^=standardSidebarView_] #appearance-tab [class^=premiumFeatureBorder_],
-
 [class^=standardSidebarView_] #appearance-tab [class^=selectionGroup_]:has([class^=nitroWheel_]) {
     display: none;
 }
-
 [class^=standardSidebarView_] [id="voice-&-video-tab"] [class^=divider_][class*=callSoundsDivider_]~[class] {
     display: none !important;
 }
-
 [class^=standardSidebarView_] #overview-tab [class^=divider_] [class^=divider_]:has(> [class^=flex_] > [class^=flexChild_] > [class^=shinyButton_]),
-
 [class^=standardSidebarView_] #roles-tab [class^=contentWidth_]>[class^=container_]:has([class^=availabilityIndicator_] > [class^=icon_]:not([class*=unlockedIcon_])) {
     display: var(--boosting);
 }
-
 [class^=standardSidebarView_] #emoji-tab [class^=banner_]:has(> [class^=ctaContainer_] > [class^=shinyButton_]),
 [class^=standardSidebarView_] #stickers-tab [class^=banner_]:has(> [class^=ctaContainer_] > [class^=shinyButton_]),
 [class^=standardSidebarView_] #soundboard-tab [class^=banner_]:has(> [class^=ctaContainer_] > [class^=shinyButton_]) {
     display: var(--boosting);
 }
-
 [class^=standardSidebarView_] #stickers-tab [class^=shinyButton_],
 [class^=standardSidebarView_] #vanity_url-tab [class^=shinyButton_] {
     display: var(--boosting);
 }
-
 [class^=standardSidebarView_] #roles-tab [class^=availabilityIndicator_]>[class^=icon_],
 [class^=standardSidebarView_] #vanity_url-tab [class^=availabilityIndicator_]>[class^=icon_] {
     display: var(--boosting);
 }
-
 [class^=standardSidebarView_] #roles-tab [class^=availabilityIndicator_]>h2,
 [class^=standardSidebarView_] #vanity_url-tab [class^=availabilityIndicator_]>h2 {
     margin-left: 4px;
 }
-
 [class^=standardSidebarView_] #roles-tab [class^=clickable_]:has(> [class^=availabilityIndicator_]),
 [class^=standardSidebarView_] #vanity_url-tab [class^=clickable_]:has(> [class^=availabilityIndicator_]) {
     pointer-events: var(--boosting);
 }
-
 [class^=standardSidebarView_] #stickers-tab [class^=tierDefaultUnlocked_],
-
 [class^=standardSidebarView_] #stickers-tab [class^=tier_]:has(> [class^=tierHeaderLocked_]),
-
 [class^=standardSidebarView_] #stickers-tab [class^=progress_][class*=progressBar_] {
     display: var(--boosting);
 }
-
 [class^=standardSidebarView_] #guild_premium-tab>[class^=tier0Container_] {
     display: none;
 }
-
 #user-settings-cog-Discord_Nitro,
-
 #user-settings-cog-Subscriptions,
-
 #user-settings-cog-Library_Inventory,
-
 #user-settings-cog-Billing {
     display: var(--billing);
 }
-
 #user-settings-cog-merchandise {
     display: none;
 }
-
 #channels>ul>li:has(> [data-list-item-id^=channels___boosts]),
-
 #channels [class^=containerDefault_]:has(> [id^=shop]),
-
 [class^=membersWrap_] [class^=premiumIcon],
-
 #user-settings-cog-Nitro_Server_Boost,
-
 #guild-header-popout-premium-subscribe,
-
 #guild-header-popout div:has(> #guild-header-popout-premium-subscribe)+[class^=separator_],
-
 #guild-context-guild-settings--ROLE_SUBSCRIPTIONS,
-
 #guild-context-guild-settings--GUILD_PREMIUM {
     display: var(--boosting);
 }
-
 [class^=header_] [class^=guildIcon]:active {
     pointer-events: var(--boosting);
 }
-
 #emoji-picker-tab-panel [class^=tooltipContainer_]:has(> #fancybutton-toggle),
-
 #emoji-picker-tab-panel >[class^=header_]>[class^=burstToggle_] {
     display: none;
 }
-
 #emoji-picker-tab-panel #emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroDivider]>[class^=nitroTopDividerContainer_],
 #emoji-picker-tab-panel #emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroDivider]>[class^=nitroBottomDivider_] {
     display: none;
 }
-
 #emoji-picker-tab-panel #emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroLocked] {
     filter: grayscale();
     background-color: transparent;
 }
-
 #emoji-picker-tab-panel #emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroLocked] [class^=header_] [class^=headerIcon_]:has(> svg > path) {
     display: none;
 }
-
 #emoji-picker-tab-panel #emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroLocked] [class^=header_] [class^=headerIcon_]:has(> svg > path)+[class^=headerLabel_] {
     margin: 0;
 }
-
 #emoji-picker-tab-panel #emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroLocked] [class^=header_] [class^=headerLabel_] {
     font-size: 0;
 }
-
 #emoji-picker-tab-panel #emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroLocked] [class^=header_] [class^=headerLabel_]::before {
     font-size: 12px;
     content: "Unavailable";
 }
-
 #emoji-picker-tab-panel #emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroLocked] [class^=emojiListRow_] {
     pointer-events: none;
 }
-
 #emoji-picker-tab-panel #emoji-picker-grid [class^=categorySection_][class*=categorySectionNitroLocked] [class^=lockedEmoji_] {
     background: hsl(var(--black-500-hsl)/.6);
     filter: brightness(50%);
 }
-
 #emoji-picker-tab-panel #emoji-picker-grid [class^=listItems_][style="inset: 8px 0px;"] > [class^=categorySection_][class*=categorySectionNitroLocked] {
  display: none;
 }
-
 #emoji-picker-tab-panel #emoji-picker-grid [class^=emojiListRow_] [class^=emojiItem_]:has([class^=emojiLockIconContainer_]) {
     pointer-events: none;
     background-color: transparent;
     filter: grayscale();
 }
-
 #emoji-picker-tab-panel #emoji-picker-grid [class^=upsellContainer_] {
     display: none;
 }
-
 #emoji-picker-tab-panel>[class^=wrapper_]>[class^=scroller_]:has(> [class^=listItems_] [class^=categoryItemLockIconContainer_]) {
     overflow-y: hidden !important;
 }
-
 #emoji-picker-tab-panel>[class^=wrapper_]>[class^=scroller_]>[class^=listItems_]>div:has([class^=categoryItemLockIconContainer_]) {
     display: none;
 }
-
 #sticker-picker-tab-panel>#sticker-picker-grid [class^=wrapper_]:has(+ [class^=row_] [class^=sticker_] [class^=stickerNode_][class*=stickerUnsendable_]) [class^=header_] {
     filter: grayscale();
 }
-
 #sticker-picker-tab-panel>#sticker-picker-grid [class^=wrapper_]:has(+ [class^=row_] [class^=sticker_] [class^=stickerNode_][class*=stickerUnsendable_]) [class^=header_] [class^=headerLabel_] {
     font-size: 0;
 }
-
 #sticker-picker-tab-panel>#sticker-picker-grid [class^=wrapper_]:has(+ [class^=row_] [class^=sticker_] [class^=stickerNode_][class*=stickerUnsendable_]) [class^=header_] [class^=headerLabel_]::before {
     font-size: 12px;
     content: "Unavailable";
 }
-
 #sticker-picker-tab-panel>#sticker-picker-grid [class^=sticker_]:has([class^=stickerNode_][class*=stickerUnsendable_]) {
     pointer-events: none;
     background: hsl(var(--black-500-hsl)/.6);
     filter: brightness(50%);
 }
-
 [id^=popout_] #user-settings-change-avatar-change-avatar-decoration,
-
 [id^=popout_] [class^=reactionTooltip_]>[class^=burstReactionTooltipPrompt] {
     display: none;
 }
-
 [id^=popout_] [class^=picker_][role=dialog]>[class^=gridNoticeWrapper_]:has(> [class^=premiumFeatureBorder_]) {
     display: none;
 }
-
 [id^=popout_] [class^=picker_][role=dialog]>[class^=listWrapper_]>[class^=wrapper_]>[class^=scroller_]>[class^=listItems_]>[class^=sectionContainer_]:has(+ ul > li > [class^=soundButton_][class*=premiumDisabled_]) {
     filter: grayscale();
 }
-
 [id^=popout_] [class^=picker_][role=dialog]>[class^=listWrapper_]>[class^=wrapper_]>[class^=scroller_]>[class^=listItems_]>[class^=sectionContainer_]:has(+ ul > li > [class^=soundButton_][class*=premiumDisabled_])>[class^=sectionHeader_]>[class^=sectionHeaderContent_]>h1 {
     content: 0;
 }
-
 [id^=popout_] [class^=picker_][role=dialog]>[class^=listWrapper_]>[class^=wrapper_]>[class^=scroller_]>[class^=listItems_]>[class^=sectionContainer_]:has(+ ul > li > [class^=soundButton_][class*=premiumDisabled_])>[class^=sectionHeader_]>[class^=sectionHeaderContent_]>h1::before {
     content: "Unavailable";
     font-size: 12px;
 }
-
 [id^=popout_] [class^=picker_][role=dialog]>[class^=listWrapper_]>[class^=wrapper_]>[class^=scroller_]>[class^=listItems_]>ul>li:has(> [class^=soundButton_][class*=premiumDisabled_]) {
     filter: grayscale();
     pointer-events: none;
 }
-
 [class^=channelTextArea_] [class^=buttons_]>button,
-
 [class^=channelTextArea_] >[class^=characterCount_] [class*=upsell_] {
     display: none;
 }
-
 [data-list-id=chat-messages] [class^=reaction_]>[class^=reactionInner_]:has(> [class^=burstGlow_]) {
     pointer-events: none;
 }
-
 [data-list-id=chat-messages] [class^=reaction_]>[class^=reactionInner_]:has(> [class^=burstGlow_]) [class^=effectsWrapper_] {
     display: none;
 }
-
 [data-list-id=chat-messages] [class^=reaction_]>[class^=reactionInner_]:has(> [class^=burstGlow_]) .emoji[class*=hideEmoji_] {
     opacity: 1;
 }
-
 [class^=popoutContainer_]>[class^=emojiSection_]>[class^=flex_]>[class^=flex_]>[class^=defaultColor_][data-text-variant="text-sm/normal"],
-
 [class^=popoutContainer_]>[class^=emojiSection_]>[class^=shinyButton_] {
     display: none;
 }
-
 [class^=focusLock_][role=dialog]>[class^=root_]>[class^=content_]>[class^=defaultColor_]>p:has(> a, > [class^=learnMoreLink_]) {
     display: none;
 }
-
 [class^=focusLock_][role=dialog]>[class^=root_]>[class^=content_]>[class^=defaultColor_]>[class^=body_]>[class^=defaultColor_] {
     display: none;
 }
-
 [class^=focusLock_][role=dialog]>[class^=root_]>[class^=content_] [class^=imagePickerContainer_]>[class^=optionBox_]:has([class^=nitroWheel]) {
     display: none;
 }
-
 [class^=focusLock_][role=dialog]>[class^=root_] [class^=shinyButton_] {
     display: none;
 }
-
 [class^=focusLock_][role=dialog]>[class^=root_]:has(> [class^=content_] > [class^=shinyButton_]) {
     background: var(--background-primary);
 }
-
 [class^=focusLock_][role=dialog]>[class^=root_]:has(> [class^=content_] > [class^=shinyButton_])>button[class^=closeButton_] {
     opacity: 1;
 }
-
 [class^=focusLock_][role=dialog]>[class^=root_]:has(> [class^=content_] > [class^=shinyButton_])>button[class^=closeButton_]>[class^=contents_] {
     height: 24px;
     zoom: 112.5%;
 }
-
 [class^=focusLock_][role=dialog]>[class^=root_]:has(> [class^=content_] > [class^=shinyButton_])>svg,
 [class^=focusLock_][role=dialog]>[class^=root_]:has(> [class^=content_] > [class^=shinyButton_])>[class^=modalTopPill][class*=freeTrial] {
     display: none;
 }
-
 [class^=focusLock_][role=dialog]>[class^=root_]>[class^=content_]:has(> [class^=shinyButton_])>h2[class^=defaultColor_][class*=subHeader_]>a,
 [class^=focusLock_][role=dialog]>[class^=root_]>[class^=content_]:has(> [class^=shinyButton_])>[class] {
     display: none;
 }
-
 [class^=focusLock_][role=dialog]>[class^=root_]>[class^=content_]:has(> [class^=shinyButton_])>h2[class^=defaultColor_][class*=subHeader_] {
     visibility: hidden;
     display: flex !important;
     align-items: center;
 }
-
 [class^=focusLock_][role=dialog]>[class^=root_]>[class^=content_]:has(> [class^=shinyButton_])>h2[class^=defaultColor_][class*=subHeader_]::after {
     visibility: visible !important;
     content: "There was previously a Nitro advertisement here. Move along.";
     position: absolute;
     top: 42.5%;
 }
-
 [class^=focusLock_][role=dialog]>[class^=root_]>.paymentModalContent [class^=upsellFooter_] {
     display: none;
 }
