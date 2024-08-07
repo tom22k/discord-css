@@ -17,18 +17,16 @@
 }
 
 /* GENERAL HIDE */
-/* nitro & shop buttons above DM list (more space efficient) */
+/* nitro & shop buttons above DM list (more space efficient) - #1 */
 [data-list-id^=private-channels] > ul > li:has([href="/store"],[href="/shop"]),
 /* nitro button (in case it's anywhere else) */
 [href="/store"],
 /* shop button (in case it's anywhere else) */
 [href="/shop"],
-/* nitro button */
+/* nitro button - #2  */
 [class^=shinyButton_]:has(> [class*=premiumSubscribeButton_]),
-/* nitro upselling in server boosting screen */
+/* nitro upselling in server boosting screen - #3 */
 [class^=guildStatus_] > [class^=guildBoostCtas_] > [class^=guildBoostCta_][class*=guildBoostCtaSecondary_],
-/* nitro upselling description in popup when clicking on emoji/sticker */
-[class^=popoutContainer_] > [class^=emojiSection_] > [class^=flex_] > [class^=flex_] > [class^=defaultColor_][data-text-variant="text-sm/normal"],
 /* nitro icon in stream quality */
 [class^=streamQualityIndicator_] [class^=premiumStreamIcon_] {
     display: none;
@@ -342,6 +340,15 @@
     /* super reaction hover tooltips */
     [class^=reactionTooltip_] > [class^=burstReactionTooltipPrompt] {
         display: none;
+    }
+    /* nitro upselling description in popup when clicking on emoji/sticker */
+    [class^=popoutContainer_] > [class^=emojiSection_] [data-text-variant="text-sm/normal"] {
+        font-size: 0;
+        /* when not from a public server, keep part of the description */
+        &:has(> a)::after {
+            content: "This emoji is from a server that is either invite-only or unavailable.";
+            font-size: 14px;
+        }
     }
     /* soundboard */
     [class^=picker_][role=dialog] {
