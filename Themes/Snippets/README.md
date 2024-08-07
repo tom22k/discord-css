@@ -7,40 +7,7 @@ Screenshots may be slightly out of date.
 
 **These snippets are constantly under development.**
 
-## [BetterLockedEmojis](https://github.com/tom22k/discord-css/blob/main/Snippets/BetterLockedEmojis.css)
-If you don't have Discord Nitro, this will make all the emojis and stickers that you cannot use black and white, disable being able to click on things you can't use, and remove the annoying Nitro upsell.
-
-**Only use if you do not have Nitro.**
-
-<details> <summary>Screenshots</summary>
-
-**Before**
-
-![image](https://github.com/tom22k/css-snippets/assets/143504320/f52957dc-82d5-4584-aeb7-c4899c25736a) ![gif](https://github.com/tom22k/css-snippets/assets/143504320/a86e813e-9281-46a8-be4a-40d0e48acddb)
-
-**After**
-
-![image](https://github.com/tom22k/css-snippets/assets/143504320/7484f717-3cd6-4623-b57f-39f4feb5c343) ![gif](https://github.com/tom22k/css-snippets/assets/143504320/b46e6387-026c-47b5-8ddc-d063541af2a4)
-</details>
-
-<details> <summary>How to use</summary>
-  
-**Copy link to paste in online themes**
-```
-https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BetterLockedEmojis.css
-```
-
-**Importing in quick CSS**
-```css
-@import url("https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BetterLockedEmojis.css");
-```
-
-**Or copy the raw CSS into your own file (Click [here](https://github.com/tom22k/discord-css/blob/main/Snippets/BetterLockedEmojis.css))**
-
-</details>
-
-
-## [BetterModView](https://github.com/tom22k/discord-css/blob/main/Snippets/BetterModView.css)
+## [Better Mod View](https://github.com/tom22k/discord-css/blob/main/Snippets/BetterModView.css)
 Give Discord's "mod view" its intended style. Works for users with and without profile themes.
 
 <details> <summary>Screenshots</summary>
@@ -70,7 +37,7 @@ https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BetterModView
 
 </details>
 
-## [BoxyUserPanel](https://github.com/tom22k/discord-css/blob/main/Snippets/BoxyUserPanel.css)
+## [Boxy User Panel](https://github.com/tom22k/discord-css/blob/main/Snippets/BoxyUserPanel.css)
 Just a user panel re-design, inspired by [Snare Hawk's idea](https://github.com/Snare-Hawk/snare-CSS?tab=readme-ov-file#profile-panel-thingy). Works with the game activity toggle button too.
 
 <details> <summary>Screenshots</summary>
@@ -101,7 +68,7 @@ https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/BoxyUserPanel
 
 </details>
 
-## [ClickableConnectedAccounts](https://github.com/tom22k/discord-css/blob/main/Snippets/ClickableConnectedAccounts.css)
+## [Clickable Connected Accounts](https://github.com/tom22k/discord-css/blob/main/Snippets/ClickableConnectedAccounts.css)
 Make each entire connected account clickable! Instead of just the little arrow. Also adds a little background when hovering.
 
 <details> <summary>Screenshots</summary>
@@ -132,7 +99,7 @@ https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/ClickableConn
 
 </details>
 
-## [InteractiveFolders](https://github.com/tom22k/discord-css/blob/main/Snippets/InteractiveFolders.css)
+## [Interactive Folders](https://github.com/tom22k/discord-css/blob/main/Snippets/InteractiveFolders.css)
 A simple redesign making folders and the "Add a Server" button appear as interactive icons.
 
 <details> <summary>Screenshots</summary>
@@ -166,7 +133,7 @@ https://raw.githubusercontent.com/tom22k/discord-css/main/Snippets/InteractiveFo
 </details>
 
 
-## [SimpleDarkUsernamesFix](https://github.com/tom22k/discord-css/blob/main/Snippets/SimpleDarkUsernamesFix.css)
+## [Simple Dark Usernames Fix](https://github.com/tom22k/discord-css/blob/main/Snippets/SimpleDarkUsernamesFix.css)
 Makes very dark usernames the normal text colour. This is applied to usernames everywhere, as well as mentions if using the "RoleColorEverywhere" plugin.
 
 <details> <summary>Screenshots</summary>
