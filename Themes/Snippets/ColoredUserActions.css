@@ -1,0 +1,27 @@
+/*
+ * @name Colored User Actions
+ * @description colorize positive/negative user actions
+ * @author tom2k
+*/
+/* Add green colour to positive user actions */
+#user-context-add-friend {
+    color: rgb(35, 165, 90);
+}
+
+#user-context-add-friend[class*="focused_"] {
+    background-color: rgba(35, 165, 90, 0.8);
+    color: var(--white-500);
+}
+
+/* Add red colour to dangerous user actions by pointy */
+#user-context-close-dm,
+#user-context-remove-friend,
+#user-context-block {
+    color: var(--status-danger);
+}
+#user-context-close-dm[class*=focused_],
+#user-context-remove-friend[class*=focused_],
+#user-context-block[class*=focused_] {
+    background-color: var(--button-danger-background);
+    color: var(--white-500);
+}
