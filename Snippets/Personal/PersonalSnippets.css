@@ -7,75 +7,9 @@
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* remove backround & border for user badges */
+/* remove border for user badges */
 [class^=usernameRow_] + [class^=tags_] > [class^=container_] {
     border: none;
-}
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* consistent chat bar */
-[class^=chat_] > [class^=content_] > [class^=chatContent_] {
-    /* move up jump to present bar when typing or slow mode so no overlap */
-    &:has(> [class^=form_] > [class^=typing_]) > [class^=messagesWrapper_] > [class^=jumpToPresentBar_] {
-        padding-bottom: 32px;
-    }
-    /* jump to present bar consistent dimensions */
-    > [class^=messagesWrapper_] > [class^=jumpToPresentBar_] {
-        border-radius: 0%;
-        opacity: 1;
-        left: 0;
-        right: 0;        
-    }
-    > [class^=form_] {
-        /* take up full width */
-        padding: 0;
-        &::before {
-            display: none;
-        }
-        > [class^=channelBottomBarArea_] {
-            > [class^=channelTextArea_] {
-                margin-bottom: 0;
-                > [class^=scrollableContainer_] {
-                    border-radius: 0;
-                    padding-right: 0 !important;
-                    /* consistent height */
-                    min-height: 53px;
-                    > [class^=inner_] {
-                        /* consistent height */
-                        padding-top: 4px;
-                        min-height: 49px;
-                    }
-                }
-            }
-            /* app launcher */
-            > [class^=channelAppLauncher_] {
-                margin: 0;
-                min-width: 44px;
-                background: var(--bg-overlay-3, var(--channeltextarea-background));
-                > [class^=buttonContainer_] {
-                    /* consistent height */
-                    padding-top: 4px;
-                    min-height: 49px;
-                    position: absolute;
-                    top: 0;
-                    > button {
-                        border-radius: 0;
-                    }
-                }
-            }
-        }
-        /* slowmode/typing indicator consistent dimensions */
-        [class^=typing_] {
-            top: -24px;
-            left: 0;
-            right: 0;
-            background: var(--bg-overlay-chat, var(--background-primary)) !important;
-            /* move slowmode indicator back to default location */
-            [class^=cooldownWrapper_] {
-                margin-right: 16px;
-            }
-        }
-    }
 }
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
@@ -153,27 +87,6 @@
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* coloured status picker backgrounds */
-[class^=item_][class*=focused_] {
-    #status-status-picker--dnd& {
-        background-color: rgba(242, 63, 66, 0.9);
-    }
-    #status-status-picker--dnd& {
-    background-color: rgba(242, 63, 66, 0.9);
-    }
-    #status-status-picker--invisible& {
-    background-color: rgba(128, 132, 142, 0.9);
-    }
-    #status-status-picker--idle& {
-    background-color: rgba(240, 178, 50, 0.9);
-    }
-    #status-status-picker--online& {
-    background-color: rgba(35, 165, 90, 0.9);
-    }
-}
-
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
 /* compact polls by Faf4a/catpurrrchino */
 [class^=chatContent_] [id^=message-accessories-] {
     [aria-label="Poll options"] {
@@ -188,7 +101,7 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* more condensed member list*/
-[class^=members_] > div > [class^=member_] > [class^=memberInner_] {
+[class^=members_] [class^=member_] > [class^=memberInner_] {
     padding: 0;
 }
 
@@ -252,32 +165,6 @@ nav:has(> [data-list-id=guildsnav]) {
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* Add green colour to positive user actions */
-#user-context-add-friend {
-    color: rgb(35, 165, 90);
-}
-
-#user-context-add-friend[class*="focused_"] {
-    background-color: rgba(35, 165, 90, 0.8);
-    color: var(--white-500);
-}
-
-/* Add red colour to dangerous user actions by pointy */
-#user-context-close-dm,
-#user-context-remove-friend,
-#user-context-block {
-    color: var(--status-danger);
-}
-
-#user-context-close-dm[class*=focused_],
-#user-context-remove-friend[class*=focused_],
-#user-context-block[class*=focused_] {
-    background-color: var(--button-danger-background);
-    color: var(--white-500);
-}
-
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
 /* smaller member count */
 .vc-membercount-member-list {
     margin-top: 0 !important;
@@ -297,39 +184,6 @@ nav:has(> [data-list-id=guildsnav]) {
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
-/* Role pill background by alije */
-[class^=role_] {
-    transform: translate(0);
-    border: 0;
-    [class^=roleCircle_]::before,
-    [class*=actionButton_]&[class*=justifyCenter_] {
-        border-radius: 5px;
-    }
-    [class^=roleRemoveIcon_] {
-        margin: 0;
-        left: unset;
-        transform: translate(50%,-50%);
-    }
-    [class^=roleRemoveButton] {
-        position: static;
-    }
-    [class^=root_] > & [class^=roleCircle_]::before {
-        content: '';
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        position: absolute;
-        background: inherit;
-        border: 2px solid transparent;
-        opacity: .4;
-    }
-}
-
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
 /* Bigger Reactions */
 [data-list-id=chat-messages] [id^=message-reactions] [class^=reaction_] .emoji {
     zoom: 150%;
@@ -340,18 +194,4 @@ nav:has(> [data-list-id=guildsnav]) {
 /* rounder radius in mentions */
 .mention {
     border-radius: 5px;
-}
-
-/* /////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////// */
-/* Vencord toolbox Logo */
-.vc-toolbox-btn {
-    margin-left: 0;
-    svg {
-        width: 125%;
-        height: 125%;
-        path {
-            d: path("M7 12.001C7 10.8964 6.10457 10.001 5 10.001C3.89543 10.001 3 10.8964 3 12.001C3 13.1055 3.89543 14.001 5 14.001C6.10457 14.001 7 13.1055 7 12.001ZM14 12.001C14 10.8964 13.1046 10.001 12 10.001C10.8954 10.001 10 10.8964 10 12.001C10 13.1055 10.8954 14.001 12 14.001C13.1046 14.001 14 13.1055 14 12.001ZM19 10.001C20.1046 10.001 21 10.8964 21 12.001C21 13.1055 20.1046 14.001 19 14.001C17.8954 14.001 17 13.1055 17 12.001C17 10.8964 17.8954 10.001 19 10.001Z");
-        }
-    }
 }
