@@ -404,9 +404,7 @@
     > [class^=content_] {
         > [class^=defaultColor_] {
             /* paragraphs with a link, likely to the nitro page (long message length upselling description,100 server limit upselling description) */
-            > p:has(> a,> [class^=learnMoreLink_]) {
-                display: none;
-            }
+            > p:has(> a,> [class^=learnMoreLink_]),
             /* large file upload upselling description */
             > [class^=body_] > [class^=defaultColor_] {
                 display: none;
