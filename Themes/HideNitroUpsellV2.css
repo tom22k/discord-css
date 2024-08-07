@@ -410,19 +410,19 @@
     /* text */
     > [class^=content_] {
         > [class^=defaultColor_] {
-            /* paragraphs with a link, likely to the nitro page (long message length upselling description,100 server limit upselling description) */
+            /* paragraphs with a link, likely to the nitro page (long message length upselling description - #43, 100 server limit upselling description - #44) */
             > p:has(> a,> [class^=learnMoreLink_]),
-            /* large file upload upselling description */
+            /* large file upload upselling description - #45 */
             > [class^=body_] > [class^=defaultColor_] {
                 display: none;
             }
         }
-        /* remove gif option from profile pic upload option */
+        /* remove gif option from avatar upload popup in profile settings - #46 */
         [class^=imagePickerContainer_] > [class^=optionBox_]:has([class^=nitroWheel]) {
             display: none;
         }
     }
-    /* nuke huge upsell popup on login - images #1-2 */
+    /* nuke huge upsell popup on login - #47 */
     &:has([class^=shinyButton_]) {
         /* restyle background */
         background: var(--background-primary);
