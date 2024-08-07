@@ -1,0 +1,22 @@
+/*
+ * @name Colored Status Picker Background
+ * @description make the status picker's background be colored on hover
+ * @author tom2k
+*/
+[class^=item_][class*=focused_] {
+    #status-status-picker--dnd& {
+        background-color: rgba(242, 63, 66, 0.9);
+    }
+    #status-status-picker--dnd& {
+    background-color: rgba(242, 63, 66, 0.9);
+    }
+    #status-status-picker--invisible& {
+    background-color: rgba(128, 132, 142, 0.9);
+    }
+    #status-status-picker--idle& {
+    background-color: rgba(240, 178, 50, 0.9);
+    }
+    #status-status-picker--online& {
+    background-color: rgba(35, 165, 90, 0.9);
+    }
+}
