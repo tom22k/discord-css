@@ -50,10 +50,8 @@ nav > [role=tablist] > [class^=socialLinks_],
 [class*=animatedContainer_]:has([class*=bannerImage_]),
 /* server banner spacer clickable*/
 [class*=animatedBannerHoverLayer_],
-/* spacer in channels list */
-#channels > ul > [style="height: 12px;"],
-/* server banner spacer */
-#channels > ul > [style="height: 84px;"],
+/* spacers in channels list */
+#channels > ul > [style^="height"],
 /* create invite on channels */
 #channels [class^=iconItem_][aria-label*="Invite"],
 /* server guide */
