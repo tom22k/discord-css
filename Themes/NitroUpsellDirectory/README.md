@@ -4,7 +4,7 @@ This folder is a directory for every bit of Nitro upsell so that they can be eas
 
 **This directory is still in the process of being made.**
 
-1. **Nitro & Shop buttons** <details> <summary>Image</summary>
+1. **Nitro & Shop buttons in DM list** <details> <summary>Image</summary>
 ![image](https://github.com/user-attachments/assets/941dc82b-44a1-4420-bea9-b2968a3276a0)
 </details>
 
