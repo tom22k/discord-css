@@ -30,6 +30,8 @@
 [class^=guildStatus_] > [class^=guildBoostCtas_] > [class^=guildBoostCta_][class*=guildBoostCtaSecondary_],
 /* nitro icon in stream quality - #4 */
 [class^=streamQualityIndicator_] [class^=premiumStreamIcon_],
+/* nitro icon on banner hover - #49 */
+[class^=banner_] > [class^=premiumIcon],
 /* random side popup theme upsell - #5 */
 #app-mount > [class^=appAsidePanelWrapper_] > [class^=themeEditor_]:has([class^=shinyButton_]) {
     display: none;
