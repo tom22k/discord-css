@@ -199,3 +199,7 @@ This folder is a directory for every bit of Nitro upsell so that they can be eas
 48. **"You could be paying less!" in server boost payment modal** <details> <summary>Image</summary>
 ![image](https://github.com/user-attachments/assets/85d37a9f-93bb-4730-be19-bcb02465014b)
 </details>
+
+49. **Nitro icon on banner hover** <details> <summary>Image</summary>
+![image](https://github.com/user-attachments/assets/a8fcf91a-21a3-4ae4-9c9c-f30183390ae2)
+</details>
