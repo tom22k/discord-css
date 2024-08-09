@@ -1,0 +1,28 @@
+/*
+ * @name Reveal Dark Usernames
+ * @description Be able to see dark usernames when hovering over them.
+ * @author tom2k
+*/
+[style^="color: rgb(0, 0, 0);"], /* black */
+[style^="color: rgb(2, 2, 2);"], /* ? black */
+[style^="color: rgb(5, 0, 5);"], /* color chan black */
+[style^="color: rgb(15, 2, 2);"], /* hiraeth black */
+[style^="color: rgb(12, 4, 99);"], /* vencord role dark blue */
+[style^="color: rgb(0, 1, 0);"], /* swiss bedwars black */
+[style^="color: rgb(10, 1, 2);"], /* sewerperson owner black */
+[style^="color: rgb(0, 0, 1);"], /* sewerperson admin black */
+[style^="color: rgb(9, 8, 8);"], /* xona loha black */
+[style^="color: rgb(12, 12, 12);"] /* xona crescent black */ {
+    [class*=username_]& {
+        [id^=chat-messages]:hover &, /* chat messages */
+        [class^=member_]:hover &, /* members list */
+        [class^=membersGroup_]:hover &  /* members list headers (RoleColorEverywhere plugin) */ {
+            color: var(--text-normal) !important;
+        }
+    }
+    .mention&:hover /* mentions */,
+    [class^=channelTextArea_] [class^=wrapper_]&:hover /* mentions in chat bar */ {
+        color: var(--text-normal) !important;
+        background-color: color-mix(in srgb, var(--text-normal) 20%, transparent) !important;
+    }
+}
