@@ -3,7 +3,7 @@
  * @description make the chat bar align with the user panel
  * @author tom2k
 */
-[class^=chat_] > [class^=content_] > [class^=chatContent_] {
+[class^=chat_] [class^=chatContent_] {
     /* move up jump to present bar when typing or slow mode so no overlap */
     &:has(> [class^=form_] > [class^=typing_]) > [class^=messagesWrapper_] > [class^=jumpToPresentBar_] {
         padding-bottom: 32px;
@@ -24,6 +24,11 @@
         > [class^=channelBottomBarArea_] {
             > [class^=channelTextArea_] {
                 margin-bottom: 0;
+                /* reply bar */
+                > [class^=attachedBars_] {
+                    border-radius: 0;
+                    width: calc(100% + 44px);
+                }
                 > [class^=scrollableContainer_] {
                     border-radius: 0;
                     margin-right: -10px;
@@ -51,6 +56,10 @@
                         border-radius: 0;
                     }
                 }
+            }
+            /* when has reply bar */
+            &:has([class^=attachedBars_]) > [class^=channelAppLauncher_] {
+                top: 32px;
             }
         }
         /* slowmode/typing indicator consistent dimensions */
