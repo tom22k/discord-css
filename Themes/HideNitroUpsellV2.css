@@ -209,6 +209,8 @@
 }
 
 /* boosting */
+/* boost icon in voice channels */
+[class^=callContainer_] [class^=participants_] [class^=boost_],
 /* boost progress bar - #27 */
 #channels > ul > li:has([data-list-item-id^=channels___boosts]),
 /* server shop - #28 */
