@@ -15,10 +15,12 @@
 [style^="color: rgb(12, 12, 12);"] /* xona crescent black */ {
     [class*=username_]& {
         [id^=chat-messages]:hover &, /* chat messages */
-        [class^=member_]:hover &, /* members list */
-        [class^=membersGroup_]:hover &  /* members list headers (RoleColorEverywhere plugin) */ {
+        [class^=member_]:hover & /* members list */ {
             color: var(--text-normal) !important;
         }
+    }
+    [class^=membersGroup_] &  /* members list headers (RoleColorEverywhere plugin) */ {
+        color: var(--text-normal) !important;
     }
     .mention&:hover /* mentions (RoleColorEverywhere plugin) */,
     [class^=channelTextArea_] [class^=wrapper_]&:hover /* mentions in chat bar (RoleColorEverywhere plugin) */ {
