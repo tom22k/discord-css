@@ -351,6 +351,10 @@
             font-size: 14px;
         }
     }
+    /* server boost upsell when clicking cutom role icon - #50 */
+    &:has([class^=roleIconContainer_]) [class^=ctaButton_] {
+        display: var(--boosting);
+    }
     /* soundboard */
     [class^=picker_][role=dialog] {
         /* nitro upsell container - #39 */
