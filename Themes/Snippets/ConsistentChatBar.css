@@ -22,6 +22,7 @@
             display: none;
         }
         > [class^=channelBottomBarArea_] {
+            background: var(--bg-overlay-3, var(--channeltextarea-background));
             > [class^=channelTextArea_] {
                 margin-bottom: 0;
                 /* reply bar */
@@ -45,6 +46,7 @@
             > [class^=channelAppLauncher_] {
                 margin: 0;
                 min-width: 44px;
+                height: fit-content;
                 background: var(--bg-overlay-3, var(--channeltextarea-background));
                 > [class^=buttonContainer_] {
                     /* consistent height */
