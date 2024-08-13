@@ -54,10 +54,5 @@ They are numbered so that they can be referenced in the comments of the [HideNit
 | 46. | Gif option from avatar upload popup in profile settings | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/0b9bf4ca-1fb7-458d-94bb-126b6bc80ecc)</details> |
 | 47. | Huge upsell popup on login | <details> <summary>Click to view image</summary>![Before](https://github.com/user-attachments/assets/17fa41d0-c56e-4ed4-9e2f-160f4c507e28) ![After](https://github.com/user-attachments/assets/019cdf85-283e-472d-ae2d-072c69b93aae)</details> |
 | 48. | "You could be paying less!" in server boost payment modal | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/85d37a9f-93bb-4730-be19-bcb02465014b)</details> |
-| 49. | Nitro icon on banner hover | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/a8fcf91a-21a3-4ae4-9c9c-f30183390ae2</details> |
-
-
-
-
-
-
+| 49. | Nitro icon on banner hover | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/a8fcf91a-21a3-4ae4-9c9c-f30183390ae2)</details> |
+| 50. | Server boost upsell when clicking custom role icon | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/9bca53a7-f6b0-454c-8b15-33f8bbe000bb)</details> |
