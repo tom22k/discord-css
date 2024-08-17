@@ -219,6 +219,7 @@
                 font-size: 0;
                 line-height: normal;
                 > .vc-spotify-artist,
+                > .vc-spotify-comma,
                 > #vc-spotify-album-title {
                     font-size: 12px !important;
                 }
