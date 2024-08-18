@@ -1,0 +1,31 @@
+/*
+ * @name Status In Chat
+ * @author tom2k
+*/
+[id^=chat-messages] [id^=message-username] {
+    > .vc-platform-indicator {
+        /* only show first icon */
+        > [aria-label] ~ [aria-label] {
+            display: none;
+        }
+        top: 6px !important;
+        > svg {
+            width: 12px !important;
+            height: 12px !important;
+            > path {
+                d: path("M 0 10 A 1 1 0 0 0 20 10 A 1 1 0 0 0 0 10");
+            }
+        }
+    }
+    /* offline indicator */
+    &:not(:has(> .vc-platform-indicator))::after {
+        content: "";
+        position: relative;
+        display: inline-flex;
+        height: 10px;
+        width: 10px;
+        border-radius: 100%;
+        margin-left: 4px;
+        background-color: rgb(128, 132, 142);
+    }
+}
