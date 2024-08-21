@@ -13,7 +13,7 @@ If you have any suggestions or issues, you can message me on Discord `@tom22k` o
 | [InteractiveFolders](InteractiveFolders.css) | A simple redesign making folders and the "Add a Server" button appear as interactive icons. | ![gif](https://github.com/tom22k/discord-css/assets/143504320/cf5be4a6-23a7-4085-936e-b2dfd8e28d63) |
 | [RevealDarkUsernames](RevealDarkUsernames.css) | Be able to see dark usernames when hovering over them. | ![gif](https://github.com/user-attachments/assets/1c1c2ca6-e8a6-477c-99a0-d092c5784702) |
 | [SimpleDarkUsernamesFix](SimpleDarkUsernamesFix.css) | Makes very dark usernames the normal text colour. This is applied to usernames everywhere, as well as places where the RoleColorEverywhere plugin would add role colors. | ![image](https://github.com/tom22k/discord-css/assets/143504320/5cf19078-7e08-4276-a89e-5aa5c5d5d26e) ![image](https://github.com/tom22k/discord-css/assets/143504320/851cef4f-b180-4a01-a26f-09aa9556d03c) |
-| [StatusInChat](StatusInChat.css) | Adds a status indicator icon next to usernames in chat. ⚠️ REQUIRES: Vencord's PlatformIndicators plugin | ![image](https://github.com/user-attachments/assets/6b68f4c5-1d3e-432b-808b-484ff0884982) |
+| [StatusInChat](StatusInChat.css) | Replaces Vencord's Platform Indicator icons with the normal Discord status icons. ⚠️ **REQUIRES:** Vencord's PlatformIndicators plugin | ![image](https://github.com/user-attachments/assets/6b68f4c5-1d3e-432b-808b-484ff0884982) |
 </details>
 
 ## Usage
