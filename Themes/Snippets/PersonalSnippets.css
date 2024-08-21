@@ -1,5 +1,22 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
+/* compact DMs list */
+[class^=privateChannels_] {
+    [class^=searchBar_] {
+        box-shadow: none;
+    }
+    ul {
+        > [style^=height] {
+            display: none;
+        }
+        > h2 {
+            padding-top: 4px;
+            height: fit-content;
+        }
+    }
+}
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
 /* fix corners peeking out on nitro user panels */
 [class^=userPanelOuter_] > [class^=userPanelInner_] {
     border-bottom-left-radius: 0;
