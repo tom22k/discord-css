@@ -6,7 +6,7 @@
         box-shadow: none;
     }
     ul {
-        > [style^=height] {
+        > [style="height: 8px;"] {
             display: none;
         }
         > h2 {
