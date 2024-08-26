@@ -28,11 +28,9 @@
                 /* reply bar */
                 > [class^=attachedBars_] {
                     border-radius: 0;
-                    width: calc(100% + 44px);
                 }
                 > [class^=scrollableContainer_] {
                     border-radius: 0;
-                    margin-right: -10px;
                     /* consistent height */
                     min-height: 53px;
                     > [class^=inner_] {
@@ -41,32 +39,6 @@
                         min-height: 49px;
                     }
                 }
-            }
-            /* app launcher */
-            > [class^=channelAppLauncher_] {
-                margin: 0;
-                min-width: 44px;
-                height: fit-content;
-                background: var(--bg-overlay-3, var(--channeltextarea-background));
-                > [class^=buttonContainer_] {
-                    /* consistent height */
-                    padding-top: 4px;
-                    min-height: 49px;
-                    position: absolute;
-                    top: 0;
-                    > button {
-                        border-radius: 0;
-                    }
-                }
-            }
-            /* when has reply bar */
-            &:has([class^=attachedBars_]) > [class^=channelAppLauncher_] {
-                top: 32px;
-            }
-            /* when has attachments */
-            &:has([data-list-id=attachments]) > [class^=channelAppLauncher_] {
-                top: 248px;
-                border-top: thin solid var(--background-modifier-accent);
             }
         }
         /* slowmode/typing indicator consistent dimensions */
