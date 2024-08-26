@@ -63,6 +63,10 @@
             &:has([class^=attachedBars_]) > [class^=channelAppLauncher_] {
                 top: 32px;
             }
+            /* when has attachments */
+            &:has([data-list-id=attachments]) > [class^=channelAppLauncher_] {
+                top: 249px;
+            }
         }
         /* slowmode/typing indicator consistent dimensions */
         [class^=typing_] {
