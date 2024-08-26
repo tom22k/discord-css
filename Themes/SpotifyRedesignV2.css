@@ -188,6 +188,8 @@
     --vc-spotify-green: #1fdf64 !important;
     --interactive-normal: #b3b3b3;
     --interactive-hover: white;
+    /* remove bottom border */
+    border-bottom: 0;
     /* set fonts */
     --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-primary: "Spotify", var(--fallback-font);
