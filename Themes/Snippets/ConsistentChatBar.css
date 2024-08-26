@@ -65,7 +65,8 @@
             }
             /* when has attachments */
             &:has([data-list-id=attachments]) > [class^=channelAppLauncher_] {
-                top: 249px;
+                top: 248px;
+                border-top: thin solid var(--background-modifier-accent);
             }
         }
         /* slowmode/typing indicator consistent dimensions */
