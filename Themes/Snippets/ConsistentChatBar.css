@@ -1,4 +1,3 @@
-
 /*
  * @name Consistent Chat Bar
  * @description make the chat bar align with the user panel
@@ -60,6 +59,12 @@
             [class^=cooldownWrapper_] {
                 margin-right: 16px;
             }
+        }
+        /* "Follow to get this channel's updates" */
+        > [class^=wrapper_] {
+            border-radius: 0;
+            margin-bottom: 0;
+            height: 21px;
         }
     }
 }
