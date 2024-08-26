@@ -5,7 +5,7 @@
 */
 /* scale icon sizes to user preference */
 :root {
-    --chat-status-size: 75%;
+    --chat-status-icon-size: 75%;
 }
 /* desktop & web */
 path:is([d^="M4 2.5c-1.103 0-2 .897-2 2v11c0 1.104.897 2"],[d^="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48"]) {
@@ -57,7 +57,7 @@ path[d^="M14.8 2.7 9 3.1V47h3.3c1.7 0 6.2.3 10 .7l6.7.6V2l-4.2"] {
 }
 .vc-platform-indicator {
     /* scale to user preference */
-    scale: var(--chat-status-size);
+    scale: var(--chat-status-icon-size);
     /* only show 1st icon */
     > [aria-label] ~ [aria-label] {
         display: none;
