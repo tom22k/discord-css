@@ -1,3 +1,4 @@
+
 /*
  * @name Consistent Chat Bar
  * @description make the chat bar align with the user panel
@@ -8,12 +9,20 @@
     &:has(> [class^=form_] > [class^=typing_]) > [class^=messagesWrapper_] > [class^=jumpToPresentBar_] {
         padding-bottom: 32px;
     }
-    /* jump to present bar consistent dimensions */
-    > [class^=messagesWrapper_] > [class^=jumpToPresentBar_] {
-        border-radius: 0%;
-        opacity: 1;
-        left: 0;
-        right: 0;        
+    > [class^=messagesWrapper_] {
+        /* new messages bar consistent dimensions */
+        > [class^=newMessagesBar_] {
+            border-radius: 0;
+            left: 0;
+            right: 0;
+        }
+        /* jump to present bar consistent dimensions */
+        > [class^=jumpToPresentBar_] {
+            border-radius: 0;
+            opacity: 1;
+            left: 0;
+            right: 0;        
+        }
     }
     > [class^=form_] {
         /* take up full width */
