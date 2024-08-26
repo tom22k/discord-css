@@ -31,4 +31,8 @@
         margin-top: 32px;
         border-top-right-radius: 0;
     }
+    &:has([data-list-id=attachments]) > [class^=channelAppLauncher_] [class^=buttonContainer_] {
+        top: 248px;
+        border-top: thin solid var(--background-modifier-accent);
+    }
 }
