@@ -3,10 +3,7 @@
  * @description replace vencord's toolbox icon with 3 dots
  * @author tom2k
 */
-.vc-toolbox-btn {
-    margin-left: 0;
-    svg path {
-        d: path("M 4 14 a 2 2 0 1 0 0 -4 a 2 2 0 0 0 0 4 Z m 10 -2 a 2 2 0 1 1 -4 0 a 2 2 0 0 1 4 0 Z m 8 0 a 2 2 0 1 1 -4 0 a 2 2 0 0 1 4 0 Z");
-        scale: 112.5%;
-    }
+.vc-toolbox-btn svg path {
+    d: path("M 4 14 a 2 2 0 1 0 0 -4 a 2 2 0 0 0 0 4 Z m 10 -2 a 2 2 0 1 1 -4 0 a 2 2 0 0 1 4 0 Z m 8 0 a 2 2 0 1 1 -4 0 a 2 2 0 0 1 4 0 Z");
+    scale: 112.5%;
 }
