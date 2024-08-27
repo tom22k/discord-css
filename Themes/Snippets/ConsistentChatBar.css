@@ -45,6 +45,11 @@
                         /* consistent height */
                         padding-top: 4px;
                         min-height: 49px;
+                        /* keep buttons near top of chat bar */
+                        > div:not([class^=textArea_]) {
+                            align-self: flex-start;
+                            top: 0;
+                        }
                     }
                 }
             }
