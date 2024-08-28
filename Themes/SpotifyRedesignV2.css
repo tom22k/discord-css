@@ -423,6 +423,6 @@
 }
 
 /* hide missing image icon in now playing column for local songs */
-#online-tab + [class^=nowPlayingColumn_] [class^=itemCard_] [class^=spotifySection_] > [class^=activitySectionAssets_] > img:not([src]) {
+[class^=nowPlayingColumn_] [class^=itemCard_] [class^=spotifySection_] > [class^=activitySectionAssets_] > img:not([src]) {
     display: none !important;
 }
