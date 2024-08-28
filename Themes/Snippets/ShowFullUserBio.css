@@ -1,0 +1,39 @@
+/*
+ * @name Show Full User Bio
+ * @description show the entire user bio in user popouts, make it scrollable, and apply a background
+ * @author the.seraphina, Obsidianninja11, Saltssaumure, JustMadDog, tom2k
+*/
+[class^=descriptionClamp_] {
+    -webkit-line-clamp: unset;
+    max-height: 112px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgb(var(--bg-overlay-color-inverse) / .075);
+    border-radius: 3px;
+    padding: 8px 4px;
+    [class*=userProfileOuterUnthemed] & {
+        background: var(--input-background);
+    }
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      border: 2px solid var(--scrollbar-thin-track);
+      background-color: var(--scrollbar-thin-track);
+      border-color: var(--scrollbar-thin-track);
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--profile-body-divider-color);
+      background-clip: padding-box;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      min-height: 40px;
+    }
+    ~ [class^=viewFullBio_] {
+        display: none;
+    }
+}
+[class*=userProfileOuterThemed] [class^=channelTextArea_] > [class^=inner_] {
+    background: rgb(var(--bg-overlay-color-inverse) / .075);
+}
