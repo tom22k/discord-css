@@ -129,7 +129,7 @@
 }
 
 /* more condensed activity in friends tab */
-#online-tab + [class^=nowPlayingColumn_] > aside > [class^=scroller_] {
+[class^=nowPlayingColumn_] > aside > [class^=scroller_] {
     padding: 0 5px;
     margin: 0;
     border: none;
