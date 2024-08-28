@@ -1,4 +1,8 @@
-/* CLICKABLE CONNECTED ACCOUNTS */
+/*
+ * @name Clickable Connected Accounts
+ * @description make the entire clickable accounts box clickable, and give them a background on hover
+ * @author tom2k
+*/
 [class^=connectedAccountContainer_] {
   position: relative;
   border: none;
