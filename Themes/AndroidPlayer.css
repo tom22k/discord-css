@@ -23,10 +23,11 @@
     /* variables */
     --android-blur-amount: 0.5px;
     --android-darken-percent: 0.85;
+    --your-font-here: "Roboto";
     /* fonts */
     --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-primary: "Roboto", var(--fallback-font);
-    --font-display: "Roboto", var(--fallback-font);
+    --font-primary: var(--your-font-here), var(--fallback-font);
+    --font-display: var(--your-font-here), var(--fallback-font);
     font-family: var(--font-display) !important;
     /* other */
     height: 110px;
