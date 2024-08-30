@@ -1,5 +1,7 @@
 /* THIS THEME IS FOR PERSONAL USE */
 /* HIDE */
+/* collapse roles button on user popout */
+[aria-label]:has(> [class^=collapseButton_]),
 /* "Search with Google" on highlight and right-click text */
 #message-search-google,
 /* dividers in little menus */
