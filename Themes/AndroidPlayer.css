@@ -21,8 +21,8 @@
 
 #vc-spotify-player {
     /* variables */
-    --blur-amount: 0.5px;
-    --darken-percent: 0.85;
+    --android-blur-amount: 0.5px;
+    --android-darken-percent: 0.85;
     /* fonts */
     --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-primary: "Roboto", var(--fallback-font);
