@@ -47,7 +47,7 @@
         background: var(--vc-spotify-track-image);
         background-size: cover;
         background-position: center;
-        filter: blur(var(--blur-amount));
+        filter: blur(var(--android-blur-amount));
         clip-path: inset(0);
         border-radius: 21px;
     }
@@ -60,7 +60,7 @@
         width: 100%;
         top: 0;
         left: 0;
-        background: radial-gradient(rgba(0, 0, 0, 0),rgba(0,0,0,var(--darken-percent)));
+        background: radial-gradient(rgba(0, 0, 0, 0),rgba(0,0,0,var(--android-darken-percent)));
         border-radius: 20px;
     }
     #vc-spotify-info-wrapper {
