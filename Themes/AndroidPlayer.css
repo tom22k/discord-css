@@ -2,7 +2,7 @@
  * @name AndroidPlayer
  * @description Make Vencord's SpotifyControls resemble the Android media player
  * @author tom2k, AkiraSimplex
- * @version Pre-Release
+ * @version 1.0.0
 */
 /* android font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -23,7 +23,6 @@
     /* variables */
     --blur-amount: 0.5px;
     --darken-percent: 0.85;
-    --player-color: rgba(250, 250, 250);
     /* fonts */
     --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-primary: "Roboto", var(--fallback-font);
@@ -64,15 +63,15 @@
         background: radial-gradient(rgba(0, 0, 0, 0),rgba(0,0,0,var(--darken-percent)));
         border-radius: 20px;
     }
-    > #vc-spotify-info-wrapper {
+    #vc-spotify-info-wrapper {
         margin-bottom: 20px;
         margin-left: 5px;
         /* hide album cover */
-        > #vc-spotify-album-image {
+        #vc-spotify-album-image {
             display: none;
         }
         /* stylize titles */
-        > #vc-spotify-titles {
+        #vc-spotify-titles {
             width: 175px;
             /* make titles wrap if very long */
             > .vc-spotify-ellipoverflow {
@@ -82,46 +81,46 @@
                     display: none;
                 }
             }
-            > #vc-spotify-song-title {
+            #vc-spotify-song-title {
                 font-weight: 400;
                 font-size: 14px;
-                color: var(--player-color);
+                color: white;
             }
             /* hide "by" and "on" */
-            > .vc-spotify-ellipoverflow:has(> .vc-spotify-artist) {
+            .vc-spotify-ellipoverflow:has(> .vc-spotify-artist) {
                 font-size: 0;
-                > .vc-spotify-artist,
-                > .vc-spotify-comma {
+                .vc-spotify-artist,
+                .vc-spotify-comma {
                     font-size: 12px !important;
-                    color: var(--player-color);
+                    color: white;
                     filter: brightness(.8);
                 }
             }
         }
     }
-    > #vc-spotify-progress-bar {
+    #vc-spotify-progress-bar {
         /* move progress bar */
-        > [class^=sliderContainer_] {
+        [class^=sliderContainer_] {
             margin-left: 32px;
             width: calc(100% - 129px);
             position: absolute;
             top: 11px;
-            > [class^=slider_] {
+            [class^=slider_] {
                 /* stylize progress bar */
-                > [class^=bar_] {
+                [class^=bar_] {
                     background-color: #ffffff3b;
                     overflow: visible;
                     height: 3px !important;
                     transform: translateY(0.5px);
-                    > [class^=barFill_] {
-                        background-color: var(--player-color);
+                    [class^=barFill_] {
+                        background-color: white;
                         overflow: visible;
                     }
                 }
                 /* stylize grabber */
-                > [class^=track_] > [class^=grabber_] {
-                    background-color: var(--player-color);
-                    color: var(--player-color);
+                [class^=track_] [class^=grabber_] {
+                    background-color: white;
+                    color: white;
                     opacity: 1;
                     height: 16px !important;
                     width: 4px !important;
@@ -134,30 +133,30 @@
             }
         }
         /* hide durations */
-        > .vc-spotify-progress-time {
+        .vc-spotify-progress-time {
             display: none;
         }
     }
-    &:has(> .vc-spotify-button-row > .vc-spotify-button > .vc-spotify-pause) > #vc-spotify-progress-bar > [class^=sliderContainer_] > [class^=slider_] > [class^=bar_] > [class^=barFill_] {
+    &:has(.vc-spotify-button-row .vc-spotify-pause) #vc-spotify-progress-bar [class^=sliderContainer_] [class^=slider_] [class^=bar_] [class^=barFill_] {
         background-color: transparent;
         /* wave animation */
         &::after {
             content: '';
-            -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='wave' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='45 -13 273 64' style='enable-background:new 0 0 456.7 39.9;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st69%7Bfill:none;stroke:%23000000;stroke-width:24;stroke-miterlimit:10;%7D%0A%3C/style%3E%3Cdefs%3E%3CclipPath id='cut-off-bottom'%3E%3Crect x='0' y='-200' width='318' height='500' /%3E%3C/clipPath%3E%3C/defs%3E%3Cpath clip-path='url(%23cut-off-bottom)' class='st69' d='M4.2,33.2c0.1-0.1,7-6.9,15.9-13.8C27.7,13.7,38.7,6,47.5,6c7.5,0,14,6.6,20.3,12.9l0.4,0.4 c6.8,6.9,14.6,14.6,24.6,14.6c9.9,0,17.7-7.8,24.5-14.6l0.5-0.5C124,12.5,130.5,6,137.9,6c7.5,0,13.9,6.5,20.2,12.9l0.4,0.4 c6.8,6.9,14.6,14.6,24.5,14.6c10,0,17.8-7.8,24.6-14.6l0.5-0.5C214.4,12.5,220.9,6,228.4,6c7.5,0,14,6.5,20.2,12.9l0.4,0.4 c6.8,6.9,14.5,14.6,24.5,14.6c9.9,0,17.7-7.8,24.5-14.6l0.3-0.3c6.3-6.4,12.9-13,20.5-13c7.5,0,14.1,6.6,20.4,13l0.3,0.3 c6.8,6.9,14.6,14.6,24.5,14.6c9.9,0,17.6-7.8,24.5-14.6l0.2-0.2C395.1,12.6,401.6,6,409.2,6c8.7,0,19.8,7.7,27.3,13.4 c8.9,6.8,15.9,13.7,16,13.8'%3E%3C/path%3E%3C/svg%3E");
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='45 -13 360 64'%3E%3Cpath d='M4 19q45-33 90 0c31 22 60 22 90 0q45-33 90 0t90 0 90 0' style='fill:none;stroke:%23000;stroke-width:28'/%3E%3C/svg%3E");
             height: 9px;
             -webkit-mask-size: 30px 9px;
             transform: translateY(-2.5px);
-            animation: barwave 3s linear infinite;
-            background: var(--player-color);
+            animation: barwave 4s linear infinite;
+            background: white;
             position: absolute;
             width: inherit;
             top: calc(25% - 1.2px);
             overflow: visible;
         }
     }
-    > .vc-spotify-button-row {
-        > .vc-spotify-button {
-            color: var(--player-color);
+    .vc-spotify-button-row {
+        .vc-spotify-button {
+            color: white;
             &:hover {
                 background: none;
                 color: var(--interactive-normal);
@@ -185,37 +184,37 @@
                     }
                 }
             }
-            &:has(> .vc-spotify-previous) {
+            &:has(.vc-spotify-previous) {
                 order: 1;
                 margin-right: calc(50% - 64px);
             }
             /* play/pause button styling */
-            &:has(> .vc-spotify-pause,> .vc-spotify-play) {
+            &:has(.vc-spotify-pause,.vc-spotify-play) {
                 order: 5;
                 position: absolute;
                 top: 1em;
                 right: 1em;
-                background: rgba(255, 255, 255, 0.65);
+                background: rgba(255, 255, 255, 0.75);
                 border-radius: 100%;
                 backdrop-filter: blur(5px);
-                > svg {
-                    fill: var(--player-color);
+                svg {
+                    fill: white;
                     filter: invert();
                 }
             }
             /* pause button squircle rather than circle */
-            &:has(> .vc-spotify-pause) {
+            &:has(.vc-spotify-pause) {
                 border-radius: 30%;
                 /* make icon bit smaller */
-                > svg {
+                svg {
                     scale: 85%;
                     /* sharp cornered pause icon */
-                    > path {
+                    path {
                         d: path("M 6.7,4.5 A 0.7,0.7 0 0 0 6,5.2 v 12.6 a 0.7,0.7 0 0 0 0.7,0.7 H 9.3 A 0.7,0.7 0 0 0 10,17.8 V 5.2 A 0.7,0.7 0 0 0 9.3,4.5 Z m 8,0 A 0.7,0.7 0 0 0 14,5.2 v 12.6 a 0.7,0.7 0 0 0 0.7,0.7 h 2.6 A 0.7,0.7 0 0 0 18,17.8 V 5.2 A 0.7,0.7 0 0 0 17.3,4.5 Z");
                     }
                 }
             }
-            &:has(> .vc-spotify-next) {
+            &:has(.vc-spotify-next) {
                 order: 2;
                 margin-left: calc(50% - 64px);
             }
@@ -223,7 +222,7 @@
             &[class*=repeat] {
                 order: 4;
                 /* make the little "1" a bit smaller */
-                > .vc-spotify-repeat-1 {
+                .vc-spotify-repeat-1 {
                     font-size: 60%;
                 }
                 path {
