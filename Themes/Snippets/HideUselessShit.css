@@ -1,5 +1,9 @@
 /* THIS THEME IS FOR PERSONAL USE */
 /* HIDE */
+/* header for activity cards in members list */
+[class^=members_] [class^=membersGroup_]:has([d^="M10.56 1.1c-.46.05-.7.53-.64.98.18"]),
+/* activity cards in members list */
+[class^=members_] div:not([class]):has([class^=facePile_]),
 /* collapse roles button on user popout */
 [aria-label]:has(> [class^=collapseButton_]),
 /* "Search with Google" on highlight and right-click text */
