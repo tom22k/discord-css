@@ -31,8 +31,10 @@
 [class^=streamQualityIndicator_] [class^=premiumStreamIcon_],
 /* nitro icon on banner hover - #49 */
 [class^=banner_] [class^=premiumIcon],
+/* Nitro upsell banner at top of screen - #51 */
+[class^=notice_][class*=colorPremium_],
 /* random side popup theme upsell - #5 */
-#app-mount > [class^=appAsidePanelWrapper_] > [class^=themeEditor_]:has([class^=shinyButton_]) {
+[class^=themeEditor_]:has([class^=shinyButton_]) {
     display: none;
 }
 
