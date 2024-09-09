@@ -22,7 +22,7 @@
 #vc-spotify-player {
     /* variables */
     --android-blur-amount: 0.5px;
-    --android-darken-percent: 0.85;
+    --android-darken-percent: 0.8;
     --your-font-here: "Roboto";
     /* fonts */
     --fallback-font: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -50,7 +50,7 @@
         background-position: center;
         filter: blur(var(--android-blur-amount));
         clip-path: inset(0);
-        border-radius: 21px;
+        border-radius: 21px 21px 0 0;
     }
     /* radial gradient over artwork */
     &::after {
@@ -62,7 +62,7 @@
         top: 0;
         left: 0;
         background: radial-gradient(rgba(0, 0, 0, 0),rgba(0,0,0,var(--android-darken-percent)));
-        border-radius: 20px;
+        border-radius: 20px 20px 0 0;
     }
     #vc-spotify-info-wrapper {
         margin-bottom: 20px;
