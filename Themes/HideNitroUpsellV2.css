@@ -418,12 +418,17 @@
 [class^=focusLock_][role=dialog] > [class^=root_] {
     /* text */
     > [class^=content_] {
-        > [class^=defaultColor_] {
+        [class^=defaultColor_] {
             /* paragraphs with a link, likely to the nitro page (long message length upselling description - #43, 100 server limit upselling description - #44) */
             > p:has(> a,> [class^=learnMoreLink_]),
             /* large file upload upselling description - #45 */
             > [class^=body_] > [class^=defaultColor_] {
-                display: none;
+                font-size:xx-small;
+                color: transparent;
+                pointer-events: none;
+                a {
+                    color: transparent;
+                }
             }
         }
         /* remove gif option from avatar upload popup in profile settings - #46 */
