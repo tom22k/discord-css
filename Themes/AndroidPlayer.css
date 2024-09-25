@@ -74,9 +74,11 @@
         /* stylize titles */
         #vc-spotify-titles {
             width: 175px;
-            /* make titles wrap if very long */
             > .vc-spotify-ellipoverflow {
+                /* make titles wrap if very long */
                 white-space: wrap;
+                /* cutoff artists names if too long */
+                max-height: 2.5rem;
                 /* hide album title */
                 &:has(> #vc-spotify-album-title) {
                     display: none;
