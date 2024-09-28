@@ -1,10 +1,8 @@
-/* @import url("https://minidiscordthemes.github.io/Demonstration/Demonstration.theme.css") */
-
 /*
  * @name Hide Nitro Upselling
  * @description Hide all Nitro upselling in any language
  * @author tom2k
- * @version 2.3.2
+ * @version 2.3.4
 */
 /* customization */
 :root {
@@ -429,15 +427,25 @@
     /* text */
     > [class^=content_] {
         [class^=defaultColor_] {
-            /* paragraphs with a link, likely to the nitro page (long message length upselling description - #43, 100 server limit upselling description - #44) */
-            > p:has(> a,> [class^=learnMoreLink_]),
-            /* large file upload upselling description - #45 */
-            > [class^=body_] > [class^=defaultColor_] {
-                font-size:xx-small;
+            /* long message length upselling description - #43 */
+            > p:has(> a) {
+                font-size: xx-small;
                 color: transparent;
-                pointer-events: none;
+                margin: 0;
                 a {
                     color: transparent;
+                }
+            }
+            /* 100 server limit upselling description - #44 */
+            > p:has(> [class^=learnMoreLink_]) {
+                display: none;
+            }
+            /* large file upload upselling description - #45 */
+            > [class^=body_] > [class^=defaultColor_] {
+                font-size: 0;
+                &::after {
+                    content: "The max file size is 10MB.";
+                    font-size: 14px;
                 }
             }
         }
@@ -446,6 +454,10 @@
             display: none;
         }
     }
+    /* hide buttons container when theres only shiny button or "All Nitro Perks" button */
+    [class^=flex_]:has([class^=primaryActions_] [class^=secondaryAction_][class*=enhancedSecondaryAction_]):has([class^=shinyButton_]) {
+        display: none;
+    }    
     /* nuke huge upsell popup on login - #47 */
     &:has([class^=shinyButton_]) {
         /* restyle background */
