@@ -22,16 +22,13 @@
 [class^=activity_] [class^=questsIcon_],
 /* quest popout on clicking a user in memberlist with a quest icon in activity */
 [id^=popout_]:has([class^=top_] > [class^=left_] > h2):has([class^=top_] > [class^=right_] > [class^=imgWrapper_]),
-/* arrow on voice & video shortcut */
-#user-settings-cog-Voice___Video [class^=iconContainer_],
-/* popup on voice & video shortcut */
-#user-settings-cog-Voice___Video + .theme-dark[class*=layer_],
-/* user settings cog shortcuts except listed below
-[id^=user-settings-cog-]:not([id^=user-settings-cog-Vencord],
-#user-settings-cog-My_Account,
-#user-settings-cog-Profile_Customization,
-#user-settings-cog-Voice___Video,
-[id^=user-settings-cog-Experiments]), */
+/* user settings cog shortcuts */
+#user-settings-cog-Family_Center,
+#user-settings-cog-Hypesquad_Online,
+/* any settings tab shortcut after experiments */
+div:has(> #user-settings-cog-Experiments) ~ [class^=item_],
+/* any settings tab after experiments */
+[data-tab-id="Experiments"] ~ [class^=item_]:not([data-tab-id="logout"]),
 /* emoji skin color picker */
 #emoji-picker-tab-panel [class^=diversitySelector_],
 /* descriptions in status picker */
