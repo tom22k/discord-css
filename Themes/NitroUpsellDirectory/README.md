@@ -57,3 +57,7 @@ They are numbered so that they can be referenced in the comments of the [HideNit
 | 49. | Nitro icon on banner hover | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/a8fcf91a-21a3-4ae4-9c9c-f30183390ae2)</details> |
 | 50. | Server boost upsell when clicking custom role icon | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/9bca53a7-f6b0-454c-8b15-33f8bbe000bb)</details> |
 | 51. | Nitro upsell banner at top of screen | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/346c5eec-2729-408a-bfea-4618353fb13f) </details> |
+| 52. | Bookmarks upsell | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/be6b0d3d-27cf-4d12-9b6f-3bd637903a27) </details> |
+| 53. | Bookmarks button in toolbar | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/a7734927-246a-4fcb-94c7-0666d0cba869) </details> |
+| 54. | Bookmarks context menu button | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/9ccb4512-18b3-4cf0-816b-96b530d1c7f0) </details> |
+| 55. |  | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/bde679f6-0cf4-4344-a4b9-8d1107bbe376) </details> |
