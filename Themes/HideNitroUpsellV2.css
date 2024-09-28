@@ -1,3 +1,5 @@
+/* @import url("https://minidiscordthemes.github.io/Demonstration/Demonstration.theme.css") */
+
 /*
  * @name Hide Nitro Upselling
  * @description Hide all Nitro upselling in any language
@@ -33,6 +35,12 @@
 [class^=banner_] [class^=premiumIcon],
 /* Nitro upsell banner at top of screen - #51 */
 [class^=notice_][class*=colorPremium_],
+/* bookmarks button in toolbar - #53 */
+[class^=toolbar_] [class^=iconWrapper_]:has(path[d^="M4 5a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v1"]),
+/* bookmarks context menu button - #54 */
+#message-save-for-later-upsell,
+/* bookmarks button in message hover actions - #55 */
+[class^=buttons_] [class^=hoverBarButton_]:has(path[d^="M17 4H7a1 1 0 0 0-1 1v13.7"]),
 /* random side popup theme upsell - #5 */
 [class^=themeEditor_]:has([class^=shinyButton_]) {
     display: none;
@@ -353,6 +361,8 @@
             font-size: 14px;
         }
     }
+    /* bookmarks upsell - #52 */
+    &:has([class^=container_][class*=upsellTooltipWrapper_]),
     /* server boost upsell when clicking cutom role icon - #50 */
     &:has([class^=roleIconContainer_]) [class^=ctaButton_] {
         display: var(--boosting);
@@ -473,7 +483,7 @@
         }
     }
 /* "you could be paying less!" in server boost payment modal */
-    > .paymentModalContent [class^=upsellFooter_] {
+    .paymentModalContent [class^=upsellFooter_] {
         display: none;
     }
 }
