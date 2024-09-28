@@ -50,7 +50,7 @@ They are numbered so that they can be referenced in the comments of the [HideNit
 | 42. | Super reaction effects | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/db64ce63-b810-49d6-8228-ad99620de199)</details> |
 | 43. | Long message length popup upselling description | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/d37efedd-db07-437f-968a-09b2e23e8162)</details> |
 | 44. | 100 server limit popup upselling description | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/7c8dcdbd-e5cd-4d0e-ada5-c761a519b7dc)</details> |
-| 45. | Large file upload popup upselling description | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/965bfefc-f86f-4465-80cb-b8df9d4e6193)</details> |
+| 45. | Large file upload popup upselling description | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/ffe33cf9-bec7-4389-b1e7-c1bd503304b5)</details> |
 | 46. | Gif option from avatar upload popup in profile settings | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/0b9bf4ca-1fb7-458d-94bb-126b6bc80ecc)</details> |
 | 47. | Huge upsell popup on login | <details> <summary>Click to view image</summary>![Before](https://github.com/user-attachments/assets/17fa41d0-c56e-4ed4-9e2f-160f4c507e28) ![After](https://github.com/user-attachments/assets/019cdf85-283e-472d-ae2d-072c69b93aae)</details> |
 | 48. | "You could be paying less!" in server boost payment modal | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/85d37a9f-93bb-4730-be19-bcb02465014b)</details> |
@@ -60,4 +60,5 @@ They are numbered so that they can be referenced in the comments of the [HideNit
 | 52. | Bookmarks upsell | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/be6b0d3d-27cf-4d12-9b6f-3bd637903a27) </details> |
 | 53. | Bookmarks button in toolbar | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/a7734927-246a-4fcb-94c7-0666d0cba869) </details> |
 | 54. | Bookmarks context menu button | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/9ccb4512-18b3-4cf0-816b-96b530d1c7f0) </details> |
-| 55. |  | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/bde679f6-0cf4-4344-a4b9-8d1107bbe376) </details> |
+| 55. | Bookmarks button in message hover actions | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/bde679f6-0cf4-4344-a4b9-8d1107bbe376) </details> |
+| 56. | Large file upload popup buttons | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/490ba4f1-e851-49de-aa01-ec9894163bcd) </details> |
