@@ -454,7 +454,7 @@
             display: none;
         }
     }
-    /* hide buttons container when theres only shiny button or "All Nitro Perks" button */
+    /* hide buttons container when theres only shiny button or "All Nitro Perks" button - #56 */
     [class^=flex_]:has([class^=primaryActions_] [class^=secondaryAction_][class*=enhancedSecondaryAction_]):has([class^=shinyButton_]) {
         display: none;
     }    
