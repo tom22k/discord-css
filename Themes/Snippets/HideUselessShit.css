@@ -89,7 +89,7 @@ nav > [role=tablist] > [class^=socialLinks_],
 /* family center in settings */
 [aria-label="Family Center"],
 /* discoverable servers */
-[data-list-id=guildsnav] > [class^=scroller_] > [class^=listItem_]:has([data-list-item-id=guildsnav___guild-discover-button]),
+[data-list-id=guildsnav] > [class^=footer_],
 /* events */
 #channels [class^=containerDefault_]:has(> [data-list-item-id^="channels___upcoming-events"]),
 /* member count in server icon hover */
