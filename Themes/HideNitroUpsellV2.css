@@ -397,7 +397,7 @@
 /* chat input */
 [class^=channelTextArea_] {
     /* gift button - #40 */
-    [class^=buttons_] > button,
+    [class^=buttons_] > [class^=container_]:has(> button [class^=giftIconButton_]),
     /* "Send longer messages with Discord Nitro!" - #41 */ 
     [class^=characterCount_] [class*=upsell_] {
         display: none;
