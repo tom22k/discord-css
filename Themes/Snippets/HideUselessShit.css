@@ -34,7 +34,7 @@ div:has(> #user-settings-cog-Experiments) ~ [class^=item_],
 /* descriptions in status picker */
 [class^=statusItem_] > [class^=description_],
 /* store button on bot profiles */
-[class^=user] button:has([class^=storeBtn_]),
+[class*=userP] button[aria-label="Store"],
 /* vencord custom badges */
 [class^=tags_] > [class^=container_] > [aria-label]:has(> a > [style="border-radius: 50%; transform: scale(0.9);"]),
 /* social links in settings */
