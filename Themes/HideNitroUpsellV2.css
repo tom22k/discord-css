@@ -423,7 +423,7 @@
 }
 
 /* dialog popups */
-[class^=focusLock_][role=dialog] > [class^=root_] {
+[class^=focusLock_][role=dialog] > [class*=root_] {
     /* text */
     > [class^=content_] {
         [class^=defaultColor_] {
@@ -457,7 +457,16 @@
     /* hide buttons container when theres only shiny button or "All Nitro Perks" button - #56 */
     [class^=flex_]:has([class^=primaryActions_] [class^=secondaryAction_][class*=enhancedSecondaryAction_]):has([class^=shinyButton_]) {
         display: none;
-    }    
+    }
+    /* Screenshare settings upsell - #57 */
+    form [class^=qualitySettingsContainer_] {
+        /* locked buttons */
+        [class^=settingsGroup_] button[class^=item_][class*=premiumUpsell_],
+        /* upsell banner */
+        [class^=upsellBanner_] {
+            display: none;
+        }
+    }
     /* nuke huge upsell popup on login - #47 */
     &:has([class^=shinyButton_]) {
         /* restyle background */
