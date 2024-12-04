@@ -39,6 +39,8 @@
 #message-save-for-later-upsell,
 /* bookmarks button in message hover actions - #55 */
 [class^=buttons_] [class^=hoverBarButton_]:has(path[d^="M17 4H7a1 1 0 0 0-1 1v13.7"]),
+/* store button on bot profiles - #58 */
+button:has(svg > path[d^="M2.63 4.19A3 3 0 0 1 5.53 2H7a1 1 0 0"]),
 /* random side popup theme upsell - #5 */
 [class^=themeEditor_]:has([class^=shinyButton_]) {
     display: none;
