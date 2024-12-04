@@ -2,7 +2,7 @@
  * @name Hide Nitro Upselling
  * @description Hide all Nitro upselling in any language
  * @author tom2k
- * @version 2.3.4
+ * @version 2.3.5
 */
 /* customization */
 :root {
@@ -244,7 +244,39 @@ button:has(svg > path[d^="M2.63 4.19A3 3 0 0 1 5.53 2H7a1 1 0 0"]),
   pointer-events: var(--boosting);
 }
 
-/* emoji picker */
+/* emojis, stickers, and soundboard */
+/* nitro upsell container - #39 */
+[class^=upsellContainer_],
+/* nitro dividers - #35 */
+[class^=nitroTopDividerContainer_],
+[class^=nitroBottomDivider_],
+/* hide unavailable server shortcuts - #35 */
+[role=listitem]:has([class^=categoryItemLockIconContainer_]),
+/* hide nitro needed emojis in search results */
+#emoji-picker-grid [class^=listItems_][style="inset: 8px 0px;"] > [class^=categorySection_][class*=categorySectionNitroLocked] {
+    display: none;
+}
+/* nitro locked section - #35 */
+[class^=categorySection_][class*=categorySectionNitroLocked],
+[class^=sectionContainer_][class*=sectionContainerNitroLocked],
+[class*=NitroLocked],
+[class*=NitroLocked] + [class^=sectionFooter_],
+#sticker-picker-grid [class^=wrapper_]:has(+ [class^=row_] [class*=stickerUnsendable_]) [class^=header_] {
+    filter: grayscale();
+    background-color: transparent;
+}
+/* make unavailable sounds have matching styles */
+[class^=lockedEmoji_],
+#sticker-picker-grid [class^=sticker_]:has([class*=stickerUnsendable_]),
+[class*=premiumDisabled] {
+    background: hsl(var(--black-500-hsl)/.6);
+    filter: brightness(50%) grayscale();
+}
+[class*=premiumDisabled],
+#sticker-picker-grid [class^=sticker_]:has([class*=stickerUnsendable_]),
+button:has(> [class^=lockedEmoji_]) {
+    pointer-events: none;
+}
 #emoji-picker-tab-panel {
     /* hide react with nitro emojis in vc upsell - #33 */
     [class^=tooltipContainer_]:has(> #fancybutton-toggle),
@@ -252,95 +284,9 @@ button:has(svg > path[d^="M2.63 4.19A3 3 0 0 1 5.53 2H7a1 1 0 0"]),
     [class^=burstToggle_] {
         display: none;
     }
-    #emoji-picker-grid {
-        /* nitro dividers - #35 */
-        [class^=categorySection_][class*=categorySectionNitroDivider] {
-            [class^=nitroTopDividerContainer_],
-            [class^=nitroBottomDivider_] {
-                display: none;
-            }
-        }
-        /* nitro locked section - #35 */
-        [class^=categorySection_][class*=categorySectionNitroLocked] {
-            /* make nitro needed emojis b&w */
-            filter: grayscale();
-            background-color: transparent;
-            /* server headers */
-            [class^=header_] {
-                /* hide nitro icon */
-                [class^=headerIcon_]:has(> svg > path) {
-                    display: none;
-                    /* remove gap */
-                    + [class^=headerLabel_] {
-                        margin: 0;
-                    }
-                }
-                /* change server names and "Available with Nitro" headers to "Unavailable" */
-                [class^=headerLabel_] {
-                    font-size: 0;
-                    &::before {
-                        font-size: 12px;
-                        content: "Unavailable";
-                    }
-                }
-            }
-            /* disable clicking on unavailable emojis */
-            [class^=emojiListRow_] {
-                pointer-events: none;
-            }
-            /* make unavailable emojis have matching styles */
-            [class^=lockedEmoji_] {
-                background: hsl(var(--black-500-hsl)/.6);
-                filter: brightness(50%);
-            }
-            /* hide nitro needed emojis in search results */
-            #emoji-picker-tab-panel #emoji-picker-grid [class^=listItems_][style="inset: 8px 0px;"] > & {
-                display: none;
-            }
-        }
-        /* disable clicking on unavailable emojis and make them b&w */
-        [class^=emojiListRow_] [class^=emojiItem_]:has([class^=emojiLockIconContainer_]) {
-            pointer-events: none;
-            background-color: transparent;
-            filter: grayscale();
-        }
-        /* nitro upsell warning  */
-        [class^=upsellContainer_] {
-            display: none;
-        }
-    }
-    > [class^=wrapper_] > [class^=scroller_] {
-        /* disable scrolling on the server shortcuts */
-        &:has(> [class^=listItems_] [class^=categoryItemLockIconContainer_]) {
-            overflow-y: hidden !important;
-        }
-        /* hide unavailable emoji server shortcuts - #35 */
-        > [class^=listItems_] > div:has([class^=categoryItemLockIconContainer_]) {
-            display: none;
-        }
-    }
-}
-
-/* sticker picker - #35 */
-#sticker-picker-tab-panel #sticker-picker-grid {
-    [class^=stickerNode_][class*=stickerUnsendable_] {
-        [class^=wrapper_]:has(+ [class^=row_] [class^=sticker_] &) [class^=header_] {
-            filter: grayscale();
-            /* change server names and "Available with Nitro" headers to "Unavailable" */
-            [class^=headerLabel_] {
-                font-size: 0;
-                &::before {
-                    font-size: 12px;
-                    content: "Unavailable";
-                }
-            }
-        }
-        /* unavailable stickers */
-        #sticker-picker-tab-panel #sticker-picker-grid [class^=sticker_]:has(&) {
-            pointer-events: none;
-            background: hsl(var(--black-500-hsl)/.6);
-            filter: brightness(50%);
-        }
+    /* disable scrolling on the server shortcuts */
+    [class^=wrapper_] [class^=scroller_]:has(> [class^=listItems_] [class^=categoryItemLockIconContainer_]) {
+        overflow-y: hidden !important;
     }
 }
 
@@ -363,36 +309,9 @@ button:has(svg > path[d^="M2.63 4.19A3 3 0 0 1 5.53 2H7a1 1 0 0"]),
     }
     /* bookmarks upsell - #52 */
     &:has([class^=container_][class*=upsellTooltipWrapper_]),
-    /* server boost upsell when clicking cutom role icon - #50 */
+    /* server boost upsell when clicking custom role icon - #50 */
     &:has([class^=roleIconContainer_]) [class^=ctaButton_] {
         display: var(--boosting);
-    }
-    /* soundboard */
-    [class^=picker_][role=dialog] {
-        /* nitro upsell container - #39 */
-        [class^=gridNoticeWrapper_]:has(> [class^=premiumFeatureBorder_]) {
-            display: none;
-        }
-        /* sounds */
-        > [class^=listWrapper_] > [class^=wrapper_] > [class^=scroller_] > [class^=listItems_] {
-            /* server header with disabled sounds */
-            [class^=sectionContainer_]:has(+ ul > li [class^=soundButton_][class*=premiumDisabled_]) {
-                filter: grayscale();
-                /* change unavailable server names to "Unavailable"  */
-                [class^=sectionHeader_] h1 {
-                    font-size: 0;
-                    &::before {
-                        content: "Unavailable";
-                        font-size: 12px;
-                    }
-                }
-            }
-            /* prevent clicking on unavailable sounds */
-            ul > li:has([class^=soundButton_][class*=premiumDisabled_]) {
-                filter: grayscale();
-                pointer-events: none;
-            }
-        }
     }
 }
 
