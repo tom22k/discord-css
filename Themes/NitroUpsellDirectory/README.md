@@ -63,3 +63,4 @@ They are numbered so that they can be referenced in the comments of the [HideNit
 | 55. | Bookmarks button in message hover actions | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/bde679f6-0cf4-4344-a4b9-8d1107bbe376) </details> |
 | 56. | Large file upload popup buttons | <details> <summary>Click to view image</summary>![image](https://github.com/user-attachments/assets/490ba4f1-e851-49de-aa01-ec9894163bcd) </details> |
 | 57. | Screenshare settings upsell | <details> <summary>Click to view image</summary> ![image](https://github.com/user-attachments/assets/5ba1e4df-5cb7-42ed-ac4c-b3580f6bab6b) </details> |
+| 58. | Store button on bot profiles | <details> <summary>Click to view image</summary> ![image](https://github.com/user-attachments/assets/9a626d9d-c148-4955-b747-4ccb3d823b7c) </details> |
