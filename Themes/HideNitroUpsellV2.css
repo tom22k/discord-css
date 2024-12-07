@@ -2,7 +2,7 @@
  * @name Hide Nitro Upselling
  * @description Hide all Nitro upselling in any language
  * @author tom2k
- * @version 2.3.5
+ * @version 2.3.6
 */
 /* customization */
 :root {
@@ -245,49 +245,45 @@ button:has(svg > path[d^="M2.63 4.19A3 3 0 0 1 5.53 2H7a1 1 0 0"]),
 }
 
 /* emojis, stickers, and soundboard */
-/* nitro upsell container - #39 */
+/* hide upsell container - #39 */
 [class^=upsellContainer_],
-/* nitro dividers - #35 */
+/* hide dividers - #35 */
 [class^=nitroTopDividerContainer_],
 [class^=nitroBottomDivider_],
-/* hide unavailable server shortcuts - #35 */
-[role=listitem]:has([class^=categoryItemLockIconContainer_]),
+[class*=SectionLast_][class*=NitroLocked_],
 /* hide nitro needed emojis in search results */
-#emoji-picker-grid [class^=listItems_][style="inset: 8px 0px;"] > [class^=categorySection_][class*=categorySectionNitroLocked] {
+#emoji-picker-grid [class^=listItems_][style="inset: 8px 0px;"] > [class*=NitroLocked_],
+/* hide react with nitro emojis in vc upsell - #33 */
+#emoji-picker-tab-panel [class^=tooltipContainer_]:has(> #fancybutton-toggle),
+/* hide super reactions toggle - #34 */
+#emoji-picker-tab-panel [class^=burstToggle_] {
     display: none;
 }
-/* nitro locked section - #35 */
-[class^=categorySection_][class*=categorySectionNitroLocked],
-[class^=sectionContainer_][class*=sectionContainerNitroLocked],
-[class*=NitroLocked],
-[class*=NitroLocked] + [class^=sectionFooter_],
+/* make nitro locked sections grayscale and remove pink background - #35 */
+[class*=NitroLocked_],
+[class*=NitroLocked_] + [class^=sectionFooter_],
 #sticker-picker-grid [class^=wrapper_]:has(+ [class^=row_] [class*=stickerUnsendable_]) [class^=header_] {
     filter: grayscale();
     background-color: transparent;
 }
-/* make unavailable sounds have matching styles */
-[class^=lockedEmoji_],
-#sticker-picker-grid [class^=sticker_]:has([class*=stickerUnsendable_]),
-[class*=premiumDisabled] {
+/* make unavailable emojis/stickers/sounds have matching styles */
+#emoji-picker-grid [class*=NitroLocked] button[data-type=emoji] img, /* other server's emojis (and not applying effects to "view all" button) */
+#emoji-picker-grid button:has(> [class^=emojiLockIconContainer_]) img, /* make already locked emojis b&w too */
+[role=listitem]:has([class^=categoryItemLockIconContainer_]) :is(img, [class^=categoryItemLockIconContainer_]), /* unavailable server shortcuts */
+#sticker-picker-grid [class^=sticker_]:has([class*=stickerUnsendable_]), /* unavailable stickers */
+[class*=premiumDisabled] /* unavailable sounds */ {
     background: hsl(var(--black-500-hsl)/.6);
     filter: brightness(50%) grayscale();
 }
-[class*=premiumDisabled],
+#emoji-picker-grid [class*=NitroLocked_] button[data-type=emoji],
+#emoji-picker-grid button:has(> [class^=emojiLockIconContainer_]),
 #sticker-picker-grid [class^=sticker_]:has([class*=stickerUnsendable_]),
-button:has(> [class^=lockedEmoji_]) {
+[class*=premiumDisabled] {
     pointer-events: none;
 }
-#emoji-picker-tab-panel {
-    /* hide react with nitro emojis in vc upsell - #33 */
-    [class^=tooltipContainer_]:has(> #fancybutton-toggle),
-    /* hide super reactions toggle - #34 */
-    [class^=burstToggle_] {
-        display: none;
-    }
-    /* disable scrolling on the server shortcuts */
-    [class^=wrapper_] [class^=scroller_]:has(> [class^=listItems_] [class^=categoryItemLockIconContainer_]) {
-        overflow-y: hidden !important;
-    }
+/* align headers in sticker picker with the stickers */
+#sticker-picker-grid [class*=packHeader_] {
+    padding-left: 0;
 }
 
 /* popouts */
