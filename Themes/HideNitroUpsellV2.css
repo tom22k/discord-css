@@ -314,7 +314,7 @@ button:has(svg > path[d^="M2.63 4.19A3 3 0 0 1 5.53 2H7a1 1 0 0"]),
 /* chat input */
 [class^=channelTextArea_] {
     /* gift button - #40 */
-    [class^=buttons_] > button[aria-haspopup=dialog],
+    [class^=buttons_] > [class^=container_]:has(button [class^=giftIcon]),
     /* "Send longer messages with Discord Nitro!" - #41 */ 
     [class^=characterCount_] [class*=upsell_] {
         display: none;
