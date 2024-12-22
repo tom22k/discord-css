@@ -89,7 +89,7 @@ nav > [role=tablist] > [class^=socialLinks_],
 /* family center in settings */
 [data-tab-id="Family Center"],
 /* discoverable servers */
-[data-list-id=guildsnav] [class*=fixedDiscoveryIcon_],
+[data-list-id=guildsnav] [class^=footer_]:has([class*=fixedDiscoveryIcon_]),
 /* events */
 #channels [class^=containerDefault_]:has(> [data-list-item-id^="channels___upcoming-events"]),
 /* member count in server icon hover */
