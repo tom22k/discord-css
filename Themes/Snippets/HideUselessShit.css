@@ -87,7 +87,7 @@ nav > [role=tablist] > [class^=socialLinks_],
 /*"welcome to channel" thing - unhidden when channel is empty */
 [class^=chatContent_] [class^=container_]:has([class^=emptyChannelIcon_], [class^=inner_] h3):has(+ [class^=divider_]),
 /* family center in settings */
-[aria-label="Family Center"],
+[data-tab-id="Family Center"],
 /* discoverable servers */
 [data-list-id=guildsnav] [class*=fixedDiscoveryIcon_],
 /* events */
