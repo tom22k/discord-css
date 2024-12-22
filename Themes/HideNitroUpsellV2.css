@@ -2,7 +2,7 @@
  * @name Hide Nitro Upselling
  * @description Hide all Nitro upselling in any language
  * @author tom2k
- * @version 2.3.6
+ * @version 2.3.7
 */
 /* customization */
 :root {
@@ -39,8 +39,14 @@
 #message-save-for-later-upsell,
 /* bookmarks button in message hover actions - #55 */
 [class^=buttons_] [class^=hoverBarButton_]:has(path[d^="M17 4H7a1 1 0 0 0-1 1v13.7"]),
-/* store button on bot profiles - #58 */
-button:has(svg > path[d^="M2.63 4.19A3 3 0 0 1 5.53 2H7a1 1 0 0"]),
+/* store button on profiles - #58 */
+button:has(svg path[d^="M2.63 4.19A3 3 0 0 1 5.53 2H7a1 1 0 0"]),
+/* prior divider */
+[class^=menuDivider_]:has(+ button svg path[d^="M2.63 4.19A3 3 0 0 1 5.53 2H7a1 1 0 0"]),
+/* nitro button on profile - #59 */
+button:has(svg path[fill="url(#33281a9e-aa23-4ad2-be62-e0c921152f11)"]),
+/* prior divider */
+[class^=menuDivider_]:has(+ button svg path[fill="url(#33281a9e-aa23-4ad2-be62-e0c921152f11)"]),
 /* random side popup theme upsell - #5 */
 [class^=themeEditor_]:has([class^=shinyButton_]) {
     display: none;
