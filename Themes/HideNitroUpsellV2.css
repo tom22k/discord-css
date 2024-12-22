@@ -431,20 +431,3 @@ button:has(svg path[d^="M2.63 4.19A3 3 0 0 1 5.53 2H7a1 1 0 0"]),
         display: none;
     }
 }
-
-/* UNABLE TO TEST ATM */
-/* Birthday avatar decoration upselling */
-/* [class^=birthdayFeatureBorder], */
-/* Halloween avatar decoration upselling */
-/* [class^=container]:has([class^=falloweenArtContainer_]), */
-/* Christmas gifting button */
-/* [class*=sansAttachButton] > [class^=buttons] > [class^=container], */
-/* Snowsgiving bs */
-/* a[href*="/snowsgiving"] {
-    display: none;
-} */
-/* idk where this is */
-/* uspell on role badge click */
-/* [id^=popout_] button:has([class^=boosterBadge_]) {
-  display: none;
-} */
