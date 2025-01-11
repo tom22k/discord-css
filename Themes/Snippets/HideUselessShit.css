@@ -90,6 +90,8 @@ nav > [role=tablist] > [class^=socialLinks_],
 [data-tab-id="Family Center"],
 /* discoverable servers */
 [data-list-id=guildsnav] [class^=listItem_]:has([data-list-item-id=guildsnav___guild-discover-button]),
+/* gradient below add servers button */
+[class^=gradient_],
 /* events */
 #channels [class^=containerDefault_]:has(> [data-list-item-id^="channels___upcoming-events"]),
 /* member count in server icon hover */
