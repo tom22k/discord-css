@@ -82,6 +82,8 @@ nav > [role=tablist] > [class^=socialLinks_],
 #message-actions-mark-unread,
 #message-mark-unread,
 [aria-label="Mark Unread"],
+/* commands button when DMing a bot */
+div:has(> .app-launcher-app-dm-entrypoint),
 /* badge api in vc toolbox */
 #vc-toolbox [aria-label="BadgeAPI"],
 /*"welcome to channel" thing - unhidden when channel is empty */
