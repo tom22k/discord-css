@@ -1,0 +1,25 @@
+[class^=clickTrapContainer_] > [id^=popout_] {
+    bottom: 0 !important;
+}
+
+[class^=voiceFiltersPopout_] {
+    height: 72px !important;
+    outline: 0;
+    display: block;
+    position: absolute;
+    bottom: 53px;
+    background: none;
+    
+    > :not([class*=Footer_]) {
+        display: none;
+    }
+
+    > [class*=Footer_] {
+        border: 0;
+        box-shadow: none;
+        border-radius: 16px;
+        position: absolute;
+        bottom: 0;
+        width: 400px;
+    }
+}
