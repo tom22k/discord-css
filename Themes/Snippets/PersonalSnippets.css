@@ -1,9 +1,9 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* remove discord's custom code font */
-:root {
+/* :root {
     --font-code: Consolas;
-}
+} */
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
@@ -21,7 +21,7 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* compact DMs list */
-[class^=privateChannels_] {
+/* [class^=privateChannels_] {
     [class^=searchBar_] {
         box-shadow: none;
     }
@@ -34,7 +34,7 @@
             height: fit-content;
         }
     }
-}
+} */
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* fix corners peeking out on nitro user panels */
@@ -45,15 +45,15 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* remove border for user badges */
-[class^=usernameRow_] + [class^=tags_] > [class^=container_] {
+/* [class^=usernameRow_] + [class^=tags_] > [class^=container_] {
     border: none;
-}
+} */
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* always neutral folder background */
-[data-list-id=guildsnav] [class*=FolderIconWrapper_] {
+/* [data-list-id=guildsnav] [class*=FolderIconWrapper_] {
     background-color: #313338 !important;
-}
+} */
 /* neutral "add a server"/"discover servers" button */
 [data-list-id=guildsnav] [class^=circleIconButton_] {
     color: #848484 !important;
@@ -70,33 +70,33 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* remove little shadow above channels column */
-[class^=sidebar_] > [class^=container_] > [class^=container_][class*=clickable_] > [class^=header_] {
+/* [class^=sidebar_] > [class^=container_] > [class^=container_][class*=clickable_] > [class^=header_] {
     box-shadow: none;
-}
+} */
 /* re-colour chat header to match channels column */
-[class^=chat_] > [class^=subtitleContainer_] > [class^=title_] {
+/* [class^=chat_] > [class^=subtitleContainer_] > [class^=title_] {
     background: var(--bg-overlay-chat, var(--background-secondary));
-}
+} */
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* LIGHTER COLOUR */
 /* friends list activity cards on hover */
-[class^=nowPlayingColumn_] > aside > div > [class^=itemCard_]:hover,
+/* [class^=nowPlayingColumn_] > aside > div > [class^=itemCard_]:hover, */
 /* lighter channel hover highlight */
-#channels > ul > li a:hover,
+/* #channels > ul > li a:hover, */
 /* highlight message container on hover */
-[data-list-id=chat-messages] > li:hover {
+/* [data-list-id=chat-messages] > li:hover {
   background-color: var(--background-modifier-selected) !important;
-}
+} */
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* lighter scrollbars */
-:root {
+/* :root {
  --scrollbar-auto-thumb: var(--background-modifier-selected);
  --scrollbar-auto-track: transparent;
-}
+} */
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
@@ -138,31 +138,31 @@
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* more condensed member list*/
-[class^=members_] [class^=member_] > [class^=memberInner_] {
+/* [class^=members_] [class^=member_] > [class^=memberInner_] {
     padding: 0;
-}
+} */
 
 /* more condensed activity in friends tab */
-[class^=nowPlayingColumn_] > aside > [class^=scroller_] {
+/* [class^=nowPlayingColumn_] > aside > [class^=scroller_] {
     padding: 0 5px;
     margin: 0;
     border: none;
-}
+} */
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* make new pins & new notifs in inbox more noticeable */
-[aria-label="Pinned Messages"]:has([class^=iconBadge_]) svg,
+/* [aria-label="Pinned Messages"]:has([class^=iconBadge_]) svg,
 [aria-label="Inbox"]:has([class^=iconBadge_]) svg {
     color: var(--status-danger) !important;
-}
+} */
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* server list less padding */
-nav:has(> [data-list-id=guildsnav]) {
+/* nav:has(> [data-list-id=guildsnav]) {
     width: 64px;
-}
+} */
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
@@ -196,17 +196,17 @@ nav:has(> [data-list-id=guildsnav]) {
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* shorten some dividers in channel column */
-#channels {
+/* #channels {
     --custom-category-channel-space-before-category: 0;
-}
+} */
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* smaller member count */
-.vc-membercount-member-list {
+/* .vc-membercount-member-list {
     margin-top: 0 !important;
     margin-bottom: -1.25em !important;
-}
+} */
 
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
@@ -223,7 +223,7 @@ nav:has(> [data-list-id=guildsnav]) {
 /* /////////////////////////////////////////////////////////////////// */
 /* Bigger Reactions */
 [data-list-id=chat-messages] [id^=message-reactions] [class^=reaction_] .emoji {
-    zoom: 150%;
+    zoom: 125%;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
